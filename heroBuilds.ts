@@ -2890,7 +2890,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Chaos Knight": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -3218,7 +3218,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Clinkz: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -4781,7 +4781,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Dragon Knight": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -4918,7 +4918,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Drow Ranger": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -5456,7 +5456,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Ember Spirit": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -6274,7 +6274,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Gyrocopter: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -7687,7 +7687,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 			"tranquil_boots",
             "magic_wand",
             "null_talisman",
-			      "infused_raindrop"
+			      "infused_raindrop",
             "force_staff",
           ],
           mid_game: [
@@ -8548,7 +8548,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lifestealer: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -9115,7 +9115,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Lone Druid": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -9453,7 +9453,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Lycan: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -11331,7 +11331,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Naga Siren": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -11497,7 +11497,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Nature's Prophet": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -14907,7 +14907,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Queen of Pain": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -18602,7 +18602,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Templar Assassin": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -18892,7 +18892,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Terrorblade: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -20148,7 +20148,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Troll Warlord": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -22484,7 +22484,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   Windranger: {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -23221,7 +23221,7 @@ export const heroBuilds: { [key: string]: HeroBuilds } = {
 
   "Wraith King": {
     gameplay_version: "7.30e",
-    creator: ContentCreator.TBD,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.physical,
     builds: [
       {
