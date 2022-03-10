@@ -85,6 +85,7 @@ export interface Ability {
   id: number;
   sequence: string; // e.g. Ability2
   is_talent: boolean;
+  talent_level?: number; // 1, 2, 3 or 4
   cooldown: number[];
   mana_cost: number[];
   name: string;
@@ -1168,15 +1169,37 @@ export namespace hero_abilities {
 
   /**
    *
+   * Attention: function is buggy for talents, as differnt heroes can have the same latent. Use getTalent instead.
+   *
    * @param ability name, e.g. "bane_brain_sap" (Bane)
    * @returns Object describing the ability (e.g. id, sequence, is_talent, etc. For further details see 'dota2Abilities.json')
    */
   export function getAbility(ability: string): Ability {
-    DotaLogger.log(`dota2.getAbility(ability: ${ability}): Called`);
+    //DotaLogger.log(`dota2.getAbility(ability: ${ability}): Called`);
+
     for (const hero of Object.keys(dota2Abilities)) {
       for (const a of Object.keys(dota2Abilities[hero])) {
         if (a == ability) {
           return dota2Abilities[hero][a];
+        }
+      }
+    }
+    return null;
+  }
+
+  /**
+   *
+   * @param npcHeroName E.g. npc_dota_hero_dragon_knight
+   * @param talent name, e.g. "bane_brain_sap" (Bane)
+   * @returns Ability object, null it there is no such ability/talent
+   */
+  export function getTalent(npcHeroName: string, talent: string): Ability {
+    //DotaLogger.log(`dota2.getAbility(ability: ${ability}): Called`);
+
+    if (Object.prototype.hasOwnProperty.call(dota2Abilities, npcHeroName)) {
+      for (const a of Object.keys(dota2Abilities[npcHeroName])) {
+        if (a == talent) {
+          return dota2Abilities[npcHeroName];
         }
       }
     }

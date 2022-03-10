@@ -4185,7 +4185,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "elder_titan_ancestral_spirit" },
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Elder Titan",
     audioFile: "ownHero/Elder Titan_6_Spirit scout",
@@ -4194,7 +4194,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Astral Spirit's movement speed is equal to your hero's at Astral Spirit cast, e.g. pop Phase Boots before casting.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "elder_titan_ancestral_spirit" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Elder Titan",
@@ -4432,7 +4432,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "ability", name: "enchantress_enchant" },
   },
-  {
+/*   {
     category: "OwnHero",
     hero: "Enchantress",
     audioFile: "ownHero/Enchantress_4_Tanky",
@@ -4442,7 +4442,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "When not much is happening, you can push out sidelanes or scout with Enchanted creeps.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "enchantress_enchant" },
-  },
+  }, */
   {
     category: "OwnHero",
     hero: "Enchantress",
@@ -4517,7 +4517,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Enigma_2_Sacrifice ranged",
     messageTime: -15,
     textMessage:
-      "Ideally, use Demonic Conversion on own ranged creeps or catapults out of opponents' experience range.",
+      `Ideally, use Demonic Conversion on your ranged creeps or catapults out of opponents' experience range.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "enigma_demonic_conversion" },
   },
