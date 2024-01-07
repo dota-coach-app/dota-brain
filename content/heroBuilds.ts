@@ -1,6 +1,6 @@
 /**
  * heroBuilds.ts contains the ability and items builds for all Dota 2 heroes. This infromation is used across Dota Caoch, i.e. in the app, on the website and in the in-game guides.
- *
+ * T
  * Note that each hero can have several builds.
  *
  * Rules for abilities:
