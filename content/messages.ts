@@ -773,15 +773,6 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "alchemist",
-    audioFile: "ownHero/Alchemist_2_GreevilsGreed1",
-    messageTime: 4 * 60,
-    textMessage:
-      "Understand when you are no longer able to lane and move to the jungle. Alchemist farms insanely fast and you don't want to die and lose Greevil's Greed stacks.",
-    audience: [Audience.ROLE_CORE],
-  },
-  {
-    category: "OwnHero",
-    npcHeroName: "alchemist",
     audioFile: "ownHero/Alchemist_3_Stacks",
     messageTime: 5 * 60,
     textMessage:
@@ -2450,7 +2441,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "centaur",
     audioFile: "ownHero/CentaurWarrunner_1_Ring",
     messageTime: 15,
-    textMessage: `Focus on last hitting to get Helm of Iron Will purchased as soon as possible.`,
+    textMessage: `Focus on last hitting and farm your Bracers.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "ring_of_health" },
   },
@@ -2460,7 +2451,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/CentaurWarrunner_2_Creepskip",
     messageTime: 4 * 60 + 45,
     textMessage:
-      "If you cannot pressure on the lane, consider creep skipping after minute 5 and farming neutral camps nearby.",
+      "If you cannot pressure on the lane or being pressured, consider creep skipping or pulling enemy creeps to your tower after minute 5 as well as farming neutral camps nearby.",
     audience: [Audience.ROLE_OFFLANE],
   },
   {
