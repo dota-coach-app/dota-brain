@@ -3571,7 +3571,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   dawnbreaker: {
     under_review: true,
-    creator: ContentCreator.YoonA,
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -3580,18 +3580,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40471,
         power_level: [1.3, 1.9, 2.1, 2.2],
+        facet: 2,
         abilities: [
-          `dawnbreaker_celestial_hammer`, // 1
-          `dawnbreaker_fire_wreath`, // 2
-          'dawnbreaker_celestial_hammer', // 3
-          'dawnbreaker_fire_wreath', // 4   equals to `starbreaker`
+          `dawnbreaker_fire_wreath`, // 1
+          'dawnbreaker_celestial_hammer`, // 2
+          'dawnbreaker_celestial_hammer`, // 3
+          'dawnbreaker_luminosity', // 4
           'dawnbreaker_celestial_hammer', // 5
           'dawnbreaker_solar_guardian', // 6
           'dawnbreaker_celestial_hammer', // 7
           'dawnbreaker_fire_wreath', // 8
           'dawnbreaker_fire_wreath', // 9
-          'special_bonus_unique_dawnbreaker_celestial_hammer_slow', // 10
-          'dawnbreaker_luminosity', // 11
+          'dawnbreaker_fire_wreath', // 10
+          'special_bonus_unique_dawnbreaker_celestial_hammer_slow', // 11
           'dawnbreaker_solar_guardian', // 12
           'dawnbreaker_luminosity', // 13
           'dawnbreaker_luminosity', // 14
@@ -3600,7 +3601,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'special_bonus_attributes', // 17
           'dawnbreaker_solar_guardian', // 18
           'special_bonus_attributes', // 19
-          'special_bonus_unique_dawnbreaker_solar_guardian_radius', // 20
+          'special_bonus_unique_dawnbreaker_solar_guardian_radius', // 20  
           'special_bonus_attributes', // 21
           'special_bonus_attributes', // 22
           'special_bonus_attributes', // 23
@@ -3610,52 +3611,43 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         items: {
           starting: [
             `tango`,
-            `faerie_fire`,
-            `blood_grenade`,
-            `enchanted_mango`,
-            `orb_of_venom`,
-            `ward_observer`,
-            `ward_sentry`,
+            'enchanted_mango',
+            'faerie_fire',
+            'ward_sentry',
+            'ward_sentry',
+            'ward_observer',
+            'blood_grenade',
+            'magic_stick',
           ],
           early_game: [
             `boots`,
             `magic_wand`,
             `ring_of_basilius`,
             `wind_lace`,
-            `infused_raindrop`,
           ],
           mid_game: [
             `arcane_boots`,
-            `guardian_greaves`,
-            `ultimate_scepter`,
-            `holy_locket`,
-            `pipe`,
+            'pavise`,
+            `solar_crest`,
+            'aghanims_shard',
           ],
-          late_game: [`lotus_orb`, `octarine_core`, `assault`, `refresher`],
+          late_game: ['blink',`ultimate_scepter`, 'holy_locket', `guardian_greaves`, 'black_king_bar'],
           situational: [
             `spirit_vessel`,
-            `aghanims_shard`,
             `glimmer_cape`,
-            `force_staff`,
             `cyclone`,
-            `pavise`,
-            `solar_crest`,
-            `black_king_bar`,
             `crimson_guard`,
-            `boots_of_bearing`,
             `heavens_halberd`,
-            `aeon_disk`,
-            `overwhelming_blink`,
-            `travel_boots`,
+            'octarine_core',
           ],
           core: [
             `arcane_boots`,
-            `guardian_greaves`,
-            `ultimate_scepter`,
-            `holy_locket`,
-            `pipe`,
-            `octarine_core`,
-            `assault`,
+            'solar_crest',
+            'aghanims_shard',
+            'blink',
+            'ultimate_scepter',
+            'holy_locket',
+            'black_king_bar',
           ],
           neutral: [
             `arcane_ring`,
@@ -3677,32 +3669,33 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40472,
         power_level: [2.1, 2.2, 2.5, 2.5],
+        facet: 1,
         abilities: [
-          `dawnbreaker_celestial_hammer`, // 1
-          `dawnbreaker_fire_wreath`, // 2   equals to `starbreaker`
-          `dawnbreaker_celestial_hammer`, // 3
-          `dawnbreaker_luminosity`, // 4
-          `dawnbreaker_celestial_hammer`, // 5
+          `dawnbreaker_fire_wreath`, // 1
+          'dawnbreaker_celestial_hammer`, // 2
+          'dawnbreaker_celestial_hammer`, // 3
+          'dawnbreaker_luminosity', // 4
+          'dawnbreaker_celestial_hammer', // 5
           'dawnbreaker_solar_guardian', // 6
-          `dawnbreaker_celestial_hammer`, // 7
-          `dawnbreaker_luminosity`, // 8
-          `dawnbreaker_fire_wreath`, // 9
-          `dawnbreaker_fire_wreath`, // 10
-          `dawnbreaker_fire_wreath`, // 11
+          'dawnbreaker_celestial_hammer', // 7
+          'dawnbreaker_fire_wreath', // 8
+          'dawnbreaker_fire_wreath', // 9
+          'dawnbreaker_fire_wreath', // 10
+          "special_bonus_unique_dawnbreaker_fire_wreath_swipe", // 11
           'dawnbreaker_solar_guardian', // 12
-          `special_bonus_unique_dawnbreaker_fire_wreath_swipe`, // 13
+          'dawnbreaker_luminosity', // 13
           'dawnbreaker_luminosity', // 14
-          'special_bonus_unique_dawnbreaker_luminosity_crit', // 15
+          "special_bonus_unique_dawnbreaker_luminosity_crit", // 15
           'dawnbreaker_luminosity', // 16
           'special_bonus_attributes', // 17
           'dawnbreaker_solar_guardian', // 18
           'special_bonus_attributes', // 19
-          'special_bonus_unique_dawnbreaker_luminosity_attack_count', // 20
+          "special_bonus_unique_dawnbreaker_luminosity_attack_count", // 20  
           'special_bonus_attributes', // 21
           'special_bonus_attributes', // 22
           'special_bonus_attributes', // 23
           'special_bonus_attributes', // 24
-          'special_bonus_unique_dawnbreaker_fire_wreath_cooldown', // 25
+          "special_bonus_unique_dawnbreaker_fire_wreath_cooldown", // 25
         ],
         items: {
           starting: [
@@ -3711,50 +3704,40 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `branches`,
             `branches`,
             `gauntlets`,
-            `gauntlets`,
+            `circlet',
             `ward_observer`,
           ],
           early_game: [
             `bracer`,
-            `phase_boots`,
             `soul_ring`,
+            `phase_boots`,
             `magic_wand`,
-            `infused_raindrop`,
           ],
-          mid_game: [
-            `echo_sabre`,
-            `desolator`,
-            `aghanims_shard`,
-            `black_king_bar`,
-            `blink`,
+          mid_game: [ 
+            'echo_sabre',
+            'black_king_bar',
+            'aghanims_shard',
+            'blink',
+            'desolator',
           ],
-          late_game: [`harpoon`, `assault`, `greater_crit`, `satanic`],
+          late_game: ['harpoon', 'wind_waker', `arcane_blink`, 'abyssal_blade', 'greater_crit'],
           situational: [
             `orb_of_corrosion`,
-            `vanguard`,
-            `armlet`,
-            `spirit_vessel`,
-            `crimson_guard`,
-            `blade_mail`,
-            `ultimate_scepter`,
-            `pipe`,
-            `guardian_greaves`,
             `heavens_halberd`,
-            `bloodthorn`,
             `silver_edge`,
-            `abyssal_blade`,
-            `overwhelming_blink`,
-            `travel_boots`,
+            'satanic',
+            'sphere',
+            'nullifier',
+            'assault',
           ],
           core: [
             `phase_boots`,
             `soul_ring`,
-            `echo_sabre`,
-            `desolator`,
-            `aghanims_shard`,
+            `echo_sabre`,       
             `black_king_bar`,
-            `harpoon`,
-            `assault`,
+            `aghanims_shard`,
+            'blink',
+            'desolator',
           ],
           neutral: [
             `arcane_ring`,
@@ -3773,7 +3756,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // dawnbreaker_celestial_hammer: `If you can play for a kill, you can put a second point in this spell on level 3 and get Luminosity on Level 4.`,
       },
     ],
-    combo: [
+    combo: [ 
       `dawnbreaker_solar_guardian`,
       `dawnbreaker_celestial_hammer`,
       `dawnbreaker_fire_wreath`,
