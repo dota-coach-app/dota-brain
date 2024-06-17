@@ -742,10 +742,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   antimage: {
     under_review: true,
-    creator: ContentCreator.eidandota,
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -754,6 +754,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40442,
         power_level: [0.9, 1.6, 2.7, 2.7],
+        facet: 2,
         abilities: [
           'antimage_mana_break', // 1
           'antimage_blink', // 2
@@ -783,32 +784,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         ],
         items: {
           starting: [
-            'quelling_blade',
             'tango',
-            'circlet',
-            'ring_of_protection',
             'branches',
-            //"branches",  Removed as costs were 620
+            'branches',
+            'quelling_blade',
+            'slippers',
+            'circlet',
           ],
-          early_game: ['power_treads', 'orb_of_corrosion', 'magic_wand'],
-          mid_game: ['bfury', 'manta', 'skadi'],
-          late_game: ['butterfly', 'abyssal_blade', 'disperser'],
+          early_game: ['power_treads', 'magic_wand', 'cornucopia'],
+          mid_game: ['bfury', 'manta', 'ultimate_scepter', 'skadi'],
+          late_game: ['butterfly', 'abyssal_blade'],
           situational: [
-            'ultimate_scepter',
+            'orb_of_corrosion',
             'black_king_bar',
             'monkey_king_bar',
             'sphere',
             'aghanims_shard',
-            'assault',
+            'nullifier',
+            'disperser',
           ],
-          core: ['power_treads', 'bfury', 'manta', 'abyssal_blade'],
+          core: ['power_treads', 'bfury', 'manta', 'ultimate_scepter'],
           neutral: [
             'broom_handle',
+            'safety_bubble',
             'occult_bracelet',
-            //"ring_of_aquila",
             'pupils_gift',
             'vambrace',
-            //"titan_sliver",
             'elven_tunic',
             'vindicators_axe',
             'mind_breaker',
@@ -823,6 +824,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       `antimage_blink`,
       `abyssal_blade`,
       `manta`,
+      `antimage_counterspell`,
       `attack`,
       `antimage_mana_void`,
     ],
@@ -848,7 +850,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       late_game: {
         all: ['sheepstick', 'sphere', 'aeon_disk'],
         support: ['travel_boots'],
-        core: ['abyssal_blade', 'butterfly', 'assault'],
+        core: ['silver_edge', 'abyssal_blade', 'butterfly', 'assault'],
       },
     },
   },
@@ -2127,10 +2129,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // YoonA plays hero (eidendota would play him as well, but YoonA had him already in the past)
+  // yongy146 plays hero 
   bristleback: {
     under_review: true,
-    creator: ContentCreator.YoonA,
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -2139,6 +2141,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40453,
         power_level: [2.1, 2.6, 2.5, 2.4],
+        facet: 1,
         abilities: [
           'bristleback_quill_spray',
           'bristleback_bristleback',
@@ -2150,7 +2153,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'bristleback_bristleback',
           'bristleback_bristleback',
           `bristleback_bristleback`,
-          `special_bonus_mp_regen_150`,
+          'special_bonus_attack_speed_25',
           'bristleback_warpath',
           'bristleback_viscous_nasal_goo',
           'bristleback_viscous_nasal_goo',
@@ -2173,27 +2176,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `branches`,
             'quelling_blade',
             `gauntlets`,
-            `gauntlets`,
+            `circlet`,
             `ward_observer`,
           ],
           early_game: [
-            `vanguard`,
-            `soul_ring`,
-            `phase_boots`,
+            'bracer',
             `magic_wand`,
-            `infused_raindrop`,
+            'arcane_boots',
+            'vanguard',      
           ],
           mid_game: [
             `ultimate_scepter`,
             `bloodstone`,
-            `eternal_shroud`,
             `aghanims_shard`,
-            `kaya_and_sange`,
+            'black_king_bar'            
           ],
-          late_game: [`shivas_guard`, `travel_boots`, `heart`, `assault`],
+          late_game: [`kaya_and_sange`, `shivas_guard`],
           situational: [
-            `arcane_boots`,
-            `veil_of_discord`,
+            'eternal_shroud',
             `cloak`,
             `pipe`,
             `blade_mail`,
@@ -2201,7 +2201,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `satanic`,
             `abyssal_blade`,
             `greater_crit`,
-            `black_king_bar`,
             `heavens_halberd`,
             `guardian_greaves`,
             `lotus_orb`,
@@ -2209,18 +2208,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
             `overwhelming_blink`,
             `travel_boots_2`,
+            `heart`,
           ],
           core: [
             'vanguard',
-            `soul_ring`,
-            `phase_boots`,
+            'arcane_boots',
             `ultimate_scepter`,
             `bloodstone`,
-            `eternal_shroud`,
             `aghanims_shard`,
+            'black_king_bar',
             `kaya_and_sange`,
             `shivas_guard`,
-            `heart`,
           ],
           neutral: [
             `arcane_ring`,
@@ -2244,6 +2242,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       `bristleback_hairball`,
       `bristleback_quill_spray`,
       `bristleback_viscous_nasal_goo`,
+      'bristleback_bristleback',
     ],
     counter_items: {
       laning_phase: {
@@ -2548,10 +2547,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   chaos_knight: {
     under_review: true,
-    creator: ContentCreator.eidandota,
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
       {
@@ -2560,6 +2559,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40456,
         power_level: [2.2, 2.3, 2.5, 2.2],
+        facet: 1,
         abilities: [
           'chaos_knight_chaos_bolt', // 1
           'chaos_knight_reality_rift', // 2
@@ -2597,31 +2597,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'branches',
           ],
           early_game: [
-            'power_treads',
             'bracer',
-            'magic_stick',
-            'helm_of_iron_will',
+            'power_treads',
+            'magic_wand',
+            'armlet',
           ],
-          mid_game: ['armlet', 'echo_sabre', 'blink'],
+          mid_game: ['orchid', 'manta', 'blink'],
           late_game: [
-            'bloodthorn',
-            'disperser',
-            'harpoon',
+            'black_king_bar',
+            'aghanims_shard',
+            'heart',
             'assault',
-            'overwhelming_blink',
           ],
           situational: [
-            'infused_raindrop',
-            'aghanims_shard',
-            'black_king_bar',
-            'ultimate_scepter',
-            'mage_slayer',
-            'manta',
             'sphere',
             'silver_edge',
-            'heart',
+            'nullifier',
           ],
-          core: ['power_treads', 'armlet', 'echo_sabre', 'blink'],
+          core: ['power_treads', 'armlet', 'orchid', 'manta', 'blink', 'black_king_bar'],
           neutral: [
             'occult_bracelet',
             'duelist_gloves',
@@ -2648,6 +2641,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40457,
         power_level: [2.2, 2.4, 2.4, 2.1],
+        facet: 1,
         abilities: [
           'chaos_knight_chaos_bolt', // 1
           'chaos_knight_reality_rift', // 2
@@ -2685,22 +2679,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'branches',
           ],
           early_game: [
-            'power_treads',
             'bracer',
+            'power_treads',
             'magic_wand',
-            'helm_of_iron_will',
           ],
-          mid_game: ['armlet', 'echo_sabre', 'blink', 'aghanims_shard'],
-          late_game: ['assault', 'overwhelming_blink', 'bloodthorn', 'harpoon'],
+          mid_game: ['armlet', 'orchid', 'blink'],
+          late_game: ['black_king_bar', 'manta', 'bloodthorn', 'heart', 'assault'],
           situational: [
+            'ultimate_scepter',
             'heavens_halberd',
-            'black_king_bar',
-            'manta',
             'silver_edge',
             'abyssal_blade',
-            'heart',
           ],
-          core: ['power_treads', 'armlet', 'blink', 'aghanims_shard'],
+          core: ['power_treads', 'armlet', 'orchid', 'blink', 'black_king_bar'],
           neutral: [
             'duelist_gloves',
             'broom_handle',
@@ -2708,7 +2699,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'orb_of_destruction',
             'elven_tunic',
             'vindicators_axe',
-            //"spell_prism",
             'mind_breaker',
             'ninja_gear',
             'pirate_hat',
@@ -2717,7 +2707,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
-    combo: [],
+    combo: [
+      'blink',
+      'chaos_knight_chaos_bolt', 
+      'chaos_knight_phantasm',
+      'chaos_knight_reality_rift'
+    ],
     counter_items: {
       laning_phase: {
         all: ['wind_lace', 'boots', 'armor'],
