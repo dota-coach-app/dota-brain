@@ -2213,7 +2213,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Bristleback_3_StackCamps",
     messageTime: [3 * 60 + 30, 6 * 60 + 30],
     textMessage:
-      "Alert your supports to stack for you, especially ancient camp as you can clear it at level 7.",
+      "Alert your supports to stack for you, especially ancient camps as you can clear it at level 7.",
     audience: [Audience.ALL],
   },
   {
@@ -2290,7 +2290,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "bristleback",
     audioFile: "enemyHero/Bristleback_4_SilverEdge",
     messageTime: 12 * 60,
-    textMessage: "Silver Edge allows you to break Bristleeback's passives.",
+    textMessage: "Silver Edge allows you to break Bristleback's passives.",
     audience: [Audience.ALL],
     image: { type: "item", name: "silver_edge" },
   },
@@ -2548,7 +2548,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ChaosKnight_1_Aggressive",
     messageTime: 15,
     textMessage:
-      "Try to get level 2 before your opponent and go for a kill with your support. Chaos knight has good kill potential with levels try to catch your enemy out.",
+      "Try to get level 2 before your opponent and go for a kill with your support. Chaos knight has good kill potential with levels. Try to catch enemies that are alone in 2 versus 1 trades.",
     audience: [Audience.ALL],
   },
   {
@@ -2576,7 +2576,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ChaosKnight_3_Illusions",
     messageTime: [7 * 60, 11 * 60],
     textMessage:
-      "Illusions scale with stat attributes, attack speed and movemet speed increases, health regeneration and some attack modifiers like lifesteal and crit.",
+      "Illusions scale with stat attributes, attack speed and movement speed increases, health regeneration and some attack modifiers like lifesteal and crit.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "chaos_knight_phantasm" },
   },
