@@ -7350,6 +7350,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40609,
         power_level: [1.8, 2.1, 2.6, 2.7],
+        facet: 1,
         abilities: [
           'legion_commander_overwhelming_odds', // 1
           'legion_commander_moment_of_courage', // 2
@@ -7360,8 +7361,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `legion_commander_overwhelming_odds`, // 7
           `legion_commander_moment_of_courage`, // 8
           'legion_commander_moment_of_courage', // 9
-          'special_bonus_unique_legion_commander_9', // 10
-          'legion_commander_moment_of_courage', // 11
+          'legion_commander_moment_of_courage', // 10
+          'special_bonus_unique_legion_commander_9', // 11
           'legion_commander_duel', // 12
           `legion_commander_press_the_attack`, // 13
           `legion_commander_press_the_attack`, // 14
@@ -7384,14 +7385,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'gauntlets',
             `circlet`,
             `branches`,
+            'branches',
             `ward_observer`,
           ],
-          early_game: [`bracer`, `phase_boots`, 'soul_ring', `magic_wand`],
+          early_game: [`bracer`, `magic_wand`, `phase_boots`, 'soul_ring'],
           mid_game: [
             `blade_mail`,
             `blink`,
             `black_king_bar`,
-            'silver_edge',
             `aghanims_shard`,
           ],
           late_game: [
@@ -7401,6 +7402,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `greater_crit`,
           ],
           situational: [
+            'silver_edge',
             `monkey_king_bar`,
             `heart`,
             `abyssal_blade`,
@@ -7416,7 +7418,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `blade_mail`,
             `blink`,
             `black_king_bar`,
-            'silver_edge',
             `aghanims_shard`,
             `ultimate_scepter`,
             `assault`,
@@ -7427,10 +7428,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_ring`,
             `dragon_scale`,
             `orb_of_destruction`,
-            //`titan_sliver`,
             `elven_tunic`,
             `ninja_gear`,
-            //`penta_edged_sword`,
             `giants_ring`,
             'desolator_2',
           ],
