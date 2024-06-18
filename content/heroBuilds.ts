@@ -7407,10 +7407,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   leshrac: {
     under_review: true,
-    creator: ContentCreator.eidandota,
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.magical,
     builds: [
       {
@@ -7419,24 +7419,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40659,
         power_level: [1.8, 2.3, 2.5, 2.2],
+        facet: 1,
         abilities: [
-          'leshrac_split_earth', // 1
-          'leshrac_lightning_storm', // 2
+          'leshrac_lightning_storm', // 1
+          'leshrac_split_earth', // 2
           'leshrac_lightning_storm', // 3
           'leshrac_split_earth', // 4
-          'leshrac_lightning_storm', // 5
+          'leshrac_diabolic_edict', // 5
           'leshrac_pulse_nova', // 6
-          'leshrac_lightning_storm', // 7
+          'leshrac_diabolic_edict', // 7
           'leshrac_diabolic_edict', // 8
           'leshrac_diabolic_edict', // 9
-          'leshrac_diabolic_edict', // 10
-          'leshrac_diabolic_edict', // 11
+          'leshrac_lightning_storm', // 10
+          'leshrac_lightning_storm', // 11
           'leshrac_pulse_nova', // 12
           'leshrac_split_earth', // 13
-          'special_bonus_armor_4', // 14
-          'special_bonus_unique_leshrac_6', // 15
-          'leshrac_split_earth', // 16
-          'special_bonus_attributes', // 17
+          'leshrac_split_earth', // 14 
+          'special_bonus_armor_4', // 15
+          'special_bonus_unique_leshrac_6', // 16
+          'leshrac_split_earth', // 17
           'leshrac_pulse_nova', // 18
           'special_bonus_attributes', // 19
           'special_bonus_unique_leshrac_3', // 20
@@ -7455,29 +7456,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'branches',
             'ward_observer',
           ],
-          early_game: ['bottle', 'arcane_boots', 'magic_wand', 'kaya'],
-          mid_game: ['kaya_and_sange', 'shivas_guard', 'aghanims_shard'],
+          early_game: ['bottle', 'magic_wand', 'arcane_boots', 'kaya', 'voodoo_mask'],
+          mid_game: ['cyclone', 'black_king_bar', 'kaya_and_sange', 'bloodstone'],
           late_game: [
-            'sheepstick',
-            'black_king_bar',
-            'overwhelming_blink',
-            'wind_waker',
+            'blink',
+            'aghanims_shard',
             'travel_boots',
+            'shivas_guard',
+            'wind_waker'
+            'overwhelming_blink',
           ],
           situational: [
             'ultimate_scepter',
-            'bloodstone',
-            'ghost',
-            'cyclone',
             'eternal_shroud',
-            'blink',
-            'arcane_blink',
+            'refresher',
+            'sheepstick',
+            'octarine_core',
+            'aeon_disk',
           ],
           core: [
+            'arcane_boots',
             'kaya_and_sange',
-            'shivas_guard',
             'black_king_bar',
-            'aghanims_shard',
+            'bloodstone',
+            'blink',
           ],
           neutral: [
             'mysterious_hat',
@@ -7510,7 +7512,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         support: ['glimmer_cape', 'force_staff', 'spirit_vessel'],
         core: [
           'mage_slayer',
-          //"hood_of_defiance",
           'pipe',
           'eternal_shroud',
           'black_king_bar',
@@ -8447,7 +8448,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   luna: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -8455,11 +8456,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.CARRY],
-
         steam_guide_workshop_ids: { en: 2699959031, es: 3160078396 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40534,
         power_level: [1.5, 1.8, 2.6, 2.7],
+        facet: 1,
         abilities: [
           'luna_lunar_blessing', // 1
           'luna_lucent_beam', // 2
@@ -8475,7 +8476,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'luna_eclipse', // 12
           'luna_eclipse', // 13
           'luna_lucent_beam', // 14
-          'special_bonus_unique_luna_6', // 15
+          'special_bonus_unique_luna_1', // 15
           'luna_lucent_beam', // 16
           'special_bonus_attributes', // 17
           'luna_eclipse', // 18
@@ -8493,6 +8494,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'slippers',
             'circlet',
             'branches',
+            'branches',
             'tango',
           ],
           early_game: [
@@ -8503,20 +8505,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'mask_of_madness',
           ],
           mid_game: [
-            'lesser_crit',
-            'dragon_lance',
-            'black_king_bar',
             'manta',
-            'hurricane_pike',
-            'aghanims_shard',
+            'black_king_bar',
+            'dragon_lance',
+            'lesser_crit',  
           ],
           late_game: [
+            'hurricane_pike',     
             'angels_demise',
             'blink',
-            'skadi',
-            'swift_blink',
-            'satanic',
             'butterfly',
+            'swift_blink',
+            'skadi',
+            'satanic',
+            'aghanims_shard',
           ],
           situational: [
             'silver_edge',
@@ -8527,21 +8529,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'refresher',
           ],
           core: [
+            'power_treads',
+            'mask_of_madness',
             'black_king_bar',
             'manta',
             'hurricane_pike',
             'angels_demise',
-            'skadi',
             'butterfly',
+            'skadi',
             'satanic',
             'greater_crit',
           ],
           neutral: [
-            //"ring_of_aquila",
-            //"dagger_of_ristul", Removed in 7.33
-            //"titan_sliver",
-            //"possessed_mask", Removed in 7.33
-
             // tier 1
             'unstable_wand',
             'safety_bubble',
@@ -8577,6 +8576,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
     combo: [
       `black_king_bar`,
+      'luna_moon_glaive',
       `luna_eclipse`,
       `blink`,
       `manta`,
