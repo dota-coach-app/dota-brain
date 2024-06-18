@@ -1505,8 +1505,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   beastmaster: {
-    under_review: true,
-    creator: ContentCreator.YoonA,
+    under_review: false,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -1515,6 +1515,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40448,
         power_level: [1.8, 2.1, 2.4, 2.2],
+        facet: 2,
         abilities: [
           "beastmaster_wild_axes",
           `beastmaster_call_of_the_wild_boar`,
@@ -1544,70 +1545,46 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            `circlet`,
-            `sobi_mask`,
+            `magic_wand`,
+            `branches`,
+            `branches`,
             `branches`,
             `ward_observer`,
           ],
           early_game: [
-            `boots`,
-            `magic_wand`,
+            `tango`,
             `ring_of_basilius`,
-            `veil_of_discord`,
+            `boots`,
+            `arcane_boots`,
             `wind_lace`,
           ],
-          mid_game: [
-            `arcane_boots`,
-            `ultimate_scepter`,
-            `shivas_guard`,
-            `aghanims_shard`,
-            `blink`,
-          ],
-          late_game: [
-            `octarine_core`,
-            `black_king_bar`,
-            `assault`,
-            `refresher`,
-          ],
+          mid_game: [`ultimate_scepter`, `blink`, `black_king_bar`],
+          late_game: [`shivas_guard`, `refresher`, `travel_boots`],
           situational: [
-            `vanguard`,
+            `aghanims_shard`,
             `guardian_greaves`,
             `heavens_halberd`,
-            `ancient_janggo`,
+            `octarine_core`,
             `crimson_guard`,
-            `helm_of_the_overlord`,
-            `vladmir`,
-            `lotus_orb`,
-            `force_staff`,
+            `assault`,
             `pipe`,
-            `eternal_shroud`,
-            `boots_of_bearing`,
             `kaya_and_sange`,
-            `aeon_disk`,
             `sheepstick`,
-            `wind_waker`,
-            `overwhelming_blink`,
-            `travel_boots`,
           ],
           core: [
-            `veil_of_discord`,
             `arcane_boots`,
             `ultimate_scepter`,
-            `shivas_guard`,
-            `aghanims_shard`,
             `blink`,
-            `octarine_core`,
-            `assault`,
+            `black_king_bar`,
+            `shivas_guard`,
           ],
           neutral: [
+            `safety_bubble`,
             `arcane_ring`,
-            `unstable_wand`,
             `pupils_gift`,
-            `vambrace`,
+            `dragon_scale`,
             `cloak_of_flames`,
-            `ceremonial_robe`,
+            `ogre_seal_totem`,
             `havoc_hammer`,
             `timeless_relic`,
             `giants_ring`,
@@ -4984,8 +4961,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // eidendota plays hero
   ember_spirit: {
-    under_review: true,
-    creator: ContentCreator.yongy146,
+    under_review: false,
+    creator: ContentCreator.eidandota,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -4994,23 +4971,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40607,
         power_level: [1.6, 2.1, 2.5, 2.3],
+        facet: 1,
         abilities: [
-          "ember_spirit_flame_guard", // 1
-          "ember_spirit_sleight_of_fist", // 2
+          "ember_spirit_sleight_of_fist", // 1
+          "ember_spirit_searing_chains", // 2
           "ember_spirit_sleight_of_fist", // 3
-          "ember_spirit_flame_guard", // 4
+          "ember_spirit_searing_chains", // 4
           "ember_spirit_sleight_of_fist", // 5
           "ember_spirit_fire_remnant", // 6
           "ember_spirit_sleight_of_fist", // 7
           "ember_spirit_searing_chains", // 8
           "ember_spirit_searing_chains", // 9
-          "ember_spirit_searing_chains", // 10
-          "ember_spirit_searing_chains", // 11
+          "ember_spirit_flame_guard", // 10
+          "ember_spirit_flame_guard", // 11
           "ember_spirit_flame_guard", // 12
           "ember_spirit_flame_guard", // 13
-          "ember_spirit_fire_remnant", // 14
-          "special_bonus_unique_ember_spirit_1", // 15
-          "special_bonus_unique_ember_spirit_3", // 16
+          "special_bonus_unique_ember_spirit_1", // 14
+          "special_bonus_unique_ember_spirit_3", // 15
+          "ember_spirit_fire_remnant", // 16
           "special_bonus_attributes", // 17
           "ember_spirit_fire_remnant", // 18
           "special_bonus_attributes", // 19
@@ -5026,54 +5004,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "quelling_blade",
             "branches",
             "branches",
+            "branches",
             "faerie_fire",
             "tango",
             "ward_observer",
           ],
-          early_game: [
-            "bottle",
-            "blight_stone",
-            "phase_boots",
-            "magic_wand",
-            "mage_slayer",
-          ],
-          mid_game: [
-            "maelstrom",
-            "black_king_bar",
-            "shivas_guard",
-            "aghanims_shard",
-          ],
-          late_game: [
-            "octarine_core",
-            "gungir",
-            "refresher",
-            "ultimate_scepter",
-          ],
-          situational: [
-            "sphere",
-            "sheepstick",
-            "travel_boots",
-            "kaya_and_sange",
-          ],
+          early_game: ["bottle", "magic_wand", "phase_boots", "mage_slayer"],
+          mid_game: ["maelstrom", "gungir", "aghanims_shard", "shivas_guard"],
+          late_game: ["octarine_core", "black_king_bar", "ultimate_scepter"],
+          situational: ["sphere", "cyclone", "travel_boots", "kaya_and_sange"],
           core: [
             "phase_boots",
             "mage_slayer",
             "maelstrom",
-            "black_king_bar",
-            "shivas_guard",
             "aghanims_shard",
             "octarine_core",
           ],
           neutral: [
             "arcane_ring",
-            "unstable_wand",
-            //"ring_of_aquila",
+            "saftey_bubble",
             "orb_of_destruction",
-            //`quickening_charm`,
+            "dragon_scale",
             "cloak_of_flames",
             "mind_breaker",
-            //"spell_prism",
-            //"penta_edged_sword",
+            "timeless_relic",
             "desolator_2",
             "mirror_shield",
             //`ex_machina`,
