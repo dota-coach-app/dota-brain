@@ -7167,7 +7167,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Leshrac_2_SplitEarthHarass",
     messageTime: 30,
     textMessage:
-      "Use Split Earth when opponents are likely to be stationary, e.g. when they are going for lasthit or deny.",
+      "Use Split Earth when opponents are likely to be stationary, e.g. when they are going for lasthit or deny. Also, use it immediately after Lightning Storm to increase chances of landing the stun.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "leshrac_split_earth" },
   },
@@ -7207,7 +7207,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Leshrac_6_BuildingDamage",
     messageTime: [6 * 60, 11 * 60, 16 * 60],
     textMessage:
-      "Leshrac is really good at taking building early on due to wave clear and Diabolic Edict.",
+      "Leshrac is really good at taking buildings early on due to wave clear and Diabolic Edict.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "leshrac_diabolic_edict" },
   },
@@ -7238,7 +7238,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 11 * 60 + 30,
     repeatTime: 10 * 60,
     textMessage:
-      "Leshrac is great at splitpushing due to mobility, waveclear and tower damage.",
+      "Leshrac is great at splitpushing due to mobility, wave clear and tower damage.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "leshrac_pulse_nova" },
   },
@@ -7248,7 +7248,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Leshrac_10_KiteBlackKingBar",
     messageTime: [14 * 60 + 15, 19 * 60 + 15],
     textMessage:
-      "When opponents get Black King Bars you typically need to kite those and itemize to survive their duration.",
+      "When opponents get Black King Bars, you typically need to kite those and itemize to survive their duration.",
     audience: [Audience.ALL],
   },
   {
@@ -8071,17 +8071,17 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_10_moon_glaive",
     messageTime: 3 * 60,
     textMessage:
-      "Max Lunar Blessing if you are still able to dominate the lane past level 5. Otherwise, keep Lunar Blessing at two levels and max Moon Glaives first for maximizing farm speed.",
+      "Don't forget to use Moon Glaives in lane when trading to dish out extra damage and tank lesser incoming damage.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "luna_moon_glaive" },
   },
   {
     category: "OwnHero",
     npcHeroName: "luna",
-    audioFile: "ownHero/Luna_4_Stacks",
+    audioFile: "ownHero/Luna_4_MoonGlaiveTarget",
     messageTime: [4 * 60, 8 * 60],
     textMessage:
-      "Alert your teammates to stack for you as you can clear stacks easily with Moon Glaives.",
+      "Target creeps with higher health as the bounces of Moon Glaives does lesser damage when bounced to nearby creeps.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "luna_moon_glaive" },
   },
@@ -8121,7 +8121,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Luna_8_AghanimsShard",
     messageTime: 20 * 60,
     textMessage:
-      "Start fights with Aghanim's Shard activated for extra tankiness and damage over time.",
+      "Start fights with Moon Glaives activated for extra tankiness and damage over time.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
