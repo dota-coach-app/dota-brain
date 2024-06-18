@@ -3905,7 +3905,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   death_prophet: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -3918,6 +3918,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40474,
         power_level: [2.1, 2.3, 2.5, 2.4],
+        facet: 1,
         abilities: [
           "death_prophet_carrion_swarm", // 1
           "death_prophet_spirit_siphon", // 2
@@ -3987,9 +3988,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "aghanims_shard",
           ],
           neutral: [
-            //`quickening_charm`,
-            //`spell_prism`,
-            //`ex_machina`,
             //tier 1
             "arcane_ring",
             "mysterious_hat",
@@ -4218,8 +4216,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   doom_bringer: {
     under_review: true,
-    creator: ContentCreator.eidandota,
-    damage_type: DamageType.magical,
+    creator: ContentCreator.yongy146,
+    damage_type: DamageType.neutral,
     builds: [
       {
         roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE],
@@ -4227,6 +4225,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40476,
         power_level: [1.4, 1.9, 2.4, 2.5],
+        facet: 1,
         abilities: [
           `doom_bringer_scorched_earth`, // 1
           `doom_bringer_devour`, // 2
@@ -4256,20 +4255,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            `circlet`,
-            `magic_stick`,
-            `branches`,
-            `ward_observer`,
+          'quelling_blade',
+          'tango',
+          'branches',
+          'branches',
+          'gauntlets',
+          'circlet',
+          'ward_observer',
           ],
-          early_game: [`phase_boots`, `veil_of_discord`, `magic_wand`],
-          mid_game: [`black_king_bar`, `blink`, `shivas_guard`],
+          early_game: ['bracer', 'magic_wand', `phase_boots`, `veil_of_discord`],
+          mid_game: [`shivas_guard`, `black_king_bar`, `blink`],
           late_game: [
             `octarine_core`,
+            'aghanims_shard',
             `refresher`,
-            `overwhelming_blink`,
-            "travel_boots",
+            `arcane_blink`,
+            'travel_boots',
           ],
           situational: [
             "hand_of_midas",
@@ -4285,9 +4286,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           core: [
             `phase_boots`,
             `veil_of_discord`,
-            `blink`,
+            `shivas_guard`,     
             `black_king_bar`,
-            `shivas_guard`,
+            `blink`,  
           ],
           neutral: [
             `arcane_ring`,
@@ -4320,9 +4321,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         all: ["spirit_vessel", "lotus_orb", "cloak"],
         support: ["glimmer_cape", "force_staff"],
         core: [
-          /* "hood_of_defiance", */
-          "pipe",
-          "black_king_bar",
+          'pipe',
+          'black_king_bar',
           `sange_and_yasha`,
         ],
       },
@@ -4345,77 +4345,77 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40477,
         power_level: [1.5, 2.3, 2.5, 2.4],
+        facet: 2,
         abilities: [
-          "dragon_knight_breathe_fire", // 1
-          "dragon_knight_dragon_blood", // 2
-          "dragon_knight_dragon_blood", // 3
-          "dragon_knight_breathe_fire", // 4
-          "dragon_knight_dragon_tail", // 5
-          "dragon_knight_elder_dragon_form", // 6
-          "dragon_knight_breathe_fire", // 7
-          "dragon_knight_breathe_fire", // 8
-          "dragon_knight_dragon_blood", // 9
-          "special_bonus_attack_damage_15", // 10
-          "dragon_knight_dragon_blood", // 11
-          "dragon_knight_elder_dragon_form", // 12
-          "dragon_knight_dragon_tail", // 13
-          "dragon_knight_dragon_tail", // 14
-          "special_bonus_hp_300", // 15
-          "dragon_knight_dragon_tail", // 16
-          "special_bonus_attributes", // 17
-          "dragon_knight_elder_dragon_form", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_dragon_knight_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_dragon_knight_8", // 25
+          'dragon_knight_breathe_fire', // 1
+          'dragon_knight_dragon_blood', // 2
+          'dragon_knight_dragon_blood', // 3
+          'dragon_knight_breathe_fire', // 4
+          'dragon_knight_dragon_tail', // 5 
+          'dragon_knight_elder_dragon_form', // 6
+          'dragon_knight_dragon_blood', // 7
+          'dragon_knight_dragon_blood', // 8
+          'dragon_knight_breathe_fire', // 9
+          'dragon_knight_breathe_fire', // 10
+          'special_bonus_attack_damage_15', // 11
+          'dragon_knight_elder_dragon_form', // 12
+          'dragon_knight_dragon_tail', // 13
+          'dragon_knight_dragon_tail', // 14
+          'special_bonus_hp_300', // 15
+          'dragon_knight_dragon_tail', // 16
+          'special_bonus_attributes', // 17
+          'dragon_knight_elder_dragon_form', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_dragon_knight_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_dragon_knight_8', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "gauntlets",
-            "circlet",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'branches',
+            'gauntlets',
+            'circlet',
+            'ward_observer',
           ],
           early_game: [
-            "bracer",
-            "soul_ring",
-            "power_treads",
-            "magic_wand",
-            "hand_of_midas",
+            'bracer',
+            'soul_ring',
+            'power_treads',
+            'magic_wand',
+            'mage_slayer",
           ],
-          mid_game: ["blink", "aghanims_shard", "black_king_bar"],
+          mid_game: ['black_king_bar', 'blink'],
           late_game: [
-            "ultimate_scepter",
-            "assault",
-            "greater_crit",
-            "overwhelming_blink",
-            "octarine_core",
+            'ultimate_scepter',
+            'assault',
+            'greater_crit',
+            'overwhelming_blink',
+            'octarine_core',
+            'aghanims_shard',
           ],
-          situational: ["heavens_halberd", "silver_edge", "mjollnir"],
+          situational: ['midas', 'orchid', 'heavens_halberd', 'silver_edge', 'mjollnir', 'sphere', 'satanic'],
           core: [
-            "power_treads",
-            "soul_ring",
-            "hand_of_midas",
-            "blink",
-            "aghanims_shard",
-            "black_king_bar",
-            "ultimate_scepter",
+            'power_treads',
+            'soul_ring',
+            'mage_slayer",
+            'black_king_bar',
+            'blink',
+            'ultimate_scepter',
           ],
           neutral: [
-            "duelist_gloves",
-            "broom_handle",
-            "vambrace",
-            "gossamer_cape",
-            //"titan_sliver",
-            "ogre_seal_totem",
-            "ninja_gear",
-            //"spell_prism",
-            //`fallen_sky`,
-            "giants_ring",
+            'duelist_gloves',
+            'broom_handle',
+            'vambrace',
+            'gossamer_cape',
+            'ogre_seal_totem',
+            'ninja_gear',
+            'giants_ring',
           ],
         },
       },
@@ -4447,7 +4447,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   drow_ranger: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -4459,82 +4459,80 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40478,
         power_level: [1.7, 1.8, 2.6, 2.7],
+        facet: 1,
         abilities: [
-          "drow_ranger_frost_arrows", // 1
-          "drow_ranger_multishot", // 2
-          "drow_ranger_frost_arrows", // 3
-          "drow_ranger_wave_of_silence", // 4
-          "drow_ranger_multishot", // 5
-          "drow_ranger_marksmanship", // 6
-          "drow_ranger_multishot", // 7
-          "drow_ranger_multishot", // 8
-          "drow_ranger_frost_arrows", // 9
-          "special_bonus_unique_drow_ranger_2", // 10
-          "drow_ranger_frost_arrows", // 11
-          "drow_ranger_marksmanship", // 12
-          "drow_ranger_wave_of_silence", // 13
-          "drow_ranger_wave_of_silence", // 14
-          "special_bonus_unique_drow_ranger_6", // 15
-          "drow_ranger_wave_of_silence", // 16
-          "special_bonus_attributes", // 17
-          "drow_ranger_marksmanship", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_drow_ranger_1", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_drow_ranger_3", // 25
+          'drow_ranger_frost_arrows', // 1
+          'drow_ranger_multishot', // 2
+          'drow_ranger_frost_arrows', // 3
+          'drow_ranger_wave_of_silence', // 4
+          'drow_ranger_multishot', // 5
+          'drow_ranger_marksmanship', // 6
+          'drow_ranger_multishot', // 7
+          'drow_ranger_multishot', // 8
+          'drow_ranger_frost_arrows', // 9
+          'special_bonus_unique_drow_ranger_2', // 10
+          'drow_ranger_frost_arrows', // 11
+          'drow_ranger_marksmanship', // 12
+          'drow_ranger_wave_of_silence', // 13
+          'drow_ranger_wave_of_silence', // 14
+          'special_bonus_lifesteal_20', // 15
+          'drow_ranger_wave_of_silence', // 16
+          'special_bonus_attributes', // 17
+          'drow_ranger_marksmanship', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_drow_ranger_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_drow_ranger_3', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "slippers",
-            "branches",
-            "circlet",
-            "quelling_blade",
+            'tango',
+            'slippers',
+            'branches',
+            'branches',
+            'circlet',
+            'quelling_blade',
           ],
           early_game: [
-            "wraith_band",
-            "power_treads",
-            "ring_of_basilius",
-            "magic_wand",
-            "dragon_lance",
+            'wraith_band',
+            'power_treads',
+            'null_talisman',
+            'magic_wand',
+            'dragon_lance',
           ],
           mid_game: [
-            "ultimate_scepter",
-            "hurricane_pike",
-            "black_king_bar",
-            "butterfly",
-            "aghanims_shard",
+          'yasha',
+          'ultimate_scepter',
+          'hurricane_pike',
+          'manta',
           ],
-          late_game: ["swift_blink", "skadi", "satanic"],
+          late_game: ['black_king_bar', 'butterfly', 'aghanims_shard', 'greater_crit', 'skadi', 'satanic'],
           situational: [
-            "greater_crit",
-            "sphere",
-            "mjollnir",
-            "hand_of_midas",
-            "manta",
-            "blink",
+            'sphere',
+            'mjollnir',
+            'hand_of_midas',
+            'blink',
           ],
           core: [
-            "power_treads",
-            "hurricane_pike",
-            "ultimate_scepter",
-            "black_king_bar",
+            'power_treads',
+            'ultimate_scepter',
+            'hurricane_pike',
+            'manta',
+            'black_king_bar',
           ],
           neutral: [
-            "lance_of_pursuit",
-            "unstable_wand",
-            "grove_bow",
-            //"ring_of_aquila",
-            //"titan_sliver",
-            "elven_tunic",
-            "ninja_gear",
-            "mind_breaker",
-            "apex",
-            "force_boots",
-            "mirror_shield",
+            'lance_of_pursuit',
+            'unstable_wand',
+            'grove_bow',
+            'elven_tunic',
+            'ninja_gear',
+            'mind_breaker',
+            'apex',
+            'force_boots',
+            'mirror_shield',
           ],
         },
       },
@@ -5509,7 +5507,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   faceless_void: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -5521,6 +5519,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40599,
         power_level: [1.1, 1.7, 2.7, 2.9],
+        facet: 1,
         abilities: [
           "faceless_void_time_walk", // 1
           "faceless_void_time_lock", // 2
@@ -5550,11 +5549,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "slippers",
-            "circlet",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'branches',
+            'slippers',
+            'circlet',
           ],
           early_game: [
             "wraith_band",
@@ -5564,32 +5564,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           mid_game: [
             `maelstrom`,
-            `yasha`,
             `black_king_bar`,
-            `manta`,
+            `mjollnir',
             `aghanims_shard`,
           ],
           late_game: [
-            `mjollnir`,
-            `butterfly`,
             `skadi`,
-            "refresher",
-            "greater_crit",
+            `butterfly`,
+            'refresher',
+            'greater_crit',
           ],
           situational: [
-            "hand_of_midas",
-            "sphere",
-            "monkey_king_bar",
-            `sange_and_yasha`,
-            `blink`,
+            'manta',
+            'hand_of_midas',
+            'sphere',
+            'monkey_king_bar',
             `silver_edge`,
-            `diffusal_blade`,
             `ultimate_scepter`,
             `satanic`,
             `nullifier`,
-            `disperser`,
-            `swift_blink`,
-            `travel_boots`,
           ],
           core: [
             "power_treads",
@@ -5602,24 +5595,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `skadi`,
           ],
           neutral: [
-            //"possessed_mask", Removed in 7.33
-            "lance_of_pursuit",
-            "broom_handle",
-            //"misericorde",
-            //"dagger_of_ristul", Removed in 7.33
-            //"ring_of_aquila",
-            "vambrace",
-            "elven_tunic",
-            //"titan_sliver",
-            "mind_breaker",
-            "ninja_gear",
-            "pirate_hat",
-            "apex",
+            'lance_of_pursuit',
+            'broom_handle',
+            'vambrace',
+            'elven_tunic',
+            'mind_breaker',
+            'ninja_gear',
+            'pirate_hat',
+            'apex',
           ],
         },
       },
     ],
-    combo: [],
+    combo: [
+      'faceless_void_time_walk', 
+      'faceless_void_chronosphere',
+      'faceless_void_time_dilation',
+      'attack',
+    ],
     counter_items: {
       laning_phase: {
         all: ["wind_lace", "boots", "armor"],
@@ -6875,7 +6868,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   juggernaut: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -6887,6 +6880,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40610,
         power_level: [1.9, 2.3, 2.6, 2.7],
+        facet: 1,
         abilities: [
           "juggernaut_blade_fury", // 1
           "juggernaut_blade_dance", // 2
@@ -6897,7 +6891,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "juggernaut_blade_fury", // 7
           `juggernaut_healing_ward`, // 8
           `juggernaut_blade_dance`, // 9
-          `special_bonus_unique_juggernaut_3`, // 10
+          `special_bonus_unique_juggernaut_4`, // 10
           `juggernaut_blade_dance`, // 11
           "juggernaut_omni_slash", // 12
           `juggernaut_blade_dance`, // 13
@@ -6918,12 +6912,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           starting: [
             "tango",
             `branches`,
-            "quelling_blade",
+            'branches',
+            'quelling_blade',
             `slippers`,
             `circlet`,
           ],
-          early_game: ["wraith_band", `phase_boots`, "magic_wand"],
-          mid_game: ["bfury", `manta`, "blink", "ultimate_scepter"],
+          early_game: ['wraith_band', `power_treads`, 'magic_wand'],
+          mid_game: ['bfury', `manta`, 'blink', 'ultimate_scepter'],
           late_game: [
             `butterfly`,
             `abyssal_blade`,
@@ -6932,7 +6927,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "aghanims_shard",
           ],
           situational: [
-            "maelstrom",
+            'phase_boots',
+            'maelstrom',
             `mjollnir`,
             `diffusal_blade`,
             `sange_and_yasha`,
@@ -6940,19 +6936,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `monkey_king_bar`,
             `nullifier`,
           ],
-          core: [`phase_boots`, `bfury`, `manta`, `blink`, "ultimate_scepter"],
+          core: [`power_treads`, `bfury`, `manta`, `blink`, 'ultimate_scepter', 'butterfly'],
           neutral: [
-            //"possessed_mask", Removed in 7.33
-            "broom_handle",
-            "duelist_gloves",
+            'broom_handle',
+            'duelist_gloves',
             `orb_of_destruction`,
-            //"ring_of_aquila",
-            "elven_tunic",
-            //"titan_sliver",
-            "mind_breaker",
-            //`penta_edged_sword`,
-            //`flicker`,
-            "pirate_hat",
+            'elven_tunic',
+            'mind_breaker',
+            'pirate_hat',
             `apex`,
           ],
         },
@@ -7346,6 +7337,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40609,
         power_level: [1.8, 2.1, 2.6, 2.7],
+        facet: 1,
         abilities: [
           "legion_commander_overwhelming_odds", // 1
           "legion_commander_moment_of_courage", // 2
@@ -7355,10 +7347,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "legion_commander_duel", // 6
           `legion_commander_overwhelming_odds`, // 7
           `legion_commander_moment_of_courage`, // 8
-          "legion_commander_moment_of_courage", // 9
-          "special_bonus_unique_legion_commander_9", // 10
-          "legion_commander_moment_of_courage", // 11
-          "legion_commander_duel", // 12
+          'legion_commander_moment_of_courage', // 9
+          'legion_commander_moment_of_courage', // 10
+          'special_bonus_unique_legion_commander_9', // 11
+          'legion_commander_duel', // 12
           `legion_commander_press_the_attack`, // 13
           `legion_commander_press_the_attack`, // 14
           `special_bonus_unique_legion_commander_4`, // 15
@@ -7380,14 +7372,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "gauntlets",
             `circlet`,
             `branches`,
+            'branches',
             `ward_observer`,
           ],
-          early_game: [`bracer`, `phase_boots`, "soul_ring", `magic_wand`],
+          early_game: [`bracer`, `magic_wand`, `phase_boots`, 'soul_ring'],
           mid_game: [
             `blade_mail`,
             `blink`,
             `black_king_bar`,
-            "silver_edge",
             `aghanims_shard`,
           ],
           late_game: [
@@ -7397,6 +7389,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `greater_crit`,
           ],
           situational: [
+            'silver_edge',
             `monkey_king_bar`,
             `heart`,
             `abyssal_blade`,
@@ -7412,7 +7405,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `blade_mail`,
             `blink`,
             `black_king_bar`,
-            "silver_edge",
             `aghanims_shard`,
             `ultimate_scepter`,
             `assault`,
@@ -7423,10 +7415,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_ring`,
             `dragon_scale`,
             `orb_of_destruction`,
-            //`titan_sliver`,
             `elven_tunic`,
             `ninja_gear`,
-            //`penta_edged_sword`,
             `giants_ring`,
             "desolator_2",
           ],
