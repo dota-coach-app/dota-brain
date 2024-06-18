@@ -2213,7 +2213,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Bristleback_3_StackCamps",
     messageTime: [3 * 60 + 30, 6 * 60 + 30],
     textMessage:
-      "Alert your supports to stack for you, especially ancient camp as you can clear it at level 7.",
+      "Alert your supports to stack for you, especially ancient camps as you can clear it at level 7.",
     audience: [Audience.ALL],
   },
   {
@@ -2290,7 +2290,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "bristleback",
     audioFile: "enemyHero/Bristleback_4_SilverEdge",
     messageTime: 12 * 60,
-    textMessage: "Silver Edge allows you to break Bristleeback's passives.",
+    textMessage: "Silver Edge allows you to break Bristleback's passives.",
     audience: [Audience.ALL],
     image: { type: "item", name: "silver_edge" },
   },
@@ -2548,7 +2548,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ChaosKnight_1_Aggressive",
     messageTime: 15,
     textMessage:
-      "Try to get level 2 before your opponent and go for a kill with your support. Chaos knight has good kill potential with levels try to catch your enemy out.",
+      "Try to get level 2 before your opponent and go for a kill with your support. Chaos knight has good kill potential with levels. Try to catch enemies that are alone in 2 versus 1 trades.",
     audience: [Audience.ALL],
   },
   {
@@ -2576,7 +2576,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ChaosKnight_3_Illusions",
     messageTime: [7 * 60, 11 * 60],
     textMessage:
-      "Illusions scale with stat attributes, attack speed and movemet speed increases, health regeneration and some attack modifiers like lifesteal and crit.",
+      "Illusions scale with stat attributes, attack speed and movement speed increases, health regeneration and some attack modifiers like lifesteal and crit.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "chaos_knight_phantasm" },
   },
@@ -5181,7 +5181,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Be patient in teamfights, avoid showing too early and wait for opponets to clump up for your combo.",
+      `Be patient in teamfights, avoid showing too early and wait for opponents to clump up for your combo.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "enigma_black_hole" },
   },
@@ -7861,7 +7861,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `lion`,
     audioFile: `ownHero/Lion_10_ManaDrainDamage`,
     messageTime: 2 * 60 + 15,
-    textMessage: `Position yourself to get an uninterrupted Mana Drain as a follow up on Earth Spike to harass enemy heroes from a distance.`,
+    textMessage: `With the Essence Eater facet, position yourself to get an uninterrupted Mana Drain as a follow up on Earth Spike to harass enemy heroes from a distance.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `lion_mana_drain` },
   },
@@ -11308,7 +11308,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "pangolier",
     audioFile: "ownHero/Pangolier_8_Roshan2",
     messageTime: 14 * 60 + 50,
-    textMessage: `Pick up Aghanims Shard at minute 15 as it gives you another survivability tool and reliably channel Rolling Thunder.`,
+    textMessage: `Pick up Aghanims Shard later in the game as it gives you another survivability tool and reliably channel Rolling Thunder.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -15991,19 +15991,19 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "tinker",
     audioFile: "ownHero/Tinker_1_SecureRanged",
     messageTime: 15,
-    textMessage: `Secure ranged creep last hits with Laser and potentially harass the opponent at the same time.`,
+    textMessage: `You can use Laser to blind the enemy hero and secure or deny creeps while your opponent cannot do any right click damage.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "tinker_laser" },
   },
   {
     category: "OwnHero",
     npcHeroName: "tinker",
-    audioFile: "ownHero/Tinker_2_RocketHarass",
+    audioFile: `ownHero/Tinker_2_LaserHarass`,
     messageTime: 30,
     textMessage:
-      "If the opponents don't have great health regeneration, you can whittle them down with rocket spam.",
+      `If the enemy laner does not have great HP regeneration, you can whittle them down with Laser spam along with right clicks and March of the Machines.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "tinker_heat_seeking_missile" },
+    image: { type: `ability`, name: `tinker_laser` },
   },
   {
     category: "OwnHero",
@@ -16011,9 +16011,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tinker_3_Stacks",
     messageTime: [3 * 60 + 30, 6 * 60 + 30],
     textMessage:
-      "Ask your teammates to stack and make some yourself. You can clear ancients with maxed Laser under smoke.",
+      `Ask your teammates to stack and make some yourself. You can clear multiple jungle camps and ancients with March of the Machines.`,
     audience: [Audience.ALL],
-    image: { type: "ability", name: "tinker_laser" },
+    image: { type: `ability`, name: `tinker_march_of_the_machines` },
   },
   {
     category: "OwnHero",
@@ -16072,7 +16072,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Fight under your vision to be able to do more damage with rockets and position easier, even place wards yourself.",
+      `Fight under your vision to position yourself in a safe spot for the Laser and March of the Machines spam. You can even place the wards yourself.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ward_observer" },
   },
@@ -16180,7 +16180,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: "Be aware of Tinker's Blink Dagger timing.",
     audience: [Audience.ALL],
   },
-  {
+  /* {
     category: "EnemyHero",
     npcHeroName: "tinker",
     audioFile: "enemyHero/Tinker_6_AvoidTrees",
@@ -16188,7 +16188,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage:
       "You can dodge Tinker's Heat-Seeking Missile by using Smoke of Deceit or blinking away.",
     audience: [Audience.ALL],
-  },
+  }, */
   {
     category: "EnemyHero",
     npcHeroName: "tinker",
@@ -16231,6 +16231,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: [25 * 60 + 10, 35 * 60 + 10, 45 * 60 + 10],
     textMessage:
       "It is really hard to push highground against Tinker. Be patient and take fights outside the base.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: `EnemyHero`,
+    npcHeroName: `tinker`,
+    audioFile: `enemyHero/Tinker_12_DisableAfterShield`,
+    messageTime: [21 * 60 + 10, 31 * 60 + 10, 41 * 60 + 10, 51 * 60 + 10],
+    textMessage:
+      `Against the Translocator facet, try to disable Tinker only after you break through his Defense Matrix as he gets a strong dispel when the shield expires.`,
     audience: [Audience.ALL],
   },
 
@@ -17701,7 +17710,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Visage_3_FamiliarsUsage",
     messageTime: [7 * 60 + 30, 17 * 60 + 30, 27 * 60 + 30],
     textMessage:
-      "Use familiars to control runes, stack camps, gank lanes even without your hero, drag and cut creepwaves.",
+      `With the Sepulchre facet, use familiars to control runes, stack camps, gank lanes even without your hero, drag and cut creepwaves.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "visage_summon_familiars" },
   },
@@ -17711,9 +17720,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Visage_4_DontOverrotate",
     messageTime: [7 * 60 + 45, 11 * 60 + 45],
     textMessage:
-      "Don't over-rotate. Work your way to Orchid as it allows you to solo kill most of the heroes.",
+      `Try not to over rotate. Work your way to Gleipnir as it allows you to solo kill most of the heroes.`,
     audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "orchid" },
+    image: { type: `item`, name: `gungir` },
   },
   {
     category: "OwnHero",
@@ -17744,6 +17753,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Pick up Aghanims Shard later in the game as it allows you to survive jumps and provides another stun.",
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
+  },
+  {
+    category: `OwnHero`,
+    npcHeroName: `visage`,
+    audioFile: `ownHero/Visage_8_BootsofTravel`,
+    messageTime: 25 * 60 + 30,
+    textMessage:
+      `With Boots of Travel, you can TP around the map to join fight or split push and bring your Familiars to you with the alternate cast of Summon Familiars.`,
+    audience: [Audience.ALL],
+    image: { type: `item`, name: `travel_boots` },
   },
 
   {

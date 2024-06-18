@@ -3,6 +3,7 @@
  *
  * (C) Dota Coach, 2024. All rights reserved.
  */
+import { IntlShape } from "react-intl";
 import {
   IHeroBuild,
   getSteamGuideLink,
@@ -10,7 +11,6 @@ import {
   isCoreItem,
 } from "../content/heroBuilds";
 import { getHeroContent } from "./heroContent";
-import { IntlShape } from "react-intl";
 import * as PlayerRoles from "../utilities/playerRoles";
 import * as DotaLogger from "@utilities/log/log";
 
