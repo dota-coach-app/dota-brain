@@ -11410,10 +11410,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "phantom_assassin",
-    audioFile: "ownHero/PhantomAssassin_2_RingOfHealth",
+    audioFile: "ownHero/PhantomAssassin_2_Cornucopia",
     messageTime: 30,
     textMessage:
-      "Try to get to cornucopia in tough lanes and put a point in Blur on level 2. Otherwise you will need extra regen.",
+      "Try to get to cornucopia early in tough lanes and skip power treads. Send out extra regen if necessary to sustain and survive the lane.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "cornucopia" },
   },
@@ -11452,7 +11452,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PhantomAssassin_9_PhantomStrikeFarm",
     messageTime: [5 * 60],
     textMessage:
-      "Make sure to max phantom_strike after stifling dagger for faster farming speed.",
+      "Make sure to max phantom strike after stifling dagger for faster farming speed.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "phantom_assassin_phantom_strike" },
   },
@@ -11473,7 +11473,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/PhantomAssassin_7_CounterItems",
     messageTime: [12 * 60 + 15, 22 * 60 + 15],
     textMessage:
-      "Check opponents' inventories for break effects and evasion-piercing items. Adjust playstyle and itemization.",
+      "Check opponents' inventories for break effects and evasion-piercing items. Adjust playstyle and itemization accordingly.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "black_king_bar" },
   },
@@ -11512,7 +11512,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/PhantomAssassin_3_ArmorItems",
     messageTime: 5 * 60 + 15,
     textMessage:
-      "Armor items are good against PA as she is all about physical damage and armor reduction",
+      "Armor items are good against PA as she is all about physical damage",
     audience: [Audience.ALL],
   },
   {
@@ -11527,10 +11527,10 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "EnemyHero",
     npcHeroName: "phantom_assassin",
-    audioFile: "enemyHero/PhantomAssassin_5_BlurAbility",
+    audioFile: "enemyHero/PhantomAssassin_5_InnatePassive",
     messageTime: 8 * 60 + 15,
     textMessage:
-      "Counter PA's Blur ability with items piercing through evasion, breaking passive or causing magical damage",
+      "Consider purchasing items that pierce through evasion, breaks passives or causes magical damage to counter PA's innate passive evasion ability",
     audience: [Audience.ALL],
   },
   {
@@ -12498,7 +12498,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
     textMessage:
-      "Blink or position yourself in such a way that you land a multi-hero Sonic Wave in the fights.",
+      "Blink or position yourself in such a way that you can land a multi-hero Sonic Wave in fights.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "queenofpain_sonic_wave" },
   },
@@ -12548,7 +12548,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/QueenOfPain_2_Blink",
     messageTime: 30,
     textMessage:
-      "Look to play aggressively on Queen of Pain once her Blink is on cooldown. She's very squishy.",
+      "Look to play aggressively on Queen of Pain once her Blink is on cooldown. She is very squishy.",
     audience: [Audience.ALL],
   },
   {
@@ -13993,7 +13993,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Slardar_5_Roshan",
     messageTime: [15 * 60 + 10, 20 * 60 + 10, 25 * 60 + 10],
     textMessage:
-      "Slardar lineups are able to take Roshan early on. Ward around Roshpit and check.",
+      "Slardar lineups are able to take Roshan early on. Ward around Roshpit and check it frequently incase of their smoke attempts to take down Roshan.",
     audience: [Audience.ALL],
   },
 
