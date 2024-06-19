@@ -7463,7 +7463,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'aghanims_shard',
             'travel_boots',
             'shivas_guard',
-            'wind_waker'
+            'wind_waker',
             'overwhelming_blink',
           ],
           situational: [
