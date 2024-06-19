@@ -9106,7 +9106,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Meepo_1_ControlRunes",
     messageTime: [2 * 60 + 45, 7 * 60 + 45],
     textMessage:
-      "Meepo farms really fast. Focus on pushing out waves, optimizing farming routes and stacking.",
+      "Control both of the Runes everytime it spawns by sending both your main and clone to each of the rune to prevent the enemy midlaner from taking it.",
     audience: [Audience.ALL],
     image: { type: "ability", name: "meepo_divided_we_stand" },
   },
@@ -9135,7 +9135,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Meepo_4_GankItems",
     messageTime: 10 * 60 + 15,
     textMessage:
-      "Once you have Diffusal Blade and dragon lance, look for pick-offs.",
+      "Once you have Diffusal Blade, look for pick-offs.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "diffusal_blade" },
   },
@@ -10406,7 +10406,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Necrophos_2_Burst",
     messageTime: -50,
     textMessage:
-      "Burst Necrophos down, so he can't last hit creeps and regain HP and mana with Heartstopper Aura.",
+      "Burst Necrophos down, so he can't last hit creeps and regain HP and mana with his passive.",
     audience: [Audience.IN_LANE],
   },
   {

@@ -9771,32 +9771,33 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Mid: 1.4	2.6	2.3	1.9 [77%]
         // Carry: 1.3	2.6	2.3	1.9 [15%]
         power_level: [1.4, 2.6, 2.3, 1.9],
+        facet: 1,
         abilities: [
           `meepo_poof`, // 1
           `meepo_ransack`, // 2
-          `meepo_earthbind`, // 3
-          'meepo_divided_we_stand', // 4
+          'meepo_divided_we_stand', // 3 able to upgrade at level 3 with facet 1  
+          `meepo_earthbind`, // 4
           'meepo_poof', // 5
-          `meepo_poof`, // 6
+          `meepo_earthbind`, // 6
           'meepo_poof', // 7
-          `meepo_earthbind`, // 8
+          'meepo_poof', // 8
           `meepo_ransack`, // 9
-          `special_bonus_unique_meepo_2`, // 10
-          'meepo_divided_we_stand', // 11
+          'meepo_divided_we_stand', // 10
+          `special_bonus_unique_meepo_2`, // 11
           `meepo_ransack`, // 12
           'meepo_ransack', // 13
           `meepo_earthbind`, // 14
           `special_bonus_evasion_15`, // 15
           `meepo_earthbind`, // 16
-          'special_bonus_attributes', // 17
-          'meepo_divided_we_stand', // 18
+          'meepo_divided_we_stand', // 17     
+          'special_bonus_attributes', // 18
           'special_bonus_attributes', // 19
           `special_bonus_unique_meepo_6`, // 20
           'special_bonus_attributes', // 21
           'special_bonus_attributes', // 22
           'special_bonus_attributes', // 23
           'special_bonus_attributes', // 24
-          'special_bonus_unique_meepo_poof_cast_point', // 25
+          'special_bonus_hp_350', // 25
         ],
         items: {
           starting: [
@@ -9812,17 +9813,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `wraith_band`,
             `wraith_band`,
             `power_treads`,
-            'ultimate_scepter',
+            'diffusal_blade',        
           ],
-          mid_game: ['blink', 'aghanims_shard', 'diffusal_blade', 'disperser'],
+          mid_game: ['ultimate_scepter', 'aghanims_shard', 'blink', 'disperser'],
           late_game: [`sheepstick`, `swift_blink`, `heart`, 'skadi'],
           situational: [`bloodthorn`, `travel_boots`, 'nullifier'],
           core: [
-            `wraith_band`,
             `power_treads`,
+            'diffusal_blade',
             `ultimate_scepter`,
-            `blink`,
             `aghanims_shard`,
+            `blink`,
             'disperser',
           ],
           neutral: [
@@ -9835,7 +9836,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'ninja_gear',
             `havoc_hammer`,
             'apex',
-            //`fallen_sky`,
           ],
         },
       },
@@ -11011,23 +11011,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40654,
         power_level: [1.9, 2.1, 2.4, 2.2],
+        facet: 1,
         abilities: [
           'necrolyte_death_pulse', // 1
           'necrolyte_heartstopper_aura', // 2
           'necrolyte_death_pulse', // 3
-          'necrolyte_sadist', // 4   equals to `ghost shroud`
+          'necrolyte_ghost_shroud', // 4   
           'necrolyte_death_pulse', // 5
           'necrolyte_reapers_scythe', // 6
           'necrolyte_death_pulse', // 7
           'necrolyte_heartstopper_aura', // 8
           'necrolyte_heartstopper_aura', // 9
           'necrolyte_heartstopper_aura', // 10
-          `special_bonus_unique_necrophos_6`, // 11
+          `special_bonus_unique_necrophos_heartstopper_regen_duration`, // 11
           'necrolyte_reapers_scythe', // 12
-          'necrolyte_sadist', // 13
-          'necrolyte_sadist', // 14
+          'necrolyte_ghost_shroud', // 13
+          'necrolyte_ghost_shroud', // 14
           `special_bonus_unique_necrophos_3`, // 15
-          'necrolyte_sadist', // 16
+          'necrolyte_ghost_shroud', // 16
           'special_bonus_attributes', // 17
           'necrolyte_reapers_scythe', // 18
           'special_bonus_attributes', // 19
@@ -11043,8 +11044,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'tango',
             'faerie_fire',
             'branches',
+            'branches',
             'circlet',
-            'mantle',
+            'circlet',
             `ward_observer`,
           ],
           early_game: [
@@ -11054,7 +11056,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `magic_wand`,
             `wind_lace`,
           ],
-          mid_game: ['radiance', 'travel_boots', 'aghanims_shard'],
+          mid_game: ['travel_boots', 'radiance', 'aghanims_shard'],
           late_game: [
             `heart`,
             `ultimate_scepter`,
@@ -11089,11 +11091,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vambrace`,
             `pupils_gift`,
             `cloak_of_flames`,
-            //`quickening_charm`,
             `trickster_cloak`,
-            //`spell_prism`,
-            //`fallen_sky`,
-            //`ex_machina`,
             'havoc_hammer',
             'stormcrafter',
             'mirror_shield',
@@ -11110,23 +11108,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40655,
         power_level: [2.1, 2.1, 2.3, 2.2],
+        facet: 1,
         abilities: [
           'necrolyte_death_pulse', // 1
           'necrolyte_heartstopper_aura', // 2
           'necrolyte_death_pulse', // 3
-          'necrolyte_sadist', // 4   equals to `ghost shroud`
+          'necrolyte_ghost_shroud', // 4   
           'necrolyte_death_pulse', // 5
           'necrolyte_reapers_scythe', // 6
           'necrolyte_death_pulse', // 7
           'necrolyte_heartstopper_aura', // 8
           'necrolyte_heartstopper_aura', // 9
           'necrolyte_heartstopper_aura', // 10
-          `special_bonus_unique_necrophos_6`, // 11
+          `special_bonus_unique_necrophos_heartstopper_regen_duration`, // 11
           'necrolyte_reapers_scythe', // 12
-          'necrolyte_sadist', // 13
-          'necrolyte_sadist', // 14
+          'necrolyte_ghost_shroud', // 13
+          'necrolyte_ghost_shroud', // 14
           `special_bonus_unique_necrophos_3`, // 15
-          'necrolyte_sadist', // 16
+          'necrolyte_ghost_shroud', // 16
           'special_bonus_attributes', // 17
           'necrolyte_reapers_scythe', // 18
           'special_bonus_attributes', // 19
@@ -11142,8 +11141,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'tango',
             'faerie_fire',
             'branches',
+            'branches',
             'circlet',
-            'mantle',
+            'circlet',
             `ward_observer`,
           ],
           early_game: [
@@ -11153,7 +11153,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `magic_wand`,
             `wind_lace`,
           ],
-          mid_game: ['radiance', 'travel_boots', 'aghanims_shard'],
+          mid_game: ['travel_boots', 'radiance', 'aghanims_shard'],
           late_game: [
             `heart`,
             `ultimate_scepter`,
@@ -11162,6 +11162,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'overwhelming_blink',
           ],
           situational: [
+            'kaya_and_sange',
             `spirit_vessel`,
             `crimson_guard`,
             `heavens_halberd`,
@@ -11171,6 +11172,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sphere`,
             `lotus_orb`,
             `sheepstick`,
+            'cyclone',
           ],
           core: [
             `travel_boots`,
@@ -11186,11 +11188,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vambrace`,
             `pupils_gift`,
             `cloak_of_flames`,
-            //`quickening_charm`,
             `trickster_cloak`,
-            //`spell_prism`,
-            //`fallen_sky`,
-            //`ex_machina`,
             'havoc_hammer',
             'stormcrafter',
             'mirror_shield',
@@ -11207,7 +11205,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [
       `necrolyte_death_seeker`,
       `necrolyte_death_pulse`,
-      'necrolyte_sadist',
+      'necrolyte_ghost_shroud',
       `necrolyte_reapers_scythe`,
     ],
     counter_items: {
@@ -11221,7 +11219,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         support: ['glimmer_cape'],
         core: [
           'mage_slayer',
-          /* "hood_of_defiance", */
           'pipe',
           'eternal_shroud',
           'orchid',
