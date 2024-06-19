@@ -11925,6 +11925,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40547,
         power_level: [2.2, 2.3, 2.6, 2.5],
+        facet: 2,
         abilities: [
           'obsidian_destroyer_astral_imprisonment', // 1
           'obsidian_destroyer_arcane_orb', // 2
@@ -11940,8 +11941,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'obsidian_destroyer_sanity_eclipse', // 12
           'obsidian_destroyer_equilibrium', // 13
           'obsidian_destroyer_equilibrium', // 14
-          'special_bonus_unique_outworld_devourer_astral_castrange', // 15
-          'special_bonus_attributes', // 16
+          'special_bonus_unique_outworld_devourer_5', // 15
+          'obsidian_destroyer_astral_imprisonment', // 16
           'special_bonus_attributes', // 17
           'obsidian_destroyer_sanity_eclipse', // 18
           'special_bonus_attributes', // 19
@@ -11958,7 +11959,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `circlet`,
             `branches`,
             `branches`,
-            `branches`,
+            `faerie_fire',
             `ward_observer`,
             `tango`,
           ],
@@ -11969,15 +11970,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'witch_blade',
           ],
           mid_game: [
-            `ultimate_scepter`,
+            `hurricane_pike`,
             `black_king_bar`,
+            `ultimate_scepter`,
             `blink`,
             `devastator`,
           ],
-          late_game: [`moon_shard`, `hurricane_pike`, 'sheepstick'],
+          late_game: [`moon_shard`, 'sheepstick'],
           situational: [
             `hand_of_midas`,
-            `meteor_hammer`,
             `sphere`,
             `refresher`,
             `swift_blink`,
@@ -11986,12 +11987,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           core: [
             `power_treads`,
-            `black_king_bar`,
-            `blink`,
+            'witch_blade',
             `hurricane_pike`,
-            `devastator`,
+            `black_king_bar`,
             `ultimate_scepter`,
-            `sheepstick`,
+            'blink',
           ],
           neutral: [
             //tier 1
@@ -12022,11 +12022,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
       {
-        roles: [DOTA_COACH_GUIDE_ROLE.MID],
+        roles: [DOTA_COACH_GUIDE_ROLE.OFFLANE,
         steam_guide_workshop_ids: { en: 2719253915, es: 3160081889 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40548,
         power_level: [2.3, 2.3, 2.6, 2.5],
+        facet: 2,
         abilities: [
           'obsidian_destroyer_astral_imprisonment', // 1
           'obsidian_destroyer_arcane_orb', // 2
@@ -12034,16 +12035,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'obsidian_destroyer_astral_imprisonment', // 4
           'obsidian_destroyer_astral_imprisonment', // 5
           'obsidian_destroyer_sanity_eclipse', // 6
-          'obsidian_destroyer_arcane_orb', // 7
+          'obsidian_destroyer_astral_imprisonment', // 7
           'obsidian_destroyer_arcane_orb', // 8
           'obsidian_destroyer_arcane_orb', // 9
-          'special_bonus_mp_250', // 10
-          'obsidian_destroyer_equilibrium', // 11
+          'obsidian_destroyer_arcane_orb', // 10
+          'special_bonus_mp_250', // 11
           'obsidian_destroyer_sanity_eclipse', // 12
           'obsidian_destroyer_equilibrium', // 13
           'obsidian_destroyer_equilibrium', // 14
-          'special_bonus_unique_outworld_devourer_astral_castrange', // 15
-          'obsidian_destroyer_astral_imprisonment', // 16
+          'special_bonus_unique_outworld_devourer_5', // 15
+          'obsidian_destroyer_equilibrium', // 16
           'special_bonus_attributes', // 17
           'obsidian_destroyer_sanity_eclipse', // 18
           'special_bonus_attributes', // 19
@@ -12054,13 +12055,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'special_bonus_attributes', // 24
           'special_bonus_unique_outworld_devourer', // 25
         ],
-        items: {
+          items: {
           starting: [
             `mantle`,
             `circlet`,
             `branches`,
             `branches`,
-            `branches`,
+            `faerie_fire',
             `ward_observer`,
             `tango`,
           ],
@@ -12071,15 +12072,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'witch_blade',
           ],
           mid_game: [
-            `ultimate_scepter`,
+            `hurricane_pike`,
             `black_king_bar`,
+            `ultimate_scepter`,
             `blink`,
             `devastator`,
           ],
-          late_game: [`moon_shard`, `hurricane_pike`, 'sheepstick'],
+          late_game: [`moon_shard`, 'sheepstick'],
           situational: [
             `hand_of_midas`,
-            `meteor_hammer`,
             `sphere`,
             `refresher`,
             `swift_blink`,
@@ -12088,12 +12089,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           core: [
             `power_treads`,
-            `black_king_bar`,
-            `blink`,
+            'witch_blade',
             `hurricane_pike`,
-            `devastator`,
+            `black_king_bar`,
             `ultimate_scepter`,
-            `sheepstick`,
+            'blink',
           ],
           neutral: [
             //tier 1
@@ -12124,13 +12124,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
-    combo: [
-      `obsidian_destroyer_astral_imprisonment`,
-      `black_king_bar`,
-      `meteor_hammer`,
-      `obsidian_destroyer_sanity_eclipse`,
-      `obsidian_destroyer_arcane_orb`,
-    ],
+    combo: [],
     counter_items: {
       laning_phase: {
         all: ['magic_stick', 'infused_raindrop'],
