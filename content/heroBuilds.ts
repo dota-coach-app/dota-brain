@@ -12516,7 +12516,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   phantom_assassin: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -12528,6 +12528,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40639,
         power_level: [1.5, 1.9, 2.7, 2.8],
+        facet: 1,
         abilities: [
           'phantom_assassin_stifling_dagger', // 1
           'phantom_assassin_phantom_strike', // 2
@@ -12560,6 +12561,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'tango',
             'quelling_blade',
             'branches',
+            'branches',
             'slippers',
             'circlet',
           ],
@@ -12569,7 +12571,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'power_treads',
             'magic_wand',
             'bfury',
-            'lifesteal',
           ],
           mid_game: [
             'black_king_bar',
@@ -12587,27 +12588,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           core: [
             'power_treads',
             'bfury',
-            'lifesteal',
             'black_king_bar',
             'desolator',
             'ultimate_scepter',
             'basher',
           ],
           neutral: [
-            //"possessed_mask", Removed in 7.33
             'broom_handle',
             'lance_of_pursuit',
-            //"misericorde",
-            //"dagger_of_ristul", Removed in 7.33
-            //"ring_of_aquila",
             'orb_of_destruction',
             'paladin_sword',
-            //"titan_sliver",
-            //"penta_edged_sword",
             'mind_breaker',
             'desolator_2',
             'apex',
-            //`ex_machina`,
           ],
         },
       },
@@ -13789,7 +13782,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   queenofpain: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -13801,6 +13794,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40583,
         power_level: [2.2, 2.3, 2.5, 2.4],
+        facet: 1,
         abilities: [
           'queenofpain_scream_of_pain', // 1
           'queenofpain_shadow_strike', // 2
@@ -13816,7 +13810,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'queenofpain_sonic_wave', // 12
           'queenofpain_shadow_strike', // 13
           'queenofpain_shadow_strike', // 14
-          'special_bonus_attack_damage_20', // 15
+          'special_bonus_strength_8', // 15
           'special_bonus_unique_queen_of_pain_4', // 16
           'special_bonus_attributes', // 17
           'queenofpain_sonic_wave', // 18
@@ -13840,7 +13834,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: [
             'bottle',
             'magic_wand',
-            'falcon_blade',
+            'null_talisman',
             'power_treads',
             'kaya',
           ],
@@ -13858,6 +13852,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           situational: [
             'sphere',
+            'witch_blade',
             'devastator',
             'refresher',
             'bloodthorn',
@@ -13866,6 +13861,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           core: [
             'power_treads',
+            'kaya',
             'aghanims_shard',
             'black_king_bar',
             'ultimate_scepter',
@@ -13880,10 +13876,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'vampire_fangs',
             'psychic_headband',
             'dandelion_amulet',
-            //`quickening_charm`,
-            //"spell_prism",
             'timeless_relic',
-            //`ex_machina`,
             'mirror_shield',
           ],
         },
@@ -13894,7 +13887,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40604,
         power_level: [1.8, 2, 2.4, 2.3], // Data needed
-        abilities: [
+        facet: 1,
+        abilities: [     
           'queenofpain_scream_of_pain', // 1
           'queenofpain_shadow_strike', // 2
           'queenofpain_scream_of_pain', // 3
@@ -13909,7 +13903,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'queenofpain_sonic_wave', // 12
           'queenofpain_shadow_strike', // 13
           'queenofpain_shadow_strike', // 14
-          'special_bonus_attack_damage_20', // 15
+          'special_bonus_strength_8', // 15
           'special_bonus_unique_queen_of_pain_4', // 16
           'special_bonus_attributes', // 17
           'queenofpain_sonic_wave', // 18
@@ -13922,16 +13916,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'special_bonus_unique_queen_of_pain_6', // 25
         ],
         items: {
-          starting: ['tango', 'circlet', 'branches', 'faerie_fire', 'mantle'],
+          starting: ['tango', 'circlet', 'branches', 'branches', 'faerie_fire', 'mantle'],
           early_game: [
             'null_talisman',
             'magic_wand',
-            'falcon_blade',
             'power_treads',
-            'kaya',
+            'urn_of_shadows',
           ],
           mid_game: [
+            'kaya',
             'aghanims_shard',
+            'spirit_vessel',
             'black_king_bar',
             'ultimate_scepter',
             'kaya_and_sange',
@@ -13953,6 +13948,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           core: [
             'power_treads',
+            'kaya',
+            'spirit_Vessel',
             'aghanims_shard',
             'black_king_bar',
             'ultimate_scepter',
@@ -13967,10 +13964,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'vampire_fangs',
             'psychic_headband',
             'dandelion_amulet',
-            //`quickening_charm`,
-            //"spell_prism",
             'timeless_relic',
-            //`ex_machina`,
             'mirror_shield',
           ],
         },
@@ -15715,12 +15709,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'special_bonus_attributes', // 17
           'slardar_amplify_damage', // 18
           'special_bonus_attributes', // 19
-          `special_bonus_unique_slardar_5`, // 20
+          `special_bonus_unique_slardar`, // 20
           'special_bonus_attributes', // 21
           'special_bonus_attributes', // 22
           'special_bonus_attributes', // 23
           'special_bonus_attributes', // 24
-          'special_bonus_unique_slardar_4', // 25
+          'special_bonus_unique_slardar_3', // 25
         ],
         items: {
           starting: [
@@ -15728,6 +15722,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `quelling_blade`,
             `gauntlets`,
             `circlet`,
+            'branches',
             `branches`,
             `ward_observer`,
           ],
@@ -15742,6 +15737,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `monkey_king_bar`,
             `nullifier`,
             'satanic',
+            'orchid',
+            'silver_edge',
           ],
           core: [
             `power_treads`,
@@ -15760,7 +15757,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `cloak_of_flames`,
             `elven_tunic`,
             `mind_breaker`,
-            //`penta_edged_sword`,
             'desolator_2',
             'pirate_hat',
           ],
@@ -15783,14 +15779,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       mid_game: {
         all: [
           'lotus_orb',
-          /*"medallion_of_courage",*/ 'solar_crest',
+          'solar_crest',
           'heavens_halberd',
         ],
         support: ['force_staff', 'ghost'],
         core: ['manta', 'hurricane_pike'],
       },
       late_game: {
-        all: ['ethereal_blade'],
+        all: ['sheepstick', 'ethereal_blade'],
         support: [],
         core: ['assault', 'butterfly'],
       },
