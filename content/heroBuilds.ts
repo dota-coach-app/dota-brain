@@ -16817,7 +16817,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40633,
         power_level: [1.7, 1.9, 2.6, 2.8],
-        facet: undefined,
+        facet: 2,
         abilities: [
           "storm_spirit_static_remnant", // 1
           "storm_spirit_overload", // 2
@@ -16854,14 +16854,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `branches`,
             `ward_observer`,
           ],
-          early_game: ["bottle", `boots`, `magic_wand`, `falcon_blade`],
-          mid_game: [`power_treads`, `witch_blade`, `black_king_bar`],
+          early_game: ["bottle", 'null_talisman", `boots`, `magic_wand`,],
+          mid_game: [`power_treads`, `witch_blade`, 'kaya', 'eternal_shroud', 'meteor_hammer'],
           late_game: [
-            `sheepstick`,
+            `black_king_bar`,
             "devastator",
             "aghanims_shard",
             "ultimate_scepter",
             "shivas_guard",
+            "sheepstick",     
           ],
           situational: [
             `sphere`,
@@ -16873,13 +16874,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           core: [
             `power_treads`,
-            `falcon_blade`,
             `witch_blade`,
+            'kaya',
+            'eternal_shroud',
+            'meteor_hammer',
             "black_king_bar",
-            "sheepstick",
-            "devastator",
-            "aghanims_shard",
-            `ultimate_scepter`,
           ],
           neutral: [
             "mysterious_hat",
@@ -16888,18 +16887,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "grove_bow",
             "ceremonial_robe",
             "psychic_headband",
-            //"spell_prism",
             "timeless_relic",
             `apex`,
-            //`ex_machina`,
           ],
         },
       },
     ],
     combo: [
       `storm_spirit_ball_lightning`,
-      `attack`,
-      `storm_spirit_static_remnant`,
       `attack`,
       `storm_spirit_electric_vortex`,
       `attack`,
@@ -16917,7 +16912,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         support: ["glimmer_cape", "ghost"],
         core: [
           "mage_slayer",
-          /* "hood_of_defiance", */
           "pipe",
           "eternal_shroud",
           "orchid",
@@ -16933,7 +16927,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
+  // yongy146 plays hero
   sven: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -16945,7 +16939,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40587,
         power_level: [0.9, 1.7, 2.7, 2.6],
-        facet: undefined,
+        facet: 2,
         abilities: [
           "sven_storm_bolt", // 1
           "sven_warcry", // 2
@@ -16978,17 +16972,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "quelling_blade",
             "tango",
             "branches",
+            'branches',
             "circlet",
-            "slippers",
+            "gauntlets',
           ],
           early_game: [
             "tango",
-            "wraith_band",
+            "bracer',
             "boots",
             "magic_wand",
-            "phase_boots",
+            "power_treads",
             "mask_of_madness",
-            "gloves",
             "echo_sabre",
           ],
           mid_game: ["black_king_bar", "harpoon", "lesser_crit", "blink"],
@@ -17007,6 +17001,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "ultimate_scepter",
           ],
           core: [
+            "power_treads",
             "mask_of_madness",
             "harpoon",
             "blink",
