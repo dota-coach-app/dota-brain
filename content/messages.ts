@@ -14765,7 +14765,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 8 * 60,
     repeatTime: 15 * 60,
     textMessage:
-      "Mana management is the key. The more mana you have the more damage you can do. Be full mana if you expect fight to break out.",
+      "Mana management is the key. The more mana you have the more damage you can do. Be high on mana if you expect a fight to break out.",
     audience: [Audience.ALL],
   },
   {
@@ -14834,7 +14834,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 24 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "Level 20 Vortex talent along with Aghanim's Scepter mimics Reverse Polarity but on 16s cooldown.",
+      "Electric Vortex with Aghanim's Scepter ugrade becomes a really strong spell that imitates a Blackhole or Vaccuum. Make full use of it in fights to reposition enemies into you.",
     audience: [Audience.ALL],
   },
   {
@@ -14844,7 +14844,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 33 * 60,
     repeatTime: 10 * 60,
     textMessage:
-      "In late game you can fly over and kill the creeps that opponents are looking to push with.",
+      "In late game, you can fly over and kill the creeps that opponents are looking to push with.",
     audience: [Audience.ALL],
   },
 
@@ -14929,7 +14929,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Sven_2_MakeStacks",
     messageTime: [3 * 60 + 30, 6 * 60 + 30],
     textMessage:
-      "Alert your teammates to stack for you as you can clear those fairly early.",
+      "Alert your teammates to stack for you as you can clear those fairly early. Prioritize Ancient creeps once you get your Mask of Madness.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "sven_great_cleave" },
   },
@@ -14939,7 +14939,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Sven_4_MaxCleave",
     messageTime: 1 * 60,
     textMessage:
-      "Only put points into Great Cleave once you are ready to leave the lane, or keep it at one point for the Strength Bonus to sustain in lane until you are ready to leave.",
+      "Only put points into Great Cleave once you are ready to leave the lane, or keep it at one point in lane until you are ready to leave the lane.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "sven_great_cleave" },
   },
