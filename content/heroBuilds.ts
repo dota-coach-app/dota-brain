@@ -152,7 +152,7 @@ export interface IHeroBuild {
    * specify an array fo facets, e.g. [1, 2]
    *
    */
-  facet?: number | number[];
+  facet: number | number[] | undefined; // 'undefined' to be removed once all guides are updated!
   abilities: string[];
   items: ItemBuild;
   combo?: string[]; // Combo specific to this hero build
@@ -505,6 +505,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40438,
         power_level: [1.1, 2.5, 2.6, 2.2],
+        facet: undefined,
         abilities: [
           "alchemist_unstable_concoction",
           "alchemist_acid_spray",
@@ -590,6 +591,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40439,
         power_level: [1.3, 2.5, 2.5, 2.2],
+        facet: undefined,
         abilities: [
           "alchemist_unstable_concoction",
           "alchemist_acid_spray",
@@ -965,6 +967,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Carry: 1	1.4	2.6	2.9 | 10% of matches
         // Mid: 1.3	1.4	2.6	2.9 | 80% of matches
         power_level: [1.3, 1.4, 2.6, 2.9],
+        facet: undefined,
         abilities: [
           "arc_warden_spark_wraith", // 1
           "arc_warden_flux", // 2
@@ -1108,6 +1111,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40444,
         power_level: [1.9, 2.3, 2.4, 2.3],
+        facet: undefined,
         abilities: [
           "axe_battle_hunger", // 1
           "axe_counter_helix", // 2
@@ -1383,6 +1387,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40446,
         power_level: [2.4, 2.4, 2.3, 2],
+        facet: undefined,
         abilities: [
           "batrider_sticky_napalm", // 1
           "batrider_flamebreak", // 2
@@ -1477,6 +1482,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40447,
         power_level: [2.2, 2.4, 2.3, 2],
+        facet: undefined,
         abilities: [
           "batrider_sticky_napalm", // 1
           "batrider_flamebreak", // 2
@@ -1734,6 +1740,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40449,
         power_level: [1.9, 2.1, 2.5, 2.3],
+        facet: undefined,
         abilities: [
           "bloodseeker_blood_bath",
           "bloodseeker_thirst",
@@ -1819,6 +1826,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40450,
         power_level: [1.7, 2.1, 2.3, 2.2],
+        facet: undefined,
         abilities: [
           "bloodseeker_blood_bath",
           "bloodseeker_thirst",
@@ -2070,6 +2078,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40452,
         power_level: [1.5, 1.9, 2.4, 2.3],
+        facet: undefined,
         abilities: [
           "brewmaster_thunder_clap",
           "brewmaster_cinder_brew",
@@ -2357,6 +2366,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Mid: 1.5	2.6	2.5	2.1 [58%]
         // Offlane:1.7	2.7	2.5	2.1 [25%]
         power_level: [1.5, 2.6, 2.5, 2.1], // Mid
+        facet: undefined,
         abilities: [
           "broodmother_spin_web", // 1
           `broodmother_incapacitating_bite`, // 2
@@ -2513,6 +2523,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40455,
         power_level: [2, 2.1, 2.4, 2.3],
+        facet: undefined,
         abilities: [
           "centaur_hoof_stomp", // 1
           `centaur_double_edge`, // 2
@@ -2813,6 +2824,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40577,
         power_level: [1.6, 1.9, 1.7, 1.5],
+        facet: undefined,
         abilities: [
           `chen_penitence`, // 1
           `chen_holy_persuasion`, // 2
@@ -2931,6 +2943,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40581,
         power_level: [2, 2.3, 2.5, 2.4],
+        facet: undefined,
         abilities: [
           "clinkz_tar_bomb", // 1
           "clinkz_death_pact", // 2
@@ -3502,6 +3515,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40470,
         power_level: [1.9, 2, 2.1, 2.3],
+        facet: undefined,
         abilities: [
           "dark_willow_bramble_maze", // 1
           "dark_willow_shadow_realm", // 2
@@ -4790,6 +4804,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40586,
         power_level: [0.7, 2.1, 2.4, 2.4],
+        facet: undefined,
         abilities: [
           "earthshaker_fissure", // 1
           "earthshaker_enchant_totem", // 2
@@ -4932,6 +4947,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40595,
         power_level: [1.6, 1.7, 2.2, 2.1],
+        facet: undefined,
         abilities: [
           "elder_titan_ancestral_spirit", // 1
           "elder_titan_natural_order", // 2
@@ -6244,6 +6260,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40603,
         power_level: [2.6, 2.7, 2.4, 1.9],
+        facet: undefined,
         abilities: [
           `huskar_inner_fire`, // 1
           "huskar_berserkers_blood", // 2
@@ -7197,6 +7214,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40658,
         power_level: [2, 2.4, 2.5, 2.2],
+        facet: undefined,
         abilities: [
           "kunkka_tidebringer", // 1
           "kunkka_torrent", // 2
@@ -7279,6 +7297,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40665,
         power_level: [1.8, 2.4, 2.5, 2.2],
+        facet: undefined,
         abilities: [
           "kunkka_tidebringer", // 1
           "kunkka_torrent", // 2
@@ -7800,6 +7819,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40608,
         power_level: [2.2, 2.3, 2.5, 2.3],
+        facet: undefined,
         abilities: [
           "life_stealer_feast", // 1
           "life_stealer_ghoul_frenzy", // 2
@@ -8419,6 +8439,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40683,
         power_level: [2.3, 2.3, 2.6, 2.5],
+        facet: undefined,
         abilities: [
           "lone_druid_spirit_bear", // 1
           "lone_druid_spirit_link", // 2
@@ -8723,6 +8744,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40673,
         power_level: [1.4, 2.2, 2.3, 1.9],
+        facet: undefined,
         abilities: [
           "lycan_summon_wolves", // 1
           "lycan_feral_impulse", // 2
@@ -8823,6 +8845,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40674,
         power_level: [1.5, 2.1, 2.5, 2.1],
+        facet: undefined,
         abilities: [
           "lycan_summon_wolves", // 1
           "lycan_feral_impulse", // 2
@@ -10131,6 +10154,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40620,
         power_level: [2, 2.1, 2.6, 2.6],
+        facet: undefined,
         abilities: [
           "monkey_king_boundless_strike", // 1
           "monkey_king_jingu_mastery", // 2
@@ -10213,6 +10237,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40626,
         power_level: [1.1, 1.7, 2.2, 2.3],
+        facet: undefined,
         abilities: [
           "monkey_king_tree_dance", // 1
           "monkey_king_boundless_strike", // 2
@@ -10334,6 +10359,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Mid: 1.1	1.5	2.7	2.9 [17%]
         // Carry: 1.2	1.6	2.7	2.9 [81%]
         power_level: [1.2, 1.6, 2.7, 2.9],
+        facet: undefined,
         abilities: [
           "morphling_morph_agi", // 1
           "morphling_adaptive_strike_agi", // 2
@@ -10700,6 +10726,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40644,
         power_level: [1.4, 2, 2.5, 2.4],
+        facet: undefined,
         abilities: [
           "naga_siren_mirror_image", // 1
           "naga_siren_eelskin", // 2
@@ -10821,6 +10848,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40660,
         power_level: [2.1, 2.4, 2.4, 2.2],
+        facet: undefined,
         abilities: [
           `furion_sprout`, // 1
           "furion_teleportation", // 2
@@ -10905,6 +10933,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Carry : 2.1	2.4	2.4	2.2 [3.2%]
         // Mid: 1.6	2.3	2.4	2.2 [14%]
         power_level: [1.6, 2.3, 2.4, 2.2],
+        facet: undefined,
         abilities: [
           `furion_teleportation`, // 1
           "furion_sprout", // 2
@@ -10994,6 +11023,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40662,
         power_level: [2.1, 1.9, 2.1, 1.9],
+        facet: undefined,
         abilities: [
           `furion_teleportation`, // 1
           "furion_sprout", // 2
@@ -11353,6 +11383,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40656,
         power_level: [0.9, 1.9, 2.5, 2.2],
+        facet: undefined,
         abilities: [
           "night_stalker_void", // 1
           "night_stalker_hunter_in_the_night", // 2
@@ -11744,6 +11775,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40680,
         power_level: [1.3, 1.6, 2, 1.8],
+        facet: undefined,
         abilities: [
           "omniknight_hammer_of_purity", // 1
           `omniknight_purification`, // 2
@@ -11887,6 +11919,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40648,
         power_level: [1.7, 1.8, 2, 1.7],
+        facet: undefined,
         abilities: [
           "oracle_fortunes_end", // 1
           "oracle_purifying_flames", // 2
@@ -12755,6 +12788,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40622,
         power_level: [1.2, 1.6, 2.7, 2.9],
+        facet: undefined,
         abilities: [
           "phantom_lancer_spirit_lance", // 1
           "phantom_lancer_phantom_edge", // 2
@@ -13433,6 +13467,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40667,
         power_level: [0.8, 1.7, 2, 2],
+        facet: undefined,
         abilities: [
           "pudge_meat_hook", // 1
           "pudge_rot", // 2
@@ -13526,6 +13561,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40668,
         power_level: [0.9, 1.8, 2.3, 2.1],
+        facet: undefined,
         abilities: [
           "pudge_meat_hook", // 1
           "pudge_rot", // 2
@@ -14485,6 +14521,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40675,
         power_level: [1.6, 2.2, 2.5, 2.3],
+        facet: undefined,
         abilities: [
           "riki_blink_strike", // 1
           "riki_tricks_of_the_trade", // 2
@@ -14585,6 +14622,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40676,
         power_level: [0.4, 1.4, 2, 2.1],
+        facet: undefined,
         abilities: [
           "riki_blink_strike", // 1
           "riki_tricks_of_the_trade", // 2
@@ -14726,6 +14764,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40629,
         power_level: [1.8, 1.9, 2, 1.9],
+        facet: undefined,
         abilities: [
           "rubick_fade_bolt", // 1
           "rubick_telekinesis", // 2
@@ -15160,6 +15199,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40606,
         power_level: [1.8, 2, 2.6, 2.6],
+        facet: undefined,
         abilities: [
           "nevermore_shadowraze1", // 1
           "nevermore_necromastery", // 2
@@ -15255,6 +15295,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40605,
         power_level: [1.8, 2.1, 2.6, 2.6],
+        facet: undefined,
         abilities: [
           "nevermore_shadowraze1", // 1
           "nevermore_necromastery", // 2
@@ -15804,6 +15845,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40623,
         power_level: [1.8, 2.1, 2.5, 2.4],
+        facet: undefined,
         abilities: [
           "slardar_slithereen_crush", // 1
           "slardar_bash", // 2
@@ -16446,6 +16488,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40637,
         power_level: [0.8, 1.9, 2.7, 2.9],
+        facet: undefined,
         abilities: [
           "spectre_spectral_dagger", // 1
           "spectre_dispersion", // 2
@@ -16561,6 +16604,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40666,
         power_level: [1.4, 2.2, 2.3, 2.1],
+        facet: undefined,
         abilities: [
           "spirit_breaker_greater_bash", // 1
           "spirit_breaker_charge_of_darkness", // 2
@@ -16648,6 +16692,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40736,
         power_level: [1.4, 2.3, 2.4, 2.2],
+        facet: undefined,
         abilities: [
           "spirit_breaker_greater_bash", // 1
           "spirit_breaker_charge_of_darkness", // 2
@@ -16772,6 +16817,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40633,
         power_level: [1.7, 1.9, 2.6, 2.8],
+        facet: undefined,
         abilities: [
           "storm_spirit_static_remnant", // 1
           "storm_spirit_overload", // 2
@@ -16899,6 +16945,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40587,
         power_level: [0.9, 1.7, 2.7, 2.6],
+        facet: undefined,
         abilities: [
           "sven_storm_bolt", // 1
           "sven_warcry", // 2
@@ -17040,6 +17087,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40625,
         power_level: [2, 2.1, 2.1, 2.2],
+        facet: undefined,
         abilities: [
           "techies_sticky_bomb", // 1
           "techies_suicide", // 2
@@ -17144,6 +17192,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40624,
         power_level: [1.8, 2.1, 2.1, 2.3],
+        facet: undefined,
         abilities: [
           "techies_sticky_bomb", // 1
           "techies_suicide", // 2
@@ -17298,6 +17347,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40602,
         power_level: [1.8, 2.2, 2.7, 2.6],
+        facet: undefined,
         abilities: [
           "templar_assassin_psi_blades", // 1
           "templar_assassin_refraction", // 2
@@ -17392,6 +17442,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40613,
         power_level: [1.9, 2.2, 2.7, 2.6],
+        facet: undefined,
         abilities: [
           "templar_assassin_psi_blades", // 1
           "templar_assassin_refraction", // 2
@@ -17519,6 +17570,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40645,
         power_level: [1.6, 2, 2.7, 2.8],
+        facet: undefined,
         abilities: [
           "terrorblade_reflection", // 1
           "terrorblade_metamorphosis", // 2
@@ -17640,6 +17692,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40621,
         power_level: [1.7, 2, 2.5, 2.6],
+        facet: undefined,
         abilities: [
           `tidehunter_gush`, // 1
           `tidehunter_anchor_smash`, // 2
@@ -18573,6 +18626,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40634,
         power_level: [1.6, 1.7, 2.7, 2.6],
+        facet: undefined,
         abilities: [
           "troll_warlord_whirling_axes_ranged", // 1
           "troll_warlord_berserkers_rage", // 2
@@ -18695,6 +18749,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40681,
         power_level: [1.8, 1.8, 2, 2.1],
+        facet: undefined,
         abilities: [
           `tusk_bitter_chill`, // 1
           `tusk_ice_shards`, // 2
@@ -18799,6 +18854,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40682,
         power_level: [1.8, 1.9, 2.1, 2.1],
+        facet: undefined,
         abilities: [
           `tusk_ice_shards`, // 1
           `tusk_bitter_chill`, // 2
@@ -18936,6 +18992,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40663,
         power_level: [1.9, 2.3, 2.3, 2.1],
+        facet: undefined,
         abilities: [
           `abyssal_underlord_firestorm`, // 1
           `abyssal_underlord_atrophy_aura`, // 2
@@ -19075,6 +19132,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40664,
         power_level: [2.4, 2.1, 1.6, 1.5],
+        facet: undefined,
         abilities: [
           "undying_decay", // 1
           `undying_tombstone`, // 2
@@ -19182,6 +19240,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40611,
         power_level: [2.4, 2.4, 1.9, 1.7],
+        facet: undefined,
         abilities: [
           "undying_decay", // 1
           `undying_tombstone`, // 2
@@ -19331,6 +19390,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40635,
         power_level: [1.9, 2.3, 2.6, 2.3],
+        facet: undefined,
         abilities: [
           "ursa_earthshock", // 1
           "ursa_fury_swipes", // 2
@@ -20398,6 +20458,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40619,
         power_level: [1.7, 2.1, 2.6, 2.6],
+        facet: undefined,
         abilities: [
           "void_spirit_resonant_pulse", // 1
           "void_spirit_aether_remnant", // 2
@@ -20481,6 +20542,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40641,
         power_level: [1.4, 2, 2.5, 2.5],
+        facet: undefined,
         abilities: [
           "void_spirit_resonant_pulse", // 1
           "void_spirit_aether_remnant", // 2
@@ -20756,6 +20818,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40669,
         power_level: [1.8, 1.9, 2.1, 2.1],
+        facet: undefined,
         abilities: [
           "weaver_shukuchi", // 1
           "weaver_geminate_attack", // 2
@@ -20830,6 +20893,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40670,
         power_level: [2, 2.4, 2.6, 2.4],
+        facet: undefined,
         abilities: [
           "weaver_shukuchi", // 1
           "weaver_geminate_attack", // 2
@@ -20956,6 +21020,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40677,
         power_level: [1.7, 1.7, 1.9, 2],
+        facet: undefined,
         abilities: [
           `windrunner_powershot`, // 1
           `windrunner_windrun`, // 2
@@ -21065,6 +21130,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40678,
         power_level: [2, 2.1, 2.5, 2.4],
+        facet: undefined,
         abilities: [
           "windrunner_powershot", // 1
           "windrunner_windrun", // 2
@@ -21161,6 +21227,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40679,
         power_level: [1.8, 1.9, 2.3, 2.3],
+        facet: undefined,
         abilities: [
           "windrunner_powershot", // 1
           "windrunner_windrun", // 2
@@ -21611,6 +21678,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40640,
         power_level: [2, 2.1, 2.6, 2.5],
+        facet: undefined,
         abilities: [
           "skeleton_king_hellfire_blast", // 1
           "skeleton_king_vampiric_spirit", // 2
