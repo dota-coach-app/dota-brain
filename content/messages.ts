@@ -770,6 +770,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "Use unstable concoction to secure last hits on range creeps and harras the opponent in the early stages of the lane.",
     audience: [Audience.ALL],
   },
+  /*{
+    category: "OwnHero",
+    npcHeroName: "alchemist",
+    audioFile: "ownHero/Alchemist_2_GreevilsGreed1",
+    messageTime: 4 * 60,
+    textMessage:
+      "Understand when you are no longer able to lane and move to the jungle. Alchemist farms insanely fast and you don't want to die and lose Greevil's Greed stacks.",
+    audience: [Audience.ROLE_CORE],
+  },*/
   {
     category: "OwnHero",
     npcHeroName: "alchemist",
@@ -2009,8 +2018,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "bounty_hunter",
     audioFile: "enemyHero/BountyHunter_1_Detection",
     messageTime: -60,
-    textMessage:
-      `Bring a Sentry Ward to the lane to not let Bounty Hunter close the gap on you from the invisibility of Shadow Walk.`,
+    textMessage: `Bring a Sentry Ward to the lane to not let Bounty Hunter close the gap on you from the invisibility of Shadow Walk.`,
     audience: [Audience.IN_LANE],
     image: { type: "item", name: "ward_sentry" },
   },
@@ -2220,11 +2228,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "bristleback",
     audioFile: "ownHero/Bristleback_4_Vanguard",
-    messageTime: [5 * 60 ],
+    messageTime: [5 * 60],
     textMessage:
       "Once you get Vanguard, play very strong in lane. Look to push the enemy out of the lane and break their Safelane tower with the help of your support.",
     audience: [Audience.ALL],
-    image: { type: "item", name: "vanguard"},
+    image: { type: "item", name: "vanguard" },
   },
   {
     category: "OwnHero",
@@ -2835,17 +2843,16 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Clinkz_6_BarrageLine",
     messageTime: 10 * 60 + 10,
     repeatTime: 10 * 60,
-    textMessage:
-      `In fights try to focus targets that you can burst such as supports or squishy heroes without escapes.`,
+    textMessage: `In fights try to focus targets that you can burst such as supports or squishy heroes without escapes.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "clinkz_strafe" },
   },
   {
     category: `OwnHero`,
     npcHeroName: `clinkz`,
-    audioFile: `ownHero/Clinkz_7_DaedlusAggression`,
+    audioFile: `ownHero/Clinkz_7_DaedalusAggression`,
     messageTime: 21 * 60 + 10,
-    textMessage: `Use the Daedlus power spike to put pressure on the map by getting kill after kill on isolated enemy heroes.`,
+    textMessage: `Use the Daedalus power spike to put pressure on the map by getting kill after kill on isolated enemy heroes.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `bloodthorn` },
   },
@@ -2958,8 +2965,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Clockwerk_4_PushCogs",
     messageTime: 100,
     repeatTime: 8 * 60,
-    textMessage:
-      `With the Expanded Armature facet, if an opponent is trying to escape your Power Cogs, look to kick Cogs onto them to push them and do damage.`,
+    textMessage: `With the Expanded Armature facet, if an opponent is trying to escape your Power Cogs, look to kick Cogs onto them to push them and do damage.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "rattletrap_power_cogs" },
   },
@@ -3563,7 +3569,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "dawnbreaker",
     audioFile: "enemyHero/Dawnbreaker_1_SpiritVessel",
     messageTime: -60,
-    textMessage: "Someone should buy a Spirit Vessel to counter Dawnbreaker's healing",
+    textMessage:
+      "Someone should buy a Spirit Vessel to counter Dawnbreaker's healing",
     audience: [Audience.ALL],
   },
   {
@@ -3730,8 +3737,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "dazzle",
     audioFile: "enemyHero/Dazzle_1_PoisonTouch",
     messageTime: -60,
-    textMessage:
-      `Avoid being hit by Dazzle while under effect of Poison Touch. If he has the Poison Bloom facet, move away from him or hide in treelines before he attacks you four times.`,
+    textMessage: `Avoid being hit by Dazzle while under effect of Poison Touch. If he has the Poison Bloom facet, move away from him or hide in treelines before he attacks you four times.`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -3926,8 +3932,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "disruptor",
     audioFile: "ownHero/Disruptor_3_FieldVision",
     messageTime: [2 * 60 + 15, 9 * 60 + 15, 16 * 60 + 15],
-    textMessage:
-      `While you have the Thunderstorm facet, Kinetic Field provides vision in the middle of it. You can use it to scout pillars for wards or Roshan pit.`,
+    textMessage: `While you have the Thunderstorm facet, Kinetic Field provides vision in the middle of it. You can use it to scout pillars for wards or Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "disruptor_kinetic_field" },
   },
@@ -5181,8 +5186,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Enigma_6_Teamfight",
     messageTime: 12 * 60,
     repeatTime: 10 * 60,
-    textMessage:
-      `Be patient in teamfights, avoid showing too early and wait for opponents to clump up for your combo.`,
+    textMessage: `Be patient in teamfights, avoid showing too early and wait for opponents to clump up for your combo.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "enigma_black_hole" },
   },
@@ -5357,7 +5361,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "faceless_void",
     audioFile: "enemyHero/Faceless_2_TimeWalk2",
     messageTime: [45, 3 * 60 + 30],
-    textMessage: "Maximize damage on Faceless Void after he has used Time Walk.",
+    textMessage:
+      "Maximize damage on Faceless Void after he has used Time Walk.",
     audience: [Audience.IN_LANE],
   },
   {
@@ -5570,8 +5575,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "gyrocopter",
     audioFile: "ownHero/Gyrocopter_3_Waveclear",
     messageTime: 4 * 60 + 45,
-    textMessage:
-      `Gyro has great waveclear early on. Push out waves once you have two points in Flak Cannon and start farming nearby camps.`,
+    textMessage: `Gyro has great waveclear early on. Push out waves once you have two points in Flak Cannon and start farming nearby camps.`,
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "gyrocopter_flak_cannon" },
   },
@@ -6182,8 +6186,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "wisp",
     audioFile: `ownHero/Io_4_BoostFightingCore`,
     messageTime: 10 * 60 + 15,
-    textMessage:
-      `Past laning stage, you typically want to play with a core on your team who plays aggressively and utilizes their HP and mana pool while you buff them with Tether and Overcharge.`,
+    textMessage: `Past laning stage, you typically want to play with a core on your team who plays aggressively and utilizes their HP and mana pool while you buff them with Tether and Overcharge.`,
     audience: [Audience.ALL],
   },
   {
@@ -6223,8 +6226,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "wisp",
     audioFile: "ownHero/Io_8_AghanimsShard",
     messageTime: 14 * 60 + 50,
-    textMessage:
-      `Pick up Aghanims Shard later in the game to gain spell lifesteal and slow resistance through Overcharge for yourself and your Tethered ally.`,
+    textMessage: `Pick up Aghanims Shard later in the game to gain spell lifesteal and slow resistance through Overcharge for yourself and your Tethered ally.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -6258,8 +6260,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `wisp`,
     audioFile: `ownHero/Io_11_BoostFarmingCore`,
     messageTime: 11 * 60 + 15,
-    textMessage:
-      `Past laning stage, if you do not have fighting core hero on your team, look to play with your farming core to boost his farm and stack camps.`,
+    textMessage: `Past laning stage, if you do not have fighting core hero on your team, look to play with your farming core to boost his farm and stack camps.`,
     audience: [Audience.ALL],
   },
 
@@ -6368,8 +6369,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "jakiro",
     audioFile: "ownHero/Jakiro_5_TowerDamage",
     messageTime: [8 * 60 + 15, 14 * 60 + 15],
-    textMessage:
-      `Use Liquid Fire to apply pressure on enemy buildings if you have the facet for it.`,
+    textMessage: `Use Liquid Fire to apply pressure on enemy buildings if you have the facet for it.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "jakiro_liquid_fire" },
   },
@@ -6400,8 +6400,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "jakiro",
     audioFile: "ownHero/Jakiro_8_AghanimsShard",
     messageTime: 14 * 60 + 50,
-    textMessage:
-      `Pick up Aghanims Shard later in the game to massively boost the damage of Liquid Fire or Liquid Frost on enemy heroes.`,
+    textMessage: `Pick up Aghanims Shard later in the game to massively boost the damage of Liquid Fire or Liquid Frost on enemy heroes.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -6430,8 +6429,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "jakiro",
     audioFile: "enemyHero/Jakiro_2_Stacking",
     messageTime: -50,
-    textMessage:
-      `Avoid standing beside your laning partner against Dual Breath and Ice Path.`,
+    textMessage: `Avoid standing beside your laning partner against Dual Breath and Ice Path.`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -6692,8 +6690,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "keeper_of_the_light",
     audioFile: "ownHero/KeeperOfTheLight_4_IlluminateVision",
     messageTime: [4 * 60 + 15, 12 * 60 + 15, 20 * 60 + 15],
-    textMessage:
-      `Illuminate provides vision which can be used to check pillars for wards or Roshan pit.`,
+    textMessage: `Illuminate provides vision which can be used to check pillars for wards or Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "keeper_of_the_light_illuminate" },
   },
@@ -6774,8 +6771,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `keeper_of_the_light`,
     audioFile: `ownHero/KeeperOfTheLight_12_RecallFacet`,
     messageTime: [13 * 60 + 20, 23 * 60 + 20, 33 * 60 + 20, 43 * 60 + 20],
-    textMessage:
-      `If you have the Recall facet, look to split push lanes as much as you can to get an enemy hero to defend, and then Recall yourself elsewhere to gank or take a fight.`,
+    textMessage: `If you have the Recall facet, look to split push lanes as much as you can to get an enemy hero to defend, and then Recall yourself elsewhere to gank or take a fight.`,
     audience: [Audience.ALL],
   },
 
@@ -6841,8 +6837,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "keeper_of_the_light",
     audioFile: "enemyHero/KeeperOfTheLight_6_Recall",
     messageTime: [20 * 60 + 20, 30 * 60 + 20, 40 * 60 + 20],
-    textMessage:
-      `Be aware if Keeper of the Light has the Recall facet. He can bring multiple heroes to ganks or fights and beat you with a numbers advantage.`,
+    textMessage: `Be aware if Keeper of the Light has the Recall facet. He can bring multiple heroes to ganks or fights and beat you with a numbers advantage.`,
     audience: [Audience.ALL],
   },
 
@@ -7350,8 +7345,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "lich",
     audioFile: "ownHero/Lich_3_PlayAggressively",
     messageTime: 45,
-    textMessage:
-      `Play aggressively on the lane, burn your mana by using your spells and utilize the regen items you bought at the start of the game.`,
+    textMessage: `Play aggressively on the lane, burn your mana by using your spells and utilize the regen items you bought at the start of the game.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: "ability", name: "lich_frost_nova" },
   },
@@ -7696,8 +7690,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "lina",
     audioFile: "ownHero/Lina_6_UpkeepFierySoul",
     messageTime: [7 * 60, 17 * 60, 27 * 60],
-    textMessage:
-      `Use Dragon Slave on creep waves to maintain Fiery Soul Stacks and keep your maximum damage potential in fights and for farming.`,
+    textMessage: `Use Dragon Slave on creep waves to maintain Fiery Soul Stacks and keep your maximum damage potential in fights and for farming.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "lina_dragon_slave" },
   },
@@ -7707,8 +7700,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lina_7_SplitpushPickoff",
     messageTime: 10 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage:
-      `Lina is great at split pushing with her quick wave clear abilities, as well as pick offs due to her high movement speed and massive burst damage.`,
+    textMessage: `Lina is great at split pushing with her quick wave clear abilities, as well as pick offs due to her high movement speed and massive burst damage.`,
     audience: [Audience.ALL],
   },
   {
@@ -8715,8 +8707,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "marci",
     audioFile: "enemyHero/Marci_5_AntiHealingItems",
     messageTime: [12 * 60 + 10, 22 * 60 + 10, 32 * 60 + 10],
-    textMessage:
-      `Items that reduce healing and regeneration are good against Marcis Sidekick and Bodyguard.`,
+    textMessage: `Items that reduce healing and regeneration are good against Marcis Sidekick and Bodyguard.`,
     audience: [Audience.ALL],
   },
   {
@@ -8724,8 +8715,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "marci",
     audioFile: "enemyHero/Marci_6_DispelItems",
     messageTime: [12 * 60 + 20, 22 * 60 + 20, 32 * 60 + 20],
-    textMessage:
-      `Items that can dispel the Rebound buff from Marci or her ally are great purchase.`,
+    textMessage: `Items that can dispel the Rebound buff from Marci or her ally are great purchase.`,
     audience: [Audience.ALL],
   },
   {
@@ -9134,8 +9124,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "meepo",
     audioFile: "ownHero/Meepo_4_GankItems",
     messageTime: 10 * 60 + 15,
-    textMessage:
-      "Once you have Diffusal Blade, look for pick-offs.",
+    textMessage: "Once you have Diffusal Blade, look for pick-offs.",
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "diffusal_blade" },
   },
@@ -9273,8 +9262,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "mirana",
     audioFile: "ownHero/Mirana_5_SaveAlly",
     messageTime: [8 * 60, 14 * 60],
-    textMessage:
-      `With the Moonlight Shadow facet, look around the map to save an ally in trouble with Moonlight Shadow.`,
+    textMessage: `With the Moonlight Shadow facet, look around the map to save an ally in trouble with Moonlight Shadow.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "mirana_invis" },
   },
@@ -9340,8 +9328,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "mirana",
     audioFile: "enemyHero/Mirana_5_ObserverSentry",
     messageTime: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
-    textMessage:
-      `If Mirana has the Moonlight Shadow facet, pair Observer Wards and Sentries on map to see opponents approaching under invisibility.`,
+    textMessage: `If Mirana has the Moonlight Shadow facet, pair Observer Wards and Sentries on map to see opponents approaching under invisibility.`,
     audience: [Audience.ALL],
   },
   {
@@ -9757,8 +9744,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "muerta",
     audioFile: "ownHero/Muerta_5_SpellImmunity",
     messageTime: [10 * 60 + 15, 20 * 60 + 15],
-    textMessage:
-      `Be careful not to use Pierce the Veil against debuff immunity and heavy magic resistance.`,
+    textMessage: `Be careful not to use Pierce the Veil against debuff immunity and heavy magic resistance.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "muerta_pierce_the_veil" },
   },
@@ -9873,8 +9859,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "muerta",
     audioFile: "enemyHero/Muerta_4_Bkb",
     messageTime: 12 * 60,
-    textMessage:
-      `Get an early BKB against Muerta to reduce her spell damage from Pierce the Veil and Dead Shot.`,
+    textMessage: `Get an early BKB against Muerta to reduce her spell damage from Pierce the Veil and Dead Shot.`,
     audience: [Audience.ALL],
   },
   {
@@ -10700,10 +10685,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `nyx_assassin`,
     audioFile: `ownHero/NyxAssassin_11_MindFlareCreepSecure`,
     messageTime: [3 * 60 + 15, 13 * 60 + 15],
-    textMessage:
-      `When not much is happening in the game, look to use Mind Flare to instantly kill some jungle creeps for some quick farm and experience.`,
+    textMessage: `When not much is happening in the game, look to use Mind Flare to instantly kill some jungle creeps for some quick farm and experience.`,
     audience: [Audience.ALL],
-	image: { type: `ability`, name: `nyx_assassin_jolt` },
+    image: { type: `ability`, name: `nyx_assassin_jolt` },
   },
 
   {
@@ -10752,8 +10736,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "nyx_assassin",
     audioFile: "enemyHero/NyxAssassin_6_MindFlare",
     messageTime: 12 * 60,
-    textMessage:
-      `Avoid buying too many mana pool increasing items against Nyx Assassins Mind Flare.`,
+    textMessage: `Avoid buying too many mana pool increasing items against Nyx Assassins Mind Flare.`,
     audience: [Audience.ALL],
   },
 
@@ -11945,8 +11928,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "primal_beast",
     audioFile: "ownHero/PrimalBeast_7_AghanimsShard",
     messageTime: 14 * 60 + 50,
-    textMessage:
-      `Pick up Aghanims Shard around later in the game as it provides another disable among other things.`,
+    textMessage: `Pick up Aghanims Shard around later in the game as it provides another disable among other things.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "primal_beast_trample" },
   },
@@ -13051,8 +13033,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "sand_king",
     audioFile: "ownHero/SandKing_3_TagExplode",
     messageTime: [75, 3 * 60 + 15],
-    textMessage:
-      `Tag creeps with Caustic Finale and if an opponent comes close, you can Burrowstrike or Stinger to last hit and explode creeps.`,
+    textMessage: `Tag creeps with Caustic Finale and if an opponent comes close, you can Burrowstrike or Stinger to last hit and explode creeps.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "sandking_caustic_finale" },
   },
@@ -13071,8 +13052,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "sand_king",
     audioFile: "ownHero/SandKing_5_DefendTowers",
     messageTime: [8 * 60, 12 * 60],
-    textMessage:
-      `Sand King is great at defending towers as you can Sand Storm in front and hide yourself in trees with the Sandshroud facet.`,
+    textMessage: `Sand King is great at defending towers as you can Sand Storm in front and hide yourself in trees with the Sandshroud facet.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "sandking_sand_storm" },
   },
@@ -13140,8 +13120,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "sand_king",
     audioFile: "enemyHero/SandKing_4_Detection",
     messageTime: [10 * 60 + 10, 18 * 60 + 10, 26 * 60 + 10],
-    textMessage:
-      `Against Sand King you need to carry detection on multiple heroes if he took the Sandshroud facet.`,
+    textMessage: `Against Sand King you need to carry detection on multiple heroes if he took the Sandshroud facet.`,
     audience: [Audience.ALL],
   },
   {
@@ -13541,8 +13520,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "shadow_shaman",
     audioFile: "ownHero/ShadowShaman_4_Ultimate2",
     messageTime: 8 * 60,
-    textMessage:
-      `If opponents are farming your Mass Serpent Wards, try to deny individual Serpent Wards with other Serpent Wards if you have the Cluster Cluck facet.`,
+    textMessage: `If opponents are farming your Mass Serpent Wards, try to deny individual Serpent Wards with other Serpent Wards if you have the Cluster Cluck facet.`,
     audience: [Audience.ALL],
   },
   {
@@ -13738,8 +13716,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "silencer",
     audioFile: "enemyHero/Silencer_2_ArcaneCurse",
     messageTime: -50,
-    textMessage:
-      `Silencers Arcane Curse silences and does more damage if you cast a spell while under the effect of it.`,
+    textMessage: `Silencers Arcane Curse silences and does more damage if you cast a spell while under the effect of it.`,
     audience: [Audience.ALL],
   },
   {
@@ -14003,8 +13980,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "slark",
     audioFile: "ownHero/Slark_1_ScoutWards",
     messageTime: -90,
-    textMessage:
-      `As you load into the game, start running to scout opponents placing wards as you have high night vision.`,
+    textMessage: `As you load into the game, start running to scout opponents placing wards as you have high night vision.`,
     audience: [Audience.ALL],
   },
   {
@@ -14012,8 +13988,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "slark",
     audioFile: "ownHero/Slark_2_DamageDifference",
     messageTime: 15,
-    textMessage:
-      `Hit an opponent whenever you can to create a damage difference of 4. It'll help you with last hiting.`,
+    textMessage: `Hit an opponent whenever you can to create a damage difference of 4. It'll help you with last hiting.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "slark_essence_shift" },
   },
@@ -14022,8 +13997,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "slark",
     audioFile: "ownHero/Slark_3_GoPounce",
     messageTime: 75,
-    textMessage:
-      `If you are able to build up a few Essence Shift stacks, look to commit for a kill attempt with Pounce.`,
+    textMessage: `If you are able to build up a few Essence Shift stacks, look to commit for a kill attempt with Pounce.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "slark_pounce" },
   },
@@ -14083,8 +14057,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "slark",
     audioFile: "ownHero/Slark_9_AghanimsShard",
     messageTime: 15 * 60,
-    textMessage:
-      `Slarks Aghanims Shard is very good for man fighting and saving allies, consider purchasing after your 3 main items.`,
+    textMessage: `Slarks Aghanims Shard is very good for man fighting and saving allies, consider purchasing after your 3 main items.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
@@ -14093,8 +14066,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `slark`,
     audioFile: `ownHero/Slark_10_AghanimsShard`,
     messageTime: [45, 2 * 60 + 45, 4 * 60 + 45, 6 * 60 + 45],
-    textMessage:
-      `When low on HP, look to get out of enemy vision to gain some HP regen from your Barracuda innate.`,
+    textMessage: `When low on HP, look to get out of enemy vision to gain some HP regen from your Barracuda innate.`,
     audience: [Audience.ALL],
   },
 
@@ -14103,10 +14075,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "slark",
     audioFile: "enemyHero/Slark_1_OfflaneMelee",
     messageTime: -90,
-    textMessage:
-      `Slark tends to do well against melee offlane heroes due to Essence Shift stacks. Check if you can send at least one ranged hero against him`,
-    chatMessage:
-      `Slark tends to do well against melee offlane heroes due to Essence Shift stacks. Send one ranged hero against him`,
+    textMessage: `Slark tends to do well against melee offlane heroes due to Essence Shift stacks. Check if you can send at least one ranged hero against him`,
+    chatMessage: `Slark tends to do well against melee offlane heroes due to Essence Shift stacks. Send one ranged hero against him`,
     audience: [Audience.ALL],
   },
   {
@@ -14263,8 +14233,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `snapfire`,
     audioFile: `ownHero/Snapfire_10_FullBoreFacet`,
     messageTime: [-45, 45, 3 * 60 + 45, 8 * 60 + 45, 13 * 60 + 45],
-    textMessage:
-      `With the Full Bore facet, look to keep more than 650 units distance from enemy heroes when hitting them with Scatterblast to do maximum damage.`,
+    textMessage: `With the Full Bore facet, look to keep more than 650 units distance from enemy heroes when hitting them with Scatterblast to do maximum damage.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `snapfire_scatterblast` },
   },
@@ -14274,10 +14243,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "snapfire",
     audioFile: "enemyHero/Snapfire_1_Scatterblast",
     messageTime: -10,
-    textMessage:
-      `If Snapfire has the Ricochet II facet, avoid staying too close to Snapfire on the lane as her main harassing spell is Scatterblast which does 50% more damage if you are within 450 range`,
-    chatMessage:
-      `If Snapfire has the Ricochet II facet, avoid staying close to Snapfire as her Scatterblast which does 50% more damage if you are within 450 range`,
+    textMessage: `If Snapfire has the Ricochet II facet, avoid staying too close to Snapfire on the lane as her main harassing spell is Scatterblast which does 50% more damage if you are within 450 range`,
+    chatMessage: `If Snapfire has the Ricochet II facet, avoid staying close to Snapfire as her Scatterblast which does 50% more damage if you are within 450 range`,
     audience: [Audience.IN_LANE],
   },
   {
@@ -15932,8 +15899,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "shredder",
     audioFile: "ownHero/Timbersaw_11_NoToLategame",
     messageTime: [22 * 60, 27 * 60],
-    textMessage:
-      `You do not necessarily want to go to late game, so try to close out the game before you fall off.`,
+    textMessage: `You do not necessarily want to go to late game, so try to close out the game before you fall off.`,
     audience: [Audience.ALL],
   },
 
@@ -16001,8 +15967,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "tinker",
     audioFile: `ownHero/Tinker_2_LaserHarass`,
     messageTime: 30,
-    textMessage:
-      `If the enemy laner does not have great HP regeneration, you can whittle them down with Laser spam along with right clicks and March of the Machines.`,
+    textMessage: `If the enemy laner does not have great HP regeneration, you can whittle them down with Laser spam along with right clicks and March of the Machines.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `tinker_laser` },
   },
@@ -16011,8 +15976,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "tinker",
     audioFile: "ownHero/Tinker_3_Stacks",
     messageTime: [3 * 60 + 30, 6 * 60 + 30],
-    textMessage:
-      `Ask your teammates to stack and make some yourself. You can clear multiple jungle camps and ancients with March of the Machines.`,
+    textMessage: `Ask your teammates to stack and make some yourself. You can clear multiple jungle camps and ancients with March of the Machines.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `tinker_march_of_the_machines` },
   },
@@ -16072,8 +16036,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tinker_9_Vision",
     messageTime: 12 * 60 + 15,
     repeatTime: 10 * 60,
-    textMessage:
-      `Fight under your vision to position yourself in a safe spot for the Laser and March of the Machines spam. You can even place the wards yourself.`,
+    textMessage: `Fight under your vision to position yourself in a safe spot for the Laser and March of the Machines spam. You can even place the wards yourself.`,
     audience: [Audience.ALL],
     image: { type: "item", name: "ward_observer" },
   },
@@ -16239,8 +16202,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `tinker`,
     audioFile: `enemyHero/Tinker_12_DisableAfterShield`,
     messageTime: [21 * 60 + 10, 31 * 60 + 10, 41 * 60 + 10, 51 * 60 + 10],
-    textMessage:
-      `Against the Translocator facet, try to disable Tinker only after you break through his Defense Matrix as he gets a strong dispel when the shield expires.`,
+    textMessage: `Against the Translocator facet, try to disable Tinker only after you break through his Defense Matrix as he gets a strong dispel when the shield expires.`,
     audience: [Audience.ALL],
   },
 
@@ -17302,8 +17264,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "vengefulspirit",
     audioFile: "ownHero/VengefulSpirit_3_Vision",
     messageTime: [3 * 60 + 30, 13 * 60 + 30],
-    textMessage:
-      `Wave of Terror provides vision so you can scout pillars for wards and Roshan pit.`,
+    textMessage: `Wave of Terror provides vision so you can scout pillars for wards and Roshan pit.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "vengefulspirit_wave_of_terror" },
   },
@@ -17342,8 +17303,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `vengefulspirit`,
     audioFile: `ownHero/VengefulSpirit_7_SwapBarrier`,
     messageTime: [10 * 60 + 45, 22 * 60 + 45, 34 * 60 + 45],
-    textMessage:
-      `In fights, you can Swap an ally just to give them and yourself a damage barrier, as long as it does not put them in a bad position.`,
+    textMessage: `In fights, you can Swap an ally just to give them and yourself a damage barrier, as long as it does not put them in a bad position.`,
     audience: [Audience.ALL],
     image: { type: `ability`, name: `vengefulspirit_nether_swap` },
   },
@@ -17485,8 +17445,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "venomancer",
     audioFile: "ownHero/Venomancer_10_Aghanims",
     messageTime: 35 * 60,
-    textMessage:
-      `Pick up Aghanims Scepter in the late game to significantly increase your damage through right clicks and Plague Wards.`,
+    textMessage: `Pick up Aghanims Scepter in the late game to significantly increase your damage through right clicks and Plague Wards.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `ultimate_scepter` },
   },
@@ -17681,8 +17640,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `viper`,
     audioFile: `enemyHero/Viper_6_PoisonBurstFacet`,
     messageTime: [1 * 60 + 15, 8 * 60 + 15, 19 * 60 + 15],
-    textMessage:
-      `When Viper has the Poison Burst facet, try not to stand next to the target he is attacking with Poison Attack to avoid its AoE burst damage.`,
+    textMessage: `When Viper has the Poison Burst facet, try not to stand next to the target he is attacking with Poison Attack to avoid its AoE burst damage.`,
     audience: [Audience.ALL],
   },
 
@@ -17710,8 +17668,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "visage",
     audioFile: "ownHero/Visage_3_FamiliarsUsage",
     messageTime: [7 * 60 + 30, 17 * 60 + 30, 27 * 60 + 30],
-    textMessage:
-      `With the Sepulchre facet, use familiars to control runes, stack camps, gank lanes even without your hero, drag and cut creepwaves.`,
+    textMessage: `With the Sepulchre facet, use familiars to control runes, stack camps, gank lanes even without your hero, drag and cut creepwaves.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "visage_summon_familiars" },
   },
@@ -17720,8 +17677,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "visage",
     audioFile: "ownHero/Visage_4_DontOverrotate",
     messageTime: [7 * 60 + 45, 11 * 60 + 45],
-    textMessage:
-      `Try not to over rotate. Work your way to Gleipnir as it allows you to solo kill most of the heroes.`,
+    textMessage: `Try not to over rotate. Work your way to Gleipnir as it allows you to solo kill most of the heroes.`,
     audience: [Audience.ROLE_CORE],
     image: { type: `item`, name: `gungir` },
   },
@@ -17760,8 +17716,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `visage`,
     audioFile: `ownHero/Visage_8_BootsofTravel`,
     messageTime: 25 * 60 + 30,
-    textMessage:
-      `With Boots of Travel, you can TP around the map to join fight or split push and bring your Familiars to you with the alternate cast of Summon Familiars.`,
+    textMessage: `With Boots of Travel, you can TP around the map to join fight or split push and bring your Familiars to you with the alternate cast of Summon Familiars.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `travel_boots` },
   },
@@ -18441,8 +18396,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/WinterWyvern_6_WintersCurse2",
     messageTime: 20 * 60,
     repeatTime: 30 * 60,
-    textMessage:
-      `Use Winters Curse carefully in the middle of fights as you might waste a lot of your ally's damage and cooldowns.`,
+    textMessage: `Use Winters Curse carefully in the middle of fights as you might waste a lot of your ally's damage and cooldowns.`,
     audience: [Audience.ALL],
   },
   {
@@ -18553,8 +18507,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "witch_doctor",
     audioFile: "ownHero/WitchDoctor_3_ToughLane",
     messageTime: 75,
-    textMessage:
-      `If you did not take the Voodoo Festeration facet, consider investing a point in Voodoo Restoration on tough lanes.`,
+    textMessage: `If you did not take the Voodoo Festeration facet, consider investing a point in Voodoo Restoration on tough lanes.`,
     audience: [Audience.ALL],
     image: { type: "ability", name: "witch_doctor_voodoo_restoration" },
   },
@@ -18563,8 +18516,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "witch_doctor",
     audioFile: "ownHero/WitchDoctor_4_Powerspike",
     messageTime: 2 * 60,
-    textMessage:
-      `With the Voodoo Festeration facet, level 2 Voodoo Restoration is a big damage powerspike for the Witch Doctor. Communicate with laning partner to go for a kill.`,
+    textMessage: `With the Voodoo Festeration facet, level 2 Voodoo Restoration is a big damage powerspike for the Witch Doctor. Communicate with laning partner to go for a kill.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: `ability`, name: `witch_doctor_voodoo_restoration` },
   },
@@ -18645,8 +18597,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `witch_doctor`,
     audioFile: `ownHero/WitchDoctor_12_VoodooRestorationFarming`,
     messageTime: [11 * 60 + 15, 21 * 60 + 15, 31 * 60 + 15],
-    textMessage:
-      `With the Voodoo Festeration facet, when not much is happening in the game, you can quickly farm creep waves and jungle camps with maxed out Voodoo Restoration.`,
+    textMessage: `With the Voodoo Festeration facet, when not much is happening in the game, you can quickly farm creep waves and jungle camps with maxed out Voodoo Restoration.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: `ability`, name: `witch_doctor_voodoo_restoration` },
   },
@@ -18673,8 +18624,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "witch_doctor",
     audioFile: "enemyHero/WitchDoctor_3_StrongLaner",
     messageTime: 2 * 60 + 20,
-    textMessage:
-      `Witch Doctor is a strong laner, especially when he gets a second point in Voodoo Restoration with his Voodoo Festeration facet.`,
+    textMessage: `Witch Doctor is a strong laner, especially when he gets a second point in Voodoo Restoration with his Voodoo Festeration facet.`,
     audience: [Audience.ALL],
   },
   {
@@ -18978,8 +18928,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `zuus`,
     audioFile: `ownHero/Zeus_14_AghanimsShard`,
     messageTime: 14 * 60 + 50,
-    textMessage:
-      `Pick up Aghanims Shard around the 15 minute mark to significantly increase your damage output and farm speed without expending your mana.`,
+    textMessage: `Pick up Aghanims Shard around the 15 minute mark to significantly increase your damage output and farm speed without expending your mana.`,
     audience: [Audience.ALL],
     image: { type: `item`, name: `aghanims_shard` },
   },

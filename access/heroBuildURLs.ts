@@ -25,7 +25,7 @@ export function getAllHeroAndBuildURLNames(): TURLName[] {
 }
 
 export function getBuildURLName(build: IHeroBuild): string {
-  const elements: string[] = build.roles;
+  const elements: string[] = [...build.roles];
 
   build.type && elements.push(build.type);
 

@@ -71,7 +71,7 @@ test("heroBuilds-getAbilityBuild()", () => {
   //console.log(`abilityBuild:\n`, abilityBuild);
 
   expect(abilityBuild[0].info).toBe(
-    "Try to hit the enemy as much as possible as early as possible in order to burn they're mana."
+    "Try to hit the enemy as much as possible as early as possible in order to burn their mana."
   );
 });
 
