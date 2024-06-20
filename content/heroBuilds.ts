@@ -653,7 +653,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             "orb_of_destruction",
             "vambrace",
             "elven_tunic",
-            "paladins_sword",
+            "paladin_sword",
             "vindicators_axe",
             "ninja_gear",
             "avianas_feather",
