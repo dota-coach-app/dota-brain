@@ -495,7 +495,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   //
   alchemist: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.physical,
     builds: [
@@ -843,7 +843,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   antimage: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -1101,7 +1101,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   axe: {
     // TNTCN updating this
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.pure,
     builds: [
@@ -2214,7 +2214,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   bristleback: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -2513,7 +2513,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   centaur: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.TNTCNz,
     damage_type: DamageType.magical,
     builds: [
@@ -2629,7 +2629,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   chaos_knight: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -3648,7 +3648,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   dawnbreaker: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
@@ -3995,7 +3995,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   death_prophet: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
@@ -4303,7 +4303,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   doom_bringer: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
@@ -4424,7 +4424,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   dragon_knight: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -4546,7 +4546,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   drow_ranger: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -5326,7 +5326,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   enigma: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -5582,7 +5582,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   faceless_void: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -6939,7 +6939,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   juggernaut: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -7405,7 +7405,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   legion_commander: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -7525,7 +7525,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   leshrac: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.magical,
     builds: [
@@ -8287,7 +8287,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   lion: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -8579,7 +8579,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   luna: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
@@ -9885,7 +9885,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   meepo: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -11139,7 +11139,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   necrolyte: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.magical,
     builds: [
@@ -12056,7 +12056,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   // Outworld Destroyer
   // Outworld Devourer
   obsidian_destroyer: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
@@ -12286,7 +12286,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   pangolier: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
@@ -12659,7 +12659,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   phantom_assassin: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -13928,7 +13928,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   // yongy146 plays hero
   queenofpain: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
@@ -15835,7 +15835,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   slardar: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.yongy146,
     damage_type: DamageType.physical,
     builds: [
@@ -17976,7 +17976,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   tinker: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -18467,7 +18467,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   // YoonA plays hero
   // Treant Protector
   treant: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.magical,
     builds: [
@@ -20176,7 +20176,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
   },
 
   visage: {
-    under_review: true,
+    under_review: false,
     creator: ContentCreator.YoonA,
     damage_type: DamageType.neutral,
     builds: [
