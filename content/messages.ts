@@ -2429,7 +2429,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "broodmother",
     audioFile: "enemyHero/Broodmother_6_AntievasionItems",
     messageTime: 12 * 60 + 20,
-    textMessage: "Evasion piercing items are good against Brood's Silken Bola.",
+    textMessage: 'Evasion piercing items are good against Broodmothers Incapacitating Bite.',
     audience: [Audience.ALL],
     image: { type: "item", name: "monkey_king_bar" },
   },
@@ -3423,9 +3423,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "dark_willow",
     audioFile: "ownHero/DarkWillow_6_Carry",
-    messageTime: [20 * 60 + 15, 24 * 60 + 15],
+    messageTime: 35 * 60 + 15,
     textMessage:
-      "If the game opens up for you, you can transition into right-clicker with Aghanim's Scepter and attack speed talent.",
+      'If the game opens up for you, you can transition into right clicker with Aghanims Scepter and attack speed items in the late game.',
     audience: [Audience.ROLE_SUPPORT],
   },
   {
@@ -11105,6 +11105,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Oracle_5_GapClosingItems",
     messageTime: 12 * 60 + 10,
     textMessage: "Gap closing items allow you to get on top of Oracle.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'EnemyHero',
+    npcHeroName: 'oracle',
+    audioFile: 'enemyHero/Oracle_6_RunePrediction',
+    messageTime: [5 * 60 + 45, 7 * 60 + 45, 9 * 60 + 45],
+    textMessage: 'The enemy mid laner will know where the power rune will spawn because of Oracle. You can follow him to contest the rune.',
     audience: [Audience.ALL],
   },
 
