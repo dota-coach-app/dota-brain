@@ -2669,7 +2669,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "chen",
     audioFile: "ownHero/Chen_1_UnblockCamps",
-    messageTime: -90,
+    messageTime: -80,
     textMessage:
       "Bring a sentry or two to the lane to unblock the camps. Chen's laning impact is directly related to summon usage.",
     audience: [Audience.ALL],
@@ -2730,6 +2730,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Chen_7_Farming",
     messageTime: 7 * 60,
     textMessage: `Look to farm and play greedy once you have level 3 Holy Persuasion. An early timing on Vladmirs Offering into Solar Crest lets you snowball the game.`,
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    npcHeroName: 'chen',
+    audioFile: 'ownHero/Chen_8_FacetSelection',
+    messageTime: -90,
+    textMessage: 'You can choose a Convert facet to cover the weakness or enforce the strength of your team, such as stun lock, damage, or laning.',
     audience: [Audience.ALL],
   },
 
@@ -8181,7 +8189,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_1_HelmOfIronWill",
     messageTime: -90,
     textMessage: "Rush Helm of Iron Will to solve your health sustain issues.",
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
     image: { type: "item", name: "helm_of_iron_will" },
   },
   {
@@ -8219,7 +8227,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 4 * 60 + 45,
     textMessage:
       "Lycan's laning power spike is Helm of Dominator and level 6. Try to get a kill or force the enemy out of the lane and you can take the tower fast.",
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
   {
@@ -8229,7 +8237,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 5 * 60,
     textMessage:
       "Delay death of the 5 minute catapult wave to meet Helm of the Dominator and level 6 power spike.",
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
   },
   {
     category: "OwnHero",
@@ -8237,7 +8245,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_7_ControlledCreep",
     messageTime: 5 * 60,
     textMessage: `Take control of a neutral creep with a stun or root with the Helm of the Dominator so the opponents cant teleport out.`,
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
   {
@@ -8247,7 +8255,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: [7 * 60 + 15, 14 * 60 + 15],
     textMessage:
       "When dominated creep is about to die, you can overtake another one and deny gold and experience to opponents.",
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
   {
@@ -8301,7 +8309,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "lycan",
     audioFile: "ownHero/Lycan_14_Boots",
@@ -8310,7 +8318,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "With Power Treads, you are less reliant on your Shapeshift when trying to stay on top of enemy heroes and right click them.",
     audience: [Audience.ROLE_MID],
     image: { type: "item", name: "power_treads" },
-  },
+  }, */
   {
     category: "OwnHero",
     npcHeroName: "lycan",
@@ -8318,8 +8326,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 9 * 60,
     textMessage:
       "Use your burst damage to make maximum use of item spikes by looking for kills and objectives on the map.",
-    audience: [Audience.ROLE_MID],
-    image: { type: "item", name: "echo_sabre" },
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'helm_of_the_overlord' },
   },
   {
     category: "OwnHero",
@@ -16728,9 +16736,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_4_MaxPunch",
     messageTime: [4 * 60, 14 * 60],
     textMessage:
-      "Pop Tag Team before using Walrus Punch to maximize on damage.",
+      'If you have the Tag Team facet, pop Tag Team before using Walrus Punch to maximize on damage.',
     audience: [Audience.ALL],
-    image: { type: "ability", name: "tusk_tag_team" },
+    image: { type: 'ability', name: 'tusk_bitter_chill' },
   },
   {
     category: "OwnHero",
@@ -16747,9 +16755,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_6_BlinkSnowball2",
     messageTime: [14 * 60 + 30, 19 * 60 + 30],
     textMessage:
-      "Tuskar enables the team to take an early Roshan due to the Tag Team.",
+      'If you have the Tag Team facet, Tusk enables the team to take an early Roshan due to the Tag Team.',
     audience: [Audience.ALL],
-    image: { type: "ability", name: "tusk_tag_team" },
+    image: { type: 'ability', name: 'tusk_bitter_chill' },
   },
   {
     category: "OwnHero",
@@ -16757,7 +16765,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_7_AghanimsScepter",
     messageTime: [24 * 60 + 30, 29 * 60 + 30],
     textMessage:
-      "Pick up Aghanims Scepter as it is an amazing repositioning and kiting tool.",
+      'Pick up Aghanims Scepter as it is an amazing repositioning, kiting, and waveclear tool.',
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -16767,7 +16775,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_8_SpellsDuringSnowball",
     messageTime: [6 * 60 + 30, 11 * 60 + 30, 21 * 60 + 30, 31 * 60 + 30],
     textMessage:
-      "You can use both Tag Team and Ice Shard while Snowballed. Particularly helps in stopping enemy heroes fleeing from Snowball.",
+      'If you have the Tag Team facet, you can use both Tag Team and Ice Shard while Snowballed. Particularly helps in stopping enemy heroes fleeing from Snowball.',
     audience: [Audience.ALL],
   },
 
