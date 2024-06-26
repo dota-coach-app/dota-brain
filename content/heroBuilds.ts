@@ -18953,8 +18953,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         },
       },
     ],
-    combo: [],
-    // To be reveiwed as 'tusk_tag_team' does no longer exist
     combo: [
       "tusk_bitter_chill",
       "blink",
