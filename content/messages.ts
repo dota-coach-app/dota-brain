@@ -1128,7 +1128,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ArcWarden_1_LastHit",
     messageTime: -30,
     textMessage:
-      "Make use of Spark Wraiths to secure creep last hits, especially ranged creep.",
+      'Make use of Spark Wraiths to secure creep last hits, especially the ranged creeps.',
     audience: [Audience.IN_LANE, Audience.ROLE_CORE],
     image: { type: "ability", name: "arc_warden_spark_wraith" },
   },
@@ -1208,7 +1208,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/ArcWarden_2_SparkWraith",
     messageTime: 7 * 60,
     textMessage:
-      "Arc Wardens Tempest Spark Wraith takes two seconds to charge which gives you time to dodge it.",
+      'Arc Wardens Spark Wraith takes time to charge which gives you an opportunity to run away and dodge it.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "arc_warden_spark_wraith" },
   },
@@ -3436,7 +3436,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       'If the game opens up for you, you can transition into right clicker with Aghanims Scepter and attack speed items in the late game.',
     audience: [Audience.ROLE_SUPPORT],
   },
-  {
+  /* {
     category: `OwnHero`,
     npcHeroName: `dark_willow`,
     audioFile: `ownHero/DarkWillow_7_BedlamAlly`,
@@ -3444,7 +3444,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `You can use your Bedlam on initiators on your team and do all your damage while staying back in fights.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: `ability`, name: `dark_willow_bedlam` },
-  },
+  }, */
 
   {
     category: "EnemyHero",
@@ -7946,7 +7946,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "lone_druid",
     audioFile: "ownHero/LoneDruid_4_InTrouble",
     messageTime: [5 * 60 + 15, 15 * 60 + 15],
-    textMessage: `When in trouble, consider using Savage Roar and True Form. Lifesteal or body blocks from the Spirit Bear can help.`,
+    textMessage: 'When in trouble, consider using Savage Roar and True Form if you have the Bear with Me facet. Lifesteal or body blocks from the Spirit Bear can help.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "lone_druid_savage_roar" },
   },
@@ -7965,7 +7965,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "lone_druid",
     audioFile: "ownHero/LoneDruid_6_Roshan",
     messageTime: 16 * 60 + 15,
-    textMessage: `You can take Roshan fairly early by yourself or with minimal help. Tank with hero as the Spirit Bear will heal you.`,
+    textMessage: 'You can take Roshan fairly early by yourself or with minimal help. The Bear with Me facet will help heal both the hero and Spirit Bear with right clicks.',
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aegis" },
   },
@@ -10078,7 +10078,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Furion_1_TreantsJob",
     messageTime: 18 * 60 + 45,
     textMessage:
-      "Treants are not only good for lasthitting or harassing but also to scout, block off camps and deny runes.",
+      'Treants are not only good for last hitting or harassing but also to scout, block off camps and deny runes.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_force_of_nature" },
   },
@@ -10108,7 +10108,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Furion_12_TPWisdomRune",
     messageTime: 6 * 60 + 45,
     textMessage:
-      "Wisdom runes spawn at minute 7, look to steal enemy runes with teleport as it gives you alot and denies alot from the enemy.",
+      'Wisdom runes spawn at minute 7, look to steal enemy runes with teleport as it gives you a lot and denies a lot from the enemy.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_teleportation" },
   },
@@ -10177,7 +10177,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Furion_10_PushSidelanes",
     messageTime: [10 * 60 + 15, 18 * 60 + 15, 26 * 60 + 15],
     textMessage:
-      "When not much is happening, push out the sidelines with your sprout and summons.",
+      'When not much is happening, push out the side lanes with your Sprout and summons.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_sprout" },
   },
@@ -10464,7 +10464,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/NightStalker_3_SurviveDay",
     messageTime: 10,
     textMessage:
-      "Look to survive through the first 5 minutes of the game and ideally have phase boots as the night hits.",
+      'If you took the Blinding Void facet, look to survive through the first 5 minutes of the game and ideally have phase boots as the night hits.',
     audience: [Audience.ALL],
   },
   {
@@ -10472,7 +10472,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "night_stalker",
     audioFile: "ownHero/NightStalker_4_VoidCreeps",
     messageTime: 20,
-    textMessage: "Use Void to secure ranged creep lasthits.",
+    textMessage: 'Use Void to secure ranged creep last hits.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "night_stalker_void" },
   },
@@ -10492,7 +10492,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/NightStalker_5_CripplingFear",
     messageTime: 4 * 60,
     textMessage:
-      "Keep a skill point or opt to skill Crippling Fear as the first night approaches if it is necessary to score a kill.",
+      'If you took the Blinding Void facet, keep a skill point or opt to skill Crippling Fear as the first night approaches if it is necessary to score a kill.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "night_stalker_crippling_fear" },
   },
@@ -10535,6 +10535,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "blink" },
   },
+  {
+    category: 'OwnHero',
+    npcHeroName: 'night_stalker',
+    audioFile: 'ownHero/NightStalker_10_NightTimeLaning',
+    messageTime: -10,
+    textMessage:
+      'With the Night Reign facet, Look to apply pressure in the first 5 mins of the game and get ahead during this time to eventually make use of your ultimate.',
+    audience: [Audience.ALL],
+  },
 
   {
     category: "EnemyHero",
@@ -10542,7 +10551,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/NightStalker_1_PressureEarly",
     messageTime: 10,
     textMessage:
-      "Night Stalker is weak in the first 5 minutes of the game. Pressure him early.",
+      'If Night Stalker took the Blinding Void facet, he is weak in the first 5 minutes of the game. Pressure him early.',
     audience: [Audience.IN_LANE],
   },
   {
@@ -10551,7 +10560,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/NightStalker_2_5Minutes",
     messageTime: 4 * 60 + 30,
     textMessage:
-      "Night Stalker will fight you at the 5 minute mark, as night time will hit.",
+      'If Night Stalker took the Blinding Void facet, he will fight you at the 5 minute mark, as night time will hit.',
     audience: [Audience.IN_LANE],
   },
   {
@@ -10588,6 +10597,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Break effects remove Hunter in the Night and Nightstalker becomes significantly weaker.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'EnemyHero',
+    npcHeroName: 'night_stalker',
+    audioFile: 'enemyHero/NightStalker_7_DayTimeAggression',
+    messageTime: 5 * 60 + 10,
+    textMessage:
+      'If Night Stalker took the Night Reign facet, look to apply pressure before he reaches his level 6 during day time.',
     audience: [Audience.ALL],
   },
 
@@ -16218,7 +16236,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `tinker`,
     audioFile: `enemyHero/Tinker_12_DisableAfterShield`,
     messageTime: [21 * 60 + 10, 31 * 60 + 10, 41 * 60 + 10, 51 * 60 + 10],
-    textMessage: `Against the Translocator facet, try to disable Tinker only after you break through his Defense Matrix as he gets a strong dispel when the shield expires.`,
+    textMessage: 'Against the Translocator facet, try to root or silence Tinker only after you break through his Defense Matrix as he gets a basic dispel when the shield expires.',
     audience: [Audience.ALL],
   },
 
