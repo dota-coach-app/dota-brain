@@ -21,22 +21,22 @@
  *
  * (C) Dota Coach, 2024. All rights reserved.
  */
-import { IntlShape } from "react-intl";
+import { IntlShape } from 'react-intl';
 import {
   DOTA_COACH_GUIDE_ROLE,
   STEAM_GUIDE_ROLE,
   getRolesString,
-} from "../utilities/playerRoles";
+} from '../utilities/playerRoles';
 
 export enum ContentCreator {
   //TBD = "TBD",
   //ZoGraF = "ZoGraF",
   //AlexDota = "AlexDota",
   //TNTCNz = "TNTCNz",
-  YoonA = "YoonA",
-  eidandota = "eidandota",
-  yongy146 = "yongy146",
-  TNTCNz = "TNTCNz",
+  YoonA = 'YoonA',
+  eidandota = 'eidandota',
+  yongy146 = 'yongy146',
+  TNTCNz = 'TNTCNz',
 }
 
 export interface IContentCreatorLink {
@@ -63,29 +63,29 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> =
     link_text: "Click here to be coached by him.",
   },*/
     eidandota: {
-      image: "https://i.imgur.com/BLWOWSp.jpg",
-      text: "This guide was written by 8k MMR player and coach eidandota:",
-      link_http: "https://skelly.gg/g/Eidan",
+      image: 'https://i.imgur.com/BLWOWSp.jpg',
+      text: 'This guide was written by 8k MMR player and coach eidandota:',
+      link_http: 'https://skelly.gg/g/Eidan',
       //link_text: "Click here to book a coaching session with eidandota.",
     },
     TNTCNz: {
-      image: "https://i.imgur.com/MvM6s5B.jpeg",
-      text: "This guide was written by 8k MMR player TNTCN:",
-      link_http: "https://skelly.gg/g/TNTCN",
+      image: 'https://i.imgur.com/MvM6s5B.jpeg',
+      text: 'This guide was written by 8k MMR player TNTCN:',
+      link_http: 'https://skelly.gg/g/TNTCN',
       //link_http: "https://www.gamersensei.com/senseis/tntcn",
       //link_text: "Click here to book a coaching session with him.",
     },
     YoonA: {
-      image: "https://i.imgur.com/TZpRwOK.jpeg",
-      text: "This guide was written by Hammad:",
+      image: 'https://i.imgur.com/TZpRwOK.jpeg',
+      text: 'This guide was written by Hammad:',
       //link_http: "https://www.fiverr.com/share/k0bmRk",
-      link_http: "https://skelly.gg/g/YoonA",
+      link_http: 'https://skelly.gg/g/YoonA',
       //link_text: "Click here to book a coaching session with him.",
     },
     yongy146: {
-      image: "https://i.imgur.com/pPXOkj8.png",
-      text: "This guide was written by BaLLooN, a 7.8k DotA 2 player based in SEA with 17 years of experience:",
-      link_http: "https://www.fiverr.com/yongy146",
+      image: 'https://i.imgur.com/pPXOkj8.png',
+      text: 'This guide was written by BaLLooN, a 7.8k DotA 2 player based in SEA with 17 years of experience:',
+      link_http: 'https://www.fiverr.com/yongy146',
     },
     /*ZoGraF: {
     image: "https://i.imgur.com/QZzNRhz.png",
@@ -96,10 +96,10 @@ export const ContentCreatorLinks: Record<ContentCreator, IContentCreatorLink> =
   };
 
 export enum DamageType {
-  neutral = "neutral", // Combination of physical, magical and pure
-  physical = "physical",
-  magical = "magical",
-  pure = "pure",
+  neutral = 'neutral', // Combination of physical, magical and pure
+  physical = 'physical',
+  magical = 'magical',
+  pure = 'pure',
 }
 
 /**
@@ -152,7 +152,7 @@ export interface IHeroBuild {
    * specify an array fo facets, e.g. [1, 2]
    *
    */
-  facet: number | number[] | undefined; // 'undefined' to be removed once all guides are updated!
+  facet: number | number[] | null; // 'null' to be removed once all guides are updated!
   abilities: string[];
   items: ItemBuild;
   combo?: string[]; // Combo specific to this hero build
@@ -187,9 +187,9 @@ export function getSteamGuideLink(id: number) {
  */
 export function getRoleName(heroBuild: IHeroBuild, intl: IntlShape): string {
   return `${getRolesString(heroBuild.roles, intl)}${
-    Object.prototype.hasOwnProperty.call(heroBuild, "type")
-      ? " " + heroBuild.type
-      : ""
+    Object.prototype.hasOwnProperty.call(heroBuild, 'type')
+      ? ' ' + heroBuild.type
+      : ''
   }`;
 }
 
@@ -245,49 +245,49 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.6, 1.8, 1.9, 1.6],
         facet: 2,
         abilities: [
-          "abaddon_aphotic_shield", // 1
-          "abaddon_frostmourne", // 2, equals to `curse of avernus`
+          'abaddon_aphotic_shield', // 1
+          'abaddon_frostmourne', // 2, equals to `curse of avernus`
           `abaddon_aphotic_shield`, // 3
           `abaddon_death_coil`, // 4
-          "abaddon_aphotic_shield", // 5
-          "abaddon_borrowed_time", // 6
-          "abaddon_aphotic_shield", // 7
-          "abaddon_death_coil", // 8
-          "abaddon_death_coil", // 9
+          'abaddon_aphotic_shield', // 5
+          'abaddon_borrowed_time', // 6
+          'abaddon_aphotic_shield', // 7
+          'abaddon_death_coil', // 8
+          'abaddon_death_coil', // 9
           `abaddon_death_coil`, // 10
           `special_bonus_unique_abaddon_7`, // 11
-          "abaddon_borrowed_time", // 12
-          "abaddon_frostmourne", // 13
-          "abaddon_frostmourne", // 14
-          "special_bonus_unique_abaddon_2", // 15
-          "abaddon_frostmourne", // 16
-          "special_bonus_attributes", // 17
-          "abaddon_borrowed_time", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_abaddon", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_abaddon_4", // 25
+          'abaddon_borrowed_time', // 12
+          'abaddon_frostmourne', // 13
+          'abaddon_frostmourne', // 14
+          'special_bonus_unique_abaddon_2', // 15
+          'abaddon_frostmourne', // 16
+          'special_bonus_attributes', // 17
+          'abaddon_borrowed_time', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_abaddon', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_abaddon_4', // 25
           //25 levels, no need for more than that as they are automatic afterwards
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
-            "enchanted_mango",
+            'enchanted_mango',
             `enchanted_mango`,
             `branches`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
-            "magic_wand",
+            'magic_wand',
             `ring_of_basilius`,
             `wind_lace`,
             `infused_raindrop`,
@@ -300,7 +300,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `force_staff`,
           ],
           late_game: [
-            "ultimate_scepter",
+            'ultimate_scepter',
             `guardian_greaves`,
             `assault`,
             `overwhelming_blink`,
@@ -321,7 +321,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vladmir`,
             `blade_mail`,
             `cyclone`,
-            "aghanims_shard",
+            'aghanims_shard',
             `travel_boots`,
           ],
           core: [
@@ -340,9 +340,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `philosophers_stone`,
             `ogre_seal_totem`,
             `psychic_headband`,
-            "spy_gadget",
+            'spy_gadget',
             `martyrs_plate`,
-            "force_field",
+            'force_field',
             `giants_ring`,
           ],
         },
@@ -355,36 +355,36 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.6, 2.3, 2.2, 1.9],
         facet: 2,
         abilities: [
-          "abaddon_aphotic_shield", // 1
-          "abaddon_frostmourne", // 2, equals to `curse of avernus`
+          'abaddon_aphotic_shield', // 1
+          'abaddon_frostmourne', // 2, equals to `curse of avernus`
           `abaddon_aphotic_shield`, // 3
           `abaddon_frostmourne`, // 4
-          "abaddon_aphotic_shield", // 5
-          "abaddon_borrowed_time", // 6
-          "abaddon_aphotic_shield", // 7
+          'abaddon_aphotic_shield', // 5
+          'abaddon_borrowed_time', // 6
+          'abaddon_aphotic_shield', // 7
           `abaddon_frostmourne`, // 8
           `abaddon_frostmourne`, // 9
           `special_bonus_unique_abaddon_6`, // 10
           `abaddon_death_coil`, // 11
-          "abaddon_borrowed_time", // 12
+          'abaddon_borrowed_time', // 12
           `abaddon_death_coil`, // 13
           `abaddon_death_coil`, // 14
           `special_bonus_unique_abaddon_5`, // 15
           `abaddon_death_coil`, // 16
-          "special_bonus_attributes", // 17
-          "abaddon_borrowed_time", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'abaddon_borrowed_time', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_abaddon_immolation`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_abaddon_3`, // 25
           //25 levels, no need for more than that as they are automatic afterwards
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `quelling_blade`,
             `circlet`,
             `circlet`,
@@ -475,20 +475,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "blight_stone", "wind_lace", "boots"],
+        all: ['magic_stick', 'blight_stone', 'wind_lace', 'boots'],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
         // Comment for Alex: On the screen in the game only 5 items are shows, on the second screen there are 6. The items in the catrogy `all` are shonw first, then either `support` or `core`. Any additional items are discarded.
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff", "cyclone"],
-        core: ["silver_edge"],
+        support: ['glimmer_cape', 'force_staff', 'cyclone'],
+        core: ['silver_edge'],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["shivas_guard", "skadi", "butterfly"],
+        core: ['shivas_guard', 'skadi', 'butterfly'],
       },
     },
   },
@@ -505,80 +505,80 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40438,
         power_level: [1.1, 2.5, 2.6, 2.2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "alchemist_unstable_concoction",
-          "alchemist_acid_spray",
-          "alchemist_acid_spray",
-          "alchemist_unstable_concoction",
-          "alchemist_acid_spray",
-          "alchemist_chemical_rage",
-          "alchemist_acid_spray",
-          "alchemist_unstable_concoction",
-          "alchemist_unstable_concoction",
-          "special_bonus_unique_alchemist",
-          "alchemist_corrosive_weaponry",
-          "alchemist_chemical_rage",
-          "alchemist_corrosive_weaponry",
-          "alchemist_corrosive_weaponry",
-          "special_bonus_unique_alchemist_7",
-          "alchemist_corrosive_weaponry",
-          "special_bonus_attributes",
-          "alchemist_chemical_rage",
-          "special_bonus_attributes",
-          "special_bonus_unique_alchemist_8",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_alchemist_6",
+          'alchemist_unstable_concoction',
+          'alchemist_acid_spray',
+          'alchemist_acid_spray',
+          'alchemist_unstable_concoction',
+          'alchemist_acid_spray',
+          'alchemist_chemical_rage',
+          'alchemist_acid_spray',
+          'alchemist_unstable_concoction',
+          'alchemist_unstable_concoction',
+          'special_bonus_unique_alchemist',
+          'alchemist_corrosive_weaponry',
+          'alchemist_chemical_rage',
+          'alchemist_corrosive_weaponry',
+          'alchemist_corrosive_weaponry',
+          'special_bonus_unique_alchemist_7',
+          'alchemist_corrosive_weaponry',
+          'special_bonus_attributes',
+          'alchemist_chemical_rage',
+          'special_bonus_attributes',
+          'special_bonus_unique_alchemist_8',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_unique_alchemist_6',
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "gauntlets",
+            'tango',
+            'quelling_blade',
+            'gauntlets',
             //"magic_stick", removed by Dota Coach, as costs were too high (20.6.2024)
-            "branches",
-            "circlet",
+            'branches',
+            'circlet',
           ],
-          early_game: ["bracer", "power_treads", "magic_wand", "null_talisman"],
-          mid_game: ["radiance", "blink", "black_king_bar", "assault"],
-          late_game: ["abyssal_blade", "bloodthorn", "overwhelming_blink"],
+          early_game: ['bracer', 'power_treads', 'magic_wand', 'null_talisman'],
+          mid_game: ['radiance', 'blink', 'black_king_bar', 'assault'],
+          late_game: ['abyssal_blade', 'bloodthorn', 'overwhelming_blink'],
           situational: [
-            "manta",
-            "sange_and_yasha",
-            "silver_edge",
-            "swift_blink",
-            "nullifier",
-            "monkey_king_bar",
-            "aghanims_shard",
-            "sphere",
-            "refresher",
+            'manta',
+            'sange_and_yasha',
+            'silver_edge',
+            'swift_blink',
+            'nullifier',
+            'monkey_king_bar',
+            'aghanims_shard',
+            'sphere',
+            'refresher',
           ],
           core: [
-            "power_treads",
-            "radiance",
-            "black_king_bar",
-            "blink",
-            "assault",
-            "bloodthorn",
+            'power_treads',
+            'radiance',
+            'black_king_bar',
+            'blink',
+            'assault',
+            'bloodthorn',
           ],
           neutral: [
-            "broom_handle",
-            "duelist_gloves",
-            "orb_of_destruction",
-            "vambrace",
-            "elven_tunic",
-            "paladin_sword",
-            "vindicators_axe",
-            "ninja_gear",
-            "avianas_feather",
-            "havoc_hammer",
-            "mind_breaker",
-            "pirate_hat",
-            "mirror_shield",
-            "desolator_2",
+            'broom_handle',
+            'duelist_gloves',
+            'orb_of_destruction',
+            'vambrace',
+            'elven_tunic',
+            'paladin_sword',
+            'vindicators_axe',
+            'ninja_gear',
+            'avianas_feather',
+            'havoc_hammer',
+            'mind_breaker',
+            'pirate_hat',
+            'mirror_shield',
+            'desolator_2',
           ],
         },
       },
@@ -591,77 +591,77 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40439,
         power_level: [1.3, 2.5, 2.5, 2.2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "alchemist_unstable_concoction",
-          "alchemist_acid_spray",
-          "alchemist_acid_spray",
-          "alchemist_unstable_concoction",
-          "alchemist_acid_spray",
-          "alchemist_chemical_rage",
-          "alchemist_acid_spray",
-          "alchemist_unstable_concoction",
-          "alchemist_unstable_concoction",
-          "special_bonus_unique_alchemist",
-          "alchemist_corrosive_weaponry",
-          "alchemist_chemical_rage",
-          "alchemist_corrosive_weaponry",
-          "alchemist_corrosive_weaponry",
-          "special_bonus_unique_alchemist_7",
-          "alchemist_corrosive_weaponry",
-          "special_bonus_attributes",
-          "alchemist_chemical_rage",
-          "special_bonus_attributes",
-          "special_bonus_unique_alchemist_8",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_alchemist_6",
+          'alchemist_unstable_concoction',
+          'alchemist_acid_spray',
+          'alchemist_acid_spray',
+          'alchemist_unstable_concoction',
+          'alchemist_acid_spray',
+          'alchemist_chemical_rage',
+          'alchemist_acid_spray',
+          'alchemist_unstable_concoction',
+          'alchemist_unstable_concoction',
+          'special_bonus_unique_alchemist',
+          'alchemist_corrosive_weaponry',
+          'alchemist_chemical_rage',
+          'alchemist_corrosive_weaponry',
+          'alchemist_corrosive_weaponry',
+          'special_bonus_unique_alchemist_7',
+          'alchemist_corrosive_weaponry',
+          'special_bonus_attributes',
+          'alchemist_chemical_rage',
+          'special_bonus_attributes',
+          'special_bonus_unique_alchemist_8',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_unique_alchemist_6',
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "branches",
-            "gauntlets",
-            "gauntlets",
-            "ward_observer",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'branches',
+            'gauntlets',
+            'gauntlets',
+            'ward_observer',
           ],
-          early_game: ["bottle", "phase_boots", "soul_ring", "radiance"],
-          mid_game: ["blink", "black_king_bar", "manta"],
+          early_game: ['bottle', 'phase_boots', 'soul_ring', 'radiance'],
+          mid_game: ['blink', 'black_king_bar', 'manta'],
           late_game: [
-            "assault",
-            "bloodthorn",
-            "abyssal_blade",
-            "overwhelming_blink",
-            "ultimate_scepter",
+            'assault',
+            'bloodthorn',
+            'abyssal_blade',
+            'overwhelming_blink',
+            'ultimate_scepter',
           ],
           situational: [
-            "aghanims_shard",
-            "swift_blink",
-            "monkey_king_bar",
-            "nullifier",
-            "sphere",
-            "mjollnir",
+            'aghanims_shard',
+            'swift_blink',
+            'monkey_king_bar',
+            'nullifier',
+            'sphere',
+            'mjollnir',
           ],
-          core: ["phase_boots", "radiance", "blink", "black_king_bar"],
+          core: ['phase_boots', 'radiance', 'blink', 'black_king_bar'],
           neutral: [
-            "broom_handle",
-            "duelist_gloves",
-            "orb_of_destruction",
-            "vambrace",
-            "elven_tunic",
-            "paladin_sword",
-            "vindicators_axe",
-            "ninja_gear",
-            "avianas_feather",
-            "havoc_hammer",
-            "mind_breaker",
-            "pirate_hat",
-            "mirror_shield",
-            "desolator_2",
+            'broom_handle',
+            'duelist_gloves',
+            'orb_of_destruction',
+            'vambrace',
+            'elven_tunic',
+            'paladin_sword',
+            'vindicators_axe',
+            'ninja_gear',
+            'avianas_feather',
+            'havoc_hammer',
+            'mind_breaker',
+            'pirate_hat',
+            'mirror_shield',
+            'desolator_2',
           ],
         },
       },
@@ -671,31 +671,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     // Michel added old counter_items again, please review
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "urn_of_shadows"],
-        support: ["ward_sentry"],
-        core: ["orb_of_corrosion"],
+        all: ['blight_stone', 'urn_of_shadows'],
+        support: ['ward_sentry'],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["spirit_vessel"],
+        all: ['spirit_vessel'],
         support: [
-          "ward_dispenser",
-          "ghost",
-          "glimmer_cape",
-          "force_staff",
-          "cyclone",
+          'ward_dispenser',
+          'ghost',
+          'glimmer_cape',
+          'force_staff',
+          'cyclone',
         ],
-        core: ["desolator"],
+        core: ['desolator'],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk"],
+        all: ['sheepstick', 'aeon_disk'],
         support: [],
         core: [
-          "shivas_guard",
-          "skadi",
-          "assault",
-          "abyssal_blade",
-          "butterfly",
-          "bloodthorn",
+          'shivas_guard',
+          'skadi',
+          'assault',
+          'abyssal_blade',
+          'butterfly',
+          'bloodthorn',
         ],
       },
     },
@@ -715,47 +715,47 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 2, 2, 2.1],
         facet: 2,
         abilities: [
-          "ancient_apparition_chilling_touch",
-          "ancient_apparition_cold_feet",
+          'ancient_apparition_chilling_touch',
+          'ancient_apparition_cold_feet',
           `ancient_apparition_ice_vortex`,
           `ancient_apparition_ice_vortex`,
           `ancient_apparition_ice_vortex`,
-          "ancient_apparition_ice_blast",
+          'ancient_apparition_ice_blast',
           `ancient_apparition_ice_vortex`,
           `ancient_apparition_cold_feet`,
           `ancient_apparition_cold_feet`,
           `ancient_apparition_cold_feet`,
           `special_bonus_unique_ancient_apparition_8`,
-          "ancient_apparition_ice_blast",
+          'ancient_apparition_ice_blast',
           `ancient_apparition_chilling_touch`,
           `ancient_apparition_chilling_touch`,
           `special_bonus_unique_ancient_apparition_3`,
           `ancient_apparition_chilling_touch`,
-          "special_bonus_attributes",
-          "ancient_apparition_ice_blast",
-          "special_bonus_attributes",
+          'special_bonus_attributes',
+          'ancient_apparition_ice_blast',
+          'special_bonus_attributes',
           `special_bonus_unique_ancient_apparition_ice_vortex_duration`,
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_ancient_apparition_5",
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_unique_ancient_apparition_5',
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
             `circlet`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
-            "magic_wand",
+            'magic_wand',
             `ring_of_basilius`,
             `wind_lace`,
             `infused_raindrop`,
@@ -803,13 +803,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `trusty_shovel`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ogre_seal_totem`,
             `spy_gadget`,
             `timeless_relic`,
-            "seer_stone",
+            'seer_stone',
             `book_of_shadows`,
           ],
         },
@@ -823,21 +823,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["infused_raindrop", "wind_lace", "boots", "cloak"],
+        all: ['infused_raindrop', 'wind_lace', 'boots', 'cloak'],
         support: [],
-        core: ["headdress"],
+        core: ['headdress'],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff", "cyclone"],
+        support: ['glimmer_cape', 'force_staff', 'cyclone'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
-      late_game: { all: [], support: ["black_king_bar"], core: [] },
+      late_game: { all: [], support: ['black_king_bar'], core: [] },
     },
   },
 
@@ -855,66 +855,66 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [0.9, 1.6, 2.7, 2.7],
         facet: 2,
         abilities: [
-          "antimage_mana_break", // 1
-          "antimage_blink", // 2
-          "antimage_mana_break", // 3
-          "antimage_counterspell", // 4
-          "antimage_mana_break", // 5
-          "antimage_mana_void", // 6
-          "antimage_blink", // 7
-          "antimage_blink", // 8
-          "antimage_blink", // 9
-          "special_bonus_unique_antimage_4", // 10
-          "antimage_mana_break", // 11
-          "antimage_mana_void", // 12
-          "antimage_counterspell", // 13
-          "antimage_counterspell", // 14
-          "antimage_counterspell", // 15
-          "special_bonus_unique_antimage_7", // 16
-          "special_bonus_attributes", // 17
-          "antimage_mana_void", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_antimage", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_antimage_2", // 25
+          'antimage_mana_break', // 1
+          'antimage_blink', // 2
+          'antimage_mana_break', // 3
+          'antimage_counterspell', // 4
+          'antimage_mana_break', // 5
+          'antimage_mana_void', // 6
+          'antimage_blink', // 7
+          'antimage_blink', // 8
+          'antimage_blink', // 9
+          'special_bonus_unique_antimage_4', // 10
+          'antimage_mana_break', // 11
+          'antimage_mana_void', // 12
+          'antimage_counterspell', // 13
+          'antimage_counterspell', // 14
+          'antimage_counterspell', // 15
+          'special_bonus_unique_antimage_7', // 16
+          'special_bonus_attributes', // 17
+          'antimage_mana_void', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_antimage', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_antimage_2', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "branches",
-            "branches",
-            "quelling_blade",
-            "slippers",
-            "circlet",
+            'tango',
+            'branches',
+            'branches',
+            'quelling_blade',
+            'slippers',
+            'circlet',
           ],
-          early_game: ["power_treads", "magic_wand", "cornucopia"],
-          mid_game: ["bfury", "manta", "ultimate_scepter", "skadi"],
-          late_game: ["butterfly", "abyssal_blade"],
+          early_game: ['power_treads', 'magic_wand', 'cornucopia'],
+          mid_game: ['bfury', 'manta', 'ultimate_scepter', 'skadi'],
+          late_game: ['butterfly', 'abyssal_blade'],
           situational: [
-            "orb_of_corrosion",
-            "black_king_bar",
-            "monkey_king_bar",
-            "sphere",
-            "aghanims_shard",
-            "nullifier",
-            "disperser",
+            'orb_of_corrosion',
+            'black_king_bar',
+            'monkey_king_bar',
+            'sphere',
+            'aghanims_shard',
+            'nullifier',
+            'disperser',
           ],
-          core: ["power_treads", "bfury", "manta", "ultimate_scepter"],
+          core: ['power_treads', 'bfury', 'manta', 'ultimate_scepter'],
           neutral: [
-            "broom_handle",
-            "safety_bubble",
-            "occult_bracelet",
-            "pupils_gift",
-            "vambrace",
-            "elven_tunic",
-            "vindicators_axe",
-            "mind_breaker",
-            "ninja_gear",
-            "mirror_shield",
-            "pirate_hat",
+            'broom_handle',
+            'safety_bubble',
+            'occult_bracelet',
+            'pupils_gift',
+            'vambrace',
+            'elven_tunic',
+            'vindicators_axe',
+            'mind_breaker',
+            'ninja_gear',
+            'mirror_shield',
+            'pirate_hat',
           ],
         },
       },
@@ -929,27 +929,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "enchanted_mango", "arcane_boots"],
+        all: ['magic_stick', 'enchanted_mango', 'arcane_boots'],
         support: [],
-        core: ["soul_ring"],
+        core: ['soul_ring'],
       },
       mid_game: {
-        all: ["rod_of_atos"],
-        support: ["ward_dispenser", "glimmer_cape", "ghost"],
+        all: ['rod_of_atos'],
+        support: ['ward_dispenser', 'glimmer_cape', 'ghost'],
         core: [
-          "orchid",
-          "desolator",
-          "invis_sword",
-          "diffusal_blade",
-          "hurricane_pike",
-          "travel_boots",
-          "gungir",
+          'orchid',
+          'desolator',
+          'invis_sword',
+          'diffusal_blade',
+          'hurricane_pike',
+          'travel_boots',
+          'gungir',
         ],
       },
       late_game: {
-        all: ["sheepstick", "sphere", "aeon_disk"],
-        support: ["travel_boots"],
-        core: ["silver_edge", "abyssal_blade", "butterfly", "assault"],
+        all: ['sheepstick', 'sphere', 'aeon_disk'],
+        support: ['travel_boots'],
+        core: ['silver_edge', 'abyssal_blade', 'butterfly', 'assault'],
       },
     },
   },
@@ -984,10 +984,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           "arc_warden_magnetic_field", // 13
           "arc_warden_magnetic_field", // 14
           `special_bonus_unique_arc_warden_3`, // 15
-          "arc_warden_magnetic_field", // 16
-          "special_bonus_attributes", // 17
-          "arc_warden_tempest_double", // 18
-          "special_bonus_attributes", // 19
+          'arc_warden_magnetic_field', // 16
+          'special_bonus_attributes', // 17
+          'arc_warden_tempest_double', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_arc_warden_9`, // 20
           "special_bonus_attributes", // 21
           "special_bonus_attributes", // 22
@@ -1036,7 +1036,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ultimate_scepter`,
             `ethereal_blade`,
             `dagon_5`,
-            "travel_boots_2",
+            'travel_boots_2',
           ],
           core: [
             'hand_of_midas',
@@ -1073,30 +1073,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "wind_lace", "boots", "infused_raindrop"],
-        support: ["ward_sentry"],
+        all: ['magic_stick', 'wind_lace', 'boots', 'infused_raindrop'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
-        all: ["blink", "cloak"],
-        support: ["ward_dispenser", "glimmer_cape", "force_staff", "ghost"],
+        all: ['blink', 'cloak'],
+        support: ['ward_dispenser', 'glimmer_cape', 'force_staff', 'ghost'],
         core: [
-          "invis_sword",
-          "heavens_halberd",
-          "gungir",
-          "travel_boots",
-          "witch_blade",
+          'invis_sword',
+          'heavens_halberd',
+          'gungir',
+          'travel_boots',
+          'witch_blade',
         ],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk"],
+        all: ['sheepstick', 'aeon_disk'],
         support: [],
         core: [
-          "abyssal_blade",
-          "monkey_king_bar",
-          "bloodthorn",
-          "butterfly",
-          "satanic",
+          'abyssal_blade',
+          'monkey_king_bar',
+          'bloodthorn',
+          'butterfly',
+          'satanic',
         ],
       },
     },
@@ -1114,32 +1114,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40444,
         power_level: [1.9, 2.3, 2.4, 2.3],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "axe_battle_hunger", // 1
-          "axe_counter_helix", // 2
-          "axe_counter_helix", // 3
-          "axe_berserkers_call", // 4
-          "axe_counter_helix", // 5
-          "axe_culling_blade", // 6
-          "axe_counter_helix", // 7
-          "axe_berserkers_call", // 8
-          "axe_berserkers_call", // 9
-          "axe_berserkers_call", // 10
+          'axe_battle_hunger', // 1
+          'axe_counter_helix', // 2
+          'axe_counter_helix', // 3
+          'axe_berserkers_call', // 4
+          'axe_counter_helix', // 5
+          'axe_culling_blade', // 6
+          'axe_counter_helix', // 7
+          'axe_berserkers_call', // 8
+          'axe_berserkers_call', // 9
+          'axe_berserkers_call', // 10
           `special_bonus_unique_axe_8`, // 11
-          "axe_culling_blade", // 12
-          "axe_battle_hunger", // 13
-          "axe_battle_hunger", // 14
-          "axe_battle_hunger", // 15
+          'axe_culling_blade', // 12
+          'axe_battle_hunger', // 13
+          'axe_battle_hunger', // 14
+          'axe_battle_hunger', // 15
           `special_bonus_unique_axe_4`, // 16
-          "special_bonus_attributes", // 17
-          "axe_culling_blade", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'axe_culling_blade', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_axe_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_axe_2`, // 25
         ],
         items: {
@@ -1161,15 +1161,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `blink`,
             `blade_mail`,
             `eternal_shroud`,
-            "black_king_bar",
-            "aghanims_shard",
+            'black_king_bar',
+            'aghanims_shard',
           ],
           late_game: [
             `travel_boots`,
             `shivas_guard`,
             `overwhelming_blink`,
-            "refresher",
-            "heart",
+            'refresher',
+            'heart',
           ],
           situational: [
             `pipe`,
@@ -1178,7 +1178,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sphere`,
             `ultimate_scepter`,
             `crimson_guard`,
-            "lotus_orb",
+            'lotus_orb',
             `heavens_halberd`,
             `travel_boots_2`,
           ],
@@ -1193,7 +1193,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `refresher`,
           ],
           neutral: [
-            "occult_bracelet",
+            'occult_bracelet',
             `broom_handle`,
             `safety_bubble`,
             `seeds_of_serenity`,
@@ -1207,7 +1207,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `havoc_hammer`,
             `trickster_cloak`,
             `martyrs_plate`,
-            "giants_ring",
+            'giants_ring',
             //`fallen_sky`,
           ],
         },
@@ -1225,19 +1225,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "wind_lace", "boots"],
+        all: ['blight_stone', 'wind_lace', 'boots'],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["cyclone"],
-        support: ["spirit_vessel"],
-        core: ["mage_slayer", `sange_and_yasha`, "silver_edge"],
+        all: ['cyclone'],
+        support: ['spirit_vessel'],
+        core: ['mage_slayer', `sange_and_yasha`, 'silver_edge'],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["satanic"],
+        core: ['satanic'],
       },
     },
   },
@@ -1256,43 +1256,43 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.1, 2, 2.1, 1.9],
         facet: [1, 2],
         abilities: [
-          "bane_brain_sap", // 1
-          "bane_nightmare", // 2
-          "bane_brain_sap", // 3
+          'bane_brain_sap', // 1
+          'bane_nightmare', // 2
+          'bane_brain_sap', // 3
           `bane_nightmare`, // 4
           `bane_brain_sap`, // 5
-          "bane_fiends_grip", // 6
+          'bane_fiends_grip', // 6
           `bane_nightmare`, // 7
           `bane_nightmare`, // 8
           `bane_enfeeble`, // 9
           `bane_enfeeble`, // 10
           `bane_enfeeble`, // 11
-          "bane_fiends_grip", // 12
+          'bane_fiends_grip', // 12
           `bane_enfeeble`, // 13
           `special_bonus_unique_bane_11`, // 14
           `special_bonus_unique_bane_9`, // 15 | Enfeeble Cast Range Reduction
           `bane_brain_sap`, // 16
-          "special_bonus_attributes", // 17
-          "bane_fiends_grip", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'bane_fiends_grip', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_bane_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_bane_3`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
             `circlet`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
@@ -1329,7 +1329,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            'arcane_boots',
             `aether_lens`,
             `force_staff`,
             `glimmer_cape`,
@@ -1340,13 +1340,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `faded_broach`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ceremonial_robe`,
-            "spy_gadget",
+            'spy_gadget',
             `ninja_gear`,
-            "seer_stone",
+            'seer_stone',
             `force_boots`,
           ],
         },
@@ -1364,16 +1364,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       laning_phase: {
         all: [`magic_stick`, `ring_of_regen`],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape"],
+        all: ['lotus_orb'],
+        support: ['glimmer_cape'],
         core: [`sange_and_yasha`, `black_king_bar`],
       },
       late_game: {
-        all: ["sphere", "wind_waker"],
-        support: ["black_king_bar"],
+        all: ['sphere', 'wind_waker'],
+        support: ['black_king_bar'],
         core: [],
       },
     },
@@ -1390,80 +1390,80 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40446,
         power_level: [2.4, 2.4, 2.3, 2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "batrider_sticky_napalm", // 1
-          "batrider_flamebreak", // 2
-          "batrider_sticky_napalm", // 3
-          "batrider_firefly", // 4
-          "batrider_sticky_napalm", // 5
-          "batrider_flaming_lasso", // 6
-          "batrider_sticky_napalm", // 7
-          "batrider_firefly", // 8
-          "batrider_firefly", // 9
-          "batrider_firefly", // 10
+          'batrider_sticky_napalm', // 1
+          'batrider_flamebreak', // 2
+          'batrider_sticky_napalm', // 3
+          'batrider_firefly', // 4
+          'batrider_sticky_napalm', // 5
+          'batrider_flaming_lasso', // 6
+          'batrider_sticky_napalm', // 7
+          'batrider_firefly', // 8
+          'batrider_firefly', // 9
+          'batrider_firefly', // 10
           `batrider_flamebreak`, // 11
-          "batrider_flaming_lasso", // 12
-          "batrider_flamebreak", // 13
-          "batrider_flamebreak", // 14
+          'batrider_flaming_lasso', // 12
+          'batrider_flamebreak', // 13
+          'batrider_flamebreak', // 14
           `special_bonus_unique_batrider_7`, // 15
           `special_bonus_movement_speed_20`, // 16
-          "special_bonus_attributes", // 17
-          "batrider_flaming_lasso", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'batrider_flaming_lasso', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_batrider_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_batrider_2`, // 25
         ],
         items: {
           starting: [
             `tango`,
             `blood_grenade`,
-            "branches",
+            'branches',
             `branches`,
-            "ward_observer",
-            "enchanted_mango",
+            'ward_observer',
+            'enchanted_mango',
           ],
           early_game: [
             `bottle`,
             `boots`,
             `magic_wand`,
             `wind_lace`,
-            "veil_of_discord",
+            'veil_of_discord',
           ],
           mid_game: [
             `travel_boots`,
             `black_king_bar`,
-            "shivas_guard",
+            'shivas_guard',
             `octarine_core`,
             `blink`,
           ],
           late_game: [
-            "devastator",
-            "aghanims_shard",
+            'devastator',
+            'aghanims_shard',
             `refresher`,
-            "overwhelming_blink",
+            'overwhelming_blink',
           ],
           situational: [
             `ultimate_scepter`,
             `sphere`,
             `cyclone`,
             `travel_boots_2`,
-            "sheepstick",
+            'sheepstick',
           ],
           core: [
-            "bottle",
-            "travel_boots",
-            "veil_of_discord",
+            'bottle',
+            'travel_boots',
+            'veil_of_discord',
             `black_king_bar`,
             `blink`,
             `octarine_core`,
-            "shivas_guard",
+            'shivas_guard',
             `aghanims_shard`,
-            "devastator",
+            'devastator',
           ],
           neutral: [
             `mysterious_hat`,
@@ -1485,42 +1485,42 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40447,
         power_level: [2.2, 2.4, 2.3, 2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "batrider_sticky_napalm", // 1
-          "batrider_flamebreak", // 2
-          "batrider_sticky_napalm", // 3
-          "batrider_firefly", // 4
-          "batrider_sticky_napalm", // 5
-          "batrider_flaming_lasso", // 6
-          "batrider_sticky_napalm", // 7
-          "batrider_firefly", // 8
-          "batrider_firefly", // 9
-          "batrider_firefly", // 10
+          'batrider_sticky_napalm', // 1
+          'batrider_flamebreak', // 2
+          'batrider_sticky_napalm', // 3
+          'batrider_firefly', // 4
+          'batrider_sticky_napalm', // 5
+          'batrider_flaming_lasso', // 6
+          'batrider_sticky_napalm', // 7
+          'batrider_firefly', // 8
+          'batrider_firefly', // 9
+          'batrider_firefly', // 10
           `batrider_flamebreak`, // 11
-          "batrider_flaming_lasso", // 12
-          "batrider_flamebreak", // 13
-          "batrider_flamebreak", // 14
+          'batrider_flaming_lasso', // 12
+          'batrider_flamebreak', // 13
+          'batrider_flamebreak', // 14
           `special_bonus_unique_batrider_7`, // 15
           `special_bonus_movement_speed_20`, // 16
-          "special_bonus_attributes", // 17
-          "batrider_flaming_lasso", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'batrider_flaming_lasso', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_batrider_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_batrider_2`, // 25
         ],
         items: {
           starting: [
             `tango`,
-            "gauntlets",
+            'gauntlets',
             `circlet`,
-            "branches",
-            "branches",
-            "branches",
+            'branches',
+            'branches',
+            'branches',
             `ward_observer`,
           ],
           early_game: [
@@ -1528,38 +1528,38 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `boots`,
             `magic_wand`,
             `wind_lace`,
-            "veil_of_discord",
+            'veil_of_discord',
           ],
           mid_game: [
             `travel_boots`,
             `black_king_bar`,
-            "shivas_guard",
+            'shivas_guard',
             `octarine_core`,
             `blink`,
           ],
           late_game: [
-            "devastator",
-            "aghanims_shard",
+            'devastator',
+            'aghanims_shard',
             `refresher`,
-            "overwhelming_blink",
+            'overwhelming_blink',
           ],
           situational: [
             `ultimate_scepter`,
             `sphere`,
             `cyclone`,
             `travel_boots_2`,
-            "sheepstick",
+            'sheepstick',
           ],
           core: [
             `bracer`,
-            "travel_boots",
-            "veil_of_discord",
+            'travel_boots',
+            'veil_of_discord',
             `black_king_bar`,
             `blink`,
             `octarine_core`,
-            "shivas_guard",
+            'shivas_guard',
             `aghanims_shard`,
-            "devastator",
+            'devastator',
           ],
           neutral: [
             `mysterious_hat`,
@@ -1586,26 +1586,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_wand", "wind_lace", "boots", "cloak"],
+        all: ['magic_wand', 'wind_lace', 'boots', 'cloak'],
         support: [],
-        core: ["phase_boots"],
+        core: ['phase_boots'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["force_staff", "glimmer_cape"],
+        all: ['lotus_orb'],
+        support: ['force_staff', 'glimmer_cape'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
           `sange_and_yasha`,
         ],
       },
       late_game: {
-        all: ["sphere", "sheepstick"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade"],
+        all: ['sphere', 'sheepstick'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade'],
       },
     },
   },
@@ -1623,12 +1623,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 2.1, 2.4, 2.2],
         facet: 2,
         abilities: [
-          "beastmaster_wild_axes",
+          'beastmaster_wild_axes',
           `beastmaster_call_of_the_wild_boar`,
           `beastmaster_wild_axes`,
           `beastmaster_call_of_the_wild_boar`,
           `beastmaster_wild_axes`,
-          "beastmaster_primal_roar",
+          'beastmaster_primal_roar',
           `beastmaster_wild_axes`,
           `beastmaster_call_of_the_wild_boar`,
           `beastmaster_call_of_the_wild_boar`,
@@ -1639,15 +1639,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `beastmaster_inner_beast`,
           `special_bonus_unique_beastmaster_5`,
           `beastmaster_inner_beast`,
-          "special_bonus_attributes",
-          "beastmaster_primal_roar",
-          "special_bonus_attributes",
-          "special_bonus_unique_beastmaster_6",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_beastmaster_7",
+          'special_bonus_attributes',
+          'beastmaster_primal_roar',
+          'special_bonus_attributes',
+          'special_bonus_unique_beastmaster_6',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_unique_beastmaster_7',
         ],
         items: {
           starting: [
@@ -1694,7 +1694,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `havoc_hammer`,
             `timeless_relic`,
             `giants_ring`,
-            "demonicon",
+            'demonicon',
           ],
         },
       },
@@ -1714,9 +1714,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["armor", "blight_stone", "wind_lace", "boots"],
+        all: ['armor', 'blight_stone', 'wind_lace', 'boots'],
         support: [],
-        core: ["orb_of_corrosion", "vanguard"],
+        core: ['orb_of_corrosion', 'vanguard'],
       },
       mid_game: {
         all: [],
@@ -1724,9 +1724,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: [`crimson_guard`, `sange_and_yasha`, `gungir`],
       },
       late_game: {
-        all: ["sphere"],
+        all: ['sphere'],
         support: [],
-        core: ["assault"],
+        core: ['assault'],
       },
     },
   },
@@ -1743,83 +1743,83 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40449,
         power_level: [1.9, 2.1, 2.5, 2.3],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "bloodseeker_blood_bath",
-          "bloodseeker_thirst",
-          "bloodseeker_thirst",
-          "bloodseeker_bloodrage",
-          "bloodseeker_thirst",
-          "bloodseeker_rupture",
-          "bloodseeker_bloodrage",
-          "bloodseeker_bloodrage",
-          "bloodseeker_bloodrage",
-          "special_bonus_unique_bloodseeker_5",
-          "bloodseeker_thirst",
-          "bloodseeker_rupture",
-          "bloodseeker_blood_bath",
-          "bloodseeker_blood_bath",
-          "special_bonus_unique_bloodseeker_7",
-          "bloodseeker_blood_bath",
-          "special_bonus_attributes",
-          "bloodseeker_rupture",
-          "special_bonus_attributes",
-          "special_bonus_unique_bloodseeker_3",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_bloodseeker_rupture_charges",
+          'bloodseeker_blood_bath',
+          'bloodseeker_thirst',
+          'bloodseeker_thirst',
+          'bloodseeker_bloodrage',
+          'bloodseeker_thirst',
+          'bloodseeker_rupture',
+          'bloodseeker_bloodrage',
+          'bloodseeker_bloodrage',
+          'bloodseeker_bloodrage',
+          'special_bonus_unique_bloodseeker_5',
+          'bloodseeker_thirst',
+          'bloodseeker_rupture',
+          'bloodseeker_blood_bath',
+          'bloodseeker_blood_bath',
+          'special_bonus_unique_bloodseeker_7',
+          'bloodseeker_blood_bath',
+          'special_bonus_attributes',
+          'bloodseeker_rupture',
+          'special_bonus_attributes',
+          'special_bonus_unique_bloodseeker_3',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_unique_bloodseeker_rupture_charges',
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "circlet",
-            "slippers",
-            "branches",
+            'tango',
+            'quelling_blade',
+            'circlet',
+            'slippers',
+            'branches',
           ],
-          early_game: ["wraith_band", "phase_boots", "magic_wand", "maelstrom"],
-          mid_game: ["black_king_bar", "mjollnir", "basher", "blink"],
+          early_game: ['wraith_band', 'phase_boots', 'magic_wand', 'maelstrom'],
+          mid_game: ['black_king_bar', 'mjollnir', 'basher', 'blink'],
           late_game: [
-            "ultimate_scepter",
-            "abyssal_blade",
-            "satanic",
-            "swift_blink",
-            "butterfly",
+            'ultimate_scepter',
+            'abyssal_blade',
+            'satanic',
+            'swift_blink',
+            'butterfly',
           ],
           situational: [
-            "silver_edge",
-            "skadi",
-            "monkey_king_bar",
-            "sphere",
-            "rod_of_atos",
-            "gungir",
+            'silver_edge',
+            'skadi',
+            'monkey_king_bar',
+            'sphere',
+            'rod_of_atos',
+            'gungir',
           ],
           core: [
-            "phase_boots",
-            "maelstrom",
-            "black_king_bar",
-            "mjollnir",
-            "basher",
-            "blink",
+            'phase_boots',
+            'maelstrom',
+            'black_king_bar',
+            'mjollnir',
+            'basher',
+            'blink',
           ],
           neutral: [
-            "broom_handle",
-            "lance_of_pursuit",
+            'broom_handle',
+            'lance_of_pursuit',
             //"ring_of_aquila",
-            "pupils_gift",
-            "orb_of_destruction",
-            "elven_tunic",
+            'pupils_gift',
+            'orb_of_destruction',
+            'elven_tunic',
             //"titan_sliver",
-            "paladin_sword",
+            'paladin_sword',
             //"penta_edged_sword",
-            "mind_breaker",
+            'mind_breaker',
             //"spell_prism",
-            "ninja_gear",
-            "mirror_shield",
-            "pirate_hat",
-            "apex",
+            'ninja_gear',
+            'mirror_shield',
+            'pirate_hat',
+            'apex',
           ],
         },
       },
@@ -1829,79 +1829,79 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40450,
         power_level: [1.7, 2.1, 2.3, 2.2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "bloodseeker_blood_bath",
-          "bloodseeker_thirst",
-          "bloodseeker_blood_bath",
-          "bloodseeker_thirst",
-          "bloodseeker_blood_bath",
-          "bloodseeker_rupture",
-          "bloodseeker_blood_bath",
-          "bloodseeker_bloodrage",
-          "bloodseeker_thirst",
-          "special_bonus_unique_bloodseeker_5",
-          "bloodseeker_bloodrage",
-          "bloodseeker_rupture",
-          "bloodseeker_bloodrage",
-          "bloodseeker_bloodrage",
-          "special_bonus_unique_bloodseeker_7",
-          "bloodseeker_thirst",
-          "special_bonus_attributes",
-          "bloodseeker_rupture",
-          "special_bonus_attributes",
-          "special_bonus_unique_bloodseeker_3",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_unique_bloodseeker_rupture_charges",
+          'bloodseeker_blood_bath',
+          'bloodseeker_thirst',
+          'bloodseeker_blood_bath',
+          'bloodseeker_thirst',
+          'bloodseeker_blood_bath',
+          'bloodseeker_rupture',
+          'bloodseeker_blood_bath',
+          'bloodseeker_bloodrage',
+          'bloodseeker_thirst',
+          'special_bonus_unique_bloodseeker_5',
+          'bloodseeker_bloodrage',
+          'bloodseeker_rupture',
+          'bloodseeker_bloodrage',
+          'bloodseeker_bloodrage',
+          'special_bonus_unique_bloodseeker_7',
+          'bloodseeker_thirst',
+          'special_bonus_attributes',
+          'bloodseeker_rupture',
+          'special_bonus_attributes',
+          'special_bonus_unique_bloodseeker_3',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_unique_bloodseeker_rupture_charges',
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "circlet",
-            "slippers",
-            "branches",
+            'tango',
+            'quelling_blade',
+            'circlet',
+            'slippers',
+            'branches',
           ],
           early_game: [
-            "wraith_band",
-            "phase_boots",
-            "magic_wand",
-            "blade_mail",
+            'wraith_band',
+            'phase_boots',
+            'magic_wand',
+            'blade_mail',
           ],
           mid_game: [
-            "rod_of_atos",
-            "black_king_bar",
-            "gungir",
-            "ultimate_scepter",
-            "blink",
+            'rod_of_atos',
+            'black_king_bar',
+            'gungir',
+            'ultimate_scepter',
+            'blink',
           ],
-          late_game: ["abyssal_blade", "satanic", "swift_blink", "butterfly"],
-          situational: ["silver_edge", "skadi", "monkey_king_bar", "sphere"],
+          late_game: ['abyssal_blade', 'satanic', 'swift_blink', 'butterfly'],
+          situational: ['silver_edge', 'skadi', 'monkey_king_bar', 'sphere'],
           core: [
-            "phase_boots",
-            "blade_mail",
-            "rod_of_atos",
-            "black_king_bar",
-            "gungir",
-            "ultimate_scepter",
-            "blink",
+            'phase_boots',
+            'blade_mail',
+            'rod_of_atos',
+            'black_king_bar',
+            'gungir',
+            'ultimate_scepter',
+            'blink',
           ],
           neutral: [
-            "broom_handle",
-            "unstable_wand",
+            'broom_handle',
+            'unstable_wand',
             //"ring_of_aquila",
-            "pupils_gift",
-            "ogre_seal_totem",
+            'pupils_gift',
+            'ogre_seal_totem',
             //`quickening_charm`,
-            "paladin_sword",
-            "mind_breaker",
+            'paladin_sword',
+            'mind_breaker',
             //"penta_edged_sword",
             //"spell_prism",
-            "mirror_shield",
-            "pirate_hat",
+            'mirror_shield',
+            'pirate_hat',
             //`fallen_sky`,
             //`ex_machina`,
           ],
@@ -1909,26 +1909,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
     ],
     combo: [
-      "bloodseeker_bloodrage",
-      "bloodseeker_rupture",
-      "bloodseeker_blood_bath",
-      "attack",
+      'bloodseeker_bloodrage',
+      'bloodseeker_rupture',
+      'bloodseeker_blood_bath',
+      'attack',
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
+        all: ['wind_lace', 'boots', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["cyclone", "lotus_orb"],
-        support: ["force_staff", "glimmer_cape", "ghost"],
+        all: ['cyclone', 'lotus_orb'],
+        support: ['force_staff', 'glimmer_cape', 'ghost'],
         core: [`blade_mail`, `sange_and_yasha`],
       },
       late_game: {
-        all: ["sphere", "sheepstick"],
+        all: ['sphere', 'sheepstick'],
         support: [],
-        core: ["satanic", "abyssal_blade"],
+        core: ['satanic', 'abyssal_blade'],
       },
     },
   },
@@ -1949,27 +1949,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `bounty_hunter_wind_walk`,
           `bounty_hunter_jinada`,
           `bounty_hunter_shuriken_toss`,
-          "bounty_hunter_shuriken_toss",
+          'bounty_hunter_shuriken_toss',
           `bounty_hunter_shuriken_toss`,
-          "bounty_hunter_track",
+          'bounty_hunter_track',
           `bounty_hunter_shuriken_toss`,
           `bounty_hunter_jinada`,
           `bounty_hunter_jinada`,
           `bounty_hunter_jinada`,
           `bounty_hunter_wind_walk`,
-          "bounty_hunter_track",
+          'bounty_hunter_track',
           `bounty_hunter_wind_walk`,
           `bounty_hunter_wind_walk`,
           `special_bonus_unique_bounty_hunter_5`,
           `special_bonus_unique_bounty_hunter_9`,
-          "special_bonus_attributes",
-          "bounty_hunter_track",
-          "special_bonus_attributes",
+          'special_bonus_attributes',
+          'bounty_hunter_track',
+          'special_bonus_attributes',
           `special_bonus_unique_bounty_hunter_8`,
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
           `special_bonus_unique_bounty_hunter_2`,
         ],
         items: {
@@ -2021,7 +2021,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "tranquil_boots",
+            'tranquil_boots',
             `spirit_vessel`,
             `aghanims_shard`,
             `boots_of_bearing`,
@@ -2033,7 +2033,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `broom_handle`,
             `faded_broach`,
             `philosophers_stone`,
-            "bullwhip",
+            'bullwhip',
             `psychic_headband`,
             `ceremonial_robe`,
             `timeless_relic`,
@@ -2053,19 +2053,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
-        support: ["ward_sentry", "dust"],
+        all: ['wind_lace', 'boots', 'armor'],
+        support: ['ward_sentry', 'dust'],
         core: [],
       },
       mid_game: {
-        all: ["cyclone", "lotus_orb"],
-        support: ["SentryDustGem", "ghost"],
-        core: ["manta"],
+        all: ['cyclone', 'lotus_orb'],
+        support: ['SentryDustGem', 'ghost'],
+        core: ['manta'],
       },
       late_game: {
-        all: ["sheepstick", "black_king_bar"],
-        support: ["SentryDustGem"],
-        core: ["assault", "abyssal_blade", "butterfly"],
+        all: ['sheepstick', 'black_king_bar'],
+        support: ['SentryDustGem'],
+        core: ['assault', 'abyssal_blade', 'butterfly'],
       },
     },
   },
@@ -2083,65 +2083,65 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 1.9, 2.4, 2.3],
         facet: 1,
         abilities: [
-          "brewmaster_cinder_brew",
-          "brewmaster_thunder_clap",
-          "brewmaster_drunken_brawler",
+          'brewmaster_cinder_brew',
+          'brewmaster_thunder_clap',
+          'brewmaster_drunken_brawler',
           `brewmaster_drunken_brawler`,
           `brewmaster_cinder_brew`,
-          "brewmaster_primal_split",
-          "brewmaster_drunken_brawler",
+          'brewmaster_primal_split',
+          'brewmaster_drunken_brawler',
           `brewmaster_drunken_brawler`,
-          "brewmaster_cinder_brew",
-          "brewmaster_cinder_brew",
+          'brewmaster_cinder_brew',
+          'brewmaster_cinder_brew',
           `special_bonus_unique_brewmaster_2`,
-          "brewmaster_primal_split",
+          'brewmaster_primal_split',
           `brewmaster_thunder_clap`,
           `brewmaster_thunder_clap`,
           `special_bonus_unique_brewmaster_8`,
           `brewmaster_thunder_clap`,
-          "special_bonus_attributes",
-          "brewmaster_primal_split",
-          "special_bonus_attributes",
-          "special_bonus_unique_brewmaster",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
+          'special_bonus_attributes',
+          'brewmaster_primal_split',
+          'special_bonus_attributes',
+          'special_bonus_unique_brewmaster',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
           `special_bonus_unique_brewmaster_4`,
         ],
         items: {
           starting: [
             `tango`,
             `quelling_blade`,
-            "circlet",
+            'circlet',
             `circlet`,
             `branches`,
             `branches`,
             `ward_observer`,
           ],
           early_game: [
-            "bracer",
-            "magic_wand",
-            "urn_of_shadows",
+            'bracer',
+            'magic_wand',
+            'urn_of_shadows',
             `boots`,
-            "infused_raindrop",
+            'infused_raindrop',
           ],
           mid_game: [
             `spirit_vessel`,
-            "radiance",
+            'radiance',
             `aghanims_shard`,
-            "travel_boots",
-            "manta",
+            'travel_boots',
+            'manta',
           ],
           late_game: [
-            "octarine_core",
-            "assault",
+            'octarine_core',
+            'assault',
             `refresher`,
             `overwhelming_blink`,
           ],
           situational: [
-            "veil_of_discord",
-            "vanguard",
+            'veil_of_discord',
+            'vanguard',
             `phase_boots`,
             `arcane_boots`,
             `hand_of_midas`,
@@ -2156,8 +2156,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `black_king_bar`,
             `sphere`,
             `lotus_orb`,
-            "aeon_disk",
-            "shivas_guard",
+            'aeon_disk',
+            'shivas_guard',
             `ultimate_scepter`,
             `travel_boots_2`,
           ],
@@ -2165,11 +2165,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `urn_of_shadows`,
             `boots`,
             `spirit_vessel`,
-            "radiance",
+            'radiance',
             `aghanims_shard`,
             `travel_boots`,
-            "octarine_core",
-            "refresher",
+            'octarine_core',
+            'refresher',
           ],
           neutral: [
             `arcane_ring`,
@@ -2198,19 +2198,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "magic_stick", "wind_lace", "boots"],
+        all: ['blight_stone', 'magic_stick', 'wind_lace', 'boots'],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["cloak"],
-        support: ["force_staff", "glimmer_cape", "ghost"],
-        core: ["orchid", "black_king_bar", "witch_blade"],
+        all: ['cloak'],
+        support: ['force_staff', 'glimmer_cape', 'ghost'],
+        core: ['orchid', 'black_king_bar', 'witch_blade'],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade", "monkey_king_bar", "bloodthorn", "butterfly"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade', 'monkey_king_bar', 'bloodthorn', 'butterfly'],
       },
     },
   },
@@ -2229,52 +2229,52 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.1, 2.6, 2.5, 2.4],
         facet: 1,
         abilities: [
-          "bristleback_quill_spray",
-          "bristleback_bristleback",
-          "bristleback_quill_spray",
-          "bristleback_viscous_nasal_goo",
-          "bristleback_quill_spray",
-          "bristleback_warpath",
-          "bristleback_quill_spray",
-          "bristleback_bristleback",
-          "bristleback_bristleback",
+          'bristleback_quill_spray',
+          'bristleback_bristleback',
+          'bristleback_quill_spray',
+          'bristleback_viscous_nasal_goo',
+          'bristleback_quill_spray',
+          'bristleback_warpath',
+          'bristleback_quill_spray',
+          'bristleback_bristleback',
+          'bristleback_bristleback',
           `bristleback_bristleback`,
-          "special_bonus_attack_speed_25",
-          "bristleback_warpath",
-          "bristleback_viscous_nasal_goo",
-          "bristleback_viscous_nasal_goo",
+          'special_bonus_attack_speed_25',
+          'bristleback_warpath',
+          'bristleback_viscous_nasal_goo',
+          'bristleback_viscous_nasal_goo',
           `special_bonus_unique_bristleback_6`,
-          "bristleback_viscous_nasal_goo",
-          "special_bonus_attributes",
-          "bristleback_warpath",
-          "special_bonus_attributes",
+          'bristleback_viscous_nasal_goo',
+          'special_bonus_attributes',
+          'bristleback_warpath',
+          'special_bonus_attributes',
           `special_bonus_unique_bristleback_2`,
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
-          "special_bonus_attributes",
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
+          'special_bonus_attributes',
           `special_bonus_spell_lifesteal_12`,
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `branches`,
             `branches`,
-            "quelling_blade",
+            'quelling_blade',
             `gauntlets`,
             `circlet`,
             `ward_observer`,
           ],
-          early_game: ["bracer", `magic_wand`, "arcane_boots", "vanguard"],
+          early_game: ['bracer', `magic_wand`, 'arcane_boots', 'vanguard'],
           mid_game: [
             `ultimate_scepter`,
             `bloodstone`,
             `aghanims_shard`,
-            "black_king_bar",
+            'black_king_bar',
           ],
           late_game: [`kaya_and_sange`, `shivas_guard`],
           situational: [
-            "eternal_shroud",
+            'eternal_shroud',
             `cloak`,
             `pipe`,
             `blade_mail`,
@@ -2292,12 +2292,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `heart`,
           ],
           core: [
-            "vanguard",
-            "arcane_boots",
+            'vanguard',
+            'arcane_boots',
             `ultimate_scepter`,
             `bloodstone`,
             `aghanims_shard`,
-            "black_king_bar",
+            'black_king_bar',
             `kaya_and_sange`,
             `shivas_guard`,
           ],
@@ -2323,35 +2323,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       `bristleback_hairball`,
       `bristleback_quill_spray`,
       `bristleback_viscous_nasal_goo`,
-      "bristleback_bristleback",
+      'bristleback_bristleback',
     ],
     counter_items: {
       laning_phase: {
         all: [
-          "magic_wand",
-          "armor",
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
-          "urn_of_shadows",
+          'magic_wand',
+          'armor',
+          'ring_of_regen',
+          'wind_lace',
+          'boots',
+          'urn_of_shadows',
         ],
         support: [],
         core: [],
       },
       mid_game: {
         all: [
-          "spirit_vessel",
+          'spirit_vessel',
           /*"medallion_of_courage",*/
-          "solar_crest",
-          "mekansm",
+          'solar_crest',
+          'mekansm',
         ],
-        support: ["glimmer_cape", "force_staff", "ghost"],
-        core: ["diffusal_blade", "silver_edge", "hurricane_pike"],
+        support: ['glimmer_cape', 'force_staff', 'ghost'],
+        core: ['diffusal_blade', 'silver_edge', 'hurricane_pike'],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["assault", "bloodthorn", "skadi", "butterfly"],
+        core: ['assault', 'bloodthorn', 'skadi', 'butterfly'],
       },
     },
   },
@@ -2371,41 +2371,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 2.6, 2.5, 2.1], // Mid
         facet: 1,
         abilities: [
-          "broodmother_spin_web", // 1
+          'broodmother_spin_web', // 1
           `broodmother_incapacitating_bite`, // 2
-          "broodmother_spin_web", // 3
-          "broodmother_insatiable_hunger", // 4
-          "broodmother_spin_web", // 5
-          "broodmother_spawn_spiderlings", // 6
+          'broodmother_spin_web', // 3
+          'broodmother_insatiable_hunger', // 4
+          'broodmother_spin_web', // 5
+          'broodmother_spawn_spiderlings', // 6
           `broodmother_spin_web`, // 7
           `broodmother_incapacitating_bite`, // 8
           `broodmother_incapacitating_bite`, // 9
-          "broodmother_incapacitating_bite", // 10
-          "special_bonus_unique_broodmother_6", // 11
-          "broodmother_spawn_spiderlings", // 12
+          'broodmother_incapacitating_bite', // 10
+          'special_bonus_unique_broodmother_6', // 11
+          'broodmother_spawn_spiderlings', // 12
           `broodmother_insatiable_hunger`, // 13
           `broodmother_insatiable_hunger`, // 14
           `special_bonus_unique_broodmother_5`, // 15
           `broodmother_insatiable_hunger`, // 16
-          "special_bonus_attributes", // 17
-          "broodmother_spawn_spiderlings", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'broodmother_spawn_spiderlings', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_attack_speed_35`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_broodmother_1`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `circlet`,
             `circlet`,
             `branches`,
             `branches`,
-            "ward_observer",
+            'ward_observer',
           ],
           early_game: [
             `wraith_band`,
@@ -2416,12 +2416,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           mid_game: [
             `orchid`,
-            "bloodthorn",
-            "black_king_bar",
+            'bloodthorn',
+            'black_king_bar',
             `manta`,
-            "aghanims_shard",
+            'aghanims_shard',
           ],
-          late_game: ["skadi", "butterfly", `sheepstick`, "assault"],
+          late_game: ['skadi', 'butterfly', `sheepstick`, 'assault'],
           situational: [
             `spirit_vessel`,
             `orb_of_corrosion`,
@@ -2429,14 +2429,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `diffusal_blade`,
             `disperser`,
             `lotus_orb`,
-            "phylactery",
-            "echo_sabre",
-            "harpoon",
+            'phylactery',
+            'echo_sabre',
+            'harpoon',
             `vladmir`,
             `crimson_guard`,
             `pipe`,
-            "guardian_greaves",
-            "sange_and_yasha",
+            'guardian_greaves',
+            'sange_and_yasha',
             `blink`,
             `desolator`,
             `monkey_king_bar`,
@@ -2453,21 +2453,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `power_treads`,
             `soul_ring`,
             `bloodthorn`,
-            "black_king_bar",
-            "manta",
-            "aghanims_shard",
-            "skadi",
+            'black_king_bar',
+            'manta',
+            'aghanims_shard',
+            'skadi',
           ],
           neutral: [
-            "arcane_ring",
+            'arcane_ring',
             `unstable_wand`,
             `pupils_gift`,
             `vambrace`,
-            "nemesis_curse",
+            'nemesis_curse',
             `defiant_shell`,
             `ancient_guardian`,
             `mind_breaker`,
-            "desolator_2",
+            'desolator_2',
             `apex`,
           ],
         },
@@ -2481,30 +2481,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       harpoon: `An upgrade to echo sabre that lets you catch up to enemy heroes and not get kited.`,*/
     combo: [
       `orchid`,
-      "broodmother_spawn_spiderlings",
+      'broodmother_spawn_spiderlings',
       `broodmother_insatiable_hunger`,
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor", "urn_of_shadows"],
-        support: ["ward_sentry"],
-        core: ["ring_of_health", "vanguard"],
+        all: ['wind_lace', 'boots', 'armor', 'urn_of_shadows'],
+        support: ['ward_sentry'],
+        core: ['ring_of_health', 'vanguard'],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["glimmer_cape", "ghost", "force_staff"],
-        core: ["crimson_guard", "hurricane_pike", "witch_blade"],
+        all: ['spirit_vessel'],
+        support: ['glimmer_cape', 'ghost', 'force_staff'],
+        core: ['crimson_guard', 'hurricane_pike', 'witch_blade'],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk"],
+        all: ['sheepstick', 'aeon_disk'],
         support: [],
         core: [
-          "monkey_king_bar",
-          "abyssal_blade",
-          "bloodthorn",
-          "skadi",
-          "butterfly",
-          "satanic",
+          'monkey_king_bar',
+          'abyssal_blade',
+          'bloodthorn',
+          'skadi',
+          'butterfly',
+          'satanic',
         ],
       },
     },
@@ -2521,37 +2521,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40455,
         power_level: [2, 2.1, 2.4, 2.3],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "centaur_hoof_stomp", // 1
+          'centaur_hoof_stomp', // 1
           `centaur_double_edge`, // 2
           `centaur_return`, // 3
           `centaur_return`, // 4
           `centaur_return`, // 5
-          "centaur_stampede", // 6
-          "centaur_hoof_stomp", // 7
-          "centaur_hoof_stomp", // 8
-          "centaur_hoof_stomp", // 9
+          'centaur_stampede', // 6
+          'centaur_hoof_stomp', // 7
+          'centaur_hoof_stomp', // 8
+          'centaur_hoof_stomp', // 9
           `special_bonus_hp_regen_4`, // 10
           `centaur_double_edge`, // 11
-          "centaur_stampede", // 12
+          'centaur_stampede', // 12
           `centaur_double_edge`, // 13
           `centaur_double_edge`, // 14
           `special_bonus_unique_centaur_4`, // 15
           `centaur_double_edge`, // 16
-          "special_bonus_attributes", // 17
-          "centaur_stampede", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'centaur_stampede', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_centaur_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_centaur_2`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `ring_of_protection`,
             `gauntlets`,
             `circlet`,
@@ -2561,7 +2561,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           mid_game: [`blade_mail`, `blink`, `eternal_shroud`, `aghanims_shard`],
           late_game: [`heart`, `black_king_bar`, `overwhelming_blink`],
           situational: [
-            "heavens_halberd",
+            'heavens_halberd',
             `shivas_guard`,
             `ultimate_scepter`,
             `lotus_orb`,
@@ -2581,15 +2581,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `seeds_of_serenity`,
             `safety_bubble`,
-            "dragon_scale",
-            "vambrace",
+            'dragon_scale',
+            'vambrace',
             `bullwhip`,
             `cloak_of_flames`,
             `craggy_coat`,
             `ogre_seal_totem`,
             `rattlecage`,
             `havoc_hammer`,
-            "giants_ring",
+            'giants_ring',
             `apex`,
           ],
         },
@@ -2608,19 +2608,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "wind_lace", "boots", "urn_of_shadows"],
+        all: ['blight_stone', 'wind_lace', 'boots', 'urn_of_shadows'],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["glimmer_cape", "force_staff", "cyclone"],
-        core: ["black_king_bar"],
+        all: ['spirit_vessel'],
+        support: ['glimmer_cape', 'force_staff', 'cyclone'],
+        core: ['black_king_bar'],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade", "bloodthorn"],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade', 'bloodthorn'],
       },
     },
   },
@@ -2639,66 +2639,66 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.2, 2.3, 2.5, 2.2],
         facet: 1,
         abilities: [
-          "chaos_knight_chaos_bolt", // 1
-          "chaos_knight_reality_rift", // 2
-          "chaos_knight_chaos_strike", // 3
-          "chaos_knight_chaos_strike", // 4
-          "chaos_knight_chaos_strike", // 5
-          "chaos_knight_phantasm", // 6
-          "chaos_knight_chaos_strike", // 7
-          "chaos_knight_reality_rift", // 8
-          "chaos_knight_reality_rift", // 9
-          "special_bonus_unique_chaos_knight_6", // 10
-          "chaos_knight_reality_rift", // 11
-          "chaos_knight_phantasm", // 12
-          "chaos_knight_chaos_bolt", // 13
-          "chaos_knight_chaos_bolt", // 14
-          "special_bonus_strength_10", // 15
-          "chaos_knight_chaos_bolt", // 16
-          "special_bonus_attributes", // 17
-          "chaos_knight_phantasm", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_chaos_knight", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_chaos_knight_5", // 25
+          'chaos_knight_chaos_bolt', // 1
+          'chaos_knight_reality_rift', // 2
+          'chaos_knight_chaos_strike', // 3
+          'chaos_knight_chaos_strike', // 4
+          'chaos_knight_chaos_strike', // 5
+          'chaos_knight_phantasm', // 6
+          'chaos_knight_chaos_strike', // 7
+          'chaos_knight_reality_rift', // 8
+          'chaos_knight_reality_rift', // 9
+          'special_bonus_unique_chaos_knight_6', // 10
+          'chaos_knight_reality_rift', // 11
+          'chaos_knight_phantasm', // 12
+          'chaos_knight_chaos_bolt', // 13
+          'chaos_knight_chaos_bolt', // 14
+          'special_bonus_strength_10', // 15
+          'chaos_knight_chaos_bolt', // 16
+          'special_bonus_attributes', // 17
+          'chaos_knight_phantasm', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_chaos_knight', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_chaos_knight_5', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "gauntlets",
-            "circlet",
-            "branches",
-            "branches",
+            'tango',
+            'quelling_blade',
+            'gauntlets',
+            'circlet',
+            'branches',
+            'branches',
           ],
-          early_game: ["bracer", "power_treads", "magic_wand", "armlet"],
-          mid_game: ["orchid", "manta", "blink"],
-          late_game: ["black_king_bar", "aghanims_shard", "heart", "assault"],
-          situational: ["sphere", "silver_edge", "nullifier"],
+          early_game: ['bracer', 'power_treads', 'magic_wand', 'armlet'],
+          mid_game: ['orchid', 'manta', 'blink'],
+          late_game: ['black_king_bar', 'aghanims_shard', 'heart', 'assault'],
+          situational: ['sphere', 'silver_edge', 'nullifier'],
           core: [
-            "power_treads",
-            "armlet",
-            "orchid",
-            "manta",
-            "blink",
-            "black_king_bar",
+            'power_treads',
+            'armlet',
+            'orchid',
+            'manta',
+            'blink',
+            'black_king_bar',
           ],
           neutral: [
-            "occult_bracelet",
-            "duelist_gloves",
-            "broom_handle",
-            "vambrace",
-            "orb_of_destruction",
-            "elven_tunic",
-            "vindicators_axe",
-            "mind_breaker",
-            "ninja_gear",
-            "pirate_hat",
-            "force_boots",
-            "desolator_2",
+            'occult_bracelet',
+            'duelist_gloves',
+            'broom_handle',
+            'vambrace',
+            'orb_of_destruction',
+            'elven_tunic',
+            'vindicators_axe',
+            'mind_breaker',
+            'ninja_gear',
+            'pirate_hat',
+            'force_boots',
+            'desolator_2',
           ],
         },
         // item_tooltips:
@@ -2714,99 +2714,99 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.2, 2.4, 2.4, 2.1],
         facet: 1,
         abilities: [
-          "chaos_knight_chaos_bolt", // 1
-          "chaos_knight_reality_rift", // 2
-          "chaos_knight_chaos_strike", // 3
-          "chaos_knight_chaos_strike", // 4
-          "chaos_knight_chaos_strike", // 5
-          "chaos_knight_phantasm", // 6
-          "chaos_knight_chaos_strike", // 7
-          "chaos_knight_reality_rift", // 8
-          "chaos_knight_reality_rift", // 9
-          "special_bonus_unique_chaos_knight_6", // 10
-          "chaos_knight_reality_rift", // 11
-          "chaos_knight_phantasm", // 12
-          "chaos_knight_chaos_bolt", // 13
-          "chaos_knight_chaos_bolt", // 14
-          "special_bonus_unique_chaos_knight_8", // 15
-          "chaos_knight_chaos_bolt", // 16
-          "special_bonus_attributes", // 17
-          "chaos_knight_phantasm", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_chaos_knight_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_chaos_knight_5", // 25
+          'chaos_knight_chaos_bolt', // 1
+          'chaos_knight_reality_rift', // 2
+          'chaos_knight_chaos_strike', // 3
+          'chaos_knight_chaos_strike', // 4
+          'chaos_knight_chaos_strike', // 5
+          'chaos_knight_phantasm', // 6
+          'chaos_knight_chaos_strike', // 7
+          'chaos_knight_reality_rift', // 8
+          'chaos_knight_reality_rift', // 9
+          'special_bonus_unique_chaos_knight_6', // 10
+          'chaos_knight_reality_rift', // 11
+          'chaos_knight_phantasm', // 12
+          'chaos_knight_chaos_bolt', // 13
+          'chaos_knight_chaos_bolt', // 14
+          'special_bonus_unique_chaos_knight_8', // 15
+          'chaos_knight_chaos_bolt', // 16
+          'special_bonus_attributes', // 17
+          'chaos_knight_phantasm', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_chaos_knight_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_chaos_knight_5', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "circlet",
-            "gauntlets",
-            "branches",
-            "branches",
+            'tango',
+            'quelling_blade',
+            'circlet',
+            'gauntlets',
+            'branches',
+            'branches',
           ],
-          early_game: ["bracer", "power_treads", "magic_wand"],
-          mid_game: ["armlet", "orchid", "blink"],
+          early_game: ['bracer', 'power_treads', 'magic_wand'],
+          mid_game: ['armlet', 'orchid', 'blink'],
           late_game: [
-            "black_king_bar",
-            "manta",
-            "bloodthorn",
-            "heart",
-            "assault",
+            'black_king_bar',
+            'manta',
+            'bloodthorn',
+            'heart',
+            'assault',
           ],
           situational: [
-            "ultimate_scepter",
-            "heavens_halberd",
-            "silver_edge",
-            "abyssal_blade",
+            'ultimate_scepter',
+            'heavens_halberd',
+            'silver_edge',
+            'abyssal_blade',
           ],
-          core: ["power_treads", "armlet", "orchid", "blink", "black_king_bar"],
+          core: ['power_treads', 'armlet', 'orchid', 'blink', 'black_king_bar'],
           neutral: [
-            "duelist_gloves",
-            "broom_handle",
-            "vambrace",
-            "orb_of_destruction",
-            "elven_tunic",
-            "vindicators_axe",
-            "mind_breaker",
-            "ninja_gear",
-            "pirate_hat",
-            "force_boots",
+            'duelist_gloves',
+            'broom_handle',
+            'vambrace',
+            'orb_of_destruction',
+            'elven_tunic',
+            'vindicators_axe',
+            'mind_breaker',
+            'ninja_gear',
+            'pirate_hat',
+            'force_boots',
           ],
         },
       },
     ],
     combo: [
-      "blink",
-      "chaos_knight_chaos_bolt",
-      "chaos_knight_phantasm",
-      "chaos_knight_reality_rift",
+      'blink',
+      'chaos_knight_chaos_bolt',
+      'chaos_knight_phantasm',
+      'chaos_knight_reality_rift',
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
+        all: ['wind_lace', 'boots', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: [/*"medallion_of_courage",*/ "solar_crest", "lotus_orb"],
-        support: ["glimmer_cape", "ghost", "force_staff"],
+        all: [/*"medallion_of_courage",*/ 'solar_crest', 'lotus_orb'],
+        support: ['glimmer_cape', 'ghost', 'force_staff'],
         core: [
-          "crimson_guard",
-          "bfury",
-          "maelstrom",
-          "gungir",
-          "black_king_bar",
+          'crimson_guard',
+          'bfury',
+          'maelstrom',
+          'gungir',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk"],
+        all: ['sheepstick', 'aeon_disk'],
         support: [],
-        core: ["mjollnir", "shivas_guard", "radiance", "butterfly"],
+        core: ['mjollnir', 'shivas_guard', 'radiance', 'butterfly'],
       },
     },
   },
@@ -2826,28 +2826,28 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `chen_penitence`, // 1
           `chen_holy_persuasion`, // 2
-          "chen_holy_persuasion", // 3
+          'chen_holy_persuasion', // 3
           `chen_divine_favor`, // 4
-          "chen_holy_persuasion", // 5
-          "chen_hand_of_god", // 6
-          "chen_holy_persuasion", // 7
-          "chen_penitence", // 8
-          "chen_penitence", // 9
+          'chen_holy_persuasion', // 5
+          'chen_hand_of_god', // 6
+          'chen_holy_persuasion', // 7
+          'chen_penitence', // 8
+          'chen_penitence', // 9
           `chen_penitence`, // 10
           `special_bonus_unique_chen_11`, // 11
-          "chen_hand_of_god", // 12
-          "chen_divine_favor", // 13
-          "chen_divine_favor", // 14
+          'chen_hand_of_god', // 12
+          'chen_divine_favor', // 13
+          'chen_divine_favor', // 14
           `special_bonus_unique_chen_8`, // 15
           `chen_divine_favor`, // 16
-          "special_bonus_attributes", // 17
-          "chen_hand_of_god", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_chen_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'chen_hand_of_god', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_chen_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_chen_12`, // 25
         ],
         items: {
@@ -2864,21 +2864,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: [`vladmir`, `boots`, `magic_wand`, `infused_raindrop`],
           mid_game: [
-            "mekansm",
-            "pavise",
-            "solar_crest",
+            'mekansm',
+            'pavise',
+            'solar_crest',
             `pipe`,
             `aghanims_shard`,
           ],
           late_game: [
             `boots_of_bearing`,
             `force_staff`,
-            "assault",
-            "ultimate_scepter",
+            'assault',
+            'ultimate_scepter',
           ],
           situational: [
-            "blight_stone",
-            "ring_of_basilius",
+            'blight_stone',
+            'ring_of_basilius',
             `arcane_boots`,
             `glimmer_cape`,
             `guardian_greaves`,
@@ -2894,21 +2894,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           core: [
             `vladmir`,
             `boots`,
-            "mekansm",
-            "solar_crest",
+            'mekansm',
+            'solar_crest',
             `pipe`,
             `aghanims_shard`,
             `boots_of_bearing`,
-            "assault",
+            'assault',
           ],
           neutral: [
             `arcane_ring`,
             `seeds_of_serenity`,
-            "philosophers_stone",
+            'philosophers_stone',
             `pupils_gift`,
             `ogre_seal_totem`,
             `ceremonial_robe`,
-            "spy_gadget",
+            'spy_gadget',
             `ascetic_cap`,
             `force_field`,
             `demonicon`,
@@ -2922,10 +2922,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [],
-        support: ["ward_sentry"],
+        support: ['ward_sentry'],
         core: [],
       },
-      mid_game: { all: ["spirit_vessel"], support: [], core: [] },
+      mid_game: { all: ['spirit_vessel'], support: [], core: [] },
       late_game: { all: [], support: [], core: [] },
     },
   },
@@ -2941,37 +2941,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40581,
         power_level: [2, 2.3, 2.5, 2.4],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "clinkz_tar_bomb", // 1
-          "clinkz_death_pact", // 2
-          "clinkz_tar_bomb", // 3
+          'clinkz_tar_bomb', // 1
+          'clinkz_death_pact', // 2
+          'clinkz_tar_bomb', // 3
           `clinkz_death_pact`, // 4
           `clinkz_death_pact`, // 5
-          "clinkz_wind_walk", // 6
-          "clinkz_tar_bomb", // 7
+          'clinkz_wind_walk', // 6
+          'clinkz_tar_bomb', // 7
           `clinkz_tar_bomb`, // 8
-          "clinkz_strafe", // 9
-          "special_bonus_unique_clinkz_1", // 10
-          "clinkz_strafe", // 11
-          "clinkz_wind_walk", // 12
+          'clinkz_strafe', // 9
+          'special_bonus_unique_clinkz_1', // 10
+          'clinkz_strafe', // 11
+          'clinkz_wind_walk', // 12
           `clinkz_strafe`, // 13
           `clinkz_strafe`, // 14
-          "special_bonus_attack_range_75", // 15
-          "clinkz_death_pact", // 16
-          "special_bonus_attributes", // 17
-          "clinkz_wind_walk", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_clinkz_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attack_range_75', // 15
+          'clinkz_death_pact', // 16
+          'special_bonus_attributes', // 17
+          'clinkz_wind_walk', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_clinkz_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_clinkz_3`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `quelling_blade`,
             `slippers`,
             `circlet`,
@@ -3010,9 +3010,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `angels_demise`,
             `orchid`,
             `bloodthorn`,
-            "monkey_king_bar",
-            "sphere",
-            "ultimate_scepter",
+            'monkey_king_bar',
+            'sphere',
+            'ultimate_scepter',
             `nullifier`,
             `swift_blink`,
             `refresher`,
@@ -3028,16 +3028,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `black_king_bar`,
           ],
           neutral: [
-            "lance_of_pursuit",
+            'lance_of_pursuit',
             `unstable_wand`,
-            "grove_bow",
+            'grove_bow',
             `specialists_array`,
-            "enchanted_quiver",
-            "elven_tunic",
-            "mind_breaker",
+            'enchanted_quiver',
+            'elven_tunic',
+            'mind_breaker',
             `ancient_guardian`,
             `desolator_2`,
-            "apex",
+            'apex',
           ],
         },
       },
@@ -3052,19 +3052,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["armor", "ring_of_regen"],
-        support: ["ward_sentry", "dust"],
-        core: ["ring_of_health"],
+        all: ['armor', 'ring_of_regen'],
+        support: ['ward_sentry', 'dust'],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["blink"],
-        support: ["SentryDust", "glimmer_cape", "ghost", "force_staff"],
-        core: ["blade_mail", "heavens_halberd"],
+        all: ['blink'],
+        support: ['SentryDust', 'glimmer_cape', 'ghost', 'force_staff'],
+        core: ['blade_mail', 'heavens_halberd'],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk"],
-        support: ["SentryDustGem"],
-        core: ["abyssal_blade", "butterfly"],
+        all: ['sheepstick', 'aeon_disk'],
+        support: ['SentryDustGem'],
+        core: ['abyssal_blade', 'butterfly'],
       },
     },
   },
@@ -3088,25 +3088,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `rattletrap_power_cogs`, // 3
           `rattletrap_battery_assault`, // 4
           `rattletrap_power_cogs`, // 5
-          "rattletrap_hookshot", // 6
+          'rattletrap_hookshot', // 6
           `rattletrap_power_cogs`, // 7
-          "rattletrap_rocket_flare", // 8
+          'rattletrap_rocket_flare', // 8
           `rattletrap_battery_assault`, // 9
           `special_bonus_unique_clockwerk_9`, // 10
           `rattletrap_battery_assault`, // 11
-          "rattletrap_hookshot", // 12
+          'rattletrap_hookshot', // 12
           `rattletrap_rocket_flare`, // 13
           `rattletrap_rocket_flare`, // 14
           `special_bonus_unique_clockwerk_5`, // 15
           `rattletrap_rocket_flare`, // 16
-          "special_bonus_attributes", // 17
-          "rattletrap_hookshot", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'rattletrap_hookshot', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_clockwerk_flare_damage`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_clockwerk_6`, // 25
         ],
         items: {
@@ -3121,8 +3121,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: [
             `tranquil_boots`,
-            "urn_of_shadows",
-            "magic_wand",
+            'urn_of_shadows',
+            'magic_wand',
             `wind_lace`,
             `infused_raindrop`,
           ],
@@ -3192,22 +3192,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "wind_lace", "boots", "cloak"],
-        support: ["ward_observer"],
-        core: ["orb_of_corrosion"],
+        all: ['blight_stone', 'wind_lace', 'boots', 'cloak'],
+        support: ['ward_observer'],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
         all: [],
-        support: ["force_staff", "glimmer_cape"],
+        support: ['force_staff', 'glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "hurricane_pike",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'hurricane_pike',
+          'black_king_bar',
         ],
       },
-      late_game: { all: [], support: ["black_king_bar"], core: [] },
+      late_game: { all: [], support: ['black_king_bar'], core: [] },
     },
   },
 
@@ -3225,35 +3225,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 1.9, 2, 2.1],
         facet: 1,
         abilities: [
-          "crystal_maiden_crystal_nova", // 1
-          "crystal_maiden_frostbite", // 2
-          "crystal_maiden_brilliance_aura", // 3
-          "crystal_maiden_frostbite", // 4
-          "crystal_maiden_frostbite", // 5
+          'crystal_maiden_crystal_nova', // 1
+          'crystal_maiden_frostbite', // 2
+          'crystal_maiden_brilliance_aura', // 3
+          'crystal_maiden_frostbite', // 4
+          'crystal_maiden_frostbite', // 5
           `crystal_maiden_freezing_field`, // 6
-          "crystal_maiden_frostbite", // 7
+          'crystal_maiden_frostbite', // 7
           `crystal_maiden_brilliance_aura`, // 8
           `crystal_maiden_crystal_nova`, // 9
           `special_bonus_hp_200`, // 10
           `crystal_maiden_crystal_nova`, // 11
-          "crystal_maiden_freezing_field", // 12
-          "crystal_maiden_crystal_nova", // 13
+          'crystal_maiden_freezing_field', // 12
+          'crystal_maiden_crystal_nova', // 13
           `crystal_maiden_brilliance_aura`, // 14
           `special_bonus_unique_crystal_maiden_frostbite_castrange`, // 15
           `crystal_maiden_brilliance_aura`, // 16
-          "special_bonus_attributes", // 17
-          "crystal_maiden_freezing_field", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_crystal_maiden_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_crystal_maiden_1", // 25
+          'special_bonus_attributes', // 17
+          'crystal_maiden_freezing_field', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_crystal_maiden_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_crystal_maiden_1', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `clarity`,
             `enchanted_mango`,
@@ -3261,18 +3261,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `blood_grenade`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
-            "tranquil_boots",
+            'tranquil_boots',
             `magic_wand`,
             `wind_lace`,
             `infused_raindrop`,
           ],
           mid_game: [
-            "glimmer_cape",
-            "force_staff",
+            'glimmer_cape',
+            'force_staff',
             `aghanims_shard`,
             `ancient_janggo`,
             `boots_of_bearing`,
@@ -3296,7 +3296,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ethereal_blade`,
             `octarine_core`,
             `aeon_disk`,
-            "travel_boots",
+            'travel_boots',
           ],
           core: [
             `tranquil_boots`,
@@ -3311,13 +3311,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `faded_broach`,
             `trusty_shovel`,
-            "philosophers_stone",
-            "bullwhip",
-            "psychic_headband",
+            'philosophers_stone',
+            'bullwhip',
+            'psychic_headband',
             `ceremonial_robe`,
-            "spy_gadget",
+            'spy_gadget',
             `timeless_relic`,
-            "seer_stone",
+            'seer_stone',
             `force_boots`,
           ],
         },
@@ -3331,22 +3331,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "headdress", "infused_raindrop"],
+        all: ['magic_stick', 'ring_of_regen', 'headdress', 'infused_raindrop'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["cloak"],
-        support: ["force_staff", "glimmer_cape"],
+        all: ['cloak'],
+        support: ['force_staff', 'glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'manta',
         ],
       },
-      late_game: { all: [], support: ["black_king_bar"], core: [] },
+      late_game: { all: [], support: ['black_king_bar'], core: [] },
     },
   },
 
@@ -3363,30 +3363,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.6, 1.8, 2.3, 1.9],
         facet: [1, 2],
         abilities: [
-          "dark_seer_ion_shell", // 1
+          'dark_seer_ion_shell', // 1
           `dark_seer_vacuum`, // 2
-          "dark_seer_ion_shell", // 3
+          'dark_seer_ion_shell', // 3
           `dark_seer_surge`, // 4
-          "dark_seer_ion_shell", // 5
-          "dark_seer_wall_of_replica", // 6
-          "dark_seer_ion_shell", // 7
-          "dark_seer_surge", // 8
-          "dark_seer_surge", // 9
+          'dark_seer_ion_shell', // 5
+          'dark_seer_wall_of_replica', // 6
+          'dark_seer_ion_shell', // 7
+          'dark_seer_surge', // 8
+          'dark_seer_surge', // 9
           `dark_seer_surge`, // 10
           `dark_seer_vacuum`, // 11
-          "dark_seer_wall_of_replica", // 12
-          "dark_seer_vacuum", // 13
+          'dark_seer_wall_of_replica', // 12
+          'dark_seer_vacuum', // 13
           `dark_seer_vacuum`, // 14
           `special_bonus_unique_dark_seer_7`, // 15
           `special_bonus_unique_dark_seer_2`, // 16
-          "special_bonus_attributes", // 17
-          "dark_seer_wall_of_replica", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'dark_seer_wall_of_replica', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_dark_seer_13`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_dark_seer_3`, // 25
         ],
         items: {
@@ -3451,14 +3451,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ultimate_scepter`,
           ],
           neutral: [
-            "arcane_ring",
+            'arcane_ring',
             `unstable_wand`,
             `pupils_gift`,
             `vambrace`,
             `ceremonial_robe`,
             `cloak_of_flames`,
             `havoc_hammer`,
-            "trickster_cloak",
+            'trickster_cloak',
             `demonicon`,
             `force_field`,
           ],
@@ -3480,23 +3480,23 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen"],
+        all: ['magic_stick', 'ring_of_regen'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["cloak"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['cloak'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "black_king_bar",
+          'pipe',
+          'black_king_bar',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["nullifier", "abyssal_blade", "shivas_guard"],
+        support: ['black_king_bar'],
+        core: ['nullifier', 'abyssal_blade', 'shivas_guard'],
       },
     },
   },
@@ -3515,98 +3515,98 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.9, 2, 2.1, 2.3],
         facet: 2,
         abilities: [
-          "dark_willow_bramble_maze", // 1
-          "dark_willow_shadow_realm", // 2
+          'dark_willow_bramble_maze', // 1
+          'dark_willow_shadow_realm', // 2
           `dark_willow_bramble_maze`, // 3
           `dark_willow_cursed_crown`, // 4
-          "dark_willow_bramble_maze", // 5
-          "dark_willow_bedlam", // 6
-          "dark_willow_bramble_maze", // 7
+          'dark_willow_bramble_maze', // 5
+          'dark_willow_bedlam', // 6
+          'dark_willow_bramble_maze', // 7
           `dark_willow_shadow_realm`, // 8
           `dark_willow_shadow_realm`, // 9
           `dark_willow_shadow_realm`, // 10
-          "dark_willow_cursed_crown", // 11
-          "dark_willow_bedlam", // 12
+          'dark_willow_cursed_crown', // 11
+          'dark_willow_bedlam', // 12
           `dark_willow_cursed_crown`, // 13
           `dark_willow_cursed_crown`, // 14
-          "special_bonus_unique_dark_willow_6", // 15
-          "special_bonus_unique_dark_willow_4", // 16
-          "special_bonus_attributes", // 17
-          "dark_willow_bedlam", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_dark_willow_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_dark_willow_bedlam_targets", // 25
+          'special_bonus_unique_dark_willow_6', // 15
+          'special_bonus_unique_dark_willow_4', // 16
+          'special_bonus_attributes', // 17
+          'dark_willow_bedlam', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_dark_willow_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_dark_willow_bedlam_targets', // 25
         ],
         items: {
           starting: [
             `tango`,
             `tango`,
             `blood_grenade`,
-            "faerie_fire",
-            "circlet",
+            'faerie_fire',
+            'circlet',
             `branches`,
             `branches`,
             `ward_observer`,
             `ward_sentry`,
           ],
           early_game: [
-            "null_talisman",
-            "tranquil_boots",
+            'null_talisman',
+            'tranquil_boots',
             `magic_wand`,
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: ["cyclone", "aghanims_shard", "blink", "aether_lens"],
+          mid_game: ['cyclone', 'aghanims_shard', 'blink', 'aether_lens'],
           late_game: [
-            "octarine_core",
-            "boots_of_bearing",
-            "wind_waker",
-            "sheepstick",
+            'octarine_core',
+            'boots_of_bearing',
+            'wind_waker',
+            'sheepstick',
           ],
           situational: [
             `ring_of_basilius`,
-            "arcane_boots",
-            "urn_of_shadows",
+            'arcane_boots',
+            'urn_of_shadows',
             `hand_of_midas`,
             `glimmer_cape`,
-            "pavise",
-            "force_staff",
+            'pavise',
+            'force_staff',
             `ghost`,
             `solar_crest`,
-            "spirit_vessel",
-            "mekansm",
-            "guardian_greaves",
-            "lotus_orb",
-            "aeon_disk",
-            "ultimate_scepter",
-            "revenants_brooch",
-            "moon_shard",
+            'spirit_vessel',
+            'mekansm',
+            'guardian_greaves',
+            'lotus_orb',
+            'aeon_disk',
+            'ultimate_scepter',
+            'revenants_brooch',
+            'moon_shard',
             `travel_boots`,
           ],
           core: [
-            "tranquil_boots",
+            'tranquil_boots',
             `cyclone`,
-            "aghanims_shard",
+            'aghanims_shard',
             `blink`,
-            "octarine_core",
-            "boots_of_bearing",
-            "wind_waker",
+            'octarine_core',
+            'boots_of_bearing',
+            'wind_waker',
           ],
           neutral: [
             `trusty_shovel`,
             `arcane_ring`,
-            "philosophers_stone",
+            'philosophers_stone',
             `pupils_gift`,
-            "psychic_headband",
+            'psychic_headband',
             `ceremonial_robe`,
-            "spy_gadget",
+            'spy_gadget',
             `timeless_relic`,
-            "seer_stone",
-            "force_boots",
+            'seer_stone',
+            'force_boots',
           ],
         },
       },
@@ -3622,27 +3622,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "infused_raindrop", "cloak"],
+        all: ['magic_stick', 'ring_of_regen', 'infused_raindrop', 'cloak'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape", "force_staff", "cyclone"],
+        all: ['lotus_orb'],
+        support: ['glimmer_cape', 'force_staff', 'cyclone'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'black_king_bar',
           `sange_and_yasha`,
-          "manta",
+          'manta',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["butterfly", "satanic"],
+        support: ['black_king_bar'],
+        core: ['butterfly', 'satanic'],
       },
     },
   },
@@ -3661,50 +3661,50 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         facet: 2,
         abilities: [
           `dawnbreaker_fire_wreath`, // 1
-          "dawnbreaker_celestial_hammer", // 2
-          "dawnbreaker_celestial_hammer", // 3
-          "dawnbreaker_luminosity", // 4
-          "dawnbreaker_celestial_hammer", // 5
-          "dawnbreaker_solar_guardian", // 6
-          "dawnbreaker_celestial_hammer", // 7
-          "dawnbreaker_fire_wreath", // 8
-          "dawnbreaker_fire_wreath", // 9
-          "dawnbreaker_fire_wreath", // 10
-          "special_bonus_unique_dawnbreaker_celestial_hammer_slow", // 11
-          "dawnbreaker_solar_guardian", // 12
-          "dawnbreaker_luminosity", // 13
-          "dawnbreaker_luminosity", // 14
-          "special_bonus_unique_dawnbreaker_solar_guardian_cooldown", // 15
-          "dawnbreaker_luminosity", // 16
-          "special_bonus_attributes", // 17
-          "dawnbreaker_solar_guardian", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_dawnbreaker_solar_guardian_radius", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'dawnbreaker_celestial_hammer', // 2
+          'dawnbreaker_celestial_hammer', // 3
+          'dawnbreaker_luminosity', // 4
+          'dawnbreaker_celestial_hammer', // 5
+          'dawnbreaker_solar_guardian', // 6
+          'dawnbreaker_celestial_hammer', // 7
+          'dawnbreaker_fire_wreath', // 8
+          'dawnbreaker_fire_wreath', // 9
+          'dawnbreaker_fire_wreath', // 10
+          'special_bonus_unique_dawnbreaker_celestial_hammer_slow', // 11
+          'dawnbreaker_solar_guardian', // 12
+          'dawnbreaker_luminosity', // 13
+          'dawnbreaker_luminosity', // 14
+          'special_bonus_unique_dawnbreaker_solar_guardian_cooldown', // 15
+          'dawnbreaker_luminosity', // 16
+          'special_bonus_attributes', // 17
+          'dawnbreaker_solar_guardian', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_dawnbreaker_solar_guardian_radius', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_dawnbreaker_celestial_hammer_cast_range`, // 25
         ],
         items: {
           starting: [
             `tango`,
-            "enchanted_mango",
-            "faerie_fire",
-            "ward_sentry",
-            "ward_sentry",
-            "ward_observer",
-            "blood_grenade",
-            "magic_stick",
+            'enchanted_mango',
+            'faerie_fire',
+            'ward_sentry',
+            'ward_sentry',
+            'ward_observer',
+            'blood_grenade',
+            'magic_stick',
           ],
           early_game: [`boots`, `magic_wand`, `ring_of_basilius`, `wind_lace`],
-          mid_game: [`arcane_boots`, "pavise", `solar_crest`, "aghanims_shard"],
+          mid_game: [`arcane_boots`, 'pavise', `solar_crest`, 'aghanims_shard'],
           late_game: [
-            "blink",
+            'blink',
             `ultimate_scepter`,
-            "holy_locket",
+            'holy_locket',
             `guardian_greaves`,
-            "black_king_bar",
+            'black_king_bar',
           ],
           situational: [
             `spirit_vessel`,
@@ -3712,16 +3712,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `cyclone`,
             `crimson_guard`,
             `heavens_halberd`,
-            "octarine_core",
+            'octarine_core',
           ],
           core: [
             `arcane_boots`,
-            "solar_crest",
-            "aghanims_shard",
-            "blink",
-            "ultimate_scepter",
-            "holy_locket",
-            "black_king_bar",
+            'solar_crest',
+            'aghanims_shard',
+            'blink',
+            'ultimate_scepter',
+            'holy_locket',
+            'black_king_bar',
           ],
           neutral: [
             `arcane_ring`,
@@ -3746,64 +3746,64 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         facet: 1,
         abilities: [
           `dawnbreaker_fire_wreath`, // 1
-          "dawnbreaker_celestial_hammer", // 2
-          "dawnbreaker_celestial_hammer", // 3
-          "dawnbreaker_luminosity", // 4
-          "dawnbreaker_celestial_hammer", // 5
-          "dawnbreaker_solar_guardian", // 6
-          "dawnbreaker_celestial_hammer", // 7
-          "dawnbreaker_fire_wreath", // 8
-          "dawnbreaker_fire_wreath", // 9
-          "dawnbreaker_fire_wreath", // 10
-          "special_bonus_unique_dawnbreaker_fire_wreath_swipe", // 11
-          "dawnbreaker_solar_guardian", // 12
-          "dawnbreaker_luminosity", // 13
-          "dawnbreaker_luminosity", // 14
-          "special_bonus_unique_dawnbreaker_luminosity_crit", // 15
-          "dawnbreaker_luminosity", // 16
-          "special_bonus_attributes", // 17
-          "dawnbreaker_solar_guardian", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_dawnbreaker_luminosity_attack_count", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_dawnbreaker_fire_wreath_cooldown", // 25
+          'dawnbreaker_celestial_hammer', // 2
+          'dawnbreaker_celestial_hammer', // 3
+          'dawnbreaker_luminosity', // 4
+          'dawnbreaker_celestial_hammer', // 5
+          'dawnbreaker_solar_guardian', // 6
+          'dawnbreaker_celestial_hammer', // 7
+          'dawnbreaker_fire_wreath', // 8
+          'dawnbreaker_fire_wreath', // 9
+          'dawnbreaker_fire_wreath', // 10
+          'special_bonus_unique_dawnbreaker_fire_wreath_swipe', // 11
+          'dawnbreaker_solar_guardian', // 12
+          'dawnbreaker_luminosity', // 13
+          'dawnbreaker_luminosity', // 14
+          'special_bonus_unique_dawnbreaker_luminosity_crit', // 15
+          'dawnbreaker_luminosity', // 16
+          'special_bonus_attributes', // 17
+          'dawnbreaker_solar_guardian', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_dawnbreaker_luminosity_attack_count', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_dawnbreaker_fire_wreath_cooldown', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `branches`,
             `branches`,
-            "gauntlets",
-            "circlet",
-            "ward_observer",
+            'gauntlets',
+            'circlet',
+            'ward_observer',
           ],
-          early_game: ["bracer", "soul_ring", "phase_boots", "magic_wand"],
+          early_game: ['bracer', 'soul_ring', 'phase_boots', 'magic_wand'],
           mid_game: [
-            "echo_sabre",
-            "black_king_bar",
-            "aghanims_shard",
-            "blink",
-            "desolator",
+            'echo_sabre',
+            'black_king_bar',
+            'aghanims_shard',
+            'blink',
+            'desolator',
           ],
           late_game: [
-            "harpoon",
-            "wind_waker",
-            "arcane_blink",
-            "abyssal_blade",
-            "greater_crit",
+            'harpoon',
+            'wind_waker',
+            'arcane_blink',
+            'abyssal_blade',
+            'greater_crit',
           ],
           situational: [
-            "orb_of_corrosion",
-            "heavens_halberd",
-            "silver_edge",
-            "satanic",
-            "sphere",
-            "nullifier",
-            "assault",
+            'orb_of_corrosion',
+            'heavens_halberd',
+            'silver_edge',
+            'satanic',
+            'sphere',
+            'nullifier',
+            'assault',
           ],
           core: [
             `phase_boots`,
@@ -3811,15 +3811,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `echo_sabre`,
             `black_king_bar`,
             `aghanims_shard`,
-            "blink",
-            "desolator",
+            'blink',
+            'desolator',
           ],
           neutral: [
             `arcane_ring`,
             `spark_of_courage`,
             `orb_of_destruction`,
             `dragon_scale`,
-            "cloak_of_flames",
+            'cloak_of_flames',
             `paladin_sword`,
             `havoc_hammer`,
             `trickster_cloak`,
@@ -3838,25 +3838,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["urn_of_shadows", "wind_lace", "boots", "armor"],
+        all: ['urn_of_shadows', 'wind_lace', 'boots', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
         all: [
-          "spirit_vessel",
+          'spirit_vessel',
           /*"medallion_of_courage",*/
-          "solar_crest",
-          "mekansm",
-          "vladmir",
+          'solar_crest',
+          'mekansm',
+          'vladmir',
         ],
-        support: ["ghost", "glimmer_cape", "force_staff", "cyclone"],
-        core: ["silver_edge", "hurricane_pike"],
+        support: ['ghost', 'glimmer_cape', 'force_staff', 'cyclone'],
+        core: ['silver_edge', 'hurricane_pike'],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["shivas_guard", "skadi", "assault", "bloodthorn"],
+        support: ['black_king_bar'],
+        core: ['shivas_guard', 'skadi', 'assault', 'bloodthorn'],
       },
     },
   },
@@ -3875,35 +3875,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 1.7, 1.9, 2],
         facet: [1, 2],
         abilities: [
-          "dazzle_poison_touch", // 1
-          "dazzle_shadow_wave", // 2
-          "dazzle_poison_touch", // 3
-          "dazzle_shallow_grave", // 4
+          'dazzle_poison_touch', // 1
+          'dazzle_shadow_wave', // 2
+          'dazzle_poison_touch', // 3
+          'dazzle_shallow_grave', // 4
           `dazzle_shadow_wave`, // 5
-          "dazzle_bad_juju", // 6
+          'dazzle_bad_juju', // 6
           `dazzle_shadow_wave`, // 7
           `dazzle_shadow_wave`, // 8
           `dazzle_shallow_grave`, // 9
           `dazzle_shallow_grave`, // 10
           `special_bonus_mp_regen_175`, // 11
-          "dazzle_bad_juju", // 12
+          'dazzle_bad_juju', // 12
           `dazzle_shallow_grave`, // 13
           `dazzle_poison_touch`, // 14
           `special_bonus_unique_dazzle_2`, // 15
           `dazzle_poison_touch`, // 16
-          "special_bonus_attributes", // 17
-          "dazzle_bad_juju", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_dazzle_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_dazzle_4", // 25
+          'special_bonus_attributes', // 17
+          'dazzle_bad_juju', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_dazzle_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_dazzle_4', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `wind_lace`,
@@ -3952,13 +3952,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `blink`,
           ],
           neutral: [
-            "trusty_shovel",
+            'trusty_shovel',
             `arcane_ring`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ogre_seal_totem`,
-            "spy_gadget",
+            'spy_gadget',
             `trickster_cloak`,
             `seer_stone`,
             `book_of_shadows`,
@@ -3970,25 +3970,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
-          "armor",
-          "urn_of_shadows",
+          'magic_stick',
+          'ring_of_regen',
+          'wind_lace',
+          'boots',
+          'armor',
+          'urn_of_shadows',
         ],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "blink"],
+        all: ['spirit_vessel', 'blink'],
         support: [],
         core: [],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["shivas_guard", "skadi"],
+        core: ['shivas_guard', 'skadi'],
       },
     },
   },
@@ -4008,154 +4008,154 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.1, 2.3, 2.5, 2.4],
         facet: 1,
         abilities: [
-          "death_prophet_carrion_swarm", // 1
-          "death_prophet_spirit_siphon", // 2
-          "death_prophet_carrion_swarm", // 3 can pick spirit siphon if high kill potential at level 3
-          "death_prophet_spirit_siphon", // 4
-          "death_prophet_carrion_swarm", // 5
-          "death_prophet_exorcism", // 6
-          "death_prophet_spirit_siphon", // 7
-          "death_prophet_carrion_swarm", // 8
-          "death_prophet_silence", // 9 can level silence earlier if required to silence enemy hero
-          "death_prophet_spirit_siphon", // 10
-          "special_bonus_attack_speed_40", // 11 Talent
-          "death_prophet_exorcism", // 12
-          "death_prophet_silence", // 13
-          "death_prophet_silence", // 14
-          "special_bonus_unique_death_prophet_2", // 15 talent
-          "death_prophet_silence", // 16
-          "special_bonus_attributes", // 17
-          "death_prophet_exorcism", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_death_prophet_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_death_prophet", // 25
+          'death_prophet_carrion_swarm', // 1
+          'death_prophet_spirit_siphon', // 2
+          'death_prophet_carrion_swarm', // 3 can pick spirit siphon if high kill potential at level 3
+          'death_prophet_spirit_siphon', // 4
+          'death_prophet_carrion_swarm', // 5
+          'death_prophet_exorcism', // 6
+          'death_prophet_spirit_siphon', // 7
+          'death_prophet_carrion_swarm', // 8
+          'death_prophet_silence', // 9 can level silence earlier if required to silence enemy hero
+          'death_prophet_spirit_siphon', // 10
+          'special_bonus_attack_speed_40', // 11 Talent
+          'death_prophet_exorcism', // 12
+          'death_prophet_silence', // 13
+          'death_prophet_silence', // 14
+          'special_bonus_unique_death_prophet_2', // 15 talent
+          'death_prophet_silence', // 16
+          'special_bonus_attributes', // 17
+          'death_prophet_exorcism', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_death_prophet_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_death_prophet', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "ward_observer",
-            "branches",
-            "branches",
-            "branches",
+            'tango',
+            'ward_observer',
+            'branches',
+            'branches',
+            'branches',
           ],
           early_game: [
-            "bottle",
-            "magic_wand", // can consider if enemy midlaner spams spells in lane
-            "infused_raindrop", // can consider if enemy has magic bursts
-            "arcane_boots",
-            "falcon_blade",
-            "veil_of_discord",
+            'bottle',
+            'magic_wand', // can consider if enemy midlaner spams spells in lane
+            'infused_raindrop', // can consider if enemy has magic bursts
+            'arcane_boots',
+            'falcon_blade',
+            'veil_of_discord',
           ],
-          mid_game: ["black_king_bar", "shivas_guard"],
+          mid_game: ['black_king_bar', 'shivas_guard'],
           late_game: [
-            "octarine_core",
-            "aghanims_shard",
-            "blink",
-            "wind_waker",
-            "travel_boots",
+            'octarine_core',
+            'aghanims_shard',
+            'blink',
+            'wind_waker',
+            'travel_boots',
           ],
           situational: [
-            "guardian_greaves",
-            "force_staff",
-            "refresher",
-            "sheepstick",
-            "overwhelming_blink",
-            "sphere",
-            "ghost",
+            'guardian_greaves',
+            'force_staff',
+            'refresher',
+            'sheepstick',
+            'overwhelming_blink',
+            'sphere',
+            'ghost',
           ],
           core: [
-            "black_king_bar",
-            "shivas_guard",
-            "octarine_core",
-            "wind_waker",
-            "blink",
-            "aghanims_shard",
+            'black_king_bar',
+            'shivas_guard',
+            'octarine_core',
+            'wind_waker',
+            'blink',
+            'aghanims_shard',
           ],
           neutral: [
             //tier 1
-            "arcane_ring",
-            "mysterious_hat",
-            "unstable_wand",
-            "safety_bubble",
-            "occult_bracelet",
-            "faded_broach",
+            'arcane_ring',
+            'mysterious_hat',
+            'unstable_wand',
+            'safety_bubble',
+            'occult_bracelet',
+            'faded_broach',
 
             //tier 2
-            "dragon_scale",
-            "pupils_gift",
-            "vambrace",
-            "bullwhip",
-            "eye_of_the_vizier",
+            'dragon_scale',
+            'pupils_gift',
+            'vambrace',
+            'bullwhip',
+            'eye_of_the_vizier',
 
             //tier 3
-            "dandelion_amulet",
-            "elven_tunic",
-            "cloak_of_flames",
-            "ceremonial_robe",
-            "psychic_headband",
-            "ogre_seal_totem",
+            'dandelion_amulet',
+            'elven_tunic',
+            'cloak_of_flames',
+            'ceremonial_robe',
+            'psychic_headband',
+            'ogre_seal_totem',
 
             //tier 4
-            "timeless_relic",
-            "ascetic_cap",
-            "avianas_feather",
-            "stormcrafter",
-            "havoc_hammer",
-            "rattlecage",
+            'timeless_relic',
+            'ascetic_cap',
+            'avianas_feather',
+            'stormcrafter',
+            'havoc_hammer',
+            'rattlecage',
 
             //tier 5
-            "force_boots",
-            "seer_stone",
-            "mirror_shield",
-            "demonicon",
-            "giants_ring",
-            "panic_button",
+            'force_boots',
+            'seer_stone',
+            'mirror_shield',
+            'demonicon',
+            'giants_ring',
+            'panic_button',
           ],
         },
       },
     ],
 
     combo: [
-      "death_prophet_exorcism",
-      "black_king_bar",
-      "shivas_guard",
-      "blink",
+      'death_prophet_exorcism',
+      'black_king_bar',
+      'shivas_guard',
+      'blink',
       `death_prophet_silence`,
       `death_prophet_spirit_siphon`,
       `death_prophet_carrion_swarm`,
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "boots", "wind_lace", "infused_raindrop"],
+        all: ['magic_stick', 'boots', 'wind_lace', 'infused_raindrop'],
         support: [],
         core: [],
       },
       mid_game: {
         all: [
-          "lotus_orb",
-          "spirit_vessel",
-          "force_staff",
-          "pipe",
-          "blade_mail",
+          'lotus_orb',
+          'spirit_vessel',
+          'force_staff',
+          'pipe',
+          'blade_mail',
         ],
-        support: ["glimmer_cape"],
+        support: ['glimmer_cape'],
         core: [
-          "black_king_bar",
-          "mage_slayer",
+          'black_king_bar',
+          'mage_slayer',
           //"hood_of_defiance",
-          "eternal_shroud",
-          "manta",
-          "invis_sword",
+          'eternal_shroud',
+          'manta',
+          'invis_sword',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade", "shivas_guard", "skadi"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade', 'shivas_guard', 'skadi'],
       },
     },
   },
@@ -4178,40 +4178,40 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `disruptor_glimpse`, // 2
           `disruptor_glimpse`, // 3
           `disruptor_kinetic_field`, // 4
-          "disruptor_glimpse", // 5
-          "disruptor_static_storm", // 6
-          "disruptor_glimpse", // 7
+          'disruptor_glimpse', // 5
+          'disruptor_static_storm', // 6
+          'disruptor_glimpse', // 7
           `disruptor_kinetic_field`, // 8
           `disruptor_kinetic_field`, // 9
           `disruptor_kinetic_field`, // 10
           `special_bonus_unique_disruptor_2`, // 11
-          "disruptor_static_storm", // 12
+          'disruptor_static_storm', // 12
           `disruptor_thunder_strike`, // 13
           `disruptor_thunder_strike`, // 14
-          "special_bonus_unique_disruptor_7", // 15
+          'special_bonus_unique_disruptor_7', // 15
           `disruptor_thunder_strike`, // 16
-          "special_bonus_attributes", // 17
-          "disruptor_static_storm", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'disruptor_static_storm', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_disruptor_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_disruptor_8", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_disruptor_8', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `clarity`,
-            "enchanted_mango",
+            'enchanted_mango',
             `enchanted_mango`,
             `blood_grenade`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
@@ -4259,13 +4259,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `arcane_ring`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ogre_seal_totem`,
-            "spy_gadget",
+            'spy_gadget',
             `ninja_gear`,
-            "seer_stone",
+            'seer_stone',
             `book_of_shadows`,
           ],
         },
@@ -4279,24 +4279,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "cloak"],
+        all: ['magic_stick', 'ring_of_regen', 'cloak'],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff"],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["wind_waker"],
-        support: ["black_king_bar"],
+        all: ['wind_waker'],
+        support: ['black_king_bar'],
         core: [],
       },
     },
@@ -4319,61 +4319,61 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `doom_bringer_devour`, // 2
           `doom_bringer_scorched_earth`, // 3
           `doom_bringer_infernal_blade`, // 4
-          "doom_bringer_scorched_earth", // 5
-          "doom_bringer_doom", // 6
-          "doom_bringer_scorched_earth", // 7
+          'doom_bringer_scorched_earth', // 5
+          'doom_bringer_doom', // 6
+          'doom_bringer_scorched_earth', // 7
           `doom_bringer_devour`, // 8
-          "doom_bringer_devour", // 9
+          'doom_bringer_devour', // 9
           `doom_bringer_devour`, // 10
           `special_bonus_unique_doom_4`, // 11
-          "doom_bringer_doom", // 12
-          "doom_bringer_infernal_blade", // 13
-          "doom_bringer_infernal_blade", // 14
+          'doom_bringer_doom', // 12
+          'doom_bringer_infernal_blade', // 13
+          'doom_bringer_infernal_blade', // 14
           `special_bonus_unique_doom_6`, // 15
-          "doom_bringer_infernal_blade", // 16
-          "special_bonus_attributes", // 17
-          "doom_bringer_doom", // 18
-          "special_bonus_attributes", // 19
+          'doom_bringer_infernal_blade', // 16
+          'special_bonus_attributes', // 17
+          'doom_bringer_doom', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_doom_9`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_doom_10", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_doom_10', // 25
         ],
         items: {
           starting: [
-            "quelling_blade",
-            "tango",
-            "branches",
-            "branches",
-            "gauntlets",
-            "circlet",
-            "ward_observer",
+            'quelling_blade',
+            'tango',
+            'branches',
+            'branches',
+            'gauntlets',
+            'circlet',
+            'ward_observer',
           ],
           early_game: [
-            "bracer",
-            "magic_wand",
+            'bracer',
+            'magic_wand',
             `phase_boots`,
             `veil_of_discord`,
           ],
           mid_game: [`shivas_guard`, `black_king_bar`, `blink`],
           late_game: [
             `octarine_core`,
-            "aghanims_shard",
+            'aghanims_shard',
             `refresher`,
             `arcane_blink`,
-            "travel_boots",
+            'travel_boots',
           ],
           situational: [
-            "hand_of_midas",
-            "soul_ring",
+            'hand_of_midas',
+            'soul_ring',
             `bracer`,
             `ultimate_scepter`,
             `lotus_orb`,
             `pipe`,
-            "blade_mail",
-            "heavens_halberd",
+            'blade_mail',
+            'heavens_halberd',
             `travel_boots_2`,
           ],
           core: [
@@ -4390,9 +4390,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `dragon_scale`,
             `craggy_coat`,
             `cloak_of_flames`,
-            "timeless_relic",
+            'timeless_relic',
             `ninja_gear`,
-            "giants_ring",
+            'giants_ring',
             `force_boots`,
           ],
         },
@@ -4406,18 +4406,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "wind_lace", "boots"],
+        all: ['blight_stone', 'wind_lace', 'boots'],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["spirit_vessel", "lotus_orb", "cloak"],
-        support: ["glimmer_cape", "force_staff"],
-        core: ["pipe", "black_king_bar", `sange_and_yasha`],
+        all: ['spirit_vessel', 'lotus_orb', 'cloak'],
+        support: ['glimmer_cape', 'force_staff'],
+        core: ['pipe', 'black_king_bar', `sange_and_yasha`],
       },
       late_game: {
-        all: ["sphere", "wind_waker"],
-        support: ["black_king_bar"],
+        all: ['sphere', 'wind_waker'],
+        support: ['black_king_bar'],
         core: [],
       },
     },
@@ -4436,110 +4436,110 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 2.3, 2.5, 2.4],
         facet: 2,
         abilities: [
-          "dragon_knight_breathe_fire", // 1
-          "dragon_knight_dragon_blood", // 2
-          "dragon_knight_dragon_blood", // 3
-          "dragon_knight_breathe_fire", // 4
-          "dragon_knight_dragon_tail", // 5
-          "dragon_knight_elder_dragon_form", // 6
-          "dragon_knight_dragon_blood", // 7
-          "dragon_knight_dragon_blood", // 8
-          "dragon_knight_breathe_fire", // 9
-          "dragon_knight_breathe_fire", // 10
-          "special_bonus_attack_damage_15", // 11
-          "dragon_knight_elder_dragon_form", // 12
-          "dragon_knight_dragon_tail", // 13
-          "dragon_knight_dragon_tail", // 14
-          "special_bonus_hp_300", // 15
-          "dragon_knight_dragon_tail", // 16
-          "special_bonus_attributes", // 17
-          "dragon_knight_elder_dragon_form", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_dragon_knight_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_dragon_knight_8", // 25
+          'dragon_knight_breathe_fire', // 1
+          'dragon_knight_dragon_blood', // 2
+          'dragon_knight_dragon_blood', // 3
+          'dragon_knight_breathe_fire', // 4
+          'dragon_knight_dragon_tail', // 5
+          'dragon_knight_elder_dragon_form', // 6
+          'dragon_knight_dragon_blood', // 7
+          'dragon_knight_dragon_blood', // 8
+          'dragon_knight_breathe_fire', // 9
+          'dragon_knight_breathe_fire', // 10
+          'special_bonus_attack_damage_15', // 11
+          'dragon_knight_elder_dragon_form', // 12
+          'dragon_knight_dragon_tail', // 13
+          'dragon_knight_dragon_tail', // 14
+          'special_bonus_hp_300', // 15
+          'dragon_knight_dragon_tail', // 16
+          'special_bonus_attributes', // 17
+          'dragon_knight_elder_dragon_form', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_dragon_knight_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_dragon_knight_8', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "branches",
-            "gauntlets",
-            "circlet",
-            "ward_observer",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'branches',
+            'gauntlets',
+            'circlet',
+            'ward_observer',
           ],
           early_game: [
-            "bracer",
-            "soul_ring",
-            "power_treads",
-            "magic_wand",
-            "mage_slayer",
+            'bracer',
+            'soul_ring',
+            'power_treads',
+            'magic_wand',
+            'mage_slayer',
           ],
-          mid_game: ["black_king_bar", "blink"],
+          mid_game: ['black_king_bar', 'blink'],
           late_game: [
-            "ultimate_scepter",
-            "assault",
-            "greater_crit",
-            "overwhelming_blink",
-            "octarine_core",
-            "aghanims_shard",
+            'ultimate_scepter',
+            'assault',
+            'greater_crit',
+            'overwhelming_blink',
+            'octarine_core',
+            'aghanims_shard',
           ],
           situational: [
-            "hand_of_midas",
-            "orchid",
-            "heavens_halberd",
-            "silver_edge",
-            "mjollnir",
-            "sphere",
-            "satanic",
+            'hand_of_midas',
+            'orchid',
+            'heavens_halberd',
+            'silver_edge',
+            'mjollnir',
+            'sphere',
+            'satanic',
           ],
           core: [
-            "power_treads",
-            "soul_ring",
-            "mage_slayer",
-            "black_king_bar",
-            "blink",
-            "ultimate_scepter",
+            'power_treads',
+            'soul_ring',
+            'mage_slayer',
+            'black_king_bar',
+            'blink',
+            'ultimate_scepter',
           ],
           neutral: [
-            "duelist_gloves",
-            "broom_handle",
-            "vambrace",
-            "gossamer_cape",
-            "ogre_seal_totem",
-            "ninja_gear",
-            "giants_ring",
+            'duelist_gloves',
+            'broom_handle',
+            'vambrace',
+            'gossamer_cape',
+            'ogre_seal_totem',
+            'ninja_gear',
+            'giants_ring',
           ],
         },
       },
     ],
     combo: [
-      "soul_ring",
-      "dragon_knight_elder_dragon_form",
-      "blink",
-      "dragon_knight_dragon_tail",
-      "attack",
-      "dragon_knight_breathe_fire",
+      'soul_ring',
+      'dragon_knight_elder_dragon_form',
+      'blink',
+      'dragon_knight_dragon_tail',
+      'attack',
+      'dragon_knight_breathe_fire',
     ],
     counter_items: {
       laning_phase: {
-        all: ["infused_raindrop"],
+        all: ['infused_raindrop'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['spirit_vessel'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [`maelstrom`, `silver_edge`, `sange_and_yasha`],
       },
       late_game: {
-        all: ["sphere"],
+        all: ['sphere'],
         support: [],
-        core: ["mjollnir", "skadi", "monkey_king_bar"],
+        core: ['mjollnir', 'skadi', 'monkey_king_bar'],
       },
     },
   },
@@ -4558,75 +4558,75 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 1.8, 2.6, 2.7],
         facet: 1,
         abilities: [
-          "drow_ranger_frost_arrows", // 1
-          "drow_ranger_multishot", // 2
-          "drow_ranger_frost_arrows", // 3
-          "drow_ranger_wave_of_silence", // 4
-          "drow_ranger_multishot", // 5
-          "drow_ranger_marksmanship", // 6
-          "drow_ranger_multishot", // 7
-          "drow_ranger_multishot", // 8
-          "drow_ranger_frost_arrows", // 9
-          "special_bonus_unique_drow_ranger_2", // 10
-          "drow_ranger_frost_arrows", // 11
-          "drow_ranger_marksmanship", // 12
-          "drow_ranger_wave_of_silence", // 13
-          "drow_ranger_wave_of_silence", // 14
-          "special_bonus_lifesteal_20", // 15
-          "drow_ranger_wave_of_silence", // 16
-          "special_bonus_attributes", // 17
-          "drow_ranger_marksmanship", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_drow_ranger_1", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_drow_ranger_3", // 25
+          'drow_ranger_frost_arrows', // 1
+          'drow_ranger_multishot', // 2
+          'drow_ranger_frost_arrows', // 3
+          'drow_ranger_wave_of_silence', // 4
+          'drow_ranger_multishot', // 5
+          'drow_ranger_marksmanship', // 6
+          'drow_ranger_multishot', // 7
+          'drow_ranger_multishot', // 8
+          'drow_ranger_frost_arrows', // 9
+          'special_bonus_unique_drow_ranger_2', // 10
+          'drow_ranger_frost_arrows', // 11
+          'drow_ranger_marksmanship', // 12
+          'drow_ranger_wave_of_silence', // 13
+          'drow_ranger_wave_of_silence', // 14
+          'special_bonus_lifesteal_20', // 15
+          'drow_ranger_wave_of_silence', // 16
+          'special_bonus_attributes', // 17
+          'drow_ranger_marksmanship', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_drow_ranger_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_drow_ranger_3', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "slippers",
-            "branches",
-            "branches",
-            "circlet",
-            "quelling_blade",
+            'tango',
+            'slippers',
+            'branches',
+            'branches',
+            'circlet',
+            'quelling_blade',
           ],
           early_game: [
-            "wraith_band",
-            "power_treads",
-            "null_talisman",
-            "magic_wand",
-            "dragon_lance",
+            'wraith_band',
+            'power_treads',
+            'null_talisman',
+            'magic_wand',
+            'dragon_lance',
           ],
-          mid_game: ["yasha", "ultimate_scepter", "hurricane_pike", "manta"],
+          mid_game: ['yasha', 'ultimate_scepter', 'hurricane_pike', 'manta'],
           late_game: [
-            "black_king_bar",
-            "butterfly",
-            "aghanims_shard",
-            "greater_crit",
-            "skadi",
-            "satanic",
+            'black_king_bar',
+            'butterfly',
+            'aghanims_shard',
+            'greater_crit',
+            'skadi',
+            'satanic',
           ],
-          situational: ["sphere", "mjollnir", "hand_of_midas", "blink"],
+          situational: ['sphere', 'mjollnir', 'hand_of_midas', 'blink'],
           core: [
-            "power_treads",
-            "ultimate_scepter",
-            "hurricane_pike",
-            "manta",
-            "black_king_bar",
+            'power_treads',
+            'ultimate_scepter',
+            'hurricane_pike',
+            'manta',
+            'black_king_bar',
           ],
           neutral: [
-            "lance_of_pursuit",
-            "unstable_wand",
-            "grove_bow",
-            "elven_tunic",
-            "ninja_gear",
-            "mind_breaker",
-            "apex",
-            "force_boots",
-            "mirror_shield",
+            'lance_of_pursuit',
+            'unstable_wand',
+            'grove_bow',
+            'elven_tunic',
+            'ninja_gear',
+            'mind_breaker',
+            'apex',
+            'force_boots',
+            'mirror_shield',
           ],
         },
       },
@@ -4634,19 +4634,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
+        all: ['wind_lace', 'boots', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["blink"],
-        support: ["glimmer_cape", "force_staff", "ghost"],
-        core: ["heavens_halberd", "invis_sword", "manta"],
+        all: ['blink'],
+        support: ['glimmer_cape', 'force_staff', 'ghost'],
+        core: ['heavens_halberd', 'invis_sword', 'manta'],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk"],
+        all: ['sheepstick', 'aeon_disk'],
         support: [],
-        core: ["abyssal_blade"],
+        core: ['abyssal_blade'],
       },
     },
   },
@@ -4666,33 +4666,33 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `earth_spirit_boulder_smash`, // 1
           `earth_spirit_rolling_boulder`, // 2
-          "earth_spirit_boulder_smash", // 3
+          'earth_spirit_boulder_smash', // 3
           `earth_spirit_rolling_boulder`, // 4
           `earth_spirit_boulder_smash`, // 5
-          "earth_spirit_magnetize", // 6
+          'earth_spirit_magnetize', // 6
           `earth_spirit_geomagnetic_grip`, // 7
           `earth_spirit_rolling_boulder`, // 8
           `earth_spirit_rolling_boulder`, // 9
-          "special_bonus_unique_earth_spirit_4", // 10
+          'special_bonus_unique_earth_spirit_4', // 10
           `earth_spirit_boulder_smash`, // 11
-          "earth_spirit_magnetize", // 12
-          "earth_spirit_geomagnetic_grip", // 13
+          'earth_spirit_magnetize', // 12
+          'earth_spirit_geomagnetic_grip', // 13
           `earth_spirit_geomagnetic_grip`, // 14
           `special_bonus_unique_earth_spirit_8`, // 15
           `earth_spirit_geomagnetic_grip`, // 16
-          "special_bonus_attributes", // 17
-          "earth_spirit_magnetize", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'earth_spirit_magnetize', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_earth_spirit_6`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_earth_spirit_2`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `faerie_fire`,
             `blood_grenade`,
             `branches`,
@@ -4702,8 +4702,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: [
             `urn_of_shadows`,
-            "tranquil_boots",
-            "magic_wand",
+            'tranquil_boots',
+            'magic_wand',
             `infused_raindrop`,
           ],
           mid_game: [
@@ -4726,8 +4726,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `force_staff`,
             `glimmer_cape`,
             `kaya_and_sange`,
-            "lotus_orb",
-            "heavens_halberd",
+            'lotus_orb',
+            'heavens_halberd',
             `pipe`,
             `solar_crest`,
             `ethereal_blade`,
@@ -4753,7 +4753,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `bullwhip`,
             `ceremonial_robe`,
             `craggy_coat`,
-            "timeless_relic",
+            'timeless_relic',
             `havoc_hammer`,
             `giants_ring`,
             `force_field`,
@@ -4773,23 +4773,23 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "cloak"],
-        support: ["ward_observer", "tranquil_boots"],
-        core: ["orb_of_corrosion"],
+        all: ['blight_stone', 'cloak'],
+        support: ['ward_observer', 'tranquil_boots'],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["cyclone", "lotus_orb"],
-        support: ["glimmer_cape"],
+        all: ['cyclone', 'lotus_orb'],
+        support: ['glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "mage_slayer",
-          "black_king_bar",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'mage_slayer',
+          'black_king_bar',
+          'manta',
         ],
       },
-      late_game: { all: [], support: ["black_king_bar"], core: [] },
+      late_game: { all: [], support: ['black_king_bar'], core: [] },
     },
   },
 
@@ -4806,39 +4806,39 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [0.7, 2.1, 2.4, 2.4],
         facet: 1,
         abilities: [
-          "earthshaker_fissure", // 1
-          "earthshaker_enchant_totem", // 2
-          "earthshaker_fissure", // 3
-          "earthshaker_aftershock", // 4
+          'earthshaker_fissure', // 1
+          'earthshaker_enchant_totem', // 2
+          'earthshaker_fissure', // 3
+          'earthshaker_aftershock', // 4
           `earthshaker_fissure`, // 5
-          "earthshaker_echo_slam", // 6
-          "earthshaker_fissure", // 7
-          "earthshaker_aftershock", // 8
+          'earthshaker_echo_slam', // 6
+          'earthshaker_fissure', // 7
+          'earthshaker_aftershock', // 8
           `earthshaker_aftershock`, // 9
-          "earthshaker_aftershock", // 10
-          "special_bonus_unique_earthshaker_4", // 11
-          "earthshaker_echo_slam", // 12
-          "earthshaker_enchant_totem", // 13
-          "earthshaker_enchant_totem", // 14
-          "special_bonus_unique_earthshaker_6", // 15
-          "earthshaker_enchant_totem", // 16
-          "special_bonus_attributes", // 17
-          "earthshaker_echo_slam", // 18
-          "special_bonus_attributes", // 19
+          'earthshaker_aftershock', // 10
+          'special_bonus_unique_earthshaker_4', // 11
+          'earthshaker_echo_slam', // 12
+          'earthshaker_enchant_totem', // 13
+          'earthshaker_enchant_totem', // 14
+          'special_bonus_unique_earthshaker_6', // 15
+          'earthshaker_enchant_totem', // 16
+          'special_bonus_attributes', // 17
+          'earthshaker_echo_slam', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_earthshaker_2`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_earthshaker_echo_cd", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_earthshaker_echo_cd', // 25
         ],
         items: {
           starting: [
             `tango`,
             `blood_grenade`,
-            "wind_lace",
+            'wind_lace',
             `clarity`,
-            "branches",
+            'branches',
             `ward_observer`,
             `ward_sentry`,
           ],
@@ -4859,7 +4859,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
             `refresher`,
             `ultimate_scepter`,
-            "wind_waker",
+            'wind_waker',
           ],
           situational: [
             `soul_ring`,
@@ -4873,8 +4873,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ethereal_blade`,
             `lotus_orb`,
             `greater_crit`,
-            "overwhelming_blink",
-            "arcane_blink",
+            'overwhelming_blink',
+            'arcane_blink',
             `travel_boots`,
           ],
           core: [
@@ -4884,19 +4884,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `force_staff`,
             `cyclone`,
             `octarine_core`,
-            "refresher",
+            'refresher',
           ],
           neutral: [
             `faded_broach`,
             `arcane_ring`,
-            "philosophers_stone",
-            "bullwhip",
+            'philosophers_stone',
+            'bullwhip',
             `ogre_seal_totem`,
             `ceremonial_robe`,
-            "timeless_relic",
+            'timeless_relic',
             `ninja_gear`,
             `force_boots`,
-            "giants_ring",
+            'giants_ring',
           ],
         },
       },
@@ -4914,23 +4914,23 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["cloak"],
+        all: ['cloak'],
         support: [],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff"],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
         core: [],
       },
     },
@@ -4949,30 +4949,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.6, 1.7, 2.2, 2.1],
         facet: [1, 2],
         abilities: [
-          "elder_titan_natural_order", // 1
-          "elder_titan_ancestral_spirit", // 2
+          'elder_titan_natural_order', // 1
+          'elder_titan_ancestral_spirit', // 2
           `elder_titan_ancestral_spirit`, // 3
-          "elder_titan_echo_stomp", // 4
-          "elder_titan_echo_stomp", // 5
-          "elder_titan_earth_splitter", // 6
-          "elder_titan_echo_stomp", // 7
+          'elder_titan_echo_stomp', // 4
+          'elder_titan_echo_stomp', // 5
+          'elder_titan_earth_splitter', // 6
+          'elder_titan_echo_stomp', // 7
           `elder_titan_echo_stomp`, // 8
-          "elder_titan_natural_order", // 9
-          "elder_titan_natural_order", // 10
+          'elder_titan_natural_order', // 9
+          'elder_titan_natural_order', // 10
           `elder_titan_natural_order`, // 11
-          "elder_titan_earth_splitter", // 12
-          "elder_titan_ancestral_spirit", // 13
-          "elder_titan_ancestral_spirit", // 14
+          'elder_titan_earth_splitter', // 12
+          'elder_titan_ancestral_spirit', // 13
+          'elder_titan_ancestral_spirit', // 14
           `special_bonus_attack_speed_25`, // 15
-          "special_bonus_unique_elder_titan", // 16
-          "special_bonus_attributes", // 17
-          "elder_titan_earth_splitter", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_cleave_100", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_unique_elder_titan', // 16
+          'special_bonus_attributes', // 17
+          'elder_titan_earth_splitter', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_cleave_100', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_elder_titan_3`, // 25
         ],
         items: {
@@ -4992,10 +4992,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `infused_raindrop`,
           ],
           mid_game: [
-            "ancient_janggo",
-            "pavise",
+            'ancient_janggo',
+            'pavise',
             `solar_crest`,
-            "boots_of_bearing",
+            'boots_of_bearing',
             `ultimate_scepter`,
           ],
           late_game: [
@@ -5010,8 +5010,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `spirit_vessel`,
             `force_staff`,
             `pipe`,
-            "guardian_greaves",
-            "vladmir",
+            'guardian_greaves',
+            'vladmir',
             `glimmer_cape`,
             `ghost`,
             `cyclone`,
@@ -5025,25 +5025,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "tranquil_boots",
-            "ancient_janggo",
+            'tranquil_boots',
+            'ancient_janggo',
             `solar_crest`,
-            "boots_of_bearing",
+            'boots_of_bearing',
             `ultimate_scepter`,
             `aghanims_shard`,
-            "greater_crit",
+            'greater_crit',
           ],
           neutral: [
             `arcane_ring`,
             `faded_broach`,
-            "bullwhip",
+            'bullwhip',
             `philosophers_stone`,
             `ogre_seal_totem`,
             `cloak_of_flames`,
             `havoc_hammer`,
-            "ancient_guardian",
-            "pirate_hat",
-            "giants_ring",
+            'ancient_guardian',
+            'pirate_hat',
+            'giants_ring',
           ],
         },
       },
@@ -5056,24 +5056,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "wind_lace", "boots", "armor"],
+        all: ['blight_stone', 'wind_lace', 'boots', 'armor'],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: [/*"medallion_of_courage",*/ "solar_crest"],
-        support: ["force_staff", "glimmer_cape"],
+        all: [/*"medallion_of_courage",*/ 'solar_crest'],
+        support: ['force_staff', 'glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["assault", "butterfly"],
+        support: ['black_king_bar'],
+        core: ['assault', 'butterfly'],
       },
     },
   },
@@ -5092,95 +5092,95 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.6, 2.1, 2.5, 2.3],
         facet: 1,
         abilities: [
-          "ember_spirit_sleight_of_fist", // 1
-          "ember_spirit_searing_chains", // 2
-          "ember_spirit_sleight_of_fist", // 3
-          "ember_spirit_searing_chains", // 4
-          "ember_spirit_sleight_of_fist", // 5
-          "ember_spirit_fire_remnant", // 6
-          "ember_spirit_sleight_of_fist", // 7
-          "ember_spirit_searing_chains", // 8
-          "ember_spirit_searing_chains", // 9
-          "ember_spirit_flame_guard", // 10
-          "ember_spirit_flame_guard", // 11
-          "ember_spirit_flame_guard", // 12
-          "ember_spirit_flame_guard", // 13
-          "special_bonus_unique_ember_spirit_1", // 14
-          "special_bonus_unique_ember_spirit_3", // 15
-          "ember_spirit_fire_remnant", // 16
-          "special_bonus_attributes", // 17
-          "ember_spirit_fire_remnant", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_ember_spirit_6", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_ember_spirit_4", // 25
+          'ember_spirit_sleight_of_fist', // 1
+          'ember_spirit_searing_chains', // 2
+          'ember_spirit_sleight_of_fist', // 3
+          'ember_spirit_searing_chains', // 4
+          'ember_spirit_sleight_of_fist', // 5
+          'ember_spirit_fire_remnant', // 6
+          'ember_spirit_sleight_of_fist', // 7
+          'ember_spirit_searing_chains', // 8
+          'ember_spirit_searing_chains', // 9
+          'ember_spirit_flame_guard', // 10
+          'ember_spirit_flame_guard', // 11
+          'ember_spirit_flame_guard', // 12
+          'ember_spirit_flame_guard', // 13
+          'special_bonus_unique_ember_spirit_1', // 14
+          'special_bonus_unique_ember_spirit_3', // 15
+          'ember_spirit_fire_remnant', // 16
+          'special_bonus_attributes', // 17
+          'ember_spirit_fire_remnant', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_ember_spirit_6', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_ember_spirit_4', // 25
         ],
         items: {
           starting: [
-            "quelling_blade",
-            "branches",
-            "branches",
-            "branches",
-            "faerie_fire",
-            "tango",
-            "ward_observer",
+            'quelling_blade',
+            'branches',
+            'branches',
+            'branches',
+            'faerie_fire',
+            'tango',
+            'ward_observer',
           ],
-          early_game: ["bottle", "magic_wand", "phase_boots", "mage_slayer"],
-          mid_game: ["maelstrom", "gungir", "aghanims_shard", "shivas_guard"],
-          late_game: ["octarine_core", "black_king_bar", "ultimate_scepter"],
-          situational: ["sphere", "cyclone", "travel_boots", "kaya_and_sange"],
+          early_game: ['bottle', 'magic_wand', 'phase_boots', 'mage_slayer'],
+          mid_game: ['maelstrom', 'gungir', 'aghanims_shard', 'shivas_guard'],
+          late_game: ['octarine_core', 'black_king_bar', 'ultimate_scepter'],
+          situational: ['sphere', 'cyclone', 'travel_boots', 'kaya_and_sange'],
           core: [
-            "phase_boots",
-            "mage_slayer",
-            "maelstrom",
-            "aghanims_shard",
-            "octarine_core",
+            'phase_boots',
+            'mage_slayer',
+            'maelstrom',
+            'aghanims_shard',
+            'octarine_core',
           ],
           neutral: [
-            "arcane_ring",
-            "safety_bubble",
-            "orb_of_destruction",
-            "dragon_scale",
-            "cloak_of_flames",
-            "mind_breaker",
-            "timeless_relic",
-            "desolator_2",
-            "mirror_shield",
+            'arcane_ring',
+            'safety_bubble',
+            'orb_of_destruction',
+            'dragon_scale',
+            'cloak_of_flames',
+            'mind_breaker',
+            'timeless_relic',
+            'desolator_2',
+            'mirror_shield',
             //`ex_machina`,
           ],
         },
       },
     ],
     combo: [
-      "ember_spirit_flame_guard",
-      "ember_spirit_fire_remnant",
-      "ember_spirit_searing_chains",
-      "ember_spirit_sleight_of_fist",
+      'ember_spirit_flame_guard',
+      'ember_spirit_fire_remnant',
+      'ember_spirit_searing_chains',
+      'ember_spirit_sleight_of_fist',
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "magic_stick"],
+        all: ['wind_lace', 'boots', 'magic_stick'],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["cyclone", "mekansm", "rod_of_atos"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['cyclone', 'mekansm', 'rod_of_atos'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           //"hood_of_defiance",
-          "orchid",
-          "black_king_bar",
-          "manta",
+          'orchid',
+          'black_king_bar',
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade'],
       },
     },
   },
@@ -5200,7 +5200,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `enchantress_enchant`, // 1
           `enchantress_impetus`, // 2
-          "enchantress_enchant", // 3
+          'enchantress_enchant', // 3
           `enchantress_natures_attendants`, // 4
           `enchantress_enchant`, // 5
           `enchantress_impetus`, // 6
@@ -5209,19 +5209,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `enchantress_impetus`, // 9
           `enchantress_untouchable`, // 10
           `enchantress_natures_attendants`, // 11
-          "enchantress_untouchable", // 12
+          'enchantress_untouchable', // 12
           `enchantress_natures_attendants`, // 13
           `enchantress_natures_attendants`, // 14
           `special_bonus_unique_enchantress_6`, // 15
           `special_bonus_attack_damage_45`, // 16
-          "special_bonus_attributes", // 17
-          "enchantress_untouchable", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'enchantress_untouchable', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_enchantress_3`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_enchantress_4`, // 25
         ],
         items: {
@@ -5287,13 +5287,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sheepstick`,
           ],
           neutral: [
-            "trusty_shovel",
+            'trusty_shovel',
             `seeds_of_serenity`,
             `grove_bow`,
             `pupils_gift`,
             `enchanted_quiver`,
             `vindicators_axe`,
-            "spy_gadget",
+            'spy_gadget',
             `trickster_cloak`,
             `pirate_hat`,
             `demonicon`,
@@ -5308,19 +5308,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["ring_of_regen"],
-        support: ["ward_sentry"],
+        all: ['ring_of_regen'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["glimmer_cape", "ghost"],
-        core: ["black_king_bar", "silver_edge"],
+        all: ['spirit_vessel'],
+        support: ['glimmer_cape', 'ghost'],
+        core: ['black_king_bar', 'silver_edge'],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["butterfly"],
+        support: ['black_king_bar'],
+        core: ['butterfly'],
       },
     },
   },
@@ -5340,11 +5340,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `enigma_demonic_conversion`, // 1
           `enigma_malefice`, // 2
-          "enigma_demonic_conversion", // 3
-          "enigma_malefice", // 4
-          "enigma_demonic_conversion", // 5
-          "enigma_black_hole", // 6
-          "enigma_demonic_conversion", // 7
+          'enigma_demonic_conversion', // 3
+          'enigma_malefice', // 4
+          'enigma_demonic_conversion', // 5
+          'enigma_black_hole', // 6
+          'enigma_demonic_conversion', // 7
           `enigma_malefice`, // 8
           `enigma_malefice`, // 9
           `special_bonus_unique_enigma_4`, // 10
@@ -5354,14 +5354,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `enigma_midnight_pulse`, // 14
           `special_bonus_hp_250`, // 15
           `enigma_midnight_pulse`, // 16
-          "special_bonus_attributes", // 17
-          "enigma_black_hole", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_enigma_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'enigma_black_hole', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_enigma_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_enigma`, // 25
         ],
         items: {
@@ -5429,7 +5429,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `faded_broach`,
             `arcane_ring`,
-            "philosophers_stone",
+            'philosophers_stone',
             `bullwhip`,
             `psychic_headband`,
             `ceremonial_robe`,
@@ -5448,12 +5448,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.3, 1.8, 2.3, 2.6],
         facet: 1,
         abilities: [
-          "enigma_demonic_conversion", // 1
-          "enigma_malefice", // 2
-          "enigma_demonic_conversion", // 3
-          "enigma_malefice", // 4
-          "enigma_demonic_conversion", // 5
-          "enigma_black_hole", // 6
+          'enigma_demonic_conversion', // 1
+          'enigma_malefice', // 2
+          'enigma_demonic_conversion', // 3
+          'enigma_malefice', // 4
+          'enigma_demonic_conversion', // 5
+          'enigma_black_hole', // 6
           `enigma_demonic_conversion`, // 7
           `enigma_malefice`, // 8
           `enigma_malefice`, // 9
@@ -5464,14 +5464,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `enigma_midnight_pulse`, // 14
           `special_bonus_hp_250`, // 15
           `enigma_midnight_pulse`, // 16
-          "special_bonus_attributes", // 17
-          "enigma_black_hole", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'enigma_black_hole', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_enigma_9`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_enigma_2`, // 25
         ],
         items: {
@@ -5558,24 +5558,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone"],
-        support: ["ward_sentry"],
-        core: ["orb_of_corrosion"],
+        all: ['blight_stone'],
+        support: ['ward_sentry'],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["cloak"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['cloak'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
+          'pipe',
+          'eternal_shroud',
         ],
       },
       late_game: {
-        all: ["aeon_disk", "sheepstick", "wind_waker"],
+        all: ['aeon_disk', 'sheepstick', 'wind_waker'],
         support: [],
-        core: ["abyssal_blade"],
+        core: ['abyssal_blade'],
       },
     },
   },
@@ -5594,108 +5594,108 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.1, 1.7, 2.7, 2.9],
         facet: 1,
         abilities: [
-          "faceless_void_time_walk", // 1
-          "faceless_void_time_lock", // 2
-          "faceless_void_time_lock", // 3
-          "faceless_void_time_dilation", // 4
-          "faceless_void_time_lock", // 5
-          "faceless_void_chronosphere", // 6
-          "faceless_void_time_lock", // 7
-          "faceless_void_time_walk", // 8
-          "faceless_void_time_walk", // 9
-          "faceless_void_time_walk", // 10
-          "faceless_void_time_dilation", // 11
-          "faceless_void_chronosphere", // 12
-          "faceless_void_time_dilation", // 13
-          "faceless_void_time_dilation", // 14
-          "special_bonus_unique_faceless_void_7", // 15
-          "special_bonus_unique_faceless_void_3", // 16
-          "special_bonus_attributes", // 17
-          "faceless_void_chronosphere", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_faceless_void", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_faceless_void_2", // 25
+          'faceless_void_time_walk', // 1
+          'faceless_void_time_lock', // 2
+          'faceless_void_time_lock', // 3
+          'faceless_void_time_dilation', // 4
+          'faceless_void_time_lock', // 5
+          'faceless_void_chronosphere', // 6
+          'faceless_void_time_lock', // 7
+          'faceless_void_time_walk', // 8
+          'faceless_void_time_walk', // 9
+          'faceless_void_time_walk', // 10
+          'faceless_void_time_dilation', // 11
+          'faceless_void_chronosphere', // 12
+          'faceless_void_time_dilation', // 13
+          'faceless_void_time_dilation', // 14
+          'special_bonus_unique_faceless_void_7', // 15
+          'special_bonus_unique_faceless_void_3', // 16
+          'special_bonus_attributes', // 17
+          'faceless_void_chronosphere', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_faceless_void', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_faceless_void_2', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "branches",
-            "slippers",
-            "circlet",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'branches',
+            'slippers',
+            'circlet',
           ],
           early_game: [
-            "wraith_band",
-            "power_treads",
-            "magic_wand",
-            "mask_of_madness",
+            'wraith_band',
+            'power_treads',
+            'magic_wand',
+            'mask_of_madness',
           ],
           mid_game: [
             `maelstrom`,
             `black_king_bar`,
-            "mjollnir",
-            "aghanims_shard",
+            'mjollnir',
+            'aghanims_shard',
           ],
-          late_game: ["skadi", "butterfly", "refresher", "greater_crit"],
+          late_game: ['skadi', 'butterfly', 'refresher', 'greater_crit'],
           situational: [
-            "manta",
-            "hand_of_midas",
-            "sphere",
-            "monkey_king_bar",
-            "silver_edge",
-            "ultimate_scepter",
-            "satanic",
-            "nullifier",
+            'manta',
+            'hand_of_midas',
+            'sphere',
+            'monkey_king_bar',
+            'silver_edge',
+            'ultimate_scepter',
+            'satanic',
+            'nullifier',
           ],
           core: [
-            "power_treads",
-            "mask_of_madness",
-            "maelstrom",
-            "black_king_bar",
-            "aghanims_shard",
-            "mjollnir",
-            "butterfly",
-            "skadi",
+            'power_treads',
+            'mask_of_madness',
+            'maelstrom',
+            'black_king_bar',
+            'aghanims_shard',
+            'mjollnir',
+            'butterfly',
+            'skadi',
           ],
           neutral: [
-            "lance_of_pursuit",
-            "broom_handle",
-            "vambrace",
-            "elven_tunic",
-            "mind_breaker",
-            "ninja_gear",
-            "pirate_hat",
-            "apex",
+            'lance_of_pursuit',
+            'broom_handle',
+            'vambrace',
+            'elven_tunic',
+            'mind_breaker',
+            'ninja_gear',
+            'pirate_hat',
+            'apex',
           ],
         },
       },
     ],
     combo: [
-      "faceless_void_time_walk",
-      "faceless_void_chronosphere",
-      "faceless_void_time_dilation",
-      "attack",
+      'faceless_void_time_walk',
+      'faceless_void_chronosphere',
+      'faceless_void_time_dilation',
+      'attack',
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
+        all: ['wind_lace', 'boots', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["blink", "spirit_vessel", "cyclone", "rod_of_atos"],
-        support: ["glimmer_cape", "ghost"],
-        core: ["manta"],
+        all: ['blink', 'spirit_vessel', 'cyclone', 'rod_of_atos'],
+        support: ['glimmer_cape', 'ghost'],
+        core: ['manta'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk", "wind_waker"],
+        all: ['sheepstick', 'ethereal_blade', 'aeon_disk', 'wind_waker'],
         support: [],
-        core: ["abyssal_blade", "butterfly"],
+        core: ['abyssal_blade', 'butterfly'],
       },
     },
   },
@@ -5713,48 +5713,48 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2, 2, 2.2, 2],
         facet: 1,
         abilities: [
-          "grimstroke_dark_artistry", // 1   equals to "stroke of faith"
-          "grimstroke_spirit_walk", // 2   equals to "ink swell"
-          "grimstroke_spirit_walk", // 3
-          "grimstroke_ink_creature", // 4   equals to "phantom's embrace"
-          "grimstroke_spirit_walk", // 5
-          "grimstroke_soul_chain", // 6
-          "grimstroke_spirit_walk", // 7
-          "grimstroke_ink_creature", // 8
-          "grimstroke_ink_creature", // 9
-          "special_bonus_unique_grimstroke_7", // 10
-          "grimstroke_dark_artistry", // 11
-          "grimstroke_soul_chain", // 12
-          "grimstroke_dark_artistry", // 13
-          "grimstroke_dark_artistry", // 14
-          "special_bonus_unique_grimstroke_6", // 15
-          "grimstroke_ink_creature", // 16
-          "special_bonus_attributes", // 17
-          "grimstroke_soul_chain", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_grimstroke_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_grimstroke_1", // 25
+          'grimstroke_dark_artistry', // 1   equals to "stroke of faith"
+          'grimstroke_spirit_walk', // 2   equals to "ink swell"
+          'grimstroke_spirit_walk', // 3
+          'grimstroke_ink_creature', // 4   equals to "phantom's embrace"
+          'grimstroke_spirit_walk', // 5
+          'grimstroke_soul_chain', // 6
+          'grimstroke_spirit_walk', // 7
+          'grimstroke_ink_creature', // 8
+          'grimstroke_ink_creature', // 9
+          'special_bonus_unique_grimstroke_7', // 10
+          'grimstroke_dark_artistry', // 11
+          'grimstroke_soul_chain', // 12
+          'grimstroke_dark_artistry', // 13
+          'grimstroke_dark_artistry', // 14
+          'special_bonus_unique_grimstroke_6', // 15
+          'grimstroke_ink_creature', // 16
+          'special_bonus_attributes', // 17
+          'grimstroke_soul_chain', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_grimstroke_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_grimstroke_1', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
-            "enchanted_mango",
+            'enchanted_mango',
             `enchanted_mango`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
-            "magic_wand",
+            'magic_wand',
             `ring_of_basilius`,
             `wind_lace`,
             `infused_raindrop`,
@@ -5762,12 +5762,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           mid_game: [
             `arcane_boots`,
             `aether_lens`,
-            "aghanims_shard",
+            'aghanims_shard',
             `force_staff`,
             `blink`,
           ],
           late_game: [
-            "ultimate_scepter",
+            'ultimate_scepter',
             `sheepstick`,
             `octarine_core`,
             `ethereal_blade`,
@@ -5786,7 +5786,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            'arcane_boots',
             `aether_lens`,
             `aghanims_shard`,
             `force_staff`,
@@ -5819,29 +5819,29 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
-          "headdress",
-          "infused_raindrop",
+          'magic_stick',
+          'ring_of_regen',
+          'wind_lace',
+          'boots',
+          'headdress',
+          'infused_raindrop',
         ],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["cyclone", "lotus_orb", "cloak"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['cyclone', 'lotus_orb', 'cloak'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["sphere"],
-        support: ["black_king_bar"],
+        all: ['sphere'],
+        support: ['black_king_bar'],
         core: [],
       },
     },
@@ -5866,31 +5866,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `gyrocopter_rocket_barrage`, // 3
           `gyrocopter_homing_missile`, // 4
           `gyrocopter_rocket_barrage`, // 5
-          "gyrocopter_call_down", // 6
+          'gyrocopter_call_down', // 6
           `gyrocopter_rocket_barrage`, // 7
           `gyrocopter_flak_cannon`, // 8
           `gyrocopter_flak_cannon`, // 9
           `gyrocopter_flak_cannon`, // 10
           `special_bonus_hp_175`, // 11
-          "gyrocopter_call_down", // 12
+          'gyrocopter_call_down', // 12
           `gyrocopter_homing_missile`, // 13
           `gyrocopter_homing_missile`, // 14
-          "special_bonus_unique_gyrocopter_flak_cannon_bonus_damage", // 15
+          'special_bonus_unique_gyrocopter_flak_cannon_bonus_damage', // 15
           `special_bonus_attributes`, // 16
           `special_bonus_attributes`, // 17
-          "gyrocopter_call_down", // 18
+          'gyrocopter_call_down', // 18
           `special_bonus_attributes`, // 19
-          "special_bonus_unique_gyrocopter_2", // 20
+          'special_bonus_unique_gyrocopter_2', // 20
           `special_bonus_attributes`, // 21
           `special_bonus_attributes`, // 22
           `special_bonus_attributes`, // 23
           `special_bonus_attributes`, // 24
-          "special_bonus_unique_gyrocopter_1", // 25
+          'special_bonus_unique_gyrocopter_1', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `slippers`,
             `circlet`,
             `branches`,
@@ -5905,7 +5905,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           mid_game: [
             `lesser_crit`,
-            "ultimate_scepter",
+            'ultimate_scepter',
             `satanic`,
             `black_king_bar`,
           ],
@@ -5941,12 +5941,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `duelist_gloves`,
-            "unstable_wand",
-            "grove_bow",
+            'unstable_wand',
+            'grove_bow',
             `specialists_array`,
-            "paladin_sword",
-            "elven_tunic",
-            "mind_breaker",
+            'paladin_sword',
+            'elven_tunic',
+            'mind_breaker',
             `ancient_guardian`,
             `apex`,
             `pirate_hat`,
@@ -5963,29 +5963,29 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `gyrocopter_rocket_barrage`, // 1
           `gyrocopter_homing_missile`, // 2
-          "gyrocopter_rocket_barrage", // 3
-          "gyrocopter_homing_missile", // 4
-          "gyrocopter_rocket_barrage", // 5
-          "gyrocopter_call_down", // 6
-          "gyrocopter_rocket_barrage", // 7
-          "gyrocopter_homing_missile", // 8
-          "gyrocopter_homing_missile", // 9
+          'gyrocopter_rocket_barrage', // 3
+          'gyrocopter_homing_missile', // 4
+          'gyrocopter_rocket_barrage', // 5
+          'gyrocopter_call_down', // 6
+          'gyrocopter_rocket_barrage', // 7
+          'gyrocopter_homing_missile', // 8
+          'gyrocopter_homing_missile', // 9
           `special_bonus_unique_gyrocopter_homing_missile_damage`, // 10
           `special_bonus_attributes`, // 11
-          "gyrocopter_call_down", // 12
+          'gyrocopter_call_down', // 12
           `special_bonus_attributes`, // 13
           `special_bonus_attributes`, // 14
-          "special_bonus_unique_gyrocopter_6", // 15
+          'special_bonus_unique_gyrocopter_6', // 15
           `special_bonus_attributes`, // 16
-          "special_bonus_attributes", // 17
-          "gyrocopter_call_down", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_gyrocopter_3", // 20
+          'special_bonus_attributes', // 17
+          'gyrocopter_call_down', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_gyrocopter_3', // 20
           `gyrocopter_flak_cannon`, // 21
           `gyrocopter_flak_cannon`, // 22
           `gyrocopter_flak_cannon`, // 23
           `gyrocopter_flak_cannon`, // 24
-          "special_bonus_unique_gyrocopter_5", // 25
+          'special_bonus_unique_gyrocopter_5', // 25
         ],
         items: {
           starting: [
@@ -6045,11 +6045,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `faded_broach`,
-            "philosophers_stone",
+            'philosophers_stone',
             `bullwhip`,
             `psychic_headband`,
             `ceremonial_robe`,
-            "timeless_relic",
+            'timeless_relic',
             `spy_gadget`,
             `force_boots`,
             `seer_stone`,
@@ -6065,24 +6065,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "wind_lace", "boots", "headdress"],
+        all: ['magic_stick', 'wind_lace', 'boots', 'headdress'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["mekansm", "lotus_orb", "cloak"],
-        support: ["glimmer_cape", "force_staff", "ghost", "cyclone"],
+        all: ['mekansm', 'lotus_orb', 'cloak'],
+        support: ['glimmer_cape', 'force_staff', 'ghost', 'cyclone'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["assault", "butterfly"],
+        support: ['black_king_bar'],
+        core: ['assault', 'butterfly'],
       },
     },
   },
@@ -6103,38 +6103,38 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `hoodwink_acorn_shot`, // 1
           `hoodwink_bushwhack`, // 2
           `hoodwink_acorn_shot`, // 3
-          "hoodwink_scurry", // 4
-          "hoodwink_bushwhack", // 5
-          "hoodwink_sharpshooter", // 6
+          'hoodwink_scurry', // 4
+          'hoodwink_bushwhack', // 5
+          'hoodwink_sharpshooter', // 6
           `hoodwink_acorn_shot`, // 7
-          "hoodwink_acorn_shot", // 8
+          'hoodwink_acorn_shot', // 8
           `hoodwink_bushwhack`, // 9
           `hoodwink_bushwhack`, // 10
           `special_bonus_unique_hoodwink_bushwhack_cooldown`, // 11
-          "hoodwink_sharpshooter", // 12
-          "hoodwink_scurry", // 13
-          "hoodwink_scurry", // 14
+          'hoodwink_sharpshooter', // 12
+          'hoodwink_scurry', // 13
+          'hoodwink_scurry', // 14
           `special_bonus_unique_hoodwink_acorn_shot_bounces`, // 15
-          "hoodwink_scurry", // 16
-          "special_bonus_attributes", // 17
-          "hoodwink_sharpshooter", // 18
-          "special_bonus_attributes", // 19
+          'hoodwink_scurry', // 16
+          'special_bonus_attributes', // 17
+          'hoodwink_sharpshooter', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_corruption_4`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_hoodwink_acorn_shot_charges`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
-            "branches",
-            "branches",
-            "circlet",
+            'branches',
+            'branches',
+            'circlet',
             `ward_observer`,
             `ward_sentry`,
           ],
@@ -6187,13 +6187,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `mysterious_hat`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
             `ceremonial_robe`,
-            "psychic_headband",
+            'psychic_headband',
             `timeless_relic`,
             `spy_gadget`,
-            "seer_stone",
+            'seer_stone',
             `desolator_2`,
           ],
         },
@@ -6208,12 +6208,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "quelling_blade",
-          "infused_raindrop",
-          "cloak",
-          "blade_mail",
+          'magic_stick',
+          'ring_of_regen',
+          'quelling_blade',
+          'infused_raindrop',
+          'cloak',
+          'blade_mail',
         ],
         support: [],
         core: [],
@@ -6221,25 +6221,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       mid_game: {
         all: [
           /* "hood_of_defiance", */
-          "pipe",
-          "mekansm",
+          'pipe',
+          'mekansm',
 
-          "rod_of_atos",
-          "blink",
+          'rod_of_atos',
+          'blink',
         ],
-        support: ["glimmer_cape", "SentryDustGem"],
+        support: ['glimmer_cape', 'SentryDustGem'],
         core: [`orchid`, `black_king_bar`, `witch_blade`],
       },
       late_game: {
         all: [],
         support: [],
         core: [
-          "abyssal_blade",
-          "skadi",
-          "assault",
-          "bloodthorn",
-          "monkey_king_bar",
-          "sheepstick",
+          'abyssal_blade',
+          'skadi',
+          'assault',
+          'bloodthorn',
+          'monkey_king_bar',
+          'sheepstick',
         ],
       },
     },
@@ -6263,52 +6263,52 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         facet: 1,
         abilities: [
           `huskar_inner_fire`, // 1
-          "huskar_berserkers_blood", // 2
-          "huskar_burning_spear", // 3
+          'huskar_berserkers_blood', // 2
+          'huskar_burning_spear', // 3
           `huskar_burning_spear`, // 4
           `huskar_berserkers_blood`, // 5
-          "huskar_life_break", // 6
+          'huskar_life_break', // 6
           `huskar_berserkers_blood`, // 7
           `huskar_burning_spear`, // 8
           `huskar_burning_spear`, // 9
           `huskar_berserkers_blood`, // 10
-          "special_bonus_unique_huskar_3", // 11
+          'special_bonus_unique_huskar_3', // 11
           `huskar_life_break`, // 12
-          "huskar_inner_fire", // 13
+          'huskar_inner_fire', // 13
           `huskar_inner_fire`, // 14
-          "special_bonus_lifesteal_15", // 15
-          "huskar_inner_fire", // 16
-          "special_bonus_attributes", // 17
-          "huskar_life_break", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_huskar_6", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_huskar_5", // 25
+          'special_bonus_lifesteal_15', // 15
+          'huskar_inner_fire', // 16
+          'special_bonus_attributes', // 17
+          'huskar_life_break', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_huskar_6', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_huskar_5', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
-            "gauntlets",
-            "gauntlets",
+            'tango',
+            'faerie_fire',
+            'gauntlets',
+            'gauntlets',
             `gauntlets`,
             `ward_observer`,
           ],
           early_game: [
-            "boots",
-            "magic_wand",
-            "helm_of_iron_will",
-            "armlet",
-            "wind_lace",
+            'boots',
+            'magic_wand',
+            'helm_of_iron_will',
+            'armlet',
+            'wind_lace',
           ],
           mid_game: [
-            "sange_and_yasha",
+            'sange_and_yasha',
             `black_king_bar`,
             `ultimate_scepter`,
-            "travel_boots",
+            'travel_boots',
           ],
           late_game: [`satanic`, `blink`, `aghanims_shard`, `assault`],
           situational: [
@@ -6319,7 +6319,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `dragon_lance`,
             `hurricane_pike`,
             `octarine_core`,
-            "heavens_halberd",
+            'heavens_halberd',
             `heart`,
             `monkey_king_bar`,
             `silver_edge`,
@@ -6331,22 +6331,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           core: [
             `boots`,
             `armlet`,
-            "sange_and_yasha",
+            'sange_and_yasha',
             `black_king_bar`,
             `ultimate_scepter`,
             `travel_boots`,
-            "satanic",
+            'satanic',
           ],
           neutral: [
             `safety_bubble`,
             `spark_of_courage`,
-            "grove_bow",
+            'grove_bow',
             `vampire_fangs`,
-            "paladin_sword",
+            'paladin_sword',
             `elven_tunic`,
-            "trickster_cloak",
+            'trickster_cloak',
             `mind_breaker`,
-            "giants_ring",
+            'giants_ring',
             `apex`,
           ],
         },
@@ -6355,35 +6355,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [`armlet`, `huskar_life_break`, `attack`, `huskar_inner_fire`],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "wind_lace", "boots", "urn_of_shadows", "cloak"],
+        all: ['blight_stone', 'wind_lace', 'boots', 'urn_of_shadows', 'cloak'],
         support: [],
-        core: ["orb_of_corrosion", "ring_of_health"],
+        core: ['orb_of_corrosion', 'ring_of_health'],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['spirit_vessel'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "blade_mail",
-          "pipe",
-          "eternal_shroud",
-          "heavens_halberd",
-          "hurricane_pike",
-          "black_king_bar",
-          "silver_edge",
-          "manta",
+          'blade_mail',
+          'pipe',
+          'eternal_shroud',
+          'heavens_halberd',
+          'hurricane_pike',
+          'black_king_bar',
+          'silver_edge',
+          'manta',
         ],
       },
       late_game: {
         all: [],
         support: [],
         core: [
-          "skadi",
-          "shivas_guard",
-          "bloodthorn",
-          "butterfly",
-          "abyssal_blade",
+          'skadi',
+          'shivas_guard',
+          'bloodthorn',
+          'butterfly',
+          'abyssal_blade',
         ],
       },
     },
@@ -6397,7 +6397,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         // Midlane Quas Wex Invoker build | If an app user choses to play Invoker on non-mid role, this guide should be suggested over the other one
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        type: "QW",
+        type: 'QW',
         steam_guide_workshop_ids: { en: 2700562552, es: 3160077198 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40632,
@@ -6408,37 +6408,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `invoker_quas`, // 2
           `invoker_wex`, // 3
           `invoker_quas`, // 4
-          "invoker_wex", // 5
+          'invoker_wex', // 5
           `invoker_exort`, // 6
-          "invoker_wex", // 7
-          "invoker_quas", // 8
-          "invoker_wex", // 9
+          'invoker_wex', // 7
+          'invoker_quas', // 8
+          'invoker_wex', // 9
           `invoker_quas`, // 10
           `invoker_wex`, // 11
-          "invoker_exort", // 12
+          'invoker_exort', // 12
           `invoker_wex`, // 13
-          "invoker_exort", // 14
-          "invoker_exort", // 15
-          "invoker_exort", // 16
+          'invoker_exort', // 14
+          'invoker_exort', // 15
+          'invoker_exort', // 16
           `invoker_exort`, // 17
           `invoker_exort`, // 18
           `special_bonus_unique_invoker_3`, // 19
           `special_bonus_unique_invoker_11`, // 20
           `special_bonus_unique_invoker_additional_chaos_meteors`, // 21
           `invoker_quas`, // 22
-          "invoker_quas", // 23
-          "invoker_quas", // 24
-          "special_bonus_unique_invoker_13", // 25
+          'invoker_quas', // 23
+          'invoker_quas', // 24
+          'special_bonus_unique_invoker_13', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `faerie_fire`,
             `circlet`,
-            "circlet",
-            "branches",
-            "branches",
-            "ward_observer",
+            'circlet',
+            'branches',
+            'branches',
+            'ward_observer',
           ],
           early_game: [
             `bracer`,
@@ -6505,7 +6505,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `unstable_wand`,
             `arcane_ring`,
-            "grove_bow",
+            'grove_bow',
             `pupils_gift`,
             `enchanted_quiver`,
             `ceremonial_robe`,
@@ -6519,48 +6519,48 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       {
         // Midlane Quas Exort Invoker build
         roles: [DOTA_COACH_GUIDE_ROLE.MID],
-        type: "QE",
+        type: 'QE',
         steam_guide_workshop_ids: { en: 2711948373, es: 3160077282 },
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40631,
         power_level: [1.7, 1.9, 2.6, 2.8],
         facet: 2,
         abilities: [
-          "invoker_exort", // 1
-          "invoker_quas", // 2
-          "invoker_exort", // 3
-          "invoker_quas", // 4
-          "invoker_exort", // 5
+          'invoker_exort', // 1
+          'invoker_quas', // 2
+          'invoker_exort', // 3
+          'invoker_quas', // 4
+          'invoker_exort', // 5
           `invoker_wex`, // 6
-          "invoker_exort", // 7
+          'invoker_exort', // 7
           `invoker_quas`, // 8
-          "invoker_exort", // 9
+          'invoker_exort', // 9
           `invoker_quas`, // 10
-          "invoker_exort", // 11
-          "invoker_wex", // 12
-          "invoker_exort", // 13
-          "invoker_wex", // 14
-          "invoker_wex", // 15
-          "invoker_wex", // 16
-          "invoker_wex", // 17
-          "invoker_wex", // 18
+          'invoker_exort', // 11
+          'invoker_wex', // 12
+          'invoker_exort', // 13
+          'invoker_wex', // 14
+          'invoker_wex', // 15
+          'invoker_wex', // 16
+          'invoker_wex', // 17
+          'invoker_wex', // 18
           `special_bonus_unique_invoker_3`, // 19
           `special_bonus_unique_invoker_11`, // 20
           `special_bonus_unique_invoker_additional_chaos_meteors`, // 21
           `invoker_quas`, // 22
-          "invoker_quas", // 23
-          "invoker_quas", // 24
+          'invoker_quas', // 23
+          'invoker_quas', // 24
           `special_bonus_unique_invoker_13`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `faerie_fire`,
             `circlet`,
-            "circlet",
-            "branches",
-            "branches",
-            "ward_observer",
+            'circlet',
+            'branches',
+            'branches',
+            'ward_observer',
           ],
           early_game: [
             `bracer`,
@@ -6633,34 +6633,34 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "enchanted_mango",
-          "wind_lace",
-          "boots",
-          "arcane_boots",
-          "cloak",
+          'magic_stick',
+          'enchanted_mango',
+          'wind_lace',
+          'boots',
+          'arcane_boots',
+          'cloak',
         ],
-        support: ["dust", "ward_sentry"],
-        core: ["soul_ring", "DamageItems"],
+        support: ['dust', 'ward_sentry'],
+        core: ['soul_ring', 'DamageItems'],
       },
       mid_game: {
-        all: ["cyclone"],
-        support: ["SentryDust", "force_staff", "glimmer_cape"],
+        all: ['cyclone'],
+        support: ['SentryDust', 'force_staff', 'glimmer_cape'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "orchid",
-          "black_king_bar",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'orchid',
+          'black_king_bar',
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk", "wind_waker"],
-        support: ["SentryDustGem", "black_king_bar"],
-        core: ["abyssal_blade", "satanic"],
+        all: ['sheepstick', 'aeon_disk', 'wind_waker'],
+        support: ['SentryDustGem', 'black_king_bar'],
+        core: ['abyssal_blade', 'satanic'],
       },
     },
   },
@@ -6680,31 +6680,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 1.9, 2, 2.2],
         facet: 1,
         abilities: [
-          "wisp_tether", // 1
-          "wisp_overcharge", // 2
-          "wisp_overcharge", // 3
-          "wisp_tether", // 4
-          "wisp_overcharge", // 5
-          "wisp_relocate", // 6
-          "wisp_overcharge", // 7
-          "wisp_tether", // 8
-          "wisp_tether", // 9
+          'wisp_tether', // 1
+          'wisp_overcharge', // 2
+          'wisp_overcharge', // 3
+          'wisp_tether', // 4
+          'wisp_overcharge', // 5
+          'wisp_relocate', // 6
+          'wisp_overcharge', // 7
+          'wisp_tether', // 8
+          'wisp_tether', // 9
           `special_bonus_unique_wisp_8`, // 10
-          "wisp_spirits", // 11
-          "wisp_relocate", // 12
-          "wisp_spirits", // 13
-          "wisp_spirits", // 14
-          "special_bonus_unique_wisp_3", // 15
-          "wisp_spirits", // 16
-          "special_bonus_attributes", // 17
-          "wisp_relocate", // 18
-          "special_bonus_attributes", // 19
+          'wisp_spirits', // 11
+          'wisp_relocate', // 12
+          'wisp_spirits', // 13
+          'wisp_spirits', // 14
+          'special_bonus_unique_wisp_3', // 15
+          'wisp_spirits', // 16
+          'special_bonus_attributes', // 17
+          'wisp_relocate', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_wisp_10`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_wisp_4", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_wisp_4', // 25
         ],
         items: {
           starting: [
@@ -6762,13 +6762,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `royal_jelly`,
             `seeds_of_serenity`,
-            "philosophers_stone",
+            'philosophers_stone',
             `bullwhip`,
             `craggy_coat`,
             `ogre_seal_totem`,
-            "ascetic_cap",
+            'ascetic_cap',
             `martyrs_plate`,
-            "book_of_shadows",
+            'book_of_shadows',
             `desolator_2`,
           ],
         },
@@ -6777,19 +6777,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["ring_of_regen", "wind_lace", "boots", "urn_of_shadows"],
+        all: ['ring_of_regen', 'wind_lace', 'boots', 'urn_of_shadows'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "blink"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['spirit_vessel', 'blink'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [],
       },
       late_game: {
-        all: ["sheepstick"],
+        all: ['sheepstick'],
         support: [],
-        core: ["shivas_guard", "skadi", "abyssal_blade"],
+        core: ['shivas_guard', 'skadi', 'abyssal_blade'],
       },
     },
   },
@@ -6808,51 +6808,51 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2, 2, 2.1, 2],
         facet: [1, 2],
         abilities: [
-          "jakiro_dual_breath", // 1
-          "jakiro_double_trouble", // 2
-          "jakiro_dual_breath", // 3
-          "jakiro_ice_path", // 4
-          "jakiro_dual_breath", // 5
-          "jakiro_macropyre", // 6
-          "jakiro_dual_breath", // 7
-          "jakiro_ice_path", // 8
-          "jakiro_ice_path", // 9
+          'jakiro_dual_breath', // 1
+          'jakiro_double_trouble', // 2
+          'jakiro_dual_breath', // 3
+          'jakiro_ice_path', // 4
+          'jakiro_dual_breath', // 5
+          'jakiro_macropyre', // 6
+          'jakiro_dual_breath', // 7
+          'jakiro_ice_path', // 8
+          'jakiro_ice_path', // 9
           `jakiro_ice_path`, // 10
           `special_bonus_attack_range_200`, // 11
-          "jakiro_macropyre", // 12
-          "jakiro_double_trouble", // 13
-          "jakiro_double_trouble", // 14
-          "jakiro_double_trouble", // 15
+          'jakiro_macropyre', // 12
+          'jakiro_double_trouble', // 13
+          'jakiro_double_trouble', // 14
+          'jakiro_double_trouble', // 15
           `special_bonus_unique_jakiro_6`, // 16
-          "special_bonus_attributes", // 17
-          "jakiro_macropyre", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_jakiro_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'jakiro_macropyre', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_jakiro_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_jakiro_3`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "tango",
-            "enchanted_mango",
-            "enchanted_mango",
+            'tango',
+            'tango',
+            'enchanted_mango',
+            'enchanted_mango',
             `blood_grenade`,
             `faerie_fire`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
             `magic_wand`,
             `ring_of_basilius`,
-            "wind_lace",
-            "infused_raindrop",
+            'wind_lace',
+            'infused_raindrop',
           ],
           mid_game: [
             `arcane_boots`,
@@ -6871,7 +6871,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `veil_of_discord`,
             `pavise`,
             `solar_crest`,
-            "pipe",
+            'pipe',
             `ghost`,
             `glimmer_cape`,
             `lotus_orb`,
@@ -6894,50 +6894,50 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `arcane_ring`,
-            "philosophers_stone",
-            "bullwhip",
-            "psychic_headband",
-            "ceremonial_robe",
-            "spy_gadget",
+            'philosophers_stone',
+            'bullwhip',
+            'psychic_headband',
+            'ceremonial_robe',
+            'spy_gadget',
             `timeless_relic`,
-            "seer_stone",
+            'seer_stone',
             `force_boots`,
           ],
         },
       },
     ],
     combo: [
-      "cyclone",
-      "jakiro_macropyre",
-      "jakiro_ice_path",
-      "jakiro_dual_breath",
-      "jakiro_double_trouble",
+      'cyclone',
+      'jakiro_macropyre',
+      'jakiro_ice_path',
+      'jakiro_dual_breath',
+      'jakiro_double_trouble',
     ],
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "headdress",
-          "wind_lace",
-          "boots",
-          "cloak",
+          'magic_stick',
+          'ring_of_regen',
+          'headdress',
+          'wind_lace',
+          'boots',
+          'cloak',
         ],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff"],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'black_king_bar',
         ],
       },
-      late_game: { all: [], support: ["black_king_bar"], core: [] },
+      late_game: { all: [], support: ['black_king_bar'], core: [] },
     },
   },
 
@@ -6955,53 +6955,53 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.9, 2.3, 2.6, 2.7],
         facet: 1,
         abilities: [
-          "juggernaut_blade_fury", // 1
-          "juggernaut_blade_dance", // 2
-          "juggernaut_blade_fury", // 3
-          "juggernaut_healing_ward", // 4
-          "juggernaut_blade_fury", // 5
-          "juggernaut_omni_slash", // 6
-          "juggernaut_blade_fury", // 7
+          'juggernaut_blade_fury', // 1
+          'juggernaut_blade_dance', // 2
+          'juggernaut_blade_fury', // 3
+          'juggernaut_healing_ward', // 4
+          'juggernaut_blade_fury', // 5
+          'juggernaut_omni_slash', // 6
+          'juggernaut_blade_fury', // 7
           `juggernaut_healing_ward`, // 8
           `juggernaut_blade_dance`, // 9
           `special_bonus_unique_juggernaut_4`, // 10
           `juggernaut_blade_dance`, // 11
-          "juggernaut_omni_slash", // 12
+          'juggernaut_omni_slash', // 12
           `juggernaut_blade_dance`, // 13
           `juggernaut_healing_ward`, // 14
           `special_bonus_unique_juggernaut_5`, // 15
           `juggernaut_healing_ward`, // 16
-          "special_bonus_attributes", // 17
-          "juggernaut_omni_slash", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_juggernaut_blade_dance_lifesteal", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'juggernaut_omni_slash', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_juggernaut_blade_dance_lifesteal', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_juggernaut_omnislash_duration`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `branches`,
-            "branches",
-            "quelling_blade",
+            'branches',
+            'quelling_blade',
             `slippers`,
             `circlet`,
           ],
-          early_game: ["wraith_band", `power_treads`, "magic_wand"],
-          mid_game: ["bfury", `manta`, "blink", "ultimate_scepter"],
+          early_game: ['wraith_band', `power_treads`, 'magic_wand'],
+          mid_game: ['bfury', `manta`, 'blink', 'ultimate_scepter'],
           late_game: [
             `butterfly`,
             `abyssal_blade`,
-            "skadi",
-            "swift_blink",
-            "aghanims_shard",
+            'skadi',
+            'swift_blink',
+            'aghanims_shard',
           ],
           situational: [
-            "phase_boots",
-            "maelstrom",
+            'phase_boots',
+            'maelstrom',
             `mjollnir`,
             `diffusal_blade`,
             `sange_and_yasha`,
@@ -7014,42 +7014,42 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `bfury`,
             `manta`,
             `blink`,
-            "ultimate_scepter",
-            "butterfly",
+            'ultimate_scepter',
+            'butterfly',
           ],
           neutral: [
-            "broom_handle",
-            "duelist_gloves",
+            'broom_handle',
+            'duelist_gloves',
             `orb_of_destruction`,
-            "elven_tunic",
-            "mind_breaker",
-            "pirate_hat",
+            'elven_tunic',
+            'mind_breaker',
+            'pirate_hat',
             `apex`,
           ],
         },
       },
     ],
     combo: [
-      "blink",
-      "juggernaut_omni_slash",
+      'blink',
+      'juggernaut_omni_slash',
       `juggernaut_blade_fury`,
       `juggernaut_healing_ward`,
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
+        all: ['wind_lace', 'boots', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape", "ghost"],
-        core: ["crimson_guard", "invis_sword", "manta"],
+        all: ['lotus_orb'],
+        support: ['glimmer_cape', 'ghost'],
+        core: ['crimson_guard', 'invis_sword', 'manta'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk", "wind_waker"],
+        all: ['sheepstick', 'ethereal_blade', 'aeon_disk', 'wind_waker'],
         support: [],
-        core: ["abyssal_blade", "silver_edge", "assault"],
+        core: ['abyssal_blade', 'silver_edge', 'assault'],
       },
     },
   },
@@ -7073,44 +7073,44 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `keeper_of_the_light_blinding_light`, // 3
           `keeper_of_the_light_illuminate`, // 4
           `keeper_of_the_light_illuminate`, // 5
-          "keeper_of_the_light_spirit_form", // 6
+          'keeper_of_the_light_spirit_form', // 6
           `keeper_of_the_light_illuminate`, // 7
           `keeper_of_the_light_chakra_magic`, // 8
           `keeper_of_the_light_chakra_magic`, // 9
           `keeper_of_the_light_chakra_magic`, // 10
           `special_bonus_unique_keeper_of_the_light_illuminate_cooldown`, // 11
-          "keeper_of_the_light_spirit_form", // 12
+          'keeper_of_the_light_spirit_form', // 12
           `keeper_of_the_light_blinding_light`, // 13
           `keeper_of_the_light_blinding_light`, // 14
           `special_bonus_unique_keeper_of_the_light_7`, // 15
           `keeper_of_the_light_blinding_light`, // 16
-          "special_bonus_attributes", // 17
-          "keeper_of_the_light_spirit_form", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_keeper_of_the_light_11", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'keeper_of_the_light_spirit_form', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_keeper_of_the_light_11', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_keeper_of_the_light`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `branches`,
             `branches`,
             `branches`,
-            "circlet",
+            'circlet',
             `ward_observer`,
             `ward_sentry`,
           ],
           early_game: [
-            "tranquil_boots",
-            "magic_wand",
+            'tranquil_boots',
+            'magic_wand',
             `urn_of_shadows`,
-            "infused_raindrop",
+            'infused_raindrop',
           ],
           mid_game: [
             `spirit_vessel`,
@@ -7128,12 +7128,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aether_lens`,
             `ghost`,
             `octarine_core`,
-            "lotus_orb",
+            'lotus_orb',
             `blink`,
             `ethereal_blade`,
             `aeon_disk`,
             `refresher`,
-            "travel_boots",
+            'travel_boots',
           ],
           core: [
             `tranquil_boots`,
@@ -7147,13 +7147,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `mysterious_hat`,
             `trusty_shovel`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ogre_seal_totem`,
-            "spy_gadget",
-            "timeless_relic",
-            "seer_stone",
+            'spy_gadget',
+            'timeless_relic',
+            'seer_stone',
             `book_of_shadows`,
           ],
         },
@@ -7174,34 +7174,34 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "headdress",
-          "infused_raindrop",
-          "urn_of_shadows",
-          "cloak",
+          'magic_stick',
+          'ring_of_regen',
+          'headdress',
+          'infused_raindrop',
+          'urn_of_shadows',
+          'cloak',
         ],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['lotus_orb'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "sphere",
-          "witch_blade",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'sphere',
+          'witch_blade',
+          'manta',
         ],
       },
       late_game: {
-        all: ["aeon_disk"],
-        support: ["black_king_bar"],
-        core: ["monkey_king_bar"],
+        all: ['aeon_disk'],
+        support: ['black_king_bar'],
+        core: ['monkey_king_bar'],
       },
     },
   },
@@ -7218,33 +7218,33 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40658,
         power_level: [2, 2.4, 2.5, 2.2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "kunkka_tidebringer", // 1
-          "kunkka_torrent", // 2
-          "kunkka_tidebringer", // 3
-          "kunkka_x_marks_the_spot", // 4
-          "kunkka_tidebringer", // 5
-          "kunkka_ghostship", // 6
-          "kunkka_tidebringer", // 7
-          "kunkka_x_marks_the_spot", // 8
-          "kunkka_x_marks_the_spot", // 9
+          'kunkka_tidebringer', // 1
+          'kunkka_torrent', // 2
+          'kunkka_tidebringer', // 3
+          'kunkka_x_marks_the_spot', // 4
+          'kunkka_tidebringer', // 5
+          'kunkka_ghostship', // 6
+          'kunkka_tidebringer', // 7
+          'kunkka_x_marks_the_spot', // 8
+          'kunkka_x_marks_the_spot', // 9
           `kunkka_x_marks_the_spot`, // 10
-          "special_bonus_unique_kunkka_6", // 11
-          "kunkka_ghostship", // 12
-          "kunkka_torrent", // 13
-          "kunkka_torrent", // 14
+          'special_bonus_unique_kunkka_6', // 11
+          'kunkka_ghostship', // 12
+          'kunkka_torrent', // 13
+          'kunkka_torrent', // 14
           `special_bonus_unique_kunkka_7`, // 15
-          "kunkka_torrent", // 16
-          "special_bonus_attributes", // 17
-          "kunkka_ghostship", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_kunkka_torrent_cooldown", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_kunkka_3", // 25
+          'kunkka_torrent', // 16
+          'special_bonus_attributes', // 17
+          'kunkka_ghostship', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_kunkka_torrent_cooldown', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_kunkka_3', // 25
         ],
         items: {
           starting: [
@@ -7253,45 +7253,45 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `branches`,
             `branches`,
             `faerie_fire`,
-            "tango",
+            'tango',
             `ward_observer`,
           ],
-          early_game: ["bottle", "bracer", "phase_boots", "magic_wand"],
+          early_game: ['bottle', 'bracer', 'phase_boots', 'magic_wand'],
           mid_game: [
             `blade_mail`,
-            "aghanims_shard",
+            'aghanims_shard',
             `ultimate_scepter`,
-            "black_king_bar",
+            'black_king_bar',
           ],
-          late_game: ["shivas_guard", "refresher", "travel_boots"],
+          late_game: ['shivas_guard', 'refresher', 'travel_boots'],
           situational: [
-            "infused_raindrop",
+            'infused_raindrop',
             `bloodstone`,
-            "octarine_core",
-            "sheepstick",
-            "sphere",
-            "radiance",
-            "orchid",
+            'octarine_core',
+            'sheepstick',
+            'sphere',
+            'radiance',
+            'orchid',
             `heavens_halberd`,
             `blink`,
           ],
           core: [
             `blade_mail`,
             `aghanims_shard`,
-            "ultimate_scepter",
+            'ultimate_scepter',
             `black_king_bar`,
           ],
           neutral: [
-            "broom_handle",
+            'broom_handle',
             `unstable_wand`,
-            "vambrace",
-            "dragon_scale",
+            'vambrace',
+            'dragon_scale',
             `craggy_coat`,
             `ogre_seal_totem`,
-            "timeless_relic",
+            'timeless_relic',
             `havoc_hammer`,
-            "force_boots",
-            "giants_ring",
+            'force_boots',
+            'giants_ring',
           ],
         },
       },
@@ -7301,78 +7301,78 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40665,
         power_level: [1.8, 2.4, 2.5, 2.2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "kunkka_tidebringer", // 1
-          "kunkka_torrent", // 2
-          "kunkka_tidebringer", // 3
-          "kunkka_x_marks_the_spot", // 4
-          "kunkka_tidebringer", // 5
-          "kunkka_ghostship", // 6
-          "kunkka_tidebringer", // 7
-          "kunkka_x_marks_the_spot", // 8
-          "kunkka_x_marks_the_spot", // 9
-          "kunkka_x_marks_the_spot", // 10
+          'kunkka_tidebringer', // 1
+          'kunkka_torrent', // 2
+          'kunkka_tidebringer', // 3
+          'kunkka_x_marks_the_spot', // 4
+          'kunkka_tidebringer', // 5
+          'kunkka_ghostship', // 6
+          'kunkka_tidebringer', // 7
+          'kunkka_x_marks_the_spot', // 8
+          'kunkka_x_marks_the_spot', // 9
+          'kunkka_x_marks_the_spot', // 10
           `special_bonus_unique_kunkka_6`, // 11
-          "kunkka_ghostship", // 12
-          "kunkka_torrent", // 13
-          "kunkka_torrent", // 14
+          'kunkka_ghostship', // 12
+          'kunkka_torrent', // 13
+          'kunkka_torrent', // 14
           `special_bonus_unique_kunkka_7`, // 15
           `kunkka_torrent`, // 16
-          "special_bonus_attributes", // 17
-          "kunkka_ghostship", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_kunkka_torrent_cooldown", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_kunkka_3", // 25
+          'special_bonus_attributes', // 17
+          'kunkka_ghostship', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_kunkka_torrent_cooldown', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_kunkka_3', // 25
         ],
         items: {
           starting: [
             `tango`,
-            "quelling_blade",
+            'quelling_blade',
             `gauntlets`,
             `gauntlets`,
             `branches`,
-            "branches",
+            'branches',
           ],
-          early_game: ["bracer", "bracer", "phase_boots", `magic_wand`],
-          mid_game: ["blade_mail", `aghanims_shard`, "ultimate_scepter"],
+          early_game: ['bracer', 'bracer', 'phase_boots', `magic_wand`],
+          mid_game: ['blade_mail', `aghanims_shard`, 'ultimate_scepter'],
           late_game: [
-            "black_king_bar",
-            "shivas_guard",
+            'black_king_bar',
+            'shivas_guard',
             `refresher`,
             `travel_boots`,
           ],
           situational: [
             `bloodstone`,
-            "octarine_core",
+            'octarine_core',
             `sheepstick`,
             `heavens_halberd`,
-            "pipe",
+            'pipe',
             `bloodthorn`,
-            "lotus_orb",
+            'lotus_orb',
           ],
           core: [
             `blade_mail`,
             `aghanims_shard`,
-            "ultimate_scepter",
-            "black_king_bar",
-            "shivas_guard",
+            'ultimate_scepter',
+            'black_king_bar',
+            'shivas_guard',
           ],
           neutral: [
-            "broom_handle",
+            'broom_handle',
             `unstable_wand`,
-            "vambrace",
-            "dragon_scale",
+            'vambrace',
+            'dragon_scale',
             `craggy_coat`,
             `ogre_seal_totem`,
-            "timeless_relic",
+            'timeless_relic',
             `havoc_hammer`,
-            "force_boots",
-            "giants_ring",
+            'force_boots',
+            'giants_ring',
           ],
         },
       },
@@ -7386,24 +7386,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "ring_of_regen", "armor"],
+        all: ['blight_stone', 'ring_of_regen', 'armor'],
         support: [],
-        core: ["orb_of_corrosion", "ring_of_health"],
+        core: ['orb_of_corrosion', 'ring_of_health'],
       },
       mid_game: {
-        all: ["cyclone", "spirit_vessel"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['cyclone', 'spirit_vessel'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           // "hood_of_defiance",
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["bloodthorn", "assault"],
+        support: ['black_king_bar'],
+        core: ['bloodthorn', 'assault'],
       },
     },
   },
@@ -7421,43 +7421,43 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 2.1, 2.6, 2.7],
         facet: 1,
         abilities: [
-          "legion_commander_overwhelming_odds", // 1
-          "legion_commander_moment_of_courage", // 2
+          'legion_commander_overwhelming_odds', // 1
+          'legion_commander_moment_of_courage', // 2
           `legion_commander_overwhelming_odds`, // 3
           `legion_commander_press_the_attack`, // 4
           `legion_commander_overwhelming_odds`, // 5
-          "legion_commander_duel", // 6
+          'legion_commander_duel', // 6
           `legion_commander_overwhelming_odds`, // 7
           `legion_commander_moment_of_courage`, // 8
-          "legion_commander_moment_of_courage", // 9
-          "legion_commander_moment_of_courage", // 10
-          "special_bonus_unique_legion_commander_9", // 11
-          "legion_commander_duel", // 12
+          'legion_commander_moment_of_courage', // 9
+          'legion_commander_moment_of_courage', // 10
+          'special_bonus_unique_legion_commander_9', // 11
+          'legion_commander_duel', // 12
           `legion_commander_press_the_attack`, // 13
           `legion_commander_press_the_attack`, // 14
           `special_bonus_unique_legion_commander_4`, // 15
           `legion_commander_press_the_attack`, // 16
-          "special_bonus_attributes", // 17
-          "legion_commander_duel", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'legion_commander_duel', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_legion_commander_3`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_legion_commander_8", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_legion_commander_8', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "gauntlets",
+            'tango',
+            'quelling_blade',
+            'gauntlets',
             `circlet`,
             `branches`,
-            "branches",
+            'branches',
             `ward_observer`,
           ],
-          early_game: [`bracer`, `magic_wand`, `phase_boots`, "soul_ring"],
+          early_game: [`bracer`, `magic_wand`, `phase_boots`, 'soul_ring'],
           mid_game: [`blade_mail`, `blink`, `black_king_bar`, `aghanims_shard`],
           late_game: [
             `ultimate_scepter`,
@@ -7466,19 +7466,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `greater_crit`,
           ],
           situational: [
-            "silver_edge",
+            'silver_edge',
             `monkey_king_bar`,
             `heart`,
             `abyssal_blade`,
             `moon_shard`,
             `satanic`,
-            "heavens_halberd",
+            'heavens_halberd',
             `swift_blink`,
             `overwhelming_blink`,
           ],
           core: [
             `phase_boots`,
-            "soul_ring",
+            'soul_ring',
             `blade_mail`,
             `blink`,
             `black_king_bar`,
@@ -7495,34 +7495,34 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `elven_tunic`,
             `ninja_gear`,
             `giants_ring`,
-            "desolator_2",
+            'desolator_2',
           ],
         },
       },
     ],
     combo: [
-      "legion_commander_press_the_attack",
-      "black_king_bar",
-      "blade_mail",
-      "blink",
+      'legion_commander_press_the_attack',
+      'black_king_bar',
+      'blade_mail',
+      'blink',
       `legion_commander_duel`,
       `legion_commander_overwhelming_odds`,
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
+        all: ['wind_lace', 'boots', 'armor'],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["cyclone"],
-        support: ["ghost"],
+        all: ['cyclone'],
+        support: ['ghost'],
         core: [`heavens_halberd`, `sange_and_yasha`],
       },
       late_game: {
-        all: ["sphere", "aeon_disk", "ethereal_blade", "wind_waker"],
+        all: ['sphere', 'aeon_disk', 'ethereal_blade', 'wind_waker'],
         support: [],
-        core: ["satanic", "assault", "butterfly"],
+        core: ['satanic', 'assault', 'butterfly'],
       },
     },
   },
@@ -7541,89 +7541,89 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 2.3, 2.5, 2.2],
         facet: 1,
         abilities: [
-          "leshrac_lightning_storm", // 1
-          "leshrac_split_earth", // 2
-          "leshrac_lightning_storm", // 3
-          "leshrac_split_earth", // 4
-          "leshrac_diabolic_edict", // 5
-          "leshrac_pulse_nova", // 6
-          "leshrac_diabolic_edict", // 7
-          "leshrac_diabolic_edict", // 8
-          "leshrac_diabolic_edict", // 9
-          "leshrac_lightning_storm", // 10
-          "leshrac_lightning_storm", // 11
-          "leshrac_pulse_nova", // 12
-          "leshrac_split_earth", // 13
-          "leshrac_split_earth", // 14
-          "special_bonus_armor_4", // 15
-          "special_bonus_unique_leshrac_6", // 16
-          "leshrac_split_earth", // 17
-          "leshrac_pulse_nova", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_leshrac_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_leshrac_1", // 25
+          'leshrac_lightning_storm', // 1
+          'leshrac_split_earth', // 2
+          'leshrac_lightning_storm', // 3
+          'leshrac_split_earth', // 4
+          'leshrac_diabolic_edict', // 5
+          'leshrac_pulse_nova', // 6
+          'leshrac_diabolic_edict', // 7
+          'leshrac_diabolic_edict', // 8
+          'leshrac_diabolic_edict', // 9
+          'leshrac_lightning_storm', // 10
+          'leshrac_lightning_storm', // 11
+          'leshrac_pulse_nova', // 12
+          'leshrac_split_earth', // 13
+          'leshrac_split_earth', // 14
+          'special_bonus_armor_4', // 15
+          'special_bonus_unique_leshrac_6', // 16
+          'leshrac_split_earth', // 17
+          'leshrac_pulse_nova', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_leshrac_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_leshrac_1', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
-            "branches",
-            "branches",
-            "branches",
-            "ward_observer",
+            'tango',
+            'faerie_fire',
+            'branches',
+            'branches',
+            'branches',
+            'ward_observer',
           ],
           early_game: [
-            "bottle",
-            "magic_wand",
-            "arcane_boots",
-            "kaya",
-            "voodoo_mask",
+            'bottle',
+            'magic_wand',
+            'arcane_boots',
+            'kaya',
+            'voodoo_mask',
           ],
           mid_game: [
-            "cyclone",
-            "black_king_bar",
-            "kaya_and_sange",
-            "bloodstone",
+            'cyclone',
+            'black_king_bar',
+            'kaya_and_sange',
+            'bloodstone',
           ],
           late_game: [
-            "blink",
-            "aghanims_shard",
-            "travel_boots",
-            "shivas_guard",
-            "wind_waker",
-            "overwhelming_blink",
+            'blink',
+            'aghanims_shard',
+            'travel_boots',
+            'shivas_guard',
+            'wind_waker',
+            'overwhelming_blink',
           ],
           situational: [
-            "ultimate_scepter",
-            "eternal_shroud",
-            "refresher",
-            "sheepstick",
-            "octarine_core",
-            "aeon_disk",
+            'ultimate_scepter',
+            'eternal_shroud',
+            'refresher',
+            'sheepstick',
+            'octarine_core',
+            'aeon_disk',
           ],
           core: [
-            "arcane_boots",
-            "kaya_and_sange",
-            "black_king_bar",
-            "bloodstone",
-            "blink",
+            'arcane_boots',
+            'kaya_and_sange',
+            'black_king_bar',
+            'bloodstone',
+            'blink',
           ],
           neutral: [
-            "mysterious_hat",
-            "occult_bracelet",
-            "whisper_of_the_dread",
-            "vampire_fangs",
-            "gossamer_cape",
-            "ceremonial_robe",
-            "dandelion_amulet",
-            "timeless_relic",
-            "stormcrafter",
-            "force_field",
-            "mirror_shield",
+            'mysterious_hat',
+            'occult_bracelet',
+            'whisper_of_the_dread',
+            'vampire_fangs',
+            'gossamer_cape',
+            'ceremonial_robe',
+            'dandelion_amulet',
+            'timeless_relic',
+            'stormcrafter',
+            'force_field',
+            'mirror_shield',
           ],
         },
       },
@@ -7634,25 +7634,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "wind_lace", "boots", "cloak", "infused_raindrop"],
+        all: ['magic_stick', 'wind_lace', 'boots', 'cloak', 'infused_raindrop'],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff", "spirit_vessel"],
+        support: ['glimmer_cape', 'force_staff', 'spirit_vessel'],
         core: [
-          "mage_slayer",
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "blade_mail",
+          'mage_slayer',
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'blade_mail',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade'],
       },
     },
   },
@@ -7671,48 +7671,48 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.2, 2, 1.9, 1.6],
         facet: 1,
         abilities: [
-          "lich_frost_nova", // 1
-          "lich_frost_shield", // 2
-          "lich_frost_nova", // 3
-          "lich_sinister_gaze", // 4
+          'lich_frost_nova', // 1
+          'lich_frost_shield', // 2
+          'lich_frost_nova', // 3
+          'lich_sinister_gaze', // 4
           `lich_frost_nova`, // 5
-          "lich_chain_frost", // 6
+          'lich_chain_frost', // 6
           `lich_frost_nova`, // 7
-          "lich_frost_shield", // 8
+          'lich_frost_shield', // 8
           `lich_frost_shield`, // 9
           `lich_frost_shield`, // 10
-          "lich_sinister_gaze", // 11
-          "lich_chain_frost", // 12
+          'lich_sinister_gaze', // 11
+          'lich_chain_frost', // 12
           `lich_sinister_gaze`, // 13
           `lich_sinister_gaze`, // 14
           `special_bonus_unique_lich_8`, // 15
           `special_bonus_unique_lich_2`, // 16
-          "special_bonus_attributes", // 17
-          "lich_chain_frost", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'lich_chain_frost', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_lich_7`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_lich_5`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
-            "enchanted_mango",
+            'enchanted_mango',
             `enchanted_mango`,
             `faerie_fire`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
-            "magic_wand",
+            'magic_wand',
             `ring_of_basilius`,
             `wind_lace`,
             `infused_raindrop`,
@@ -7760,13 +7760,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `arcane_ring`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ceremonial_robe`,
-            "spy_gadget",
+            'spy_gadget',
             `timeless_relic`,
-            "seer_stone",
+            'seer_stone',
             `book_of_shadows`,
           ],
         },
@@ -7781,32 +7781,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
-          "headdress",
-          "infused_raindrop",
-          "cloak",
+          'magic_stick',
+          'ring_of_regen',
+          'wind_lace',
+          'boots',
+          'headdress',
+          'infused_raindrop',
+          'cloak',
         ],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['lotus_orb'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'black_king_bar',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["nullifier"],
+        support: ['black_king_bar'],
+        core: ['nullifier'],
       },
     },
   },
@@ -7823,106 +7823,106 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40608,
         power_level: [2.2, 2.3, 2.5, 2.3],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "life_stealer_feast", // 1
-          "life_stealer_ghoul_frenzy", // 2
-          "life_stealer_feast", // 3
-          "life_stealer_rage", // 4
-          "life_stealer_ghoul_frenzy", // 5
-          "life_stealer_infest", // 6
-          "life_stealer_ghoul_frenzy", // 7
-          "life_stealer_ghoul_frenzy", // 8
-          "life_stealer_feast", // 9
-          "life_stealer_feast", // 10
-          "life_stealer_rage", // 11
-          "life_stealer_infest", // 12
-          "life_stealer_rage", // 13
-          "life_stealer_rage", // 14
-          "special_bonus_unique_lifestealer_2", // 15
-          "special_bonus_unique_lifestealer_5", // 16
-          "special_bonus_attributes", // 17
-          "life_stealer_infest", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_lifestealer_6", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_lifestealer", // 25
+          'life_stealer_feast', // 1
+          'life_stealer_ghoul_frenzy', // 2
+          'life_stealer_feast', // 3
+          'life_stealer_rage', // 4
+          'life_stealer_ghoul_frenzy', // 5
+          'life_stealer_infest', // 6
+          'life_stealer_ghoul_frenzy', // 7
+          'life_stealer_ghoul_frenzy', // 8
+          'life_stealer_feast', // 9
+          'life_stealer_feast', // 10
+          'life_stealer_rage', // 11
+          'life_stealer_infest', // 12
+          'life_stealer_rage', // 13
+          'life_stealer_rage', // 14
+          'special_bonus_unique_lifestealer_2', // 15
+          'special_bonus_unique_lifestealer_5', // 16
+          'special_bonus_attributes', // 17
+          'life_stealer_infest', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_lifestealer_6', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_lifestealer', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "gauntlets",
-            "circlet",
-            "branches",
+            'tango',
+            'quelling_blade',
+            'gauntlets',
+            'circlet',
+            'branches',
           ],
           early_game: [
-            "bracer",
-            "phase_boots",
-            "magic_wand",
-            "orb_of_corrosion",
-            "armlet",
+            'bracer',
+            'phase_boots',
+            'magic_wand',
+            'orb_of_corrosion',
+            'armlet',
           ],
-          mid_game: ["desolator", "blink", "basher"],
-          late_game: ["skadi", "assault", "aghanims_shard", "abyssal_blade"],
+          mid_game: ['desolator', 'blink', 'basher'],
+          late_game: ['skadi', 'assault', 'aghanims_shard', 'abyssal_blade'],
           situational: [
-            "radiance",
-            "heavens_halberd",
-            "sange_and_yasha",
-            "monkey_king_bar",
-            "nullifier",
-            "black_king_bar",
-            "mjollnir",
-            "greater_crit",
-            "hand_of_midas",
+            'radiance',
+            'heavens_halberd',
+            'sange_and_yasha',
+            'monkey_king_bar',
+            'nullifier',
+            'black_king_bar',
+            'mjollnir',
+            'greater_crit',
+            'hand_of_midas',
           ],
           core: [
-            "phase_boots",
-            "armlet",
-            "desolator",
-            "blink",
-            "basher",
-            "assault",
-            "aghanims_shard",
-            "skadi",
+            'phase_boots',
+            'armlet',
+            'desolator',
+            'blink',
+            'basher',
+            'assault',
+            'aghanims_shard',
+            'skadi',
           ],
           neutral: [
-            "lance_of_pursuit",
-            "broom_handle",
+            'lance_of_pursuit',
+            'broom_handle',
             //"dagger_of_ristul", Removed in 7.33
             //"misericorde",
-            "orb_of_destruction",
-            "vambrace",
-            "paladin_sword",
+            'orb_of_destruction',
+            'vambrace',
+            'paladin_sword',
             //"titan_sliver",
-            "mind_breaker",
+            'mind_breaker',
             //"penta_edged_sword",
-            "havoc_hammer",
-            "desolator_2",
-            "pirate_hat",
+            'havoc_hammer',
+            'desolator_2',
+            'pirate_hat',
           ],
         },
       },
     ],
-    combo: ["phase_boots", "armlet", "life_stealer_rage", "blink", "attack"],
+    combo: ['phase_boots', 'armlet', 'life_stealer_rage', 'blink', 'attack'],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
+        all: ['wind_lace', 'boots', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff", "ghost"],
-        core: ["orchid"],
+        support: ['glimmer_cape', 'force_staff', 'ghost'],
+        core: ['orchid'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade"],
+        all: ['sheepstick', 'ethereal_blade'],
         support: [],
-        core: ["abyssal_blade", "skadi", "shivas_guard"],
+        core: ['abyssal_blade', 'skadi', 'shivas_guard'],
       },
     },
   },
@@ -7941,41 +7941,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.2, 2.3, 2.6, 2.4],
         facet: 2,
         abilities: [
-          "lina_dragon_slave", // 1
+          'lina_dragon_slave', // 1
           `lina_light_strike_array`, // 2
-          "lina_dragon_slave", // 3
-          "lina_light_strike_array", // 4
-          "lina_dragon_slave", // 5
-          "lina_laguna_blade", // 6
-          "lina_dragon_slave", // 7
+          'lina_dragon_slave', // 3
+          'lina_light_strike_array', // 4
+          'lina_dragon_slave', // 5
+          'lina_laguna_blade', // 6
+          'lina_dragon_slave', // 7
           `lina_light_strike_array`, // 8
           `lina_light_strike_array`, // 9
           `special_bonus_unique_lina_1`, // 10
           `lina_fiery_soul`, // 11
-          "lina_laguna_blade", // 12
+          'lina_laguna_blade', // 12
           `lina_fiery_soul`, // 13
           `lina_fiery_soul`, // 14
           `special_bonus_unique_lina_3`, // 15
           `lina_fiery_soul`, // 16
-          "special_bonus_attributes", // 17
-          "lina_laguna_blade", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'lina_laguna_blade', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_lina_6`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_lina_7`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
-            "branches",
+            'tango',
+            'faerie_fire',
+            'branches',
             `branches`,
             `branches`,
-            "branches",
-            "ward_observer",
+            'branches',
+            'ward_observer',
           ],
           early_game: [
             `bottle`,
@@ -8034,9 +8034,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `sheepstick`,
           ],
           neutral: [
-            "arcane_ring",
+            'arcane_ring',
             `mysterious_hat`,
-            "grove_bow",
+            'grove_bow',
             `vambrace`,
             `psychic_headband`,
             `ceremonial_robe`,
@@ -8059,34 +8059,34 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `lina_light_strike_array`, // 1
           `lina_dragon_slave`, // 2
-          "lina_dragon_slave", // 3
+          'lina_dragon_slave', // 3
           `lina_fiery_soul`, // 4
-          "lina_dragon_slave", // 5
-          "lina_laguna_blade", // 6
-          "lina_dragon_slave", // 7
+          'lina_dragon_slave', // 5
+          'lina_laguna_blade', // 6
+          'lina_dragon_slave', // 7
           `lina_fiery_soul`, // 8
           `lina_fiery_soul`, // 9
           `special_bonus_attack_damage_25`, // 10
           `lina_fiery_soul`, // 11
-          "lina_laguna_blade", // 12
+          'lina_laguna_blade', // 12
           `lina_light_strike_array`, // 13
           `lina_light_strike_array`, // 14
           `special_bonus_unique_lina_4`, // 15
           `lina_light_strike_array`, // 16
-          "special_bonus_attributes", // 17
-          "lina_laguna_blade", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'lina_laguna_blade', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_lina_2`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_lina_crit_debuff`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
+            'tango',
+            'faerie_fire',
             `mantle`,
             `circlet`,
             `branches`,
@@ -8134,9 +8134,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `satanic`,
           ],
           neutral: [
-            "arcane_ring",
+            'arcane_ring',
             `mysterious_hat`,
-            "grove_bow",
+            'grove_bow',
             `specialists_array`,
             `enchanted_quiver`,
             `paladin_sword`,
@@ -8155,43 +8155,43 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.9, 2, 2.1, 2.2],
         facet: 2,
         abilities: [
-          "lina_light_strike_array", // 1
+          'lina_light_strike_array', // 1
           `lina_dragon_slave`, // 2
-          "lina_dragon_slave", // 3
+          'lina_dragon_slave', // 3
           `lina_light_strike_array`, // 4
-          "lina_dragon_slave", // 5
-          "lina_laguna_blade", // 6
-          "lina_dragon_slave", // 7
-          "lina_light_strike_array", // 8
-          "lina_light_strike_array", // 9
+          'lina_dragon_slave', // 5
+          'lina_laguna_blade', // 6
+          'lina_dragon_slave', // 7
+          'lina_light_strike_array', // 8
+          'lina_light_strike_array', // 9
           `special_bonus_unique_lina_1`, // 10
           `lina_fiery_soul`, // 11
-          "lina_laguna_blade", // 12
-          "lina_fiery_soul", // 13
-          "lina_fiery_soul", // 14
-          "special_bonus_unique_lina_3", // 15
-          "lina_fiery_soul", // 16
-          "special_bonus_attributes", // 17
-          "lina_laguna_blade", // 18
-          "special_bonus_attributes", // 19
+          'lina_laguna_blade', // 12
+          'lina_fiery_soul', // 13
+          'lina_fiery_soul', // 14
+          'special_bonus_unique_lina_3', // 15
+          'lina_fiery_soul', // 16
+          'special_bonus_attributes', // 17
+          'lina_laguna_blade', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_lina_6`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_lina_7`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
             `circlet`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
@@ -8230,9 +8230,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            'arcane_boots',
             `aether_lens`,
-            "cyclone",
+            'cyclone',
             `blink`,
             `ultimate_scepter`,
             `aghanims_shard`,
@@ -8241,13 +8241,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `mysterious_hat`,
-            "philosophers_stone",
+            'philosophers_stone',
             `bullwhip`,
-            "psychic_headband",
+            'psychic_headband',
             `ceremonial_robe`,
             `spy_gadget`,
             `timeless_relic`,
-            "seer_stone",
+            'seer_stone',
             `force_boots`,
           ],
         },
@@ -8262,30 +8262,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "headdress",
-          "infused_raindrop",
-          "cloak",
+          'magic_stick',
+          'ring_of_regen',
+          'headdress',
+          'infused_raindrop',
+          'cloak',
         ],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape"],
+        support: ['glimmer_cape'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
+          'pipe',
+          'eternal_shroud',
           `black_king_bar`,
         ],
       },
       late_game: {
-        all: ["sphere", "sheepstick"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade", "silver_edge", "assault", "butterfly"],
+        all: ['sphere', 'sheepstick'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade', 'silver_edge', 'assault', 'butterfly'],
       },
     },
   },
@@ -8303,31 +8303,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.6, 2.1, 2.1, 2.1],
         facet: 1,
         abilities: [
-          "lion_impale", // 1
-          "lion_mana_drain", // 2
+          'lion_impale', // 1
+          'lion_mana_drain', // 2
           `lion_mana_drain`, // 3
-          "lion_voodoo", // 4
+          'lion_voodoo', // 4
           `lion_impale`, // 5
-          "lion_finger_of_death", // 6
-          "lion_impale", // 7
+          'lion_finger_of_death', // 6
+          'lion_impale', // 7
           `lion_impale`, // 8
           `lion_mana_drain`, // 9
           `lion_mana_drain`, // 10
           `special_bonus_unique_lion_3`, // 11
-          "lion_finger_of_death", // 12
+          'lion_finger_of_death', // 12
           `lion_voodoo`, // 13
           `lion_voodoo`, // 14
           `special_bonus_unique_lion_11`, // 15
           `lion_voodoo`, // 16
-          "special_bonus_attributes", // 17
-          "lion_finger_of_death", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'lion_finger_of_death', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_lion_10`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_lion_4", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_lion_4', // 25
         ],
         items: {
           starting: [
@@ -8342,12 +8342,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ward_sentry`,
           ],
           early_game: [
-            "tranquil_boots",
-            "magic_wand",
-            "wind_lace",
+            'tranquil_boots',
+            'magic_wand',
+            'wind_lace',
             `infused_raindrop`,
           ],
-          mid_game: ["blink", `aether_lens`, `aghanims_shard`, `force_staff`],
+          mid_game: ['blink', `aether_lens`, `aghanims_shard`, `force_staff`],
           late_game: [
             `ethereal_blade`,
             `ultimate_scepter`,
@@ -8378,13 +8378,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `faded_broach`,
             `mysterious_hat`,
-            "philosophers_stone",
+            'philosophers_stone',
             `vambrace`,
-            "psychic_headband",
+            'psychic_headband',
             `ceremonial_robe`,
-            "timeless_relic",
-            "spy_gadget",
-            "seer_stone",
+            'timeless_relic',
+            'spy_gadget',
+            'seer_stone',
             `force_boots`,
           ],
         },
@@ -8403,30 +8403,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "enchanted_mango",
-          "ring_of_regen",
-          "infused_raindrop",
-          "arcane_boots",
-          "cloak",
+          'magic_stick',
+          'enchanted_mango',
+          'ring_of_regen',
+          'infused_raindrop',
+          'arcane_boots',
+          'cloak',
         ],
         support: [],
-        core: ["soul_ring"],
+        core: ['soul_ring'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape"],
+        all: ['lotus_orb'],
+        support: ['glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
           `sange_and_yasha`,
         ],
       },
       late_game: {
-        all: ["sphere", "aeon_disk"],
-        support: ["black_king_bar"],
+        all: ['sphere', 'aeon_disk'],
+        support: ['black_king_bar'],
         core: [],
       },
     },
@@ -8445,21 +8445,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.3, 2.3, 2.6, 2.5],
         facet: 1,
         abilities: [
-          "lone_druid_spirit_bear", // 1
-          "lone_druid_spirit_link", // 2
-          "lone_druid_spirit_bear", // 3
-          "lone_druid_spirit_link", // 4
-          "lone_druid_spirit_bear", // 5
-          "lone_druid_spirit_link", // 6
-          "lone_druid_spirit_bear", // 7
-          "lone_druid_spirit_link", // 8
-          "lone_druid_true_form", // 9
-          "lone_druid_savage_roar", // 10
-          "lone_druid_savage_roar", // 11
+          'lone_druid_spirit_bear', // 1
+          'lone_druid_spirit_link', // 2
+          'lone_druid_spirit_bear', // 3
+          'lone_druid_spirit_link', // 4
+          'lone_druid_spirit_bear', // 5
+          'lone_druid_spirit_link', // 6
+          'lone_druid_spirit_bear', // 7
+          'lone_druid_spirit_link', // 8
+          'lone_druid_true_form', // 9
+          'lone_druid_savage_roar', // 10
+          'lone_druid_savage_roar', // 11
           `lone_druid_savage_roar`, // 12
           `lone_druid_savage_roar`, // 13
           `special_bonus_hp_200`, // 14
-          "special_bonus_unique_lone_druid_4", // 15
+          'special_bonus_unique_lone_druid_4', // 15
           `lone_druid_true_form`, // 16
           "special_bonus_attributes", // 17
           "lone_druid_true_form", // 18
@@ -8474,12 +8474,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         items: {
           starting_bear: [`quelling_blade`, `branches`, `branches`, `branches`],
           starting: [
-            "tango",
+            'tango',
             `branches`,
             `branches`,
-            "branches",
-            "branches",
-            "branches",
+            'branches',
+            'branches',
+            'branches',
           ],
           core_bear: [
             `orb_of_corrosion`,
@@ -8498,27 +8498,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `blight_stone`,
             `aghanims_shard`,
             `boots`,
-            "wraith_band",
-            "wraith_band",
-            "wraith_band",
+            'wraith_band',
+            'wraith_band',
+            'wraith_band',
           ],
           situational_bear: [
             `orb_of_venom`,
-            "hand_of_midas",
+            'hand_of_midas',
             `mask_of_madness`,
             `desolator`,
             `maelstrom`,
             `mage_slayer`,
             `bloodthorn`,
             `aghanims_shard`,
-            "monkey_king_bar",
-            "mjollnir",
-            "black_king_bar",
+            'monkey_king_bar',
+            'mjollnir',
+            'black_king_bar',
             `radiance`,
             `skadi`,
-            "moon_shard",
-            "silver_edge",
-            "butterfly",
+            'moon_shard',
+            'silver_edge',
+            'butterfly',
           ],
           situational: [
             `magic_wand`,
@@ -8533,28 +8533,28 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `refresher`,
           ],
           neutral_bear: [
-            "broom_handle",
+            'broom_handle',
             `unstable_wand`,
             `pupils_gift`,
             `vambrace`,
             `defiant_shell`,
-            "paladin_sword",
+            'paladin_sword',
             `ancient_guardian`,
-            "mind_breaker",
-            "desolator_2",
+            'mind_breaker',
+            'desolator_2',
             `apex`,
           ],
           neutral: [
-            "unstable_wand",
-            "trusty_shovel",
+            'unstable_wand',
+            'trusty_shovel',
             `vambrace`,
-            "philosophers_stone",
+            'philosophers_stone',
             `defiant_shell`,
             `ogre_seal_totem`,
-            "trickster_cloak",
-            "ascetic_cap",
+            'trickster_cloak',
+            'ascetic_cap',
             `panic_button`,
-            "force_field",
+            'force_field',
           ],
         },
       },
@@ -8564,19 +8564,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "ring_of_regen", "armor"],
+        all: ['wind_lace', 'boots', 'ring_of_regen', 'armor'],
         support: [],
-        core: ["ring_of_health", "vanguard"],
+        core: ['ring_of_health', 'vanguard'],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["glimmer_cape", "force_staff", "ghost"],
-        core: ["crimson_guard", "hurricane_pike"],
+        all: ['spirit_vessel'],
+        support: ['glimmer_cape', 'force_staff', 'ghost'],
+        core: ['crimson_guard', 'hurricane_pike'],
       },
       late_game: {
-        all: ["sheepstick", "travel_boots"],
+        all: ['sheepstick', 'travel_boots'],
         support: [],
-        core: ["abyssal_blade", "assault", "bloodthorn", "butterfly"],
+        core: ['abyssal_blade', 'assault', 'bloodthorn', 'butterfly'],
       },
     },
   },
@@ -8595,108 +8595,108 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 1.8, 2.6, 2.7],
         facet: 1,
         abilities: [
-          "luna_lunar_blessing", // 1
-          "luna_lucent_beam", // 2
-          "luna_lunar_blessing", // 3
-          "luna_lucent_beam", // 4
-          "luna_moon_glaive", // 5
-          "luna_moon_glaive", // 6
-          "luna_lunar_blessing", // 7
-          "luna_lunar_blessing", // 8
-          "luna_moon_glaive", // 9
-          "luna_moon_glaive", // 10
-          "special_bonus_unique_luna_7", // 11
-          "luna_eclipse", // 12
-          "luna_eclipse", // 13
-          "luna_lucent_beam", // 14
-          "special_bonus_unique_luna_1", // 15
-          "luna_lucent_beam", // 16
-          "special_bonus_attributes", // 17
-          "luna_eclipse", // 18
-          "luna_lucent_beam", // 19
-          "special_bonus_unique_luna_8", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_luna_5", // 25
+          'luna_lunar_blessing', // 1
+          'luna_lucent_beam', // 2
+          'luna_lunar_blessing', // 3
+          'luna_lucent_beam', // 4
+          'luna_moon_glaive', // 5
+          'luna_moon_glaive', // 6
+          'luna_lunar_blessing', // 7
+          'luna_lunar_blessing', // 8
+          'luna_moon_glaive', // 9
+          'luna_moon_glaive', // 10
+          'special_bonus_unique_luna_7', // 11
+          'luna_eclipse', // 12
+          'luna_eclipse', // 13
+          'luna_lucent_beam', // 14
+          'special_bonus_unique_luna_1', // 15
+          'luna_lucent_beam', // 16
+          'special_bonus_attributes', // 17
+          'luna_eclipse', // 18
+          'luna_lucent_beam', // 19
+          'special_bonus_unique_luna_8', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_luna_5', // 25
         ],
         items: {
           starting: [
-            "quelling_blade",
-            "slippers",
-            "circlet",
-            "branches",
-            "branches",
-            "tango",
+            'quelling_blade',
+            'slippers',
+            'circlet',
+            'branches',
+            'branches',
+            'tango',
           ],
           early_game: [
-            "tango", // send another tango and Wraith Band as first 2 items after laning begins
-            "wraith_band", //send extra tango and Wraith Band as first 2 items after laning begins
-            "power_treads",
-            "magic_wand", // can consider if spell-casting lane, otherwise skip
-            "mask_of_madness",
+            'tango', // send another tango and Wraith Band as first 2 items after laning begins
+            'wraith_band', //send extra tango and Wraith Band as first 2 items after laning begins
+            'power_treads',
+            'magic_wand', // can consider if spell-casting lane, otherwise skip
+            'mask_of_madness',
           ],
-          mid_game: ["manta", "black_king_bar", "dragon_lance", "lesser_crit"],
+          mid_game: ['manta', 'black_king_bar', 'dragon_lance', 'lesser_crit'],
           late_game: [
-            "hurricane_pike",
-            "angels_demise",
-            "blink",
-            "butterfly",
-            "swift_blink",
-            "skadi",
-            "satanic",
-            "aghanims_shard",
+            'hurricane_pike',
+            'angels_demise',
+            'blink',
+            'butterfly',
+            'swift_blink',
+            'skadi',
+            'satanic',
+            'aghanims_shard',
           ],
           situational: [
-            "silver_edge",
-            "ultimate_scepter",
-            "monkey_king_bar",
-            "sphere",
-            "greater_crit",
-            "refresher",
+            'silver_edge',
+            'ultimate_scepter',
+            'monkey_king_bar',
+            'sphere',
+            'greater_crit',
+            'refresher',
           ],
           core: [
-            "power_treads",
-            "mask_of_madness",
-            "black_king_bar",
-            "manta",
-            "hurricane_pike",
-            "angels_demise",
-            "butterfly",
-            "skadi",
-            "satanic",
-            "greater_crit",
+            'power_treads',
+            'mask_of_madness',
+            'black_king_bar',
+            'manta',
+            'hurricane_pike',
+            'angels_demise',
+            'butterfly',
+            'skadi',
+            'satanic',
+            'greater_crit',
           ],
           neutral: [
             // tier 1
-            "unstable_wand",
-            "safety_bubble",
-            "occult_bracelet",
-            "duelist_gloves",
+            'unstable_wand',
+            'safety_bubble',
+            'occult_bracelet',
+            'duelist_gloves',
 
             // tier 2
-            "grove_bow",
-            "pupils_gift",
-            "vambrace",
-            "specialists_array",
+            'grove_bow',
+            'pupils_gift',
+            'vambrace',
+            'specialists_array',
 
             // tier 3
-            "paladin_sword",
-            "enchanted_quiver",
-            "elven_tunic",
+            'paladin_sword',
+            'enchanted_quiver',
+            'elven_tunic',
 
             // tier 4
-            "avianas_feather",
-            "ninja_gear",
-            "mind_breaker",
+            'avianas_feather',
+            'ninja_gear',
+            'mind_breaker',
 
             // tier 5
-            "force_boots",
-            "desolator_2",
-            "mirror_shield",
-            "apex",
-            "pirate_hat",
+            'force_boots',
+            'desolator_2',
+            'mirror_shield',
+            'apex',
+            'pirate_hat',
           ],
         },
       },
@@ -8704,7 +8704,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
     combo: [
       `black_king_bar`,
-      "luna_moon_glaive",
+      'luna_moon_glaive',
       `luna_eclipse`,
       `blink`,
       `manta`,
@@ -8713,26 +8713,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
     counter_items: {
       laning_phase: {
-        all: ["armor", "boots", "magic_stick", "infused_raindrop"],
-        support: ["ward_sentry"],
+        all: ['armor', 'boots', 'magic_stick', 'infused_raindrop'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
         all: [
-          "spirit_vessel",
-          "heavens_halberd",
-          "force_staff",
-          "pipe",
-          "black_king_bar",
-          "blade_mail",
+          'spirit_vessel',
+          'heavens_halberd',
+          'force_staff',
+          'pipe',
+          'black_king_bar',
+          'blade_mail',
         ],
-        support: ["glimmer_cape"],
+        support: ['glimmer_cape'],
         core: [],
       },
       late_game: {
-        all: ["sheepstick"],
+        all: ['sheepstick'],
         support: [],
-        core: ["assault", "abyssal_blade", "skadi", "butterfly"],
+        core: ['assault', 'abyssal_blade', 'skadi', 'butterfly'],
       },
     },
   },
@@ -8750,36 +8750,36 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.4, 2.2, 2.3, 1.9],
         facet: 1,
         abilities: [
-          "lycan_summon_wolves", // 1
-          "lycan_feral_impulse", // 2
-          "lycan_summon_wolves", // 3
+          'lycan_summon_wolves', // 1
+          'lycan_feral_impulse', // 2
+          'lycan_summon_wolves', // 3
           `lycan_howl`, // 4
-          "lycan_summon_wolves", // 5
-          "lycan_shapeshift", // 6
-          "lycan_summon_wolves", // 7
-          "lycan_feral_impulse", // 8
-          "lycan_feral_impulse", // 9
+          'lycan_summon_wolves', // 5
+          'lycan_shapeshift', // 6
+          'lycan_summon_wolves', // 7
+          'lycan_feral_impulse', // 8
+          'lycan_feral_impulse', // 9
           `lycan_feral_impulse`, // 10
-          "special_bonus_unique_lycan_howl_armor", // 11
-          "lycan_shapeshift", // 12
-          "lycan_howl", // 13
-          "lycan_howl", // 14
+          'special_bonus_unique_lycan_howl_armor', // 11
+          'lycan_shapeshift', // 12
+          'lycan_howl', // 13
+          'lycan_howl', // 14
           `special_bonus_unique_lycan_8`, // 15
           `lycan_howl`, // 16
-          "special_bonus_attributes", // 17
-          "lycan_shapeshift", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_lycan_1", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'lycan_shapeshift', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_lycan_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_lycan_5`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `circlet`,
             `circlet`,
             `branches`,
@@ -8787,61 +8787,61 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ward_observer`,
           ],
           early_game: [
-            "magic_wand",
-            "helm_of_iron_will",
-            "helm_of_the_dominator",
-            "ring_of_basilius",
+            'magic_wand',
+            'helm_of_iron_will',
+            'helm_of_the_dominator',
+            'ring_of_basilius',
             `helm_of_the_overlord`,
           ],
           mid_game: [
-            "vladmir",
-            "ancient_janggo",
-            "assault",
-            "black_king_bar",
-            "aghanims_shard",
+            'vladmir',
+            'ancient_janggo',
+            'assault',
+            'black_king_bar',
+            'aghanims_shard',
           ],
           late_game: [
-            "ultimate_scepter",
+            'ultimate_scepter',
             `bloodthorn`,
             `nullifier`,
-            "abyssal_blade",
+            'abyssal_blade',
           ],
           situational: [
             `power_treads`,
-            "echo_sabre",
-            "harpoon",
-            "orchid",
+            'echo_sabre',
+            'harpoon',
+            'orchid',
             `boots_of_bearing`,
-            "sange_and_yasha",
-            "manta",
-            "heavens_halberd",
+            'sange_and_yasha',
+            'manta',
+            'heavens_halberd',
             `sphere`,
             `skadi`,
             `satanic`,
-            "sheepstick",
+            'sheepstick',
             `travel_boots`,
           ],
           core: [
-            "helm_of_the_dominator",
-            "helm_of_the_overlord",
-            "vladmir",
-            "ancient_janggo",
+            'helm_of_the_dominator',
+            'helm_of_the_overlord',
+            'vladmir',
+            'ancient_janggo',
             `assault`,
             `aghanims_shard`,
-            "ultimate_scepter",
-            "nullifier",
+            'ultimate_scepter',
+            'nullifier',
           ],
           neutral: [
-            "broom_handle",
+            'broom_handle',
             `unstable_wand`,
             `pupils_gift`,
             `vambrace`,
-            "nemesis_curse",
+            'nemesis_curse',
             `defiant_shell`,
             `mind_breaker`,
-            "ancient_guardian",
+            'ancient_guardian',
             `apex`,
-            "desolator_2",
+            'desolator_2',
           ],
         },
       },
@@ -8853,90 +8853,90 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 2.1, 2.5, 2.1],
         facet: 1,
         abilities: [
-          "lycan_summon_wolves", // 1
-          "lycan_feral_impulse", // 2
-          "lycan_summon_wolves", // 3
-          "lycan_feral_impulse", // 4
-          "lycan_summon_wolves", // 5
-          "lycan_shapeshift", // 6
-          "lycan_summon_wolves", // 7
-          "lycan_howl", // 8
-          "lycan_feral_impulse", // 9
+          'lycan_summon_wolves', // 1
+          'lycan_feral_impulse', // 2
+          'lycan_summon_wolves', // 3
+          'lycan_feral_impulse', // 4
+          'lycan_summon_wolves', // 5
+          'lycan_shapeshift', // 6
+          'lycan_summon_wolves', // 7
+          'lycan_howl', // 8
+          'lycan_feral_impulse', // 9
           `lycan_feral_impulse`, // 10
-          "special_bonus_unique_lycan_howl_armor", // 11
-          "lycan_shapeshift", // 12
-          "lycan_howl", // 13
-          "lycan_howl", // 14
+          'special_bonus_unique_lycan_howl_armor', // 11
+          'lycan_shapeshift', // 12
+          'lycan_howl', // 13
+          'lycan_howl', // 14
           `special_bonus_unique_lycan_8`, // 15
           `lycan_howl`, // 16
-          "special_bonus_attributes", // 17
-          "lycan_shapeshift", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_lycan_1", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'lycan_shapeshift', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_lycan_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_lycan_5`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `quelling_blade`,
-            "branches",
-            "branches",
-            "branches",
+            'branches',
+            'branches',
+            'branches',
             `branches`,
             `ward_observer`,
           ],
           early_game: [
-            "magic_wand",
-            "helm_of_iron_will",
-            "helm_of_the_dominator",
-            "ring_of_basilius",
-            "helm_of_the_overlord",
+            'magic_wand',
+            'helm_of_iron_will',
+            'helm_of_the_dominator',
+            'ring_of_basilius',
+            'helm_of_the_overlord',
           ],
-          mid_game: ["vladmir", "assault", "black_king_bar", "aghanims_shard"],
+          mid_game: ['vladmir', 'assault', 'black_king_bar', 'aghanims_shard'],
           late_game: [
-            "bloodthorn",
-            "nullifier",
+            'bloodthorn',
+            'nullifier',
             `ultimate_scepter`,
-            "abyssal_blade",
+            'abyssal_blade',
           ],
           situational: [
-            "power_treads",
-            "echo_sabre",
-            "harpoon",
-            "orchid",
+            'power_treads',
+            'echo_sabre',
+            'harpoon',
+            'orchid',
             `ancient_janggo`,
-            "boots_of_bearing",
-            "sange_and_yasha",
-            "manta",
+            'boots_of_bearing',
+            'sange_and_yasha',
+            'manta',
             `skadi`,
             `sheepstick`,
             `heavens_halberd`,
-            "sphere",
+            'sphere',
             `satanic`,
             `travel_boots`,
           ],
           core: [
-            "helm_of_the_dominator",
-            "helm_of_the_overlord",
-            "vladmir",
-            "assault",
-            "aghanims_shard",
-            "bloodthorn",
-            "nullifier",
+            'helm_of_the_dominator',
+            'helm_of_the_overlord',
+            'vladmir',
+            'assault',
+            'aghanims_shard',
+            'bloodthorn',
+            'nullifier',
           ],
           neutral: [
-            "broom_handle",
+            'broom_handle',
             `unstable_wand`,
             `pupils_gift`,
             `vambrace`,
-            "nemesis_curse",
+            'nemesis_curse',
             `defiant_shell`,
-            "mind_breaker",
-            "ancient_guardian",
+            'mind_breaker',
+            'ancient_guardian',
             `apex`,
             `desolator_2`,
           ],
@@ -8947,19 +8947,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "armor"],
+        all: ['blight_stone', 'armor'],
         support: [],
-        core: ["orb_of_corrosion", "phase_boots", "vanguard"],
+        core: ['orb_of_corrosion', 'phase_boots', 'vanguard'],
       },
       mid_game: {
-        all: ["rod_of_atos"],
-        support: ["glimmer_cape", "ghost"],
-        core: ["crimson_guard"],
+        all: ['rod_of_atos'],
+        support: ['glimmer_cape', 'ghost'],
+        core: ['crimson_guard'],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["abyssal_blade", "assault"],
+        core: ['abyssal_blade', 'assault'],
       },
     },
   },
@@ -8977,31 +8977,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 1.9, 2.6, 2.7],
         facet: 1,
         abilities: [
-          "magnataur_shockwave", // 1
+          'magnataur_shockwave', // 1
           `magnataur_skewer`, // 2
           `magnataur_empower`, // 3
           `magnataur_empower`, // 4
           `magnataur_empower`, // 5
-          "magnataur_reverse_polarity", // 6
+          'magnataur_reverse_polarity', // 6
           `magnataur_empower`, // 7
           `magnataur_skewer`, // 8
           `magnataur_skewer`, // 9
           `magnataur_skewer`, // 10
           `magnataur_shockwave`, // 11
-          "magnataur_reverse_polarity", // 12
+          'magnataur_reverse_polarity', // 12
           `magnataur_shockwave`, // 13
           `magnataur_shockwave`, // 14
           `special_bonus_unique_magnus_4`, // 15
-          "special_bonus_unique_magnus_7", // 16
-          "special_bonus_attributes", // 17
-          "magnataur_reverse_polarity", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_magnus_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_magnus_5", // 25
+          'special_bonus_unique_magnus_7', // 16
+          'special_bonus_attributes', // 17
+          'magnataur_reverse_polarity', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_magnus_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_magnus_5', // 25
         ],
         items: {
           starting: [
@@ -9009,7 +9009,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `quelling_blade`,
             `circlet`,
             `circlet`,
-            "branches",
+            'branches',
             `branches`,
             `ward_observer`,
           ],
@@ -9063,11 +9063,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aether_lens`,
             `aghanims_shard`,
             `black_king_bar`,
-            "refresher",
+            'refresher',
           ],
           neutral: [
             `unstable_wand`,
-            "arcane_ring",
+            'arcane_ring',
             `pupils_gift`,
             `vambrace`,
             `paladin_sword`,
@@ -9091,41 +9091,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 1.9, 2.6, 2.7],
         facet: 1,
         abilities: [
-          "magnataur_shockwave", // 1
+          'magnataur_shockwave', // 1
           `magnataur_skewer`, // 2
           `magnataur_shockwave`, // 3
           `magnataur_empower`, // 4
           `magnataur_shockwave`, // 5
-          "magnataur_reverse_polarity", // 6
+          'magnataur_reverse_polarity', // 6
           `magnataur_shockwave`, // 7
           `magnataur_empower`, // 8
           `magnataur_empower`, // 9
           `magnataur_empower`, // 10
           `magnataur_skewer`, // 11
-          "magnataur_reverse_polarity", // 12
-          "magnataur_skewer", // 13
+          'magnataur_reverse_polarity', // 12
+          'magnataur_skewer', // 13
           `magnataur_skewer`, // 14
           `special_bonus_unique_magnus_4`, // 15
           `special_bonus_unique_magnus_7`, // 16
-          "special_bonus_attributes", // 17
-          "magnataur_reverse_polarity", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_magnus_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'magnataur_reverse_polarity', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_magnus_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_magnus_5`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
+            'tango',
+            'quelling_blade',
+            'branches',
             `branches`,
             `branches`,
             `circlet`,
-            "ward_observer",
+            'ward_observer',
           ],
           early_game: [
             `bottle`,
@@ -9169,8 +9169,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "bottle",
-            "power_treads",
+            'bottle',
+            'power_treads',
             `blink`,
             `echo_sabre`,
             `harpoon`,
@@ -9206,31 +9206,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1, 1.8, 2.3, 2.5],
         facet: 1,
         abilities: [
-          "magnataur_shockwave", // 1
-          "magnataur_skewer", // 2
+          'magnataur_shockwave', // 1
+          'magnataur_skewer', // 2
           `magnataur_skewer`, // 3
           `magnataur_shockwave`, // 4
-          "magnataur_empower", // 5
-          "magnataur_reverse_polarity", // 6
-          "magnataur_empower", // 7
+          'magnataur_empower', // 5
+          'magnataur_reverse_polarity', // 6
+          'magnataur_empower', // 7
           `magnataur_empower`, // 8
           `magnataur_empower`, // 9
           `magnataur_skewer`, // 10
           `magnataur_skewer`, // 11
-          "magnataur_reverse_polarity", // 12
+          'magnataur_reverse_polarity', // 12
           `special_bonus_unique_magnus_4`, // 13
           `magnataur_shockwave`, // 14
           `special_bonus_unique_magnus_7`, // 15
           `magnataur_shockwave`, // 16
-          "special_bonus_attributes", // 17
-          "magnataur_reverse_polarity", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_magnus_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_magnus_5", // 25
+          'special_bonus_attributes', // 17
+          'magnataur_reverse_polarity', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_magnus_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_magnus_5', // 25
         ],
         items: {
           starting: [
@@ -9278,8 +9278,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
-            "blink",
+            'arcane_boots',
+            'blink',
             `force_staff`,
             `aether_lens`,
             `aghanims_shard`,
@@ -9289,10 +9289,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `trusty_shovel`,
-            "arcane_ring",
+            'arcane_ring',
             `philosophers_stone`,
-            "bullwhip",
-            "psychic_headband",
+            'bullwhip',
+            'psychic_headband',
             `ceremonial_robe`,
             `timeless_relic`,
             `ninja_gear`,
@@ -9314,19 +9314,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "armor"],
-        support: ["ward_sentry"],
+        all: ['magic_stick', 'armor'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["ward_dispenser", "glimmer_cape", "force_staff", "ghost"],
+        support: ['ward_dispenser', 'glimmer_cape', 'force_staff', 'ghost'],
         core: [`sange_and_yasha`],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk", "ethereal_blade", "wind_waker"],
+        all: ['sheepstick', 'aeon_disk', 'ethereal_blade', 'wind_waker'],
         support: [],
-        core: ["abyssal_blade", "assault", "butterfly"],
+        core: ['abyssal_blade', 'assault', 'butterfly'],
       },
     },
   },
@@ -9346,28 +9346,28 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `marci_grapple`, // 1	equals to rebound
           `marci_companion_run`, // 2	 equals to dispose
-          "marci_companion_run", // 3
+          'marci_companion_run', // 3
           `marci_special_delivery`, // 4  equals to sidekick
           `marci_companion_run`, // 5
-          "marci_unleash", // 6
+          'marci_unleash', // 6
           `marci_companion_run`, // 7
           `marci_special_delivery`, // 8
           `marci_special_delivery`, // 9
           `marci_special_delivery`, // 10
           `special_bonus_unique_marci_lunge_range`, // 11
-          "marci_unleash", // 12
+          'marci_unleash', // 12
           `marci_grapple`, // 13
           `marci_grapple`, // 14
           `special_bonus_unique_marci_lunge_movespeed`, // 15
           `marci_grapple`, // 16
-          "special_bonus_attributes", // 17
-          "marci_unleash", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'marci_unleash', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_marci_unleash_speed`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_marci_unleash_extend_duration`, // 25
         ],
         items: {
@@ -9447,36 +9447,36 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.9, 2.1, 2.5, 2.3],
         facet: 1,
         abilities: [
-          "marci_grapple", // 1	equals to dispose
+          'marci_grapple', // 1	equals to dispose
           `marci_special_delivery`, // 2	equals to rebound
           `marci_special_delivery`, // 3  equals to sidekick
           `marci_companion_run`, // 4
           `marci_special_delivery`, // 5
-          "marci_unleash", // 6
+          'marci_unleash', // 6
           `marci_special_delivery`, // 7
           `marci_companion_run`, // 8
           `marci_companion_run`, // 9
           `marci_companion_run`, // 10
           `special_bonus_unique_marci_lunge_range`, // 11
-          "marci_unleash", // 12
-          "marci_grapple", // 13
-          "marci_grapple", // 14
+          'marci_unleash', // 12
+          'marci_grapple', // 13
+          'marci_grapple', // 14
           `special_bonus_unique_marci_lunge_movespeed`, // 15
           `marci_grapple`, // 16
-          "special_bonus_attributes", // 17
-          "marci_unleash", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'marci_unleash', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_marci_unleash_speed`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_marci_unleash_extend_duration`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `circlet`,
             `circlet`,
             `branches`,
@@ -9553,51 +9553,51 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "infused_raindrop",
-          "wind_lace",
-          "boots",
-          "urn_of_shadows",
-          "ring_of_regen",
-          "blight_stone",
-          "cloak",
-          "armor",
+          'magic_stick',
+          'infused_raindrop',
+          'wind_lace',
+          'boots',
+          'urn_of_shadows',
+          'ring_of_regen',
+          'blight_stone',
+          'cloak',
+          'armor',
         ],
         support: [],
-        core: ["ring_of_health", "vanguard", "orb_of_corrosion"],
+        core: ['ring_of_health', 'vanguard', 'orb_of_corrosion'],
       },
       mid_game: {
         all: [
-          "spirit_vessel",
-          "cyclone",
-          "blink",
-          "rod_of_atos",
-          "solar_crest",
+          'spirit_vessel',
+          'cyclone',
+          'blink',
+          'rod_of_atos',
+          'solar_crest',
         ],
-        support: ["glimmer_cape", "force_staff", "ghost"],
+        support: ['glimmer_cape', 'force_staff', 'ghost'],
         core: [
-          "heavens_halberd",
-          "crimson_guard",
-          "hurricane_pike",
+          'heavens_halberd',
+          'crimson_guard',
+          'hurricane_pike',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
-          "invis_sword",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'black_king_bar',
+          'invis_sword',
         ],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk", "ethereal_blade", "wind_waker"],
-        support: ["black_king_bar"],
+        all: ['sheepstick', 'aeon_disk', 'ethereal_blade', 'wind_waker'],
+        support: ['black_king_bar'],
         core: [
-          "abyssal_blade",
-          "nullifier",
-          "butterfly",
-          "assault",
-          "bloodthorn",
-          "skadi",
-          "shivas_guard",
+          'abyssal_blade',
+          'nullifier',
+          'butterfly',
+          'assault',
+          'bloodthorn',
+          'skadi',
+          'shivas_guard',
         ],
       },
     },
@@ -9616,39 +9616,39 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.2, 2.3, 2.6, 2.7],
         facet: 2,
         abilities: [
-          "mars_gods_rebuke", // 1
-          "mars_spear", // 2
-          "mars_spear", // 3
-          "mars_gods_rebuke", // 4
-          "mars_spear", // 5
-          "mars_arena_of_blood", // 6
-          "mars_spear", // 7
-          "mars_gods_rebuke", // 8
-          "mars_gods_rebuke", // 9
-          "special_bonus_unique_mars_rebuke_radius", // 10
-          "mars_bulwark", // 11
-          "mars_arena_of_blood", // 12
-          "mars_bulwark", // 13
-          "mars_bulwark", // 14
-          "special_bonus_unique_mars_rebuke_cooldown", // 15
-          "mars_bulwark", // 16
-          "special_bonus_attributes", // 17
-          "mars_arena_of_blood", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_mars_spear_stun_duration", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'mars_gods_rebuke', // 1
+          'mars_spear', // 2
+          'mars_spear', // 3
+          'mars_gods_rebuke', // 4
+          'mars_spear', // 5
+          'mars_arena_of_blood', // 6
+          'mars_spear', // 7
+          'mars_gods_rebuke', // 8
+          'mars_gods_rebuke', // 9
+          'special_bonus_unique_mars_rebuke_radius', // 10
+          'mars_bulwark', // 11
+          'mars_arena_of_blood', // 12
+          'mars_bulwark', // 13
+          'mars_bulwark', // 14
+          'special_bonus_unique_mars_rebuke_cooldown', // 15
+          'mars_bulwark', // 16
+          'special_bonus_attributes', // 17
+          'mars_arena_of_blood', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_mars_spear_stun_duration', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_mars_gods_rebuke_extra_crit`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "gauntlets",
-            "gauntlets",
-            "branches",
+            'tango',
+            'quelling_blade',
+            'gauntlets',
+            'gauntlets',
+            'branches',
             `branches`,
             `ward_observer`,
           ],
@@ -9729,31 +9729,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "blight_stone",
-          "lifesteal",
-          "wind_lace",
-          "boots",
-          "infused_raindrop",
-          "cloak",
+          'blight_stone',
+          'lifesteal',
+          'wind_lace',
+          'boots',
+          'infused_raindrop',
+          'cloak',
         ],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape"],
+        support: ['glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "black_king_bar",
-          "silver_edge",
-          "desolator",
+          'pipe',
+          'black_king_bar',
+          'silver_edge',
+          'desolator',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["bloodthorn", "wind_waker", "assault"],
+        support: ['black_king_bar'],
+        core: ['bloodthorn', 'wind_waker', 'assault'],
       },
     },
   },
@@ -9772,31 +9772,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.1, 1.7, 2.7, 2.9],
         facet: 1,
         abilities: [
-          "medusa_mystic_snake", // 1
+          'medusa_mystic_snake', // 1
           `medusa_mana_shield`, // 2
-          "medusa_mystic_snake", // 3
-          "medusa_split_shot", // 4
-          "medusa_mystic_snake", // 5
-          "medusa_split_shot", // 6
+          'medusa_mystic_snake', // 3
+          'medusa_split_shot', // 4
+          'medusa_mystic_snake', // 5
+          'medusa_split_shot', // 6
           `medusa_mystic_snake`, // 7
-          "medusa_split_shot", // 8
+          'medusa_split_shot', // 8
           `medusa_split_shot`, // 9
           `medusa_stone_gaze`, // 10
           `medusa_mana_shield`, // 11
-          "medusa_mana_shield", // 12
-          "medusa_mana_shield", // 13
+          'medusa_mana_shield', // 12
+          'medusa_mana_shield', // 13
           `special_bonus_unique_medusa_snake_damage`, // 14
           `special_bonus_unique_medusa_2`, // 15
-          "medusa_stone_gaze", // 16
-          "special_bonus_attributes", // 17
-          "medusa_stone_gaze", // 18
-          "special_bonus_attributes", // 19
+          'medusa_stone_gaze', // 16
+          'special_bonus_attributes', // 17
+          'medusa_stone_gaze', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_medusa`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_medusa_4", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_medusa_4', // 25
         ],
         items: {
           starting: [`magic_wand`, `branches`, `branches`, `branches`],
@@ -9826,7 +9826,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `black_king_bar`,
             `blink`,
             `sphere`,
-            "monkey_king_bar",
+            'monkey_king_bar',
             `silver_edge`,
             `mjollnir`,
             `devastator`,
@@ -9846,9 +9846,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `unstable_wand`,
-            "grove_bow",
+            'grove_bow',
             `vambrace`,
-            "elven_tunic",
+            'elven_tunic',
             `enchanted_quiver`,
             `ancient_guardian`,
             `ninja_gear`,
@@ -9867,19 +9867,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["ring_of_regen", "wind_lace", "boots"],
-        support: ["ward_sentry"],
+        all: ['ring_of_regen', 'wind_lace', 'boots'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["ward_dispenser", "glimmer_cape", "force_staff", "ghost"],
-        core: ["crimson_guard", "diffusal_blade", "heavens_halberd"],
+        support: ['ward_dispenser', 'glimmer_cape', 'force_staff', 'ghost'],
+        core: ['crimson_guard', 'diffusal_blade', 'heavens_halberd'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade"],
+        all: ['sheepstick', 'ethereal_blade'],
         support: [],
-        core: ["abyssal_blade", "assault", "butterfly", "bloodthorn"],
+        core: ['abyssal_blade', 'assault', 'butterfly', 'bloodthorn'],
       },
     },
   },
@@ -9901,93 +9901,93 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `meepo_poof`, // 1
           `meepo_ransack`, // 2
-          "meepo_divided_we_stand", // 3 able to upgrade at level 3 with facet 1
+          'meepo_divided_we_stand', // 3 able to upgrade at level 3 with facet 1
           `meepo_earthbind`, // 4
-          "meepo_poof", // 5
+          'meepo_poof', // 5
           `meepo_earthbind`, // 6
-          "meepo_poof", // 7
-          "meepo_poof", // 8
+          'meepo_poof', // 7
+          'meepo_poof', // 8
           `meepo_ransack`, // 9
-          "meepo_divided_we_stand", // 10
+          'meepo_divided_we_stand', // 10
           `special_bonus_unique_meepo_2`, // 11
           `meepo_ransack`, // 12
-          "meepo_ransack", // 13
+          'meepo_ransack', // 13
           `meepo_earthbind`, // 14
           `special_bonus_evasion_15`, // 15
           `meepo_earthbind`, // 16
-          "meepo_divided_we_stand", // 17
-          "special_bonus_attributes", // 18
-          "special_bonus_attributes", // 19
+          'meepo_divided_we_stand', // 17
+          'special_bonus_attributes', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_meepo_6`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_hp_350", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_hp_350', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "circlet",
+            'tango',
+            'quelling_blade',
+            'circlet',
             `circlet`,
             `branches`,
             `branches`,
-            "ward_observer",
+            'ward_observer',
           ],
           early_game: [
             `wraith_band`,
             `wraith_band`,
             `power_treads`,
-            "diffusal_blade",
+            'diffusal_blade',
           ],
           mid_game: [
-            "ultimate_scepter",
-            "aghanims_shard",
-            "blink",
-            "disperser",
+            'ultimate_scepter',
+            'aghanims_shard',
+            'blink',
+            'disperser',
           ],
-          late_game: [`sheepstick`, `swift_blink`, `heart`, "skadi"],
-          situational: [`bloodthorn`, `travel_boots`, "nullifier"],
+          late_game: [`sheepstick`, `swift_blink`, `heart`, 'skadi'],
+          situational: [`bloodthorn`, `travel_boots`, 'nullifier'],
           core: [
             `power_treads`,
-            "diffusal_blade",
+            'diffusal_blade',
             `ultimate_scepter`,
             `aghanims_shard`,
             `blink`,
-            "disperser",
+            'disperser',
           ],
           neutral: [
-            "unstable_wand",
+            'unstable_wand',
             `broom_handle`,
-            "vambrace",
+            'vambrace',
             `pupils_gift`,
             `elven_tunic`,
             `ogre_seal_totem`,
-            "ninja_gear",
+            'ninja_gear',
             `havoc_hammer`,
-            "apex",
+            'apex',
           ],
         },
       },
     ],
 
-    combo: ["meepo_poof", `blink`, `meepo_earthbind`, "disperser", `attack`],
+    combo: ['meepo_poof', `blink`, `meepo_earthbind`, 'disperser', `attack`],
     counter_items: {
       laning_phase: {
         all: [],
-        support: ["ward_sentry"],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "crimson_guard", "shivas_guard"],
-        support: ["ward_dispenser"],
-        core: ["black_king_bar", "manta"],
+        all: ['spirit_vessel', 'crimson_guard', 'shivas_guard'],
+        support: ['ward_dispenser'],
+        core: ['black_king_bar', 'manta'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk"],
-        support: ["black_king_bar"],
-        core: ["mjollnir", "bloodthorn", "assault"],
+        all: ['sheepstick', 'ethereal_blade', 'aeon_disk'],
+        support: ['black_king_bar'],
+        core: ['mjollnir', 'bloodthorn', 'assault'],
       },
     },
   },
@@ -10005,31 +10005,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.9, 1.9, 2.1, 2],
         facet: 1,
         abilities: [
-          "mirana_arrow", // 1
-          "mirana_leap", // 2
-          "mirana_starfall", // 3
-          "mirana_starfall", // 4
-          "mirana_starfall", // 5
-          "mirana_selemenes_faithful", // 6
-          "mirana_starfall", // 7
-          "mirana_arrow", // 8
-          "mirana_arrow", // 9
-          "mirana_arrow", // 10
-          "special_bonus_unique_mirana_3", // 11
-          "mirana_selemenes_faithful", // 12
-          "mirana_leap", // 13
-          "mirana_leap", // 14
-          "special_bonus_unique_mirana_5", // 15
-          "mirana_leap", // 16
-          "special_bonus_attributes", // 17
-          "mirana_selemenes_faithful", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_mirana_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_mirana_2", // 25
+          'mirana_arrow', // 1
+          'mirana_leap', // 2
+          'mirana_starfall', // 3
+          'mirana_starfall', // 4
+          'mirana_starfall', // 5
+          'mirana_selemenes_faithful', // 6
+          'mirana_starfall', // 7
+          'mirana_arrow', // 8
+          'mirana_arrow', // 9
+          'mirana_arrow', // 10
+          'special_bonus_unique_mirana_3', // 11
+          'mirana_selemenes_faithful', // 12
+          'mirana_leap', // 13
+          'mirana_leap', // 14
+          'special_bonus_unique_mirana_5', // 15
+          'mirana_leap', // 16
+          'special_bonus_attributes', // 17
+          'mirana_selemenes_faithful', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_mirana_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_mirana_2', // 25
         ],
         items: {
           starting: [
@@ -10044,9 +10044,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ward_sentry`,
           ],
           early_game: [
-            "urn_of_shadows",
+            'urn_of_shadows',
             `boots`,
-            "magic_wand",
+            'magic_wand',
             `ring_of_basilius`,
             `infused_raindrop`,
           ],
@@ -10120,24 +10120,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["ring_of_regen", "infused_raindrop", "cloak"],
-        support: ["ward_observer", "ward_sentry", "dust"],
+        all: ['ring_of_regen', 'infused_raindrop', 'cloak'],
+        support: ['ward_observer', 'ward_sentry', 'dust'],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["SentryDust", "force_staff", "glimmer_cape"],
+        support: ['SentryDust', 'force_staff', 'glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["SentryDustGem", "black_king_bar"],
-        core: ["abyssal_blade", "butterfly", "assault"],
+        all: ['sheepstick'],
+        support: ['SentryDustGem', 'black_king_bar'],
+        core: ['abyssal_blade', 'butterfly', 'assault'],
       },
     },
   },
@@ -10154,80 +10154,80 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40620,
         power_level: [2, 2.1, 2.6, 2.6],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "monkey_king_boundless_strike", // 1
-          "monkey_king_jingu_mastery", // 2
-          "monkey_king_jingu_mastery", // 3
-          "monkey_king_tree_dance", // 4
-          "monkey_king_jingu_mastery", // 5
-          "monkey_king_tree_dance", // 6
-          "monkey_king_tree_dance", // 7
-          "monkey_king_tree_dance", // 8
-          "monkey_king_wukongs_command", // 9
-          "monkey_king_boundless_strike", // 10
-          "monkey_king_boundless_strike", // 11
-          "monkey_king_wukongs_command", // 12
-          "monkey_king_boundless_strike", // 13
-          "special_bonus_unique_monkey_king_9", // 14
-          "special_bonus_unique_monkey_king_2", // 15
-          "monkey_king_jingu_mastery", // 16
-          "special_bonus_attributes", // 17
-          "monkey_king_wukongs_command", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_monkey_king_10", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_monkey_king_6", // 25
+          'monkey_king_boundless_strike', // 1
+          'monkey_king_jingu_mastery', // 2
+          'monkey_king_jingu_mastery', // 3
+          'monkey_king_tree_dance', // 4
+          'monkey_king_jingu_mastery', // 5
+          'monkey_king_tree_dance', // 6
+          'monkey_king_tree_dance', // 7
+          'monkey_king_tree_dance', // 8
+          'monkey_king_wukongs_command', // 9
+          'monkey_king_boundless_strike', // 10
+          'monkey_king_boundless_strike', // 11
+          'monkey_king_wukongs_command', // 12
+          'monkey_king_boundless_strike', // 13
+          'special_bonus_unique_monkey_king_9', // 14
+          'special_bonus_unique_monkey_king_2', // 15
+          'monkey_king_jingu_mastery', // 16
+          'special_bonus_attributes', // 17
+          'monkey_king_wukongs_command', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_monkey_king_10', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_monkey_king_6', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "circlet",
-            "magic_stick",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'circlet',
+            'magic_stick',
           ],
           early_game: [
-            "power_treads",
-            "wraith_band",
-            "magic_wand",
-            "orb_of_corrosion",
+            'power_treads',
+            'wraith_band',
+            'magic_wand',
+            'orb_of_corrosion',
           ],
-          mid_game: ["bfury", "ultimate_scepter", "black_king_bar"],
-          late_game: ["disperser", "skadi", "greater_crit"],
+          mid_game: ['bfury', 'ultimate_scepter', 'black_king_bar'],
+          late_game: ['disperser', 'skadi', 'greater_crit'],
           situational: [
-            "infused_raindrop",
-            "aghanims_shard",
-            "monkey_king_bar",
-            "nullifier",
-            "butterfly",
-            "sphere",
-            "abyssal_blade",
-            "echo_sabre",
-            "diffusal_blade",
-            "mjollnir",
+            'infused_raindrop',
+            'aghanims_shard',
+            'monkey_king_bar',
+            'nullifier',
+            'butterfly',
+            'sphere',
+            'abyssal_blade',
+            'echo_sabre',
+            'diffusal_blade',
+            'mjollnir',
           ],
           core: [
-            "power_treads",
-            "bfury",
-            "ultimate_scepter",
-            "black_king_bar",
-            "skadi",
+            'power_treads',
+            'bfury',
+            'ultimate_scepter',
+            'black_king_bar',
+            'skadi',
           ],
           neutral: [
-            "broom_handle",
-            "occult_bracelet",
-            "orb_of_destruction",
-            "vambrace",
-            "elven_tunic",
-            "vindicators_axe",
-            "mind_breaker",
-            "ninja_gear",
-            "desolator_2",
-            "pirate_hat",
+            'broom_handle',
+            'occult_bracelet',
+            'orb_of_destruction',
+            'vambrace',
+            'elven_tunic',
+            'vindicators_axe',
+            'mind_breaker',
+            'ninja_gear',
+            'desolator_2',
+            'pirate_hat',
           ],
         },
       },
@@ -10237,74 +10237,74 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40626,
         power_level: [1.1, 1.7, 2.2, 2.3],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "monkey_king_tree_dance", // 1
-          "monkey_king_boundless_strike", // 2
-          "monkey_king_tree_dance", // 3
-          "monkey_king_boundless_strike", // 4
-          "monkey_king_tree_dance", // 5
-          "monkey_king_wukongs_command", // 6
-          "monkey_king_tree_dance", // 7
-          "monkey_king_boundless_strike", // 8
-          "monkey_king_boundless_strike", // 9
-          "special_bonus_unique_monkey_king_9", // 10
-          "monkey_king_jingu_mastery", // 11
-          "monkey_king_wukongs_command", // 12
-          "monkey_king_jingu_mastery", // 13
-          "monkey_king_jingu_mastery", // 14
-          "special_bonus_unique_monkey_king_7", // 15
-          "monkey_king_jingu_mastery", // 16
-          "special_bonus_attributes", // 17
-          "monkey_king_wukongs_command", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_monkey_king_10", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_monkey_king_6", // 25
+          'monkey_king_tree_dance', // 1
+          'monkey_king_boundless_strike', // 2
+          'monkey_king_tree_dance', // 3
+          'monkey_king_boundless_strike', // 4
+          'monkey_king_tree_dance', // 5
+          'monkey_king_wukongs_command', // 6
+          'monkey_king_tree_dance', // 7
+          'monkey_king_boundless_strike', // 8
+          'monkey_king_boundless_strike', // 9
+          'special_bonus_unique_monkey_king_9', // 10
+          'monkey_king_jingu_mastery', // 11
+          'monkey_king_wukongs_command', // 12
+          'monkey_king_jingu_mastery', // 13
+          'monkey_king_jingu_mastery', // 14
+          'special_bonus_unique_monkey_king_7', // 15
+          'monkey_king_jingu_mastery', // 16
+          'special_bonus_attributes', // 17
+          'monkey_king_wukongs_command', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_monkey_king_10', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_monkey_king_6', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "orb_of_venom",
-            "blood_grenade",
-            "branches",
-            "branches",
-            "ward_sentry",
+            'tango',
+            'orb_of_venom',
+            'blood_grenade',
+            'branches',
+            'branches',
+            'ward_sentry',
           ],
           early_game: [
-            "orb_of_corrosion",
-            "boots",
-            "magic_wand",
-            "wraith_band",
+            'orb_of_corrosion',
+            'boots',
+            'magic_wand',
+            'wraith_band',
           ],
-          mid_game: ["orchid", "power_treads", "mage_slayer"],
-          late_game: ["black_king_bar", "gungir"],
+          mid_game: ['orchid', 'power_treads', 'mage_slayer'],
+          late_game: ['black_king_bar', 'gungir'],
           situational: [
-            "sheepstick",
-            "spirit_vessel",
-            "heavens_halberd",
-            "cyclone",
-            "diffusal_blade",
-            "rod_of_atos",
-            "force_staff",
-            "heavens_halberd",
+            'sheepstick',
+            'spirit_vessel',
+            'heavens_halberd',
+            'cyclone',
+            'diffusal_blade',
+            'rod_of_atos',
+            'force_staff',
+            'heavens_halberd',
           ],
-          core: ["orb_of_corrosion", "orchid", "mage_slayer", "power_treads"],
+          core: ['orb_of_corrosion', 'orchid', 'mage_slayer', 'power_treads'],
           neutral: [
-            "broom_handle",
-            "duelist_gloves",
-            "orb_of_destruction",
-            "vambrace",
-            "elven_tunic",
-            "craggy_coat",
-            "mind_breaker",
-            "ninja_gear",
-            "desolator_2",
-            "pirate_hat",
-            "mirror_shield",
+            'broom_handle',
+            'duelist_gloves',
+            'orb_of_destruction',
+            'vambrace',
+            'elven_tunic',
+            'craggy_coat',
+            'mind_breaker',
+            'ninja_gear',
+            'desolator_2',
+            'pirate_hat',
+            'mirror_shield',
           ],
         },
       },
@@ -10314,32 +10314,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "wind_lace",
-          "boots",
-          "quelling_blade",
-          "armor",
-          "urn_of_shadows",
+          'wind_lace',
+          'boots',
+          'quelling_blade',
+          'armor',
+          'urn_of_shadows',
         ],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "cyclone", "mekansm"],
-        support: ["force_staff", "glimmer_cape"],
-        core: ["crimson_guard", "hurricane_pike", "silver_edge", "basher"],
+        all: ['spirit_vessel', 'cyclone', 'mekansm'],
+        support: ['force_staff', 'glimmer_cape'],
+        core: ['crimson_guard', 'hurricane_pike', 'silver_edge', 'basher'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade"],
+        all: ['sheepstick', 'ethereal_blade'],
         support: [],
         core: [
-          "assault",
-          "radiance",
-          "skadi",
-          "shivas_guard",
-          "abyssal_blade",
-          "butterfly",
-          "bloodthorn",
-          "nullifier",
+          'assault',
+          'radiance',
+          'skadi',
+          'shivas_guard',
+          'abyssal_blade',
+          'butterfly',
+          'bloodthorn',
+          'nullifier',
         ],
       },
     },
@@ -10359,72 +10359,72 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         // Mid: 1.1	1.5	2.7	2.9 [17%]
         // Carry: 1.2	1.6	2.7	2.9 [81%]
         power_level: [1.2, 1.6, 2.7, 2.9],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "morphling_morph_agi", // 1
-          "morphling_adaptive_strike_agi", // 2
-          "morphling_adaptive_strike_agi", // 3
-          "morphling_waveform", // 4
-          "morphling_adaptive_strike_agi", // 5
-          "morphling_morph_agi", // 6
-          "morphling_adaptive_strike_agi", // 7
-          "morphling_waveform", // 8
-          "morphling_waveform", // 9
-          "morphling_waveform", // 10
-          "special_bonus_unique_morphling_1", // 11
-          "morphling_morph_agi", // 12
-          "morphling_replicate", // 13
-          "morphling_morph_agi", // 14
-          "special_bonus_agility_15", // 15
-          "morphling_replicate", // 16
-          "special_bonus_attributes", // 17
-          "morphling_replicate", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_morphling_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_morphling_waveform_cooldown", // 25
+          'morphling_morph_agi', // 1
+          'morphling_adaptive_strike_agi', // 2
+          'morphling_adaptive_strike_agi', // 3
+          'morphling_waveform', // 4
+          'morphling_adaptive_strike_agi', // 5
+          'morphling_morph_agi', // 6
+          'morphling_adaptive_strike_agi', // 7
+          'morphling_waveform', // 8
+          'morphling_waveform', // 9
+          'morphling_waveform', // 10
+          'special_bonus_unique_morphling_1', // 11
+          'morphling_morph_agi', // 12
+          'morphling_replicate', // 13
+          'morphling_morph_agi', // 14
+          'special_bonus_agility_15', // 15
+          'morphling_replicate', // 16
+          'special_bonus_attributes', // 17
+          'morphling_replicate', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_morphling_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_morphling_waveform_cooldown', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "branches",
-            "branches",
-            "branches",
-            "circlet",
-            "magic_stick",
+            'tango',
+            'branches',
+            'branches',
+            'branches',
+            'circlet',
+            'magic_stick',
           ],
           early_game: [
-            "power_treads",
-            "lifesteal",
-            "magic_wand",
-            "falcon_blade",
+            'power_treads',
+            'lifesteal',
+            'magic_wand',
+            'falcon_blade',
           ],
-          mid_game: ["manta", "angels_demise", "black_king_bar"],
-          late_game: ["skadi", "butterfly", "satanic", "travel_boots"],
+          mid_game: ['manta', 'angels_demise', 'black_king_bar'],
+          late_game: ['skadi', 'butterfly', 'satanic', 'travel_boots'],
           situational: [
-            "sphere",
-            "aghanims_shard",
-            "hurricane_pike",
-            "sange_and_yasha",
-            "ultimate_scepter",
-            "monkey_king_bar",
+            'sphere',
+            'aghanims_shard',
+            'hurricane_pike',
+            'sange_and_yasha',
+            'ultimate_scepter',
+            'monkey_king_bar',
           ],
-          core: ["manta", "angels_demise", "black_king_bar", "skadi"],
+          core: ['manta', 'angels_demise', 'black_king_bar', 'skadi'],
           neutral: [
-            "occult_bracelet",
-            "unstable_wand",
-            "specialists_array",
-            "grove_bow",
-            "paladin_sword",
-            "elven_tunic",
-            "ninja_gear",
-            "mind_breaker",
-            "mirror_shield",
-            "apex",
-            "force_boots",
+            'occult_bracelet',
+            'unstable_wand',
+            'specialists_array',
+            'grove_bow',
+            'paladin_sword',
+            'elven_tunic',
+            'ninja_gear',
+            'mind_breaker',
+            'mirror_shield',
+            'apex',
+            'force_boots',
           ],
         },
       },
@@ -10433,26 +10433,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["infused_raindrop", "urn_of_shadows"],
+        all: ['infused_raindrop', 'urn_of_shadows'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["glimmer_cape"],
+        all: ['spirit_vessel'],
+        support: ['glimmer_cape'],
         core: [
-          "orchid",
-          "diffusal_blade",
-          "heavens_halberd",
-          "black_king_bar",
-          "mage_slayer",
-          "basher",
+          'orchid',
+          'diffusal_blade',
+          'heavens_halberd',
+          'black_king_bar',
+          'mage_slayer',
+          'basher',
         ],
       },
       late_game: {
-        all: ["sheepstick", "shivas_guard", "sphere", "aeon_disk"],
-        support: ["black_king_bar"],
-        core: ["skadi", "abyssal_blade", "butterfly", "bloodthorn"],
+        all: ['sheepstick', 'shivas_guard', 'sphere', 'aeon_disk'],
+        support: ['black_king_bar'],
+        core: ['skadi', 'abyssal_blade', 'butterfly', 'bloodthorn'],
       },
     },
   },
@@ -10470,30 +10470,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 1.9, 2.6, 2.7],
         facet: 1,
         abilities: [
-          "muerta_dead_shot", // 1
-          "muerta_the_calling", // 2
-          "muerta_dead_shot", // 3
+          'muerta_dead_shot', // 1
+          'muerta_the_calling', // 2
+          'muerta_dead_shot', // 3
           `muerta_gunslinger`, // 4
-          "muerta_dead_shot", // 5
-          "muerta_pierce_the_veil", // 6
+          'muerta_dead_shot', // 5
+          'muerta_pierce_the_veil', // 6
           `muerta_dead_shot`, // 7
           `muerta_gunslinger`, // 8
           `muerta_gunslinger`, // 9
           `muerta_gunslinger`, // 10
           `special_bonus_unique_muerta_dead_shot_range`, // 11
-          "muerta_pierce_the_veil", // 12
+          'muerta_pierce_the_veil', // 12
           `muerta_the_calling`, // 13
           `muerta_the_calling`, // 14
-          "special_bonus_unique_muerta_gunslinger_bonus_damage", // 15
+          'special_bonus_unique_muerta_gunslinger_bonus_damage', // 15
           `muerta_the_calling`, // 16
-          "special_bonus_attributes", // 17
-          "muerta_pierce_the_veil", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'muerta_pierce_the_veil', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_muerta_dead_shot_charges`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_muerta_gunslinger_double_shot_chance`, // 25
         ],
         items: {
@@ -10535,9 +10535,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `yasha_and_kaya`,
             `blink`,
             `ethereal_blade`,
-            "monkey_king_bar",
+            'monkey_king_bar',
             `sphere`,
-            "satanic",
+            'satanic',
             `ultimate_scepter`,
             `gungir`,
             `silver_edge`,
@@ -10578,30 +10578,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 1.9, 2, 2.2],
         facet: 1,
         abilities: [
-          "muerta_dead_shot", // 1
-          "muerta_the_calling", // 2
-          "muerta_dead_shot", // 3
+          'muerta_dead_shot', // 1
+          'muerta_the_calling', // 2
+          'muerta_dead_shot', // 3
           `muerta_the_calling`, // 4
-          "muerta_dead_shot", // 5
-          "muerta_pierce_the_veil", // 6
+          'muerta_dead_shot', // 5
+          'muerta_pierce_the_veil', // 6
           `muerta_dead_shot`, // 7
           `muerta_the_calling`, // 8
           `muerta_the_calling`, // 9
           `special_bonus_unique_muerta_dead_shot_range`, // 10
           `muerta_gunslinger`, // 11
-          "muerta_pierce_the_veil", // 12
+          'muerta_pierce_the_veil', // 12
           `muerta_gunslinger`, // 13
           `muerta_gunslinger`, // 14
           `special_bonus_unique_muerta_gunslinger_bonus_damage`, // 15
           `muerta_gunslinger`, // 16
-          "special_bonus_attributes", // 17
-          "muerta_pierce_the_veil", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'muerta_pierce_the_veil', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_muerta_dead_shot_charges`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_muerta_gunslinger_double_shot_chance`, // 25
         ],
         items: {
@@ -10690,26 +10690,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [`muerta_the_calling`, `muerta_dead_shot`, `muerta_pierce_the_veil`],
     counter_items: {
       laning_phase: {
-        all: ["infused_raindrop", "boots", "wind_lace"],
+        all: ['infused_raindrop', 'boots', 'wind_lace'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["magicResistance"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['magicResistance'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "black_king_bar",
+          'black_king_bar',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "heavens_halberd",
-          "mage_slayer",
+          'pipe',
+          'eternal_shroud',
+          'heavens_halberd',
+          'mage_slayer',
         ],
       },
       late_game: {
         all: [],
-        support: ["aeon_disk", "wind_waker"],
-        core: ["sheepstick", "abyssal_blade", "satanic", "bloodthorn"],
+        support: ['aeon_disk', 'wind_waker'],
+        core: ['sheepstick', 'abyssal_blade', 'satanic', 'bloodthorn'],
       },
     },
   },
@@ -10726,75 +10726,75 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40644,
         power_level: [1.4, 2, 2.5, 2.4],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "naga_siren_mirror_image", // 1
-          "naga_siren_eelskin", // 2
-          "naga_siren_mirror_image", // 3
-          "naga_siren_ensnare", // 4
-          "naga_siren_mirror_image", // 5
-          "naga_siren_eelskin", // 6
-          "naga_siren_mirror_image", // 7
-          "naga_siren_eelskin", // 8
-          "naga_siren_eelskin", // 9
-          "special_bonus_unique_naga_siren_2", // 10
-          "naga_siren_song_of_the_siren", // 11
-          "naga_siren_ensnare", // 12
-          "naga_siren_ensnare", // 13
-          "naga_siren_ensnare", // 14
-          "special_bonus_unique_naga_siren_4", // 15
-          "naga_siren_song_of_the_siren", // 16
-          "special_bonus_attributes", // 17
-          "naga_siren_song_of_the_siren", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_naga_siren", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_naga_siren_6", // 25
+          'naga_siren_mirror_image', // 1
+          'naga_siren_eelskin', // 2
+          'naga_siren_mirror_image', // 3
+          'naga_siren_ensnare', // 4
+          'naga_siren_mirror_image', // 5
+          'naga_siren_eelskin', // 6
+          'naga_siren_mirror_image', // 7
+          'naga_siren_eelskin', // 8
+          'naga_siren_eelskin', // 9
+          'special_bonus_unique_naga_siren_2', // 10
+          'naga_siren_song_of_the_siren', // 11
+          'naga_siren_ensnare', // 12
+          'naga_siren_ensnare', // 13
+          'naga_siren_ensnare', // 14
+          'special_bonus_unique_naga_siren_4', // 15
+          'naga_siren_song_of_the_siren', // 16
+          'special_bonus_attributes', // 17
+          'naga_siren_song_of_the_siren', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_naga_siren', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_naga_siren_6', // 25
         ],
         items: {
           starting: [
-            "quelling_blade",
-            "tango",
-            "branches",
-            "branches",
-            "slippers",
-            "circlet",
+            'quelling_blade',
+            'tango',
+            'branches',
+            'branches',
+            'slippers',
+            'circlet',
           ],
-          early_game: ["power_treads", "wraith_band", "yasha"],
-          mid_game: ["manta", "orchid", "heart", "aghanims_shard"],
+          early_game: ['power_treads', 'wraith_band', 'yasha'],
+          mid_game: ['manta', 'orchid', 'heart', 'aghanims_shard'],
           late_game: [
-            "butterfly",
-            "disperser",
-            "bloodthorn",
-            "sheepstick",
-            "travel_boots",
+            'butterfly',
+            'disperser',
+            'bloodthorn',
+            'sheepstick',
+            'travel_boots',
           ],
           situational: [
-            "infused_raindrop",
-            "hand_of_midas",
-            "diffusal_blade",
-            "black_king_bar",
-            "ultimate_scepter",
-            "abyssal_blade",
-            "sphere",
+            'infused_raindrop',
+            'hand_of_midas',
+            'diffusal_blade',
+            'black_king_bar',
+            'ultimate_scepter',
+            'abyssal_blade',
+            'sphere',
           ],
-          core: ["manta", "orchid", "heart", "butterfly"],
+          core: ['manta', 'orchid', 'heart', 'butterfly'],
           neutral: [
-            "unstable_wand",
-            "occult_bracelet",
-            "pupils_gift",
-            "vambrace",
-            "elven_tunic",
-            "vindicators_axe",
-            "avianas_feather",
-            "mind_breaker",
-            "ninja_gear",
-            "apex",
-            "mirror_shield",
-            "pirate_hat",
+            'unstable_wand',
+            'occult_bracelet',
+            'pupils_gift',
+            'vambrace',
+            'elven_tunic',
+            'vindicators_axe',
+            'avianas_feather',
+            'mind_breaker',
+            'ninja_gear',
+            'apex',
+            'mirror_shield',
+            'pirate_hat',
           ],
         },
       },
@@ -10802,34 +10802,34 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["armor"],
-        support: ["ward_sentry"],
+        all: ['armor'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
-        all: ["dagon"],
-        support: ["ward_dispenser", "glimmer_cape", "force_staff", "ghost"],
+        all: ['dagon'],
+        support: ['ward_dispenser', 'glimmer_cape', 'force_staff', 'ghost'],
         core: [
-          "maelstrom",
-          "bfury",
-          "black_king_bar",
-          "gungir",
-          "travel_boots",
-          "manta",
+          'maelstrom',
+          'bfury',
+          'black_king_bar',
+          'gungir',
+          'travel_boots',
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade"],
-        support: ["black_king_bar", "travel_boots"],
+        all: ['sheepstick', 'ethereal_blade'],
+        support: ['black_king_bar', 'travel_boots'],
         core: [
-          "mjollnir",
-          "shivas_guard",
-          "radiance",
-          "abyssal_blade",
-          "butterfly",
-          "bloodthorn",
-          "overwhelming_blink",
-          "satanic",
+          'mjollnir',
+          'shivas_guard',
+          'radiance',
+          'abyssal_blade',
+          'butterfly',
+          'bloodthorn',
+          'overwhelming_blink',
+          'satanic',
         ],
       },
     },
@@ -11136,25 +11136,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["ring_of_regen", "quelling_blade", "armor", "infused_raindrop"],
+        all: ['ring_of_regen', 'quelling_blade', 'armor', 'infused_raindrop'],
         support: [],
-        core: ["ring_of_health", "phase_boots"],
+        core: ['ring_of_health', 'phase_boots'],
       },
       mid_game: {
-        all: ["quelling_blade"],
-        support: ["force_staff", "glimmer_cape", "ghost"],
+        all: ['quelling_blade'],
+        support: ['force_staff', 'glimmer_cape', 'ghost'],
         core: [
-          "crimson_guard",
-          "bfury",
-          "heavens_halberd",
-          "basher",
-          "travel_boots",
+          'crimson_guard',
+          'bfury',
+          'heavens_halberd',
+          'basher',
+          'travel_boots',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["travel_boots"],
-        core: ["abyssal_blade", "assault", "butterfly"],
+        all: ['sheepstick'],
+        support: ['travel_boots'],
+        core: ['abyssal_blade', 'assault', 'butterfly'],
       },
     },
   },
@@ -11172,69 +11172,69 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.9, 2.1, 2.4, 2.2],
         facet: 1,
         abilities: [
-          "necrolyte_death_pulse", // 1
-          "necrolyte_heartstopper_aura", // 2
-          "necrolyte_death_pulse", // 3
-          "necrolyte_ghost_shroud", // 4
-          "necrolyte_death_pulse", // 5
-          "necrolyte_reapers_scythe", // 6
-          "necrolyte_death_pulse", // 7
-          "necrolyte_heartstopper_aura", // 8
-          "necrolyte_heartstopper_aura", // 9
-          "necrolyte_heartstopper_aura", // 10
+          'necrolyte_death_pulse', // 1
+          'necrolyte_heartstopper_aura', // 2
+          'necrolyte_death_pulse', // 3
+          'necrolyte_ghost_shroud', // 4
+          'necrolyte_death_pulse', // 5
+          'necrolyte_reapers_scythe', // 6
+          'necrolyte_death_pulse', // 7
+          'necrolyte_heartstopper_aura', // 8
+          'necrolyte_heartstopper_aura', // 9
+          'necrolyte_heartstopper_aura', // 10
           `special_bonus_unique_necrophos_heartstopper_regen_duration`, // 11
-          "necrolyte_reapers_scythe", // 12
-          "necrolyte_ghost_shroud", // 13
-          "necrolyte_ghost_shroud", // 14
+          'necrolyte_reapers_scythe', // 12
+          'necrolyte_ghost_shroud', // 13
+          'necrolyte_ghost_shroud', // 14
           `special_bonus_unique_necrophos_3`, // 15
-          "necrolyte_ghost_shroud", // 16
-          "special_bonus_attributes", // 17
-          "necrolyte_reapers_scythe", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_necrophos_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_necrophos_2", // 25
+          'necrolyte_ghost_shroud', // 16
+          'special_bonus_attributes', // 17
+          'necrolyte_reapers_scythe', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_necrophos_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_necrophos_2', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
-            "branches",
-            "branches",
-            "circlet",
-            "circlet",
+            'tango',
+            'faerie_fire',
+            'branches',
+            'branches',
+            'circlet',
+            'circlet',
             `ward_observer`,
           ],
           early_game: [
             `null_talisman`,
             `bracer`,
-            "boots",
+            'boots',
             `magic_wand`,
             `wind_lace`,
           ],
-          mid_game: ["travel_boots", "radiance", "aghanims_shard"],
+          mid_game: ['travel_boots', 'radiance', 'aghanims_shard'],
           late_game: [
             `heart`,
             `ultimate_scepter`,
             `octarine_core`,
-            "wind_waker",
-            "overwhelming_blink",
+            'wind_waker',
+            'overwhelming_blink',
           ],
           situational: [
-            "kaya_and_sange",
+            'kaya_and_sange',
             `spirit_vessel`,
             `crimson_guard`,
             `heavens_halberd`,
-            "shivas_guard",
+            'shivas_guard',
             `eternal_shroud`,
             `black_king_bar`,
             `sphere`,
             `lotus_orb`,
             `sheepstick`,
-            "cyclone",
+            'cyclone',
           ],
           core: [
             `travel_boots`,
@@ -11242,7 +11242,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aghanims_shard`,
             `heart`,
             `ultimate_scepter`,
-            "octarine_core",
+            'octarine_core',
           ],
           neutral: [
             `mysterious_hat`,
@@ -11251,10 +11251,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pupils_gift`,
             `cloak_of_flames`,
             `trickster_cloak`,
-            "havoc_hammer",
-            "stormcrafter",
-            "mirror_shield",
-            "giants_ring",
+            'havoc_hammer',
+            'stormcrafter',
+            'mirror_shield',
+            'giants_ring',
           ],
         },
         // item_tooltips:
@@ -11269,69 +11269,69 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.1, 2.1, 2.3, 2.2],
         facet: 1,
         abilities: [
-          "necrolyte_death_pulse", // 1
-          "necrolyte_heartstopper_aura", // 2
-          "necrolyte_death_pulse", // 3
-          "necrolyte_ghost_shroud", // 4
-          "necrolyte_death_pulse", // 5
-          "necrolyte_reapers_scythe", // 6
-          "necrolyte_death_pulse", // 7
-          "necrolyte_heartstopper_aura", // 8
-          "necrolyte_heartstopper_aura", // 9
-          "necrolyte_heartstopper_aura", // 10
+          'necrolyte_death_pulse', // 1
+          'necrolyte_heartstopper_aura', // 2
+          'necrolyte_death_pulse', // 3
+          'necrolyte_ghost_shroud', // 4
+          'necrolyte_death_pulse', // 5
+          'necrolyte_reapers_scythe', // 6
+          'necrolyte_death_pulse', // 7
+          'necrolyte_heartstopper_aura', // 8
+          'necrolyte_heartstopper_aura', // 9
+          'necrolyte_heartstopper_aura', // 10
           `special_bonus_unique_necrophos_heartstopper_regen_duration`, // 11
-          "necrolyte_reapers_scythe", // 12
-          "necrolyte_ghost_shroud", // 13
-          "necrolyte_ghost_shroud", // 14
+          'necrolyte_reapers_scythe', // 12
+          'necrolyte_ghost_shroud', // 13
+          'necrolyte_ghost_shroud', // 14
           `special_bonus_unique_necrophos_3`, // 15
-          "necrolyte_ghost_shroud", // 16
-          "special_bonus_attributes", // 17
-          "necrolyte_reapers_scythe", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_necrophos_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_necrophos_2", // 25
+          'necrolyte_ghost_shroud', // 16
+          'special_bonus_attributes', // 17
+          'necrolyte_reapers_scythe', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_necrophos_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_necrophos_2', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
-            "branches",
-            "branches",
-            "circlet",
-            "circlet",
+            'tango',
+            'faerie_fire',
+            'branches',
+            'branches',
+            'circlet',
+            'circlet',
             `ward_observer`,
           ],
           early_game: [
             `null_talisman`,
             `bracer`,
-            "boots",
+            'boots',
             `magic_wand`,
             `wind_lace`,
           ],
-          mid_game: ["travel_boots", "radiance", "aghanims_shard"],
+          mid_game: ['travel_boots', 'radiance', 'aghanims_shard'],
           late_game: [
             `heart`,
             `ultimate_scepter`,
             `octarine_core`,
-            "wind_waker",
-            "overwhelming_blink",
+            'wind_waker',
+            'overwhelming_blink',
           ],
           situational: [
-            "kaya_and_sange",
+            'kaya_and_sange',
             `spirit_vessel`,
             `crimson_guard`,
             `heavens_halberd`,
-            "shivas_guard",
+            'shivas_guard',
             `eternal_shroud`,
             `black_king_bar`,
             `sphere`,
             `lotus_orb`,
             `sheepstick`,
-            "cyclone",
+            'cyclone',
           ],
           core: [
             `travel_boots`,
@@ -11339,7 +11339,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aghanims_shard`,
             `heart`,
             `ultimate_scepter`,
-            "octarine_core",
+            'octarine_core',
           ],
           neutral: [
             `mysterious_hat`,
@@ -11348,10 +11348,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pupils_gift`,
             `cloak_of_flames`,
             `trickster_cloak`,
-            "havoc_hammer",
-            "stormcrafter",
-            "mirror_shield",
-            "giants_ring",
+            'havoc_hammer',
+            'stormcrafter',
+            'mirror_shield',
+            'giants_ring',
           ],
         },
       },
@@ -11364,30 +11364,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [
       `necrolyte_death_seeker`,
       `necrolyte_death_pulse`,
-      "necrolyte_ghost_shroud",
+      'necrolyte_ghost_shroud',
       `necrolyte_reapers_scythe`,
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "infused_raindrop"],
+        all: ['magic_stick', 'infused_raindrop'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["glimmer_cape"],
+        all: ['spirit_vessel'],
+        support: ['glimmer_cape'],
         core: [
-          "mage_slayer",
-          "pipe",
-          "eternal_shroud",
-          "orchid",
-          "black_king_bar",
+          'mage_slayer',
+          'pipe',
+          'eternal_shroud',
+          'orchid',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["aeon_disk", "wind_waker", "revenants_brooch"],
-        support: ["black_king_bar"],
-        core: ["skadi", "shivas_guard", "nullifier"],
+        all: ['aeon_disk', 'wind_waker', 'revenants_brooch'],
+        support: ['black_king_bar'],
+        core: ['skadi', 'shivas_guard', 'nullifier'],
       },
     },
   },
@@ -11500,19 +11500,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots"],
+        all: ['wind_lace', 'boots'],
         support: [],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff", "ghost"],
-        core: ["hurricane_pike", "silver_edge", "heavens_halberd"],
+        support: ['glimmer_cape', 'force_staff', 'ghost'],
+        core: ['hurricane_pike', 'silver_edge', 'heavens_halberd'],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["aeon_disk"],
-        core: ["abyssal_blade", "assault", "bloodthorn", "butterfly"],
+        all: ['sheepstick'],
+        support: ['aeon_disk'],
+        core: ['abyssal_blade', 'assault', 'bloodthorn', 'butterfly'],
       },
     },
   },
@@ -11530,30 +11530,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [0.7, 1.9, 2.2, 2.2],
         facet: 1,
         abilities: [
-          "nyx_assassin_impale", // 1
+          'nyx_assassin_impale', // 1
           `nyx_assassin_jolt`, // 2
-          "nyx_assassin_impale", // 3
+          'nyx_assassin_impale', // 3
           `nyx_assassin_spiked_carapace`, // 4
-          "nyx_assassin_impale", // 5
-          "nyx_assassin_vendetta", // 6
-          "nyx_assassin_impale", // 7
+          'nyx_assassin_impale', // 5
+          'nyx_assassin_vendetta', // 6
+          'nyx_assassin_impale', // 7
           `nyx_assassin_jolt`, // 8
           `nyx_assassin_jolt`, // 9
           `nyx_assassin_jolt`, // 10
           `special_bonus_unique_nyx_vendetta_damage`, // 11
-          "nyx_assassin_vendetta", // 12
+          'nyx_assassin_vendetta', // 12
           `nyx_assassin_spiked_carapace`, // 13
           `nyx_assassin_spiked_carapace`, // 14
           `special_bonus_unique_nyx_jolt_cooldown`, // 15
           `nyx_assassin_spiked_carapace`, // 16
-          "special_bonus_attributes", // 17
-          "nyx_assassin_vendetta", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'nyx_assassin_vendetta', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_nyx_2`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_nyx`, // 25
         ],
         items: {
@@ -11629,24 +11629,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "arcane_boots", "infused_raindrop", "cloak"],
-        support: ["ward_sentry", "dust"],
-        core: ["soul_ring"],
+        all: ['magic_stick', 'arcane_boots', 'infused_raindrop', 'cloak'],
+        support: ['ward_sentry', 'dust'],
+        core: ['soul_ring'],
       },
       mid_game: {
         all: [],
-        support: ["SentryDust", "glimmer_cape"],
+        support: ['SentryDust', 'glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["SentryDustGem", "black_king_bar"],
-        core: ["abyssal_blade"],
+        all: ['sheepstick'],
+        support: ['SentryDustGem', 'black_king_bar'],
+        core: ['abyssal_blade'],
       },
     },
   },
@@ -11665,35 +11665,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 1.8, 1.8, 1.5],
         facet: 2,
         abilities: [
-          "ogre_magi_ignite", // 1
-          "ogre_magi_fireblast", // 2
-          "ogre_magi_ignite", // 3
+          'ogre_magi_ignite', // 1
+          'ogre_magi_fireblast', // 2
+          'ogre_magi_ignite', // 3
           `ogre_magi_bloodlust`, // 4
-          "ogre_magi_ignite", // 5
-          "ogre_magi_multicast", // 6
-          "ogre_magi_ignite", // 7
-          "ogre_magi_fireblast", // 8
-          "ogre_magi_fireblast", // 9
-          "special_bonus_unique_ogre_magi_4", // 10
+          'ogre_magi_ignite', // 5
+          'ogre_magi_multicast', // 6
+          'ogre_magi_ignite', // 7
+          'ogre_magi_fireblast', // 8
+          'ogre_magi_fireblast', // 9
+          'special_bonus_unique_ogre_magi_4', // 10
           `ogre_magi_fireblast`, // 11
-          "ogre_magi_multicast", // 12
-          "ogre_magi_bloodlust", // 13
-          "ogre_magi_bloodlust", // 14
+          'ogre_magi_multicast', // 12
+          'ogre_magi_bloodlust', // 13
+          'ogre_magi_bloodlust', // 14
           `special_bonus_unique_ogre_magi_dumb_luck_mana`, // 15
           `ogre_magi_bloodlust`, // 16
-          "special_bonus_attributes", // 17
-          "ogre_magi_multicast", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'ogre_magi_multicast', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_strength_30`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_ogre_magi_2", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_ogre_magi_2', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `branches`,
@@ -11706,7 +11706,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: [
             `boots`,
-            "magic_wand",
+            'magic_wand',
             `ring_of_basilius`,
             `wind_lace`,
             `infused_raindrop`,
@@ -11732,9 +11732,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pavise`,
             `glimmer_cape`,
             `cyclone`,
-            "lotus_orb",
+            'lotus_orb',
             `heavens_halberd`,
-            "blink",
+            'blink',
             `solar_crest`,
             `boots_of_bearing`,
             `phylactery`,
@@ -11757,13 +11757,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `trusty_shovel`,
-            "philosophers_stone",
-            "bullwhip",
-            "psychic_headband",
+            'philosophers_stone',
+            'bullwhip',
+            'psychic_headband',
             `ogre_seal_totem`,
-            "spy_gadget",
+            'spy_gadget',
             `havoc_hammer`,
-            "seer_stone",
+            'seer_stone',
             `giants_ring`,
           ],
         },
@@ -11777,21 +11777,21 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "infused_raindrop", "cloak"],
+        all: ['magic_stick', 'ring_of_regen', 'infused_raindrop', 'cloak'],
         support: [],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape"],
+        support: ['glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
-      late_game: { all: [], support: ["black_king_bar"], core: [] },
+      late_game: { all: [], support: ['black_king_bar'], core: [] },
     },
   },
 
@@ -11808,44 +11808,44 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.3, 1.6, 2, 1.8],
         facet: 2,
         abilities: [
-          "omniknight_hammer_of_purity", // 1
+          'omniknight_hammer_of_purity', // 1
           `omniknight_purification`, // 2
           `omniknight_purification`, // 3
           `omniknight_martyr`, // 4
           `omniknight_purification`, // 5
-          "omniknight_guardian_angel", // 6
+          'omniknight_guardian_angel', // 6
           `omniknight_purification`, // 7
           `omniknight_martyr`, // 8
           `omniknight_martyr`, // 9
           `omniknight_martyr`, // 10
           `special_bonus_unique_omniknight_6`, // 11
-          "omniknight_guardian_angel", // 12
-          "omniknight_hammer_of_purity", // 13
-          "omniknight_hammer_of_purity", // 14
-          "special_bonus_unique_omniknight_7", // 15
-          "omniknight_hammer_of_purity", // 16
-          "special_bonus_attributes", // 17
-          "omniknight_guardian_angel", // 18
-          "special_bonus_attributes", // 19
+          'omniknight_guardian_angel', // 12
+          'omniknight_hammer_of_purity', // 13
+          'omniknight_hammer_of_purity', // 14
+          'special_bonus_unique_omniknight_7', // 15
+          'omniknight_hammer_of_purity', // 16
+          'special_bonus_attributes', // 17
+          'omniknight_guardian_angel', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_omniknight_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_omniknight_1", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_omniknight_1', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
-            "enchanted_mango",
+            'enchanted_mango',
             `branches`,
             `branches`,
             `clarity`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
@@ -11864,15 +11864,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           late_game: [
             `guardian_greaves`,
-            "blink",
-            "ultimate_scepter",
+            'blink',
+            'ultimate_scepter',
             `octarine_core`,
           ],
           situational: [
             `orb_of_venom`,
-            "ancient_janggo",
-            "boots_of_bearing",
-            "mekansm",
+            'ancient_janggo',
+            'boots_of_bearing',
+            'mekansm',
             `glimmer_cape`,
             `lotus_orb`,
             `holy_locket`,
@@ -11882,8 +11882,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `pipe`,
             `cyclone`,
             `refresher`,
-            "ethereal_blade",
-            "wind_waker",
+            'ethereal_blade',
+            'wind_waker',
             `travel_boots`,
           ],
           core: [
@@ -11892,20 +11892,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aether_lens`,
             `force_staff`,
             `guardian_greaves`,
-            "blink",
-            "ultimate_scepter",
+            'blink',
+            'ultimate_scepter',
           ],
           neutral: [
-            "arcane_ring",
+            'arcane_ring',
             `trusty_shovel`,
             `bullwhip`,
-            "philosophers_stone",
+            'philosophers_stone',
             `ogre_seal_totem`,
-            "psychic_headband",
-            "spy_gadget",
+            'psychic_headband',
+            'spy_gadget',
             `martyrs_plate`,
-            "seer_stone",
-            "force_field",
+            'seer_stone',
+            'force_field',
           ],
         },
       },
@@ -11917,25 +11917,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "wind_lace", "boots", "urn_of_shadows"],
+        all: ['magic_stick', 'wind_lace', 'boots', 'urn_of_shadows'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "cyclone"],
-        support: ["glimmer_cape", "force_staff"],
-        core: ["orchid", "diffusal_blade", "maelstrom"],
+        all: ['spirit_vessel', 'cyclone'],
+        support: ['glimmer_cape', 'force_staff'],
+        core: ['orchid', 'diffusal_blade', 'maelstrom'],
       },
       late_game: {
-        all: ["sheepstick"],
+        all: ['sheepstick'],
         support: [],
         core: [
-          "skadi",
-          "shivas_guard",
-          "nullifier",
-          "bloodthorn",
-          "mjollnir",
-          "monkey_king_bar",
+          'skadi',
+          'shivas_guard',
+          'nullifier',
+          'bloodthorn',
+          'mjollnir',
+          'monkey_king_bar',
         ],
       },
     },
@@ -11955,43 +11955,43 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 1.8, 2, 1.7],
         facet: 2,
         abilities: [
-          "oracle_fortunes_end", // 1
-          "oracle_purifying_flames", // 2
-          "oracle_purifying_flames", // 3
-          "oracle_fates_edict", // 4
-          "oracle_purifying_flames", // 5
-          "oracle_false_promise", // 6
-          "oracle_purifying_flames", // 7
-          "oracle_fates_edict", // 8
+          'oracle_fortunes_end', // 1
+          'oracle_purifying_flames', // 2
+          'oracle_purifying_flames', // 3
+          'oracle_fates_edict', // 4
+          'oracle_purifying_flames', // 5
+          'oracle_false_promise', // 6
+          'oracle_purifying_flames', // 7
+          'oracle_fates_edict', // 8
           `oracle_fates_edict`, // 9
           `oracle_fortunes_end`, // 10
           `special_bonus_unique_oracle_9`, // 11
-          "oracle_false_promise", // 12
-          "oracle_fortunes_end", // 13
+          'oracle_false_promise', // 12
+          'oracle_fortunes_end', // 13
           `oracle_fortunes_end`, // 14
           `special_bonus_unique_oracle_5`, // 15
           `oracle_fates_edict`, // 16
-          "special_bonus_attributes", // 17
-          "oracle_false_promise", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_oracle_6", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_oracle", // 25
+          'special_bonus_attributes', // 17
+          'oracle_false_promise', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_oracle_6', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_oracle', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
-            "enchanted_mango",
-            "circlet",
+            'enchanted_mango',
+            'circlet',
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `flask`,
@@ -12005,8 +12005,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_boots`,
             `aether_lens`,
             `glimmer_cape`,
-            "blink",
-            "force_staff",
+            'blink',
+            'force_staff',
           ],
           late_game: [
             `aghanims_shard`,
@@ -12016,8 +12016,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           situational: [
             `spirit_vessel`,
-            "holy_locket",
-            "mekansm",
+            'holy_locket',
+            'mekansm',
             `pavise`,
             `solar_crest`,
             `ghost`,
@@ -12026,16 +12026,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `guardian_greaves`,
             `ethereal_blade`,
             `sheepstick`,
-            "lotus_orb",
+            'lotus_orb',
             `wind_waker`,
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            'arcane_boots',
             `aether_lens`,
             `glimmer_cape`,
-            "blink",
-            "force_staff",
+            'blink',
+            'force_staff',
             `aghanims_shard`,
             `ultimate_scepter`,
             `aeon_disk`,
@@ -12043,13 +12043,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `arcane_ring`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ogre_seal_totem`,
-            "spy_gadget",
-            "trickster_cloak",
-            "seer_stone",
+            'spy_gadget',
+            'trickster_cloak',
+            'seer_stone',
             `book_of_shadows`,
           ],
         },
@@ -12066,23 +12066,23 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "infused_raindrop",
-          "urn_of_shadows",
+          'magic_stick',
+          'ring_of_regen',
+          'infused_raindrop',
+          'urn_of_shadows',
         ],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "blink", "cloak"],
-        support: ["force_staff"],
-        core: ["orchid", "black_king_bar"],
+        all: ['spirit_vessel', 'blink', 'cloak'],
+        support: ['force_staff'],
+        core: ['orchid', 'black_king_bar'],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["skadi", "shivas_guard", "satanic"],
+        core: ['skadi', 'shivas_guard', 'satanic'],
       },
     },
   },
@@ -12102,97 +12102,97 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.2, 2.3, 2.6, 2.5],
         facet: 2,
         abilities: [
-          "obsidian_destroyer_astral_imprisonment", // 1
-          "obsidian_destroyer_arcane_orb", // 2
-          "obsidian_destroyer_equilibrium", // 3
-          "obsidian_destroyer_astral_imprisonment", // 4
-          "obsidian_destroyer_astral_imprisonment", // 5
-          "obsidian_destroyer_sanity_eclipse", // 6
-          "obsidian_destroyer_arcane_orb", // 7
-          "obsidian_destroyer_arcane_orb", // 8
-          "obsidian_destroyer_arcane_orb", // 9
-          "special_bonus_mp_250", // 10
-          "obsidian_destroyer_equilibrium", // 11
-          "obsidian_destroyer_sanity_eclipse", // 12
-          "obsidian_destroyer_equilibrium", // 13
-          "obsidian_destroyer_equilibrium", // 14
-          "special_bonus_unique_outworld_devourer_3", // 15
-          "obsidian_destroyer_astral_imprisonment", // 16
-          "special_bonus_attributes", // 17
-          "obsidian_destroyer_sanity_eclipse", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_outworld_devourer_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_outworld_devourer", // 25
+          'obsidian_destroyer_astral_imprisonment', // 1
+          'obsidian_destroyer_arcane_orb', // 2
+          'obsidian_destroyer_equilibrium', // 3
+          'obsidian_destroyer_astral_imprisonment', // 4
+          'obsidian_destroyer_astral_imprisonment', // 5
+          'obsidian_destroyer_sanity_eclipse', // 6
+          'obsidian_destroyer_arcane_orb', // 7
+          'obsidian_destroyer_arcane_orb', // 8
+          'obsidian_destroyer_arcane_orb', // 9
+          'special_bonus_mp_250', // 10
+          'obsidian_destroyer_equilibrium', // 11
+          'obsidian_destroyer_sanity_eclipse', // 12
+          'obsidian_destroyer_equilibrium', // 13
+          'obsidian_destroyer_equilibrium', // 14
+          'special_bonus_unique_outworld_devourer_3', // 15
+          'obsidian_destroyer_astral_imprisonment', // 16
+          'special_bonus_attributes', // 17
+          'obsidian_destroyer_sanity_eclipse', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_outworld_devourer_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_outworld_devourer', // 25
         ],
         items: {
           starting: [
-            "mantle",
-            "circlet",
-            "branches",
-            "branches",
-            "faerie_fire",
-            "ward_observer",
-            "tango",
+            'mantle',
+            'circlet',
+            'branches',
+            'branches',
+            'faerie_fire',
+            'ward_observer',
+            'tango',
           ],
           early_game: [
-            "null_talisman",
-            "magic_wand",
-            "power_treads",
-            "witch_blade",
+            'null_talisman',
+            'magic_wand',
+            'power_treads',
+            'witch_blade',
           ],
           mid_game: [
-            "hurricane_pike",
-            "black_king_bar",
-            "ultimate_scepter",
-            "blink",
-            "devastator",
+            'hurricane_pike',
+            'black_king_bar',
+            'ultimate_scepter',
+            'blink',
+            'devastator',
           ],
-          late_game: ["moon_shard", "sheepstick"],
+          late_game: ['moon_shard', 'sheepstick'],
           situational: [
-            "hand_of_midas",
-            "sphere",
-            "refresher",
-            "swift_blink",
-            "travel_boots",
-            "aghanims_shard",
+            'hand_of_midas',
+            'sphere',
+            'refresher',
+            'swift_blink',
+            'travel_boots',
+            'aghanims_shard',
           ],
           core: [
-            "power_treads",
-            "witch_blade",
-            "hurricane_pike",
-            "black_king_bar",
-            "ultimate_scepter",
-            "blink",
+            'power_treads',
+            'witch_blade',
+            'hurricane_pike',
+            'black_king_bar',
+            'ultimate_scepter',
+            'blink',
           ],
           neutral: [
             //tier 1
-            "arcane_ring",
-            "mysterious_hat",
-            "faded_broach",
+            'arcane_ring',
+            'mysterious_hat',
+            'faded_broach',
 
             //tier 2
-            "pupils_gift",
-            "vambrace",
-            "grove_bow",
+            'pupils_gift',
+            'vambrace',
+            'grove_bow',
 
             //tier 3
-            "elven_tunic",
-            "psychic_headband",
-            "enchanted_quiver",
+            'elven_tunic',
+            'psychic_headband',
+            'enchanted_quiver',
 
             //tier 4
-            "timeless_relic",
-            "avianas_feather",
-            "mind_breaker",
+            'timeless_relic',
+            'avianas_feather',
+            'mind_breaker',
 
             //tier 5
-            "mirror_shield",
-            "pirate_hat",
-            "apex",
+            'mirror_shield',
+            'pirate_hat',
+            'apex',
           ],
         },
       },
@@ -12204,97 +12204,97 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.3, 2.3, 2.6, 2.5],
         facet: 2,
         abilities: [
-          "obsidian_destroyer_astral_imprisonment", // 1
-          "obsidian_destroyer_arcane_orb", // 2
-          "obsidian_destroyer_equilibrium", // 3
-          "obsidian_destroyer_astral_imprisonment", // 4
-          "obsidian_destroyer_astral_imprisonment", // 5
-          "obsidian_destroyer_sanity_eclipse", // 6
-          "obsidian_destroyer_astral_imprisonment", // 7
-          "obsidian_destroyer_arcane_orb", // 8
-          "obsidian_destroyer_arcane_orb", // 9
-          "obsidian_destroyer_arcane_orb", // 10
-          "special_bonus_mp_250", // 11
-          "obsidian_destroyer_sanity_eclipse", // 12
-          "obsidian_destroyer_equilibrium", // 13
-          "obsidian_destroyer_equilibrium", // 14
-          "special_bonus_unique_outworld_devourer_3", // 15
-          "obsidian_destroyer_equilibrium", // 16
-          "special_bonus_attributes", // 17
-          "obsidian_destroyer_sanity_eclipse", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_outworld_devourer_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_outworld_devourer", // 25
+          'obsidian_destroyer_astral_imprisonment', // 1
+          'obsidian_destroyer_arcane_orb', // 2
+          'obsidian_destroyer_equilibrium', // 3
+          'obsidian_destroyer_astral_imprisonment', // 4
+          'obsidian_destroyer_astral_imprisonment', // 5
+          'obsidian_destroyer_sanity_eclipse', // 6
+          'obsidian_destroyer_astral_imprisonment', // 7
+          'obsidian_destroyer_arcane_orb', // 8
+          'obsidian_destroyer_arcane_orb', // 9
+          'obsidian_destroyer_arcane_orb', // 10
+          'special_bonus_mp_250', // 11
+          'obsidian_destroyer_sanity_eclipse', // 12
+          'obsidian_destroyer_equilibrium', // 13
+          'obsidian_destroyer_equilibrium', // 14
+          'special_bonus_unique_outworld_devourer_3', // 15
+          'obsidian_destroyer_equilibrium', // 16
+          'special_bonus_attributes', // 17
+          'obsidian_destroyer_sanity_eclipse', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_outworld_devourer_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_outworld_devourer', // 25
         ],
         items: {
           starting: [
-            "mantle",
-            "circlet",
-            "branches",
-            "branches",
-            "faerie_fire",
-            "ward_observer",
-            "tango",
+            'mantle',
+            'circlet',
+            'branches',
+            'branches',
+            'faerie_fire',
+            'ward_observer',
+            'tango',
           ],
           early_game: [
-            "null_talisman",
-            "magic_wand",
-            "power_treads",
-            "witch_blade",
+            'null_talisman',
+            'magic_wand',
+            'power_treads',
+            'witch_blade',
           ],
           mid_game: [
-            "hurricane_pike",
-            "black_king_bar",
-            "ultimate_scepter",
-            "blink",
-            "devastator",
+            'hurricane_pike',
+            'black_king_bar',
+            'ultimate_scepter',
+            'blink',
+            'devastator',
           ],
-          late_game: ["moon_shard", "sheepstick"],
+          late_game: ['moon_shard', 'sheepstick'],
           situational: [
-            "hand_of_midas",
-            "sphere",
-            "refresher",
-            "swift_blink",
-            "travel_boots",
-            "aghanims_shard",
+            'hand_of_midas',
+            'sphere',
+            'refresher',
+            'swift_blink',
+            'travel_boots',
+            'aghanims_shard',
           ],
           core: [
-            "power_treads",
-            "witch_blade",
-            "hurricane_pike",
-            "black_king_bar",
-            "ultimate_scepter",
-            "blink",
+            'power_treads',
+            'witch_blade',
+            'hurricane_pike',
+            'black_king_bar',
+            'ultimate_scepter',
+            'blink',
           ],
           neutral: [
             //tier 1
-            "arcane_ring",
-            "mysterious_hat",
-            "faded_broach",
+            'arcane_ring',
+            'mysterious_hat',
+            'faded_broach',
 
             //tier 2
-            "pupils_gift",
-            "vambrace",
-            "grove_bow",
+            'pupils_gift',
+            'vambrace',
+            'grove_bow',
 
             //tier 3
-            "elven_tunic",
-            "psychic_headband",
-            "enchanted_quiver",
+            'elven_tunic',
+            'psychic_headband',
+            'enchanted_quiver',
 
             //tier 4
-            "timeless_relic",
-            "avianas_feather",
-            "mind_breaker",
+            'timeless_relic',
+            'avianas_feather',
+            'mind_breaker',
 
             //tier 5
-            "mirror_shield",
-            "pirate_hat",
-            "apex",
+            'mirror_shield',
+            'pirate_hat',
+            'apex',
           ],
         },
       },
@@ -12302,19 +12302,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "infused_raindrop"],
+        all: ['magic_stick', 'infused_raindrop'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["black_king_bar", "blink", "ghost", "blade_mail"],
-        support: ["force_staff", "glimmer_cape"],
-        core: ["orchid", "heavens_halberd", "silver_edge"],
+        all: ['black_king_bar', 'blink', 'ghost', 'blade_mail'],
+        support: ['force_staff', 'glimmer_cape'],
+        core: ['orchid', 'heavens_halberd', 'silver_edge'],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["skadi", "sheepstick", "abyssal_blade"],
+        core: ['skadi', 'sheepstick', 'abyssal_blade'],
       },
     },
   },
@@ -12332,108 +12332,108 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 2.1, 2.5, 2.4],
         facet: 1,
         abilities: [
-          "pangolier_shield_crash", // 1
-          "pangolier_swashbuckle", // 2
-          "pangolier_shield_crash", // 3
-          "pangolier_swashbuckle", // 4
-          "pangolier_shield_crash", // 5
-          "pangolier_gyroshell", // 6
-          "pangolier_shield_crash", // 7
-          "pangolier_swashbuckle", // 8
-          "pangolier_swashbuckle", // 9
-          "pangolier_lucky_shot", // 10
-          "pangolier_lucky_shot", // 11
-          "pangolier_gyroshell", // 12
-          "pangolier_lucky_shot", // 13
-          "pangolier_lucky_shot", // 14
-          "special_bonus_unique_pangolier_luckyshot_armor", // 15
-          "special_bonus_unique_pangolier_shield_crash_herostacks", // 16
-          "special_bonus_attributes", // 17
-          "pangolier_gyroshell", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_pangolier_shield_crash_radius", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_pangolier_5", // 25
+          'pangolier_shield_crash', // 1
+          'pangolier_swashbuckle', // 2
+          'pangolier_shield_crash', // 3
+          'pangolier_swashbuckle', // 4
+          'pangolier_shield_crash', // 5
+          'pangolier_gyroshell', // 6
+          'pangolier_shield_crash', // 7
+          'pangolier_swashbuckle', // 8
+          'pangolier_swashbuckle', // 9
+          'pangolier_lucky_shot', // 10
+          'pangolier_lucky_shot', // 11
+          'pangolier_gyroshell', // 12
+          'pangolier_lucky_shot', // 13
+          'pangolier_lucky_shot', // 14
+          'special_bonus_unique_pangolier_luckyshot_armor', // 15
+          'special_bonus_unique_pangolier_shield_crash_herostacks', // 16
+          'special_bonus_attributes', // 17
+          'pangolier_gyroshell', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_pangolier_shield_crash_radius', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_pangolier_5', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "circlet",
-            "circlet",
-            "branches",
-            "branches",
-            "ward_observer",
+            'tango',
+            'quelling_blade',
+            'circlet',
+            'circlet',
+            'branches',
+            'branches',
+            'ward_observer',
           ],
           early_game: [
-            "bracer",
-            "bracer",
-            "power_treads",
-            "magic_wand",
-            "infused_raindrop",
+            'bracer',
+            'bracer',
+            'power_treads',
+            'magic_wand',
+            'infused_raindrop',
           ],
-          mid_game: ["echo_sabre", "blink", "manta", "aghanims_shard"],
+          mid_game: ['echo_sabre', 'blink', 'manta', 'aghanims_shard'],
           late_game: [
-            "ultimate_scepter",
-            "shivas_guard",
-            "harpoon",
-            "abyssal_blade",
+            'ultimate_scepter',
+            'shivas_guard',
+            'harpoon',
+            'abyssal_blade',
           ],
           situational: [
-            "wraith_band",
-            "ring_of_basilius",
-            "orb_of_corrosion",
-            "arcane_boots",
-            "veil_of_discord",
-            "spirit_vessel",
-            "guardian_greaves",
-            "cyclone",
-            "maelstrom",
-            "lotus_orb",
-            "sphere",
-            "aeon_disk",
-            "pipe",
-            "crimson_guard",
-            "assault",
-            "diffusal_blade",
-            "basher",
-            "heavens_halberd",
-            "disperser",
-            "octarine_core",
-            "black_king_bar",
-            "gungir",
-            "mjollnir",
-            "mage_slayer",
-            "skadi",
-            "monkey_king_bar",
-            "satanic",
-            "arcane_blink",
-            "overwhelming_blink",
-            "travel_boots",
+            'wraith_band',
+            'ring_of_basilius',
+            'orb_of_corrosion',
+            'arcane_boots',
+            'veil_of_discord',
+            'spirit_vessel',
+            'guardian_greaves',
+            'cyclone',
+            'maelstrom',
+            'lotus_orb',
+            'sphere',
+            'aeon_disk',
+            'pipe',
+            'crimson_guard',
+            'assault',
+            'diffusal_blade',
+            'basher',
+            'heavens_halberd',
+            'disperser',
+            'octarine_core',
+            'black_king_bar',
+            'gungir',
+            'mjollnir',
+            'mage_slayer',
+            'skadi',
+            'monkey_king_bar',
+            'satanic',
+            'arcane_blink',
+            'overwhelming_blink',
+            'travel_boots',
           ],
           core: [
-            "bracer",
-            "power_treads",
-            "echo_sabre",
-            "blink",
-            "manta",
-            "aghanims_shard",
-            "ultimate_scepter",
+            'bracer',
+            'power_treads',
+            'echo_sabre',
+            'blink',
+            'manta',
+            'aghanims_shard',
+            'ultimate_scepter',
           ],
           neutral: [
-            "lance_of_pursuit",
-            "unstable_wand",
-            "pupils_gift",
-            "orb_of_destruction",
-            "defiant_shell",
-            "paladin_sword",
-            "ancient_guardian",
-            "havoc_hammer",
-            "desolator_2",
-            "apex",
+            'lance_of_pursuit',
+            'unstable_wand',
+            'pupils_gift',
+            'orb_of_destruction',
+            'defiant_shell',
+            'paladin_sword',
+            'ancient_guardian',
+            'havoc_hammer',
+            'desolator_2',
+            'apex',
           ],
         },
       },
@@ -12445,101 +12445,101 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [0.9, 1.8, 2, 2.1],
         facet: 1,
         abilities: [
-          "pangolier_shield_crash", // 1
-          "pangolier_swashbuckle", // 2
-          "pangolier_shield_crash", // 3
-          "pangolier_swashbuckle", // 4
-          "pangolier_shield_crash", // 5
-          "pangolier_gyroshell", // 6
-          "pangolier_shield_crash", // 7
-          "pangolier_swashbuckle", // 8
-          "pangolier_swashbuckle", // 9
-          "special_bonus_unique_pangolier", // 10
-          "pangolier_lucky_shot", // 11
-          "pangolier_gyroshell", // 12
-          "pangolier_lucky_shot", // 13
-          "pangolier_lucky_shot", // 14
-          "special_bonus_unique_pangolier_6", // 15
-          "pangolier_lucky_shot", // 16
-          "special_bonus_attributes", // 17
-          "pangolier_gyroshell", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_pangolier_shield_crash_radius", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_pangolier_5", // 25
+          'pangolier_shield_crash', // 1
+          'pangolier_swashbuckle', // 2
+          'pangolier_shield_crash', // 3
+          'pangolier_swashbuckle', // 4
+          'pangolier_shield_crash', // 5
+          'pangolier_gyroshell', // 6
+          'pangolier_shield_crash', // 7
+          'pangolier_swashbuckle', // 8
+          'pangolier_swashbuckle', // 9
+          'special_bonus_unique_pangolier', // 10
+          'pangolier_lucky_shot', // 11
+          'pangolier_gyroshell', // 12
+          'pangolier_lucky_shot', // 13
+          'pangolier_lucky_shot', // 14
+          'special_bonus_unique_pangolier_6', // 15
+          'pangolier_lucky_shot', // 16
+          'special_bonus_attributes', // 17
+          'pangolier_gyroshell', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_pangolier_shield_crash_radius', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_pangolier_5', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "tango",
-            "blood_grenade",
-            "circlet",
-            "branches",
-            "branches",
-            "branches",
-            "ward_sentry",
-            "ward_observer",
+            'tango',
+            'tango',
+            'blood_grenade',
+            'circlet',
+            'branches',
+            'branches',
+            'branches',
+            'ward_sentry',
+            'ward_observer',
           ],
           early_game: [
-            "boots",
-            "magic_wand",
-            "ring_of_basilius",
-            "wind_lace",
-            "infused_raindrop",
+            'boots',
+            'magic_wand',
+            'ring_of_basilius',
+            'wind_lace',
+            'infused_raindrop',
           ],
           mid_game: [
-            "arcane_boots",
-            "mekansm",
-            "blink",
-            "guardian_greaves",
-            "cyclone",
-            "aghanims_shard",
+            'arcane_boots',
+            'mekansm',
+            'blink',
+            'guardian_greaves',
+            'cyclone',
+            'aghanims_shard',
           ],
-          late_game: ["pipe", "gungir", "octarine_core", "overwhelming_blink"],
+          late_game: ['pipe', 'gungir', 'octarine_core', 'overwhelming_blink'],
           situational: [
-            "blight_stone",
-            "orb_of_corrosion",
-            "spirit_vessel",
-            "pavise",
-            "ghost",
-            "glimmer_cape",
-            "force_staff",
-            "crimson_guard",
-            "vladmir",
-            "boots_of_bearing",
-            "heavens_halberd",
-            "solar_crest",
-            "lotus_orb",
-            "aeon_disk",
-            "wind_waker",
-            "diffusal_blade",
-            "basher",
-            "ultimate_scepter",
-            "travel_boots",
+            'blight_stone',
+            'orb_of_corrosion',
+            'spirit_vessel',
+            'pavise',
+            'ghost',
+            'glimmer_cape',
+            'force_staff',
+            'crimson_guard',
+            'vladmir',
+            'boots_of_bearing',
+            'heavens_halberd',
+            'solar_crest',
+            'lotus_orb',
+            'aeon_disk',
+            'wind_waker',
+            'diffusal_blade',
+            'basher',
+            'ultimate_scepter',
+            'travel_boots',
           ],
           core: [
-            "arcane_boots",
-            "blink",
-            "guardian_greaves",
-            "cyclone",
-            "aghanims_shard",
-            "pipe",
-            "octarine_core",
+            'arcane_boots',
+            'blink',
+            'guardian_greaves',
+            'cyclone',
+            'aghanims_shard',
+            'pipe',
+            'octarine_core',
           ],
           neutral: [
-            "arcane_ring",
-            "trusty_shovel",
-            "pupils_gift",
-            "bullwhip",
-            "ogre_seal_totem",
-            "ceremonial_robe",
-            "havoc_hammer",
-            "timeless_relic",
-            "panic_button",
-            "force_field",
+            'arcane_ring',
+            'trusty_shovel',
+            'pupils_gift',
+            'bullwhip',
+            'ogre_seal_totem',
+            'ceremonial_robe',
+            'havoc_hammer',
+            'timeless_relic',
+            'panic_button',
+            'force_field',
           ],
         },
       },
@@ -12551,36 +12551,36 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 2.2, 2.5, 2.4],
         facet: 1,
         abilities: [
-          "pangolier_shield_crash", // 1
-          "pangolier_swashbuckle", // 2
-          "pangolier_shield_crash", // 3
-          "pangolier_swashbuckle", // 4
-          "pangolier_shield_crash", // 5
-          "pangolier_gyroshell", // 6
-          "pangolier_shield_crash", // 7
-          "pangolier_swashbuckle", // 8
-          "pangolier_swashbuckle", // 9
-          "pangolier_lucky_shot", // 10
-          "pangolier_lucky_shot", // 11
-          "pangolier_gyroshell", // 12
-          "pangolier_lucky_shot", // 13
-          "pangolier_lucky_shot", // 14
-          "special_bonus_unique_pangolier_luckyshot_armor", // 15
-          "special_bonus_unique_pangolier_shield_crash_herostacks", // 16
-          "special_bonus_attributes", // 17
-          "pangolier_gyroshell", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_pangolier_shield_crash_radius", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_pangolier_5", // 25
+          'pangolier_shield_crash', // 1
+          'pangolier_swashbuckle', // 2
+          'pangolier_shield_crash', // 3
+          'pangolier_swashbuckle', // 4
+          'pangolier_shield_crash', // 5
+          'pangolier_gyroshell', // 6
+          'pangolier_shield_crash', // 7
+          'pangolier_swashbuckle', // 8
+          'pangolier_swashbuckle', // 9
+          'pangolier_lucky_shot', // 10
+          'pangolier_lucky_shot', // 11
+          'pangolier_gyroshell', // 12
+          'pangolier_lucky_shot', // 13
+          'pangolier_lucky_shot', // 14
+          'special_bonus_unique_pangolier_luckyshot_armor', // 15
+          'special_bonus_unique_pangolier_shield_crash_herostacks', // 16
+          'special_bonus_attributes', // 17
+          'pangolier_gyroshell', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_pangolier_shield_crash_radius', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_pangolier_5', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `faerie_fire`,
             `branches`,
             `branches`,
@@ -12588,7 +12588,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ward_observer`,
           ],
           early_game: [
-            "bottle",
+            'bottle',
             `power_treads`,
             `magic_wand`,
             `blight_stone`,
@@ -12665,28 +12665,28 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["ring_of_regen", "wind_lace", "boots", "infused_raindrop"],
+        all: ['ring_of_regen', 'wind_lace', 'boots', 'infused_raindrop'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["cloak"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['cloak'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "hurricane_pike",
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "orchid",
+          'hurricane_pike',
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'orchid',
           `sange_and_yasha`,
-          "manta",
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade", "bloodthorn", "nullifier", "satanic"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade', 'bloodthorn', 'nullifier', 'satanic'],
       },
     },
   },
@@ -12705,107 +12705,107 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 1.9, 2.7, 2.8],
         facet: 1,
         abilities: [
-          "phantom_assassin_stifling_dagger", // 1
-          "phantom_assassin_phantom_strike", // 2
-          "phantom_assassin_stifling_dagger", // 3
-          "phantom_assassin_blur", // 4
-          "phantom_assassin_stifling_dagger", // 5
-          "phantom_assassin_coup_de_grace", // 6
-          "phantom_assassin_phantom_strike", // 7
-          "phantom_assassin_phantom_strike", // 8
-          "phantom_assassin_phantom_strike", // 9
-          "special_bonus_unique_phantom_assassin_4", // 10
-          "phantom_assassin_stifling_dagger", // 11
-          "phantom_assassin_coup_de_grace", // 12
-          "phantom_assassin_blur", // 13
-          "phantom_assassin_blur", // 14
-          "special_bonus_unique_phantom_assassin_6", // 15
-          "phantom_assassin_blur", // 16
-          "special_bonus_attributes", // 17
-          "phantom_assassin_coup_de_grace", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_phantom_assassin_strike_aspd", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_phantom_assassin", // 25
+          'phantom_assassin_stifling_dagger', // 1
+          'phantom_assassin_phantom_strike', // 2
+          'phantom_assassin_stifling_dagger', // 3
+          'phantom_assassin_blur', // 4
+          'phantom_assassin_stifling_dagger', // 5
+          'phantom_assassin_coup_de_grace', // 6
+          'phantom_assassin_phantom_strike', // 7
+          'phantom_assassin_phantom_strike', // 8
+          'phantom_assassin_phantom_strike', // 9
+          'special_bonus_unique_phantom_assassin_4', // 10
+          'phantom_assassin_stifling_dagger', // 11
+          'phantom_assassin_coup_de_grace', // 12
+          'phantom_assassin_blur', // 13
+          'phantom_assassin_blur', // 14
+          'special_bonus_unique_phantom_assassin_6', // 15
+          'phantom_assassin_blur', // 16
+          'special_bonus_attributes', // 17
+          'phantom_assassin_coup_de_grace', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_phantom_assassin_strike_aspd', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_phantom_assassin', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "branches",
-            "slippers",
-            "circlet",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'branches',
+            'slippers',
+            'circlet',
           ],
           early_game: [
-            "wraith_band",
-            "blight_stone",
-            "power_treads",
-            "magic_wand",
-            "bfury",
+            'wraith_band',
+            'blight_stone',
+            'power_treads',
+            'magic_wand',
+            'bfury',
           ],
           mid_game: [
-            "black_king_bar",
-            "desolator",
-            "ultimate_scepter",
-            "basher",
+            'black_king_bar',
+            'desolator',
+            'ultimate_scepter',
+            'basher',
           ],
-          late_game: ["abyssal_blade", "satanic", "aghanims_shard"],
+          late_game: ['abyssal_blade', 'satanic', 'aghanims_shard'],
           situational: [
-            "orb_of_corrosion",
-            "sphere",
-            "monkey_king_bar",
-            "nullifier",
+            'orb_of_corrosion',
+            'sphere',
+            'monkey_king_bar',
+            'nullifier',
           ],
           core: [
-            "power_treads",
-            "bfury",
-            "black_king_bar",
-            "desolator",
-            "ultimate_scepter",
-            "basher",
+            'power_treads',
+            'bfury',
+            'black_king_bar',
+            'desolator',
+            'ultimate_scepter',
+            'basher',
           ],
           neutral: [
-            "broom_handle",
-            "lance_of_pursuit",
-            "orb_of_destruction",
-            "paladin_sword",
-            "mind_breaker",
-            "desolator_2",
-            "apex",
+            'broom_handle',
+            'lance_of_pursuit',
+            'orb_of_destruction',
+            'paladin_sword',
+            'mind_breaker',
+            'desolator_2',
+            'apex',
           ],
         },
       },
     ],
     combo: [
-      "black_king_bar",
-      "phantom_assassin_stifling_dagger",
-      "phantom_assassin_phantom_strike",
-      "attack",
+      'black_king_bar',
+      'phantom_assassin_stifling_dagger',
+      'phantom_assassin_phantom_strike',
+      'attack',
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_wand", "armor"],
+        all: ['magic_wand', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["ghost", "glimmer_cape", "force_staff"],
+        support: ['ghost', 'glimmer_cape', 'force_staff'],
         core: [
-          "hurricane_pike",
-          "monkey_king_bar",
-          "silver_edge",
-          "witch_blade",
+          'hurricane_pike',
+          'monkey_king_bar',
+          'silver_edge',
+          'witch_blade',
         ],
       },
       late_game: {
         all: [`sheepstick`, `ethereal_blade`, `aeon_disk`],
         support: [],
-        core: ["bloodthorn"],
+        core: ['bloodthorn'],
       },
     },
   },
@@ -12822,77 +12822,77 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40622,
         power_level: [1.2, 1.6, 2.7, 2.9],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "phantom_lancer_spirit_lance", // 1
-          "phantom_lancer_phantom_edge", // 2
-          "phantom_lancer_doppelwalk", // 3
-          "phantom_lancer_phantom_edge", // 4
-          "phantom_lancer_phantom_edge", // 5
-          "phantom_lancer_juxtapose", // 6
-          "phantom_lancer_phantom_edge", // 7
-          "phantom_lancer_spirit_lance", // 8
-          "phantom_lancer_spirit_lance", // 9
-          "phantom_lancer_spirit_lance", // 10
-          "special_bonus_unique_phantom_lancer_lance_damage", // 11
-          "phantom_lancer_juxtapose", // 12
-          "phantom_lancer_doppelwalk", // 13
-          "phantom_lancer_doppelwalk", // 14
-          "special_bonus_unique_phantom_lancer_5", // 15
-          "phantom_lancer_doppelwalk", // 16
-          "special_bonus_attributes", // 17
-          "phantom_lancer_juxtapose", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_phantom_lancer_6", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_20_crit_2", // 25
+          'phantom_lancer_spirit_lance', // 1
+          'phantom_lancer_phantom_edge', // 2
+          'phantom_lancer_doppelwalk', // 3
+          'phantom_lancer_phantom_edge', // 4
+          'phantom_lancer_phantom_edge', // 5
+          'phantom_lancer_juxtapose', // 6
+          'phantom_lancer_phantom_edge', // 7
+          'phantom_lancer_spirit_lance', // 8
+          'phantom_lancer_spirit_lance', // 9
+          'phantom_lancer_spirit_lance', // 10
+          'special_bonus_unique_phantom_lancer_lance_damage', // 11
+          'phantom_lancer_juxtapose', // 12
+          'phantom_lancer_doppelwalk', // 13
+          'phantom_lancer_doppelwalk', // 14
+          'special_bonus_unique_phantom_lancer_5', // 15
+          'phantom_lancer_doppelwalk', // 16
+          'special_bonus_attributes', // 17
+          'phantom_lancer_juxtapose', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_phantom_lancer_6', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_20_crit_2', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "branches",
-            "slippers",
-            "circlet",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'branches',
+            'slippers',
+            'circlet',
           ],
-          early_game: ["power_treads", "wraith_band", "magic_wand"],
+          early_game: ['power_treads', 'wraith_band', 'magic_wand'],
           mid_game: [
-            "ultimate_scepter",
-            "diffusal_blade",
-            "manta",
-            "aghanims_shard",
+            'ultimate_scepter',
+            'diffusal_blade',
+            'manta',
+            'aghanims_shard',
           ],
-          late_game: ["heart", "disperser", "butterfly", "bloodthorn", "skadi"],
+          late_game: ['heart', 'disperser', 'butterfly', 'bloodthorn', 'skadi'],
           situational: [
-            "abyssal_blade",
-            "monkey_king_bar",
-            "sphere",
-            "octarine_core",
-            "sange_and_yasha",
+            'abyssal_blade',
+            'monkey_king_bar',
+            'sphere',
+            'octarine_core',
+            'sange_and_yasha',
           ],
           core: [
-            "ultimate_scepter",
-            "diffusal_blade",
-            "manta",
-            "heart",
-            "aghanims_shard",
+            'ultimate_scepter',
+            'diffusal_blade',
+            'manta',
+            'heart',
+            'aghanims_shard',
           ],
           neutral: [
-            "broom_handle",
-            "lance_of_pursuit",
-            "pupils_gift",
-            "vambrace",
-            "elven_tunic",
-            "vindicators_axe",
-            "mind_breaker",
-            "ninja_gear",
-            "mirror_shield",
-            "apex",
-            "pirate_hat",
+            'broom_handle',
+            'lance_of_pursuit',
+            'pupils_gift',
+            'vambrace',
+            'elven_tunic',
+            'vindicators_axe',
+            'mind_breaker',
+            'ninja_gear',
+            'mirror_shield',
+            'apex',
+            'pirate_hat',
           ],
         },
       },
@@ -12903,26 +12903,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["armor", "magic_stick"],
+        all: ['armor', 'magic_stick'],
 
         support: [],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "ghost"],
-        core: ["maelstrom", "bfury", "black_king_bar", "gungir"],
+        support: ['glimmer_cape', 'ghost'],
+        core: ['maelstrom', 'bfury', 'black_king_bar', 'gungir'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade"],
-        support: ["black_king_bar"],
+        all: ['sheepstick', 'ethereal_blade'],
+        support: ['black_king_bar'],
         core: [
-          "mjollnir",
-          "shivas_guard",
-          "radiance",
-          "butterfly",
-          "assault",
-          "overwhelming_blink",
+          'mjollnir',
+          'shivas_guard',
+          'radiance',
+          'butterfly',
+          'assault',
+          'overwhelming_blink',
         ],
       },
     },
@@ -12942,35 +12942,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.4, 2, 2.3, 2.3],
         facet: 1,
         abilities: [
-          "phoenix_fire_spirits", // 1
-          "phoenix_icarus_dive", // 2
-          "phoenix_fire_spirits", // 3
-          "phoenix_sun_ray", // 4
-          "phoenix_fire_spirits", // 5
-          "phoenix_supernova", // 6
-          "phoenix_fire_spirits", // 7
-          "phoenix_sun_ray", // 8
-          "phoenix_sun_ray", // 9
-          "phoenix_sun_ray", // 10
+          'phoenix_fire_spirits', // 1
+          'phoenix_icarus_dive', // 2
+          'phoenix_fire_spirits', // 3
+          'phoenix_sun_ray', // 4
+          'phoenix_fire_spirits', // 5
+          'phoenix_supernova', // 6
+          'phoenix_fire_spirits', // 7
+          'phoenix_sun_ray', // 8
+          'phoenix_sun_ray', // 9
+          'phoenix_sun_ray', // 10
           `phoenix_icarus_dive`, // 11
-          "phoenix_supernova", // 12
-          "phoenix_icarus_dive", // 13
-          "phoenix_icarus_dive", // 14
+          'phoenix_supernova', // 12
+          'phoenix_icarus_dive', // 13
+          'phoenix_icarus_dive', // 14
           `special_bonus_unique_phoenix_6`, // 15
-          "special_bonus_unique_phoenix_3", // 16
-          "special_bonus_attributes", // 17
-          "phoenix_supernova", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_phoenix_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_unique_phoenix_3', // 16
+          'special_bonus_attributes', // 17
+          'phoenix_supernova', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_phoenix_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_phoenix_1`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
@@ -12984,7 +12984,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `tranquil_boots`,
             `magic_wand`,
             `urn_of_shadows`,
-            "infused_raindrop",
+            'infused_raindrop',
           ],
           mid_game: [
             `spirit_vessel`,
@@ -12998,7 +12998,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `solar_crest`,
             `hand_of_midas`,
             `guardian_greaves`,
-            "lotus_orb",
+            'lotus_orb',
             `holy_locket`,
             `cyclone`,
             `meteor_hammer`,
@@ -13006,16 +13006,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ghost`,
             `force_staff`,
             `wind_waker`,
-            "heavens_halberd",
+            'heavens_halberd',
             `pipe`,
             `kaya_and_sange`,
             `boots_of_bearing`,
             `ultimate_scepter`,
-            "radiance",
+            'radiance',
             `travel_boots`,
           ],
           core: [
-            "tranquil_boots",
+            'tranquil_boots',
             `spirit_vessel`,
             `veil_of_discord`,
             `aghanims_shard`,
@@ -13026,13 +13026,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `mysterious_hat`,
-            "philosophers_stone",
+            'philosophers_stone',
             `vambrace`,
             `ogre_seal_totem`,
             `ceremonial_robe`,
             `ascetic_cap`,
-            "timeless_relic",
-            "book_of_shadows",
+            'timeless_relic',
+            'book_of_shadows',
             `panic_button`,
           ],
         },
@@ -13048,26 +13048,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "ring_of_regen", "headdress", "cloak"],
-        support: ["tranquil_boots"],
+        all: ['blight_stone', 'ring_of_regen', 'headdress', 'cloak'],
+        support: ['tranquil_boots'],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff"],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "orchid",
-          "AttackSpeed",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'orchid',
+          'AttackSpeed',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["AttackSpeed"],
+        support: ['black_king_bar'],
+        core: ['AttackSpeed'],
       },
     },
   },
@@ -13090,7 +13090,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `primal_beast_trample`, // 3
           `primal_beast_onslaught`, // 4
           `primal_beast_trample`, // 5
-          "primal_beast_pulverize", // 6
+          'primal_beast_pulverize', // 6
           `primal_beast_trample`, // 7
           `primal_beast_onslaught`, // 8
           `primal_beast_onslaught`, // 9
@@ -13101,23 +13101,23 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `primal_beast_uproar`, // 14
           `special_bonus_unique_primal_beast_roar_dispells`, // 15
           `primal_beast_uproar`, // 16
-          "special_bonus_attributes", // 17
-          "primal_beast_pulverize", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_primal_beast_trample_attack_damage", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_primal_beast_pulverize_duration", // 25
+          'special_bonus_attributes', // 17
+          'primal_beast_pulverize', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_primal_beast_trample_attack_damage', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_primal_beast_pulverize_duration', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `gauntlets`,
             `gauntlets`,
-            "branches",
+            'branches',
             `branches`,
             `ward_observer`,
           ],
@@ -13147,13 +13147,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vanguard`,
             `guardian_greaves`,
             `boots_of_bearing`,
-            "lotus_orb",
+            'lotus_orb',
             `ethereal_blade`,
             `kaya_and_sange`,
             `sange_and_yasha`,
             `crimson_guard`,
-            "pipe",
-            "heavens_halberd",
+            'pipe',
+            'heavens_halberd',
             `radiance`,
             `cyclone`,
             `sphere`,
@@ -13174,14 +13174,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `occult_bracelet`,
-            "arcane_ring",
+            'arcane_ring',
             `bullwhip`,
-            "vambrace",
+            'vambrace',
             `cloak_of_flames`,
             `ceremonial_robe`,
             `havoc_hammer`,
             `timeless_relic`,
-            "giants_ring",
+            'giants_ring',
             `mirror_shield`,
           ],
         },
@@ -13200,29 +13200,29 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `primal_beast_trample`, // 1
           `primal_beast_onslaught`, // 2
-          "primal_beast_trample", // 3
-          "primal_beast_onslaught", // 4
-          "primal_beast_trample", // 5
-          "primal_beast_pulverize", // 6
-          "primal_beast_trample", // 7
-          "primal_beast_onslaught", // 8
-          "primal_beast_onslaught", // 9
+          'primal_beast_trample', // 3
+          'primal_beast_onslaught', // 4
+          'primal_beast_trample', // 5
+          'primal_beast_pulverize', // 6
+          'primal_beast_trample', // 7
+          'primal_beast_onslaught', // 8
+          'primal_beast_onslaught', // 9
           `special_bonus_unique_primal_beast_onslaught_damage`, // 10
           `primal_beast_uproar`, // 11
-          "primal_beast_pulverize", // 12
-          "primal_beast_uproar", // 13
-          "primal_beast_uproar", // 14
+          'primal_beast_pulverize', // 12
+          'primal_beast_uproar', // 13
+          'primal_beast_uproar', // 14
           `special_bonus_unique_primal_beast_roar_dispells`, // 15
-          "primal_beast_uproar", // 16
-          "special_bonus_attributes", // 17
-          "primal_beast_pulverize", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_primal_beast_trample_attack_damage", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_primal_beast_pulverize_duration", // 25
+          'primal_beast_uproar', // 16
+          'special_bonus_attributes', // 17
+          'primal_beast_pulverize', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_primal_beast_trample_attack_damage', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_primal_beast_pulverize_duration', // 25
         ],
         items: {
           starting: [
@@ -13243,7 +13243,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           mid_game: [
             `arcane_boots`,
             `blink`,
-            "black_king_bar",
+            'black_king_bar',
             `blade_mail`,
             `ultimate_scepter`,
           ],
@@ -13312,29 +13312,29 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "boots"],
+        all: ['magic_stick', 'boots'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["cloak"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['cloak'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "blade_mail",
-          "eternal_shroud",
-          "black_king_bar",
-          "orchid",
-          "hurricane_pike",
+          'pipe',
+          'blade_mail',
+          'eternal_shroud',
+          'black_king_bar',
+          'orchid',
+          'hurricane_pike',
           `sange_and_yasha`,
         ],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["bloodthorn", "sheepstick", "shivas_guard"],
+        core: ['bloodthorn', 'sheepstick', 'shivas_guard'],
       },
     },
   },
@@ -13352,39 +13352,39 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.1, 2.3, 2.6, 2.7],
         facet: 1,
         abilities: [
-          "puck_illusory_orb", // 1
-          "puck_phase_shift", // 2
-          "puck_illusory_orb", // 3
-          "puck_waning_rift", // 4
-          "puck_illusory_orb", // 5
-          "puck_dream_coil", // 6
-          "puck_illusory_orb", // 7
-          "puck_waning_rift", // 8
-          "puck_waning_rift", // 9
-          "puck_waning_rift", // 10
+          'puck_illusory_orb', // 1
+          'puck_phase_shift', // 2
+          'puck_illusory_orb', // 3
+          'puck_waning_rift', // 4
+          'puck_illusory_orb', // 5
+          'puck_dream_coil', // 6
+          'puck_illusory_orb', // 7
+          'puck_waning_rift', // 8
+          'puck_waning_rift', // 9
+          'puck_waning_rift', // 10
           `special_bonus_unique_puck_orb_damage`, // 11
           `puck_dream_coil`, // 12
-          "puck_phase_shift", // 13
+          'puck_phase_shift', // 13
           `puck_phase_shift`, // 14
           `puck_phase_shift`, // 15
           `special_bonus_unique_puck_6`, // 16
-          "special_bonus_attributes", // 17
-          "puck_dream_coil", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_puck_2", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_puck_5", // 25
+          'special_bonus_attributes', // 17
+          'puck_dream_coil', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_puck_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_puck_5', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `faerie_fire`,
             `circlet`,
-            "branches",
-            "branches",
+            'branches',
+            'branches',
             `branches`,
             `ward_observer`,
           ],
@@ -13413,13 +13413,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           situational: [
             `veil_of_discord`,
             `cyclone`,
-            "sphere",
+            'sphere',
             `maelstrom`,
-            "black_king_bar",
+            'black_king_bar',
             `dagon_5`,
             `mage_slayer`,
             `bloodthorn`,
-            "aeon_disk",
+            'aeon_disk',
             `refresher`,
             `shivas_guard`,
             `ethereal_blade`,
@@ -13429,24 +13429,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "bottle",
+            'bottle',
             `power_treads`,
             `witch_blade`,
-            "blink",
-            "kaya_and_sange",
+            'blink',
+            'kaya_and_sange',
             `devastator`,
             `ultimate_scepter`,
             `octarine_core`,
           ],
           neutral: [
-            "mysterious_hat",
-            "arcane_ring",
+            'mysterious_hat',
+            'arcane_ring',
             `vambrace`,
-            "grove_bow",
+            'grove_bow',
             `enchanted_quiver`,
             `ceremonial_robe`,
             `mind_breaker`,
-            "timeless_relic",
+            'timeless_relic',
             `desolator_2`,
             `pirate_hat`,
           ],
@@ -13463,28 +13463,28 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "infused_raindrop", "cloak"],
+        all: ['magic_stick', 'infused_raindrop', 'cloak'],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape"],
+        support: ['glimmer_cape'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "orchid",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'orchid',
           `sange_and_yasha`,
-          "manta",
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade", "satanic", "assault", "butterfly"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade', 'satanic', 'assault', 'butterfly'],
       },
     },
   },
@@ -13501,91 +13501,91 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40667,
         power_level: [0.8, 1.7, 2, 2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "pudge_meat_hook", // 1
-          "pudge_rot", // 2
-          "pudge_rot", // 3
-          "pudge_flesh_heap", // 4
-          "pudge_rot", // 5
-          "pudge_dismember", // 6
-          "pudge_rot", // 7
-          "pudge_flesh_heap", // 8
-          "pudge_flesh_heap", // 9
-          "pudge_flesh_heap", // 10
-          "special_bonus_armor_5", // 11
-          "pudge_dismember", // 12
-          "pudge_meat_hook", // 13
-          "pudge_meat_hook", // 14
-          "special_bonus_unique_pudge_7", // 15
-          "pudge_meat_hook", // 16
-          "special_bonus_attributes", // 17
-          "pudge_dismember", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_pudge_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_pudge_3", // 25
+          'pudge_meat_hook', // 1
+          'pudge_rot', // 2
+          'pudge_rot', // 3
+          'pudge_flesh_heap', // 4
+          'pudge_rot', // 5
+          'pudge_dismember', // 6
+          'pudge_rot', // 7
+          'pudge_flesh_heap', // 8
+          'pudge_flesh_heap', // 9
+          'pudge_flesh_heap', // 10
+          'special_bonus_armor_5', // 11
+          'pudge_dismember', // 12
+          'pudge_meat_hook', // 13
+          'pudge_meat_hook', // 14
+          'special_bonus_unique_pudge_7', // 15
+          'pudge_meat_hook', // 16
+          'special_bonus_attributes', // 17
+          'pudge_dismember', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_pudge_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_pudge_3', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "blood_grenade",
-            "wind_lace",
-            "enchanted_mango",
-            "branches",
-            "ward_observer",
-            "ward_sentry",
+            'tango',
+            'blood_grenade',
+            'wind_lace',
+            'enchanted_mango',
+            'branches',
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
-            "tranquil_boots",
-            "magic_wand",
-            "urn_of_shadows",
-            "smoke_of_deceit",
+            'tranquil_boots',
+            'magic_wand',
+            'urn_of_shadows',
+            'smoke_of_deceit',
           ],
-          mid_game: ["blink", "aether_lens", "aghanims_shard"],
+          mid_game: ['blink', 'aether_lens', 'aghanims_shard'],
           late_game: [
-            "octarine_core",
-            "shivas_guard",
-            "ethereal_blade",
-            "ultimate_scepter",
-            "overwhelming_blink",
+            'octarine_core',
+            'shivas_guard',
+            'ethereal_blade',
+            'ultimate_scepter',
+            'overwhelming_blink',
           ],
           situational: [
             /*"hood_of_defiance", Item removed from game */
-            "black_king_bar",
-            "glimmer_cape",
-            "spirit_vessel",
-            "force_staff",
-            "rod_of_atos",
-            "ghost",
-            "pipe",
-            "cyclone",
-            "lotus_orb",
-            "pavise",
+            'black_king_bar',
+            'glimmer_cape',
+            'spirit_vessel',
+            'force_staff',
+            'rod_of_atos',
+            'ghost',
+            'pipe',
+            'cyclone',
+            'lotus_orb',
+            'pavise',
           ],
           core: [
-            "tranquil_boots",
-            "magic_wand",
-            "blink",
-            "aether_lens",
-            "black_king_bar",
-            "aghanims_shard",
+            'tranquil_boots',
+            'magic_wand',
+            'blink',
+            'aether_lens',
+            'black_king_bar',
+            'aghanims_shard',
           ],
           neutral: [
-            "seeds_of_serenity",
-            "safety_bubble",
-            "philosophers_stone",
-            "eye_of_the_vizier",
-            "bullwhip",
-            "psychic_headband",
-            "ogre_seal_totem",
-            "spy_gadget",
-            "trickster_cloak",
-            "giants_ring",
-            "force_field",
+            'seeds_of_serenity',
+            'safety_bubble',
+            'philosophers_stone',
+            'eye_of_the_vizier',
+            'bullwhip',
+            'psychic_headband',
+            'ogre_seal_totem',
+            'spy_gadget',
+            'trickster_cloak',
+            'giants_ring',
+            'force_field',
           ],
         },
       },
@@ -13595,90 +13595,90 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40668,
         power_level: [0.9, 1.8, 2.3, 2.1],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "pudge_meat_hook", // 1
-          "pudge_rot", // 2
-          "pudge_rot", // 3
-          "pudge_flesh_heap", // 4
-          "pudge_rot", // 5
-          "pudge_dismember", // 6
-          "pudge_rot", // 7
-          "pudge_flesh_heap", // 8
-          "pudge_flesh_heap", // 9
-          "pudge_flesh_heap", // 10
-          "special_bonus_unique_pudge_4", // 11
-          "pudge_dismember", // 12
-          "pudge_meat_hook", // 13
-          "pudge_meat_hook", // 14
-          "special_bonus_spell_lifesteal_8", // 15
-          "pudge_meat_hook", // 16
-          "special_bonus_attributes", // 17
-          "pudge_dismember", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_pudge_6", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_pudge_3", // 25
+          'pudge_meat_hook', // 1
+          'pudge_rot', // 2
+          'pudge_rot', // 3
+          'pudge_flesh_heap', // 4
+          'pudge_rot', // 5
+          'pudge_dismember', // 6
+          'pudge_rot', // 7
+          'pudge_flesh_heap', // 8
+          'pudge_flesh_heap', // 9
+          'pudge_flesh_heap', // 10
+          'special_bonus_unique_pudge_4', // 11
+          'pudge_dismember', // 12
+          'pudge_meat_hook', // 13
+          'pudge_meat_hook', // 14
+          'special_bonus_spell_lifesteal_8', // 15
+          'pudge_meat_hook', // 16
+          'special_bonus_attributes', // 17
+          'pudge_dismember', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_pudge_6', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_pudge_3', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "gauntlets",
-            "ring_of_protection",
-            "branches",
-            "branches",
-            "branches",
+            'tango',
+            'gauntlets',
+            'ring_of_protection',
+            'branches',
+            'branches',
+            'branches',
           ],
           early_game: [
-            "veil_of_discord",
-            "phase_boots",
-            "magic_wand",
-            "soul_ring",
+            'veil_of_discord',
+            'phase_boots',
+            'magic_wand',
+            'soul_ring',
           ],
           mid_game: [
-            "ultimate_scepter",
-            "shivas_guard",
-            "blink",
-            "black_king_bar",
+            'ultimate_scepter',
+            'shivas_guard',
+            'blink',
+            'black_king_bar',
           ],
-          late_game: ["shivas_guard", "overwhelming_blink", "travel_boots"],
+          late_game: ['shivas_guard', 'overwhelming_blink', 'travel_boots'],
           situational: [
-            "aghanims_shard",
-            "eternal_shroud",
-            "pipe",
-            "lotus_orb",
-            "aghanims_shard",
-            "force_staff",
-            "sheepstick",
-            "spirit_vessel",
-            "octarine_core",
-            "heart",
-            "blade_mail",
+            'aghanims_shard',
+            'eternal_shroud',
+            'pipe',
+            'lotus_orb',
+            'aghanims_shard',
+            'force_staff',
+            'sheepstick',
+            'spirit_vessel',
+            'octarine_core',
+            'heart',
+            'blade_mail',
           ],
           core: [
-            "veil_of_discord",
-            "phase_boots",
-            "ultimate_scepter",
-            "black_king_bar",
-            "blink",
-            "shivas_guard",
+            'veil_of_discord',
+            'phase_boots',
+            'ultimate_scepter',
+            'black_king_bar',
+            'blink',
+            'shivas_guard',
           ],
           neutral: [
-            "safety_bubble",
-            "seeds_of_serenity",
-            "occult_bracelet",
-            "dragon_scale",
-            "gossamer_cape",
-            "cloak_of_flames",
-            "craggy_coat",
-            "trickster_cloak",
-            "havoc_hammer",
-            "ascetic_cap",
-            "giants_ring",
-            "force_field",
+            'safety_bubble',
+            'seeds_of_serenity',
+            'occult_bracelet',
+            'dragon_scale',
+            'gossamer_cape',
+            'cloak_of_flames',
+            'craggy_coat',
+            'trickster_cloak',
+            'havoc_hammer',
+            'ascetic_cap',
+            'giants_ring',
+            'force_field',
           ],
         },
       },
@@ -13686,19 +13686,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "wind_lace", "boots", "urn_of_shadows"],
-        support: ["ward_observer"],
-        core: ["orb_of_corrosion"],
+        all: ['blight_stone', 'wind_lace', 'boots', 'urn_of_shadows'],
+        support: ['ward_observer'],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["spirit_vessel", "lotus_orb"],
-        support: ["glimmer_cape", "force_staff", "cyclone"],
-        core: ["desolator", "mage_slayer", "hurricane_pike", `sange_and_yasha`],
+        all: ['spirit_vessel', 'lotus_orb'],
+        support: ['glimmer_cape', 'force_staff', 'cyclone'],
+        core: ['desolator', 'mage_slayer', 'hurricane_pike', `sange_and_yasha`],
       },
       late_game: {
-        all: ["sphere", "wind_waker"],
+        all: ['sphere', 'wind_waker'],
         support: [],
-        core: ["bloodthorn"],
+        core: ['bloodthorn'],
       },
     },
   },
@@ -13716,41 +13716,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.1, 2.3, 2.3, 1.9],
         facet: 1,
         abilities: [
-          "pugna_nether_blast", // 1
-          "pugna_decrepify", // 2
-          "pugna_nether_blast", // 3
-          "pugna_decrepify", // 4
-          "pugna_nether_blast", // 5
-          "pugna_life_drain", // 6
-          "pugna_nether_blast", // 7
-          "pugna_decrepify", // 8
-          "pugna_decrepify", // 9
-          "special_bonus_hp_200", // 10
-          "pugna_nether_ward", // 11
-          "pugna_life_drain", // 12
-          "pugna_nether_ward", // 13
-          "pugna_nether_ward", // 14
+          'pugna_nether_blast', // 1
+          'pugna_decrepify', // 2
+          'pugna_nether_blast', // 3
+          'pugna_decrepify', // 4
+          'pugna_nether_blast', // 5
+          'pugna_life_drain', // 6
+          'pugna_nether_blast', // 7
+          'pugna_decrepify', // 8
+          'pugna_decrepify', // 9
+          'special_bonus_hp_200', // 10
+          'pugna_nether_ward', // 11
+          'pugna_life_drain', // 12
+          'pugna_nether_ward', // 13
+          'pugna_nether_ward', // 14
           `special_bonus_unique_pugna_6`, // 15
           `pugna_nether_ward`, // 16
-          "special_bonus_attributes", // 17
-          "pugna_life_drain", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'pugna_life_drain', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_pugna_1`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_pugna_3`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
+            'tango',
+            'faerie_fire',
             `branches`,
-            "branches",
+            'branches',
             `branches`,
             `branches`,
-            "ward_observer",
+            'ward_observer',
           ],
           early_game: [
             `bottle`,
@@ -13780,8 +13780,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ethereal_blade`,
             `lotus_orb`,
             `aghanims_shard`,
-            "black_king_bar",
-            "sphere",
+            'black_king_bar',
+            'sphere',
             `aeon_disk`,
             `shivas_guard`,
             `overwhelming_blink`,
@@ -13800,15 +13800,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ultimate_scepter`,
           ],
           neutral: [
-            "mysterious_hat",
+            'mysterious_hat',
             `arcane_ring`,
             `eye_of_the_vizier`,
             `vambrace`,
-            "psychic_headband",
+            'psychic_headband',
             `ceremonial_robe`,
-            "timeless_relic",
+            'timeless_relic',
             `spy_gadget`,
-            "seer_stone",
+            'seer_stone',
             `mirror_shield`,
           ],
         },
@@ -13821,35 +13821,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.9, 2.1, 1.9, 1.7],
         facet: 1,
         abilities: [
-          "pugna_nether_blast", // 1
+          'pugna_nether_blast', // 1
           `pugna_nether_ward`, // 2
-          "pugna_nether_blast", // 3
-          "pugna_decrepify", // 4
-          "pugna_nether_blast", // 5
-          "pugna_life_drain", // 6
-          "pugna_nether_blast", // 7
+          'pugna_nether_blast', // 3
+          'pugna_decrepify', // 4
+          'pugna_nether_blast', // 5
+          'pugna_life_drain', // 6
+          'pugna_nether_blast', // 7
           `pugna_decrepify`, // 8
-          "pugna_decrepify", // 9
+          'pugna_decrepify', // 9
           `special_bonus_hp_200`, // 10
           `pugna_decrepify`, // 11
-          "pugna_life_drain", // 12
-          "pugna_nether_ward", // 13
-          "pugna_nether_ward", // 14
+          'pugna_life_drain', // 12
+          'pugna_nether_ward', // 13
+          'pugna_nether_ward', // 14
           `special_bonus_unique_pugna_6`, // 15
           `pugna_nether_ward`, // 16
-          "special_bonus_attributes", // 17
-          "pugna_life_drain", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_pugna_1", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'pugna_life_drain', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_pugna_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_pugna_3`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `enchanted_mango`,
@@ -13903,13 +13903,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `arcane_ring`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ceremonial_robe`,
-            "spy_gadget",
+            'spy_gadget',
             `timeless_relic`,
-            "seer_stone",
+            'seer_stone',
             `book_of_shadows`,
           ],
         },
@@ -13927,35 +13927,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "headdress",
-          "wind_lace",
-          "boots",
-          "infused_raindrop",
-          "cloak",
-          "urn_of_shadows",
+          'magic_stick',
+          'ring_of_regen',
+          'headdress',
+          'wind_lace',
+          'boots',
+          'infused_raindrop',
+          'cloak',
+          'urn_of_shadows',
         ],
-        support: ["tranquil_boots"],
-        core: ["ring_of_health"],
+        support: ['tranquil_boots'],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["force_staff", "glimmer_cape"],
+        all: ['lotus_orb'],
+        support: ['force_staff', 'glimmer_cape'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "orchid",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'orchid',
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick", "sphere"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade", "nullifier", "satanic"],
+        all: ['sheepstick', 'sphere'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade', 'nullifier', 'satanic'],
       },
     },
   },
@@ -13974,88 +13974,88 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.2, 2.3, 2.5, 2.4],
         facet: 1,
         abilities: [
-          "queenofpain_scream_of_pain", // 1
-          "queenofpain_shadow_strike", // 2
-          "queenofpain_scream_of_pain", // 3
-          "queenofpain_blink", // 4
-          "queenofpain_shadow_strike", // 5
-          "queenofpain_sonic_wave", // 6
-          "queenofpain_scream_of_pain", // 7
-          "queenofpain_scream_of_pain", // 8
-          "queenofpain_blink", // 9
-          "queenofpain_blink", // 10
-          "queenofpain_blink", // 11
-          "queenofpain_sonic_wave", // 12
-          "queenofpain_shadow_strike", // 13
-          "queenofpain_shadow_strike", // 14
-          "special_bonus_strength_8", // 15
-          "special_bonus_unique_queen_of_pain_4", // 16
-          "special_bonus_attributes", // 17
-          "queenofpain_sonic_wave", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_queen_of_pain_2", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_queen_of_pain_6", // 25
+          'queenofpain_scream_of_pain', // 1
+          'queenofpain_shadow_strike', // 2
+          'queenofpain_scream_of_pain', // 3
+          'queenofpain_blink', // 4
+          'queenofpain_shadow_strike', // 5
+          'queenofpain_sonic_wave', // 6
+          'queenofpain_scream_of_pain', // 7
+          'queenofpain_scream_of_pain', // 8
+          'queenofpain_blink', // 9
+          'queenofpain_blink', // 10
+          'queenofpain_blink', // 11
+          'queenofpain_sonic_wave', // 12
+          'queenofpain_shadow_strike', // 13
+          'queenofpain_shadow_strike', // 14
+          'special_bonus_strength_8', // 15
+          'special_bonus_unique_queen_of_pain_4', // 16
+          'special_bonus_attributes', // 17
+          'queenofpain_sonic_wave', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_queen_of_pain_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_queen_of_pain_6', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
-            "branches",
-            "branches",
-            "branches",
-            "ward_observer",
+            'tango',
+            'faerie_fire',
+            'branches',
+            'branches',
+            'branches',
+            'ward_observer',
           ],
           early_game: [
-            "bottle",
-            "magic_wand",
-            "null_talisman",
-            "power_treads",
-            "kaya",
+            'bottle',
+            'magic_wand',
+            'null_talisman',
+            'power_treads',
+            'kaya',
           ],
           mid_game: [
-            "aghanims_shard",
-            "black_king_bar",
-            "ultimate_scepter",
-            "kaya_and_sange",
+            'aghanims_shard',
+            'black_king_bar',
+            'ultimate_scepter',
+            'kaya_and_sange',
           ],
           late_game: [
-            "aether_lens",
-            "octarine_core",
-            "shivas_guard",
-            "sheepstick",
+            'aether_lens',
+            'octarine_core',
+            'shivas_guard',
+            'sheepstick',
           ],
           situational: [
-            "sphere",
-            "witch_blade",
-            "devastator",
-            "refresher",
-            "bloodthorn",
-            "mjollnir",
-            "orchid",
+            'sphere',
+            'witch_blade',
+            'devastator',
+            'refresher',
+            'bloodthorn',
+            'mjollnir',
+            'orchid',
           ],
           core: [
-            "power_treads",
-            "kaya",
-            "aghanims_shard",
-            "black_king_bar",
-            "ultimate_scepter",
-            "kaya_and_sange",
-            "aether_lens",
-            "octarine_core",
+            'power_treads',
+            'kaya',
+            'aghanims_shard',
+            'black_king_bar',
+            'ultimate_scepter',
+            'kaya_and_sange',
+            'aether_lens',
+            'octarine_core',
           ],
           neutral: [
-            "arcane_ring",
-            "mysterious_hat",
-            "grove_bow",
-            "vampire_fangs",
-            "psychic_headband",
-            "dandelion_amulet",
-            "timeless_relic",
-            "mirror_shield",
+            'arcane_ring',
+            'mysterious_hat',
+            'grove_bow',
+            'vampire_fangs',
+            'psychic_headband',
+            'dandelion_amulet',
+            'timeless_relic',
+            'mirror_shield',
           ],
         },
       },
@@ -14067,90 +14067,90 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 2, 2.4, 2.3], // Data needed
         facet: 1,
         abilities: [
-          "queenofpain_scream_of_pain", // 1
-          "queenofpain_shadow_strike", // 2
-          "queenofpain_scream_of_pain", // 3
-          "queenofpain_blink", // 4
-          "queenofpain_shadow_strike", // 5
-          "queenofpain_sonic_wave", // 6
-          "queenofpain_scream_of_pain", // 7
-          "queenofpain_scream_of_pain", // 8
-          "queenofpain_blink", // 9
-          "queenofpain_blink", // 10
-          "queenofpain_blink", // 11
-          "queenofpain_sonic_wave", // 12
-          "queenofpain_shadow_strike", // 13
-          "queenofpain_shadow_strike", // 14
-          "special_bonus_strength_8", // 15
-          "special_bonus_unique_queen_of_pain_4", // 16
-          "special_bonus_attributes", // 17
-          "queenofpain_sonic_wave", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_queen_of_pain_2", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_queen_of_pain_6", // 25
+          'queenofpain_scream_of_pain', // 1
+          'queenofpain_shadow_strike', // 2
+          'queenofpain_scream_of_pain', // 3
+          'queenofpain_blink', // 4
+          'queenofpain_shadow_strike', // 5
+          'queenofpain_sonic_wave', // 6
+          'queenofpain_scream_of_pain', // 7
+          'queenofpain_scream_of_pain', // 8
+          'queenofpain_blink', // 9
+          'queenofpain_blink', // 10
+          'queenofpain_blink', // 11
+          'queenofpain_sonic_wave', // 12
+          'queenofpain_shadow_strike', // 13
+          'queenofpain_shadow_strike', // 14
+          'special_bonus_strength_8', // 15
+          'special_bonus_unique_queen_of_pain_4', // 16
+          'special_bonus_attributes', // 17
+          'queenofpain_sonic_wave', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_queen_of_pain_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_queen_of_pain_6', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "circlet",
-            "branches",
-            "branches",
-            "faerie_fire",
-            "mantle",
+            'tango',
+            'circlet',
+            'branches',
+            'branches',
+            'faerie_fire',
+            'mantle',
           ],
           early_game: [
-            "null_talisman",
-            "magic_wand",
-            "power_treads",
-            "urn_of_shadows",
+            'null_talisman',
+            'magic_wand',
+            'power_treads',
+            'urn_of_shadows',
           ],
           mid_game: [
-            "kaya",
-            "aghanims_shard",
-            "spirit_vessel",
-            "black_king_bar",
-            "ultimate_scepter",
-            "kaya_and_sange",
+            'kaya',
+            'aghanims_shard',
+            'spirit_vessel',
+            'black_king_bar',
+            'ultimate_scepter',
+            'kaya_and_sange',
           ],
           late_game: [
-            "aether_lens",
-            "octarine_core",
-            "shivas_guard",
-            "sheepstick",
+            'aether_lens',
+            'octarine_core',
+            'shivas_guard',
+            'sheepstick',
           ],
           situational: [
-            "witch_blade",
-            "sphere",
-            "devastator",
-            "refresher",
-            "bloodthorn",
-            "mjollnir",
-            "orchid",
+            'witch_blade',
+            'sphere',
+            'devastator',
+            'refresher',
+            'bloodthorn',
+            'mjollnir',
+            'orchid',
           ],
           core: [
-            "power_treads",
-            "kaya",
-            "spirit_vessel",
-            "aghanims_shard",
-            "black_king_bar",
-            "ultimate_scepter",
-            "kaya_and_sange",
-            "aether_lens",
-            "octarine_core",
+            'power_treads',
+            'kaya',
+            'spirit_vessel',
+            'aghanims_shard',
+            'black_king_bar',
+            'ultimate_scepter',
+            'kaya_and_sange',
+            'aether_lens',
+            'octarine_core',
           ],
           neutral: [
-            "arcane_ring",
-            "mysterious_hat",
-            "grove_bow",
-            "vampire_fangs",
-            "psychic_headband",
-            "dandelion_amulet",
-            "timeless_relic",
-            "mirror_shield",
+            'arcane_ring',
+            'mysterious_hat',
+            'grove_bow',
+            'vampire_fangs',
+            'psychic_headband',
+            'dandelion_amulet',
+            'timeless_relic',
+            'mirror_shield',
           ],
         },
       },
@@ -14159,27 +14159,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     /*special_bonus_spell_block_18:
         "You can take this level 25 talent over the suggested one if you are in need for Linken`s sphere effect.",*/
     combo: [
-      "queenofpain_blink",
-      "queenofpain_scream_of_pain",
-      "queenofpain_shadow_strike",
-      "attack",
-      "queenofpain_sonic_wave",
+      'queenofpain_blink',
+      'queenofpain_scream_of_pain',
+      'queenofpain_shadow_strike',
+      'attack',
+      'queenofpain_sonic_wave',
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick"],
-        support: ["tranquil_boots"],
+        all: ['magic_stick'],
+        support: ['tranquil_boots'],
         core: [],
       },
       mid_game: {
-        all: ["rod_of_atos", "cyclone"],
-        support: ["glimmer_cape"],
-        core: ["mage_slayer", "black_king_bar", "orchid", "manta"],
+        all: ['rod_of_atos', 'cyclone'],
+        support: ['glimmer_cape'],
+        core: ['mage_slayer', 'black_king_bar', 'orchid', 'manta'],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade'],
       },
     },
   },
@@ -14198,35 +14198,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.1, 2.3, 2.5, 2.2],
         facet: 2,
         abilities: [
-          "razor_static_link", // 1
-          "razor_plasma_field", // 2
-          "razor_static_link", // 3
-          "razor_plasma_field", // 4
-          "razor_plasma_field", // 5
-          "razor_eye_of_the_storm", // 6
-          "razor_plasma_field", // 7
+          'razor_static_link', // 1
+          'razor_plasma_field', // 2
+          'razor_static_link', // 3
+          'razor_plasma_field', // 4
+          'razor_plasma_field', // 5
+          'razor_eye_of_the_storm', // 6
+          'razor_plasma_field', // 7
           `razor_unstable_current`, // 8
           `razor_unstable_current`, // 9
           `special_bonus_spell_lifesteal_10`, // 10
           `razor_static_link`, // 11
-          "razor_eye_of_the_storm", // 12
+          'razor_eye_of_the_storm', // 12
           `razor_unstable_current`, // 13
-          "razor_unstable_current", // 14
+          'razor_unstable_current', // 14
           `special_bonus_unique_razor`, // 15
           `razor_static_link`, // 16
-          "special_bonus_attributes", // 17
-          "razor_eye_of_the_storm", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_razor_2", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'razor_eye_of_the_storm', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_razor_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_razor_static_link_aspd`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `faerie_fire`,
             `slippers`,
             `circlet`,
@@ -14307,31 +14307,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `razor_static_link`, // 2
           `razor_static_link`, // 3
           `razor_plasma_field`, // 4
-          "razor_plasma_field", // 5
-          "razor_eye_of_the_storm", // 6
-          "razor_plasma_field", // 7
-          "razor_unstable_current", // 8
+          'razor_plasma_field', // 5
+          'razor_eye_of_the_storm', // 6
+          'razor_plasma_field', // 7
+          'razor_unstable_current', // 8
           `razor_unstable_current`, // 9
           `razor_unstable_current`, // 10
           `special_bonus_spell_lifesteal_10`, // 11
-          "razor_eye_of_the_storm", // 12
+          'razor_eye_of_the_storm', // 12
           `razor_static_link`, // 13
           `razor_static_link`, // 14
           `special_bonus_unique_razor`, // 15
           `razor_unstable_current`, // 16
-          "special_bonus_attributes", // 17
-          "razor_eye_of_the_storm", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_razor_2", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'razor_eye_of_the_storm', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_razor_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_razor_static_link_aspd`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `faerie_fire`,
             `circlet`,
             `circlet`,
@@ -14422,35 +14422,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `razor_plasma_field`, // 3
           `razor_static_link`, // 4
           `razor_plasma_field`, // 5
-          "razor_eye_of_the_storm", // 6
-          "razor_plasma_field", // 7
+          'razor_eye_of_the_storm', // 6
+          'razor_plasma_field', // 7
           `razor_unstable_current`, // 8
           `razor_unstable_current`, // 9
           `razor_unstable_current`, // 10
           `special_bonus_spell_lifesteal_10`, // 11
-          "razor_eye_of_the_storm", // 12
+          'razor_eye_of_the_storm', // 12
           `razor_static_link`, // 13
           `razor_static_link`, // 14
           `special_bonus_unique_razor`, // 15
           `razor_unstable_current`, // 16
-          "special_bonus_attributes", // 17
-          "razor_eye_of_the_storm", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_razor_2", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'razor_eye_of_the_storm', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_razor_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_razor_static_link_aspd`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
+            'tango',
+            'faerie_fire',
             `branches`,
             `branches`,
             `branches`,
-            "circlet",
+            'circlet',
             `ward_observer`,
           ],
           early_game: [
@@ -14527,19 +14527,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "ring_of_regen", "armor"],
+        all: ['wind_lace', 'boots', 'ring_of_regen', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["force_staff", "glimmer_cape", "ghost"],
-        core: ["hurricane_pike"],
+        all: ['lotus_orb'],
+        support: ['force_staff', 'glimmer_cape', 'ghost'],
+        core: ['hurricane_pike'],
       },
       late_game: {
-        all: ["sphere", "sheepstick"],
+        all: ['sphere', 'sheepstick'],
         support: [],
-        core: ["abyssal_blade", "assault", "butterfly"],
+        core: ['abyssal_blade', 'assault', 'butterfly'],
       },
     },
   },
@@ -14557,43 +14557,43 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.6, 2.2, 2.5, 2.3],
         facet: 1,
         abilities: [
-          "riki_blink_strike", // 1
-          "riki_tricks_of_the_trade", // 2
-          "riki_blink_strike", // 3
-          "riki_tricks_of_the_trade", // 4
-          "riki_blink_strike", // 5
-          "riki_backstab", // 6
-          "riki_blink_strike", // 7
-          "riki_smoke_screen", // 8
-          "riki_tricks_of_the_trade", // 9
+          'riki_blink_strike', // 1
+          'riki_tricks_of_the_trade', // 2
+          'riki_blink_strike', // 3
+          'riki_tricks_of_the_trade', // 4
+          'riki_blink_strike', // 5
+          'riki_backstab', // 6
+          'riki_blink_strike', // 7
+          'riki_smoke_screen', // 8
+          'riki_tricks_of_the_trade', // 9
           `riki_tricks_of_the_trade`, // 10
           `riki_smoke_screen`, // 11
-          "riki_backstab", // 12
-          "riki_smoke_screen", // 13
-          "riki_smoke_screen", // 14
+          'riki_backstab', // 12
+          'riki_smoke_screen', // 13
+          'riki_smoke_screen', // 14
           `special_bonus_unique_riki_7`, // 15
           `special_bonus_unique_riki_2`, // 16
-          "special_bonus_attributes", // 17
-          "riki_backstab", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'riki_backstab', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_riki_1`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_riki_6", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_riki_6', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `slippers`,
             `circlet`,
             `branches`,
             `branches`,
           ],
           early_game: [
-            "wraith_band",
+            'wraith_band',
             `power_treads`,
             `orb_of_corrosion`,
             `magic_wand`,
@@ -14607,13 +14607,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           late_game: [
             `greater_crit`,
             `disperser`,
-            "nullifier",
-            "abyssal_blade",
+            'nullifier',
+            'abyssal_blade',
           ],
           situational: [
-            "bfury",
-            "phylactery",
-            "angels_demise",
+            'bfury',
+            'phylactery',
+            'angels_demise',
             `blink`,
             `basher`,
             `black_king_bar`,
@@ -14629,24 +14629,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           core: [
             `wraith_band`,
             `power_treads`,
-            "diffusal_blade",
-            "manta",
+            'diffusal_blade',
+            'manta',
             `ultimate_scepter`,
             `aghanims_shard`,
             `greater_crit`,
-            "nullifier",
+            'nullifier',
           ],
           neutral: [
             `lance_of_pursuit`,
             `broom_handle`,
             `orb_of_destruction`,
-            "vambrace",
+            'vambrace',
             `elven_tunic`,
-            "nemesis_curse",
-            "mind_breaker",
+            'nemesis_curse',
+            'mind_breaker',
             `ancient_guardian`,
-            "apex",
-            "desolator_2",
+            'apex',
+            'desolator_2',
           ],
         },
       },
@@ -14658,30 +14658,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [0.4, 1.4, 2, 2.1],
         facet: 1,
         abilities: [
-          "riki_blink_strike", // 1
-          "riki_tricks_of_the_trade", // 2
-          "riki_blink_strike", // 3
-          "riki_smoke_screen", // 4
-          "riki_blink_strike", // 5
-          "riki_backstab", // 6
-          "riki_blink_strike", // 7
-          "riki_smoke_screen", // 8
-          "riki_smoke_screen", // 9
+          'riki_blink_strike', // 1
+          'riki_tricks_of_the_trade', // 2
+          'riki_blink_strike', // 3
+          'riki_smoke_screen', // 4
+          'riki_blink_strike', // 5
+          'riki_backstab', // 6
+          'riki_blink_strike', // 7
+          'riki_smoke_screen', // 8
+          'riki_smoke_screen', // 9
           `special_bonus_unique_riki_7`, // 10
           `riki_smoke_screen`, // 11
-          "riki_backstab", // 12
-          "riki_tricks_of_the_trade", // 13
-          "riki_tricks_of_the_trade", // 14
-          "special_bonus_unique_riki_3", // 15
-          "riki_tricks_of_the_trade", // 16
-          "special_bonus_attributes", // 17
-          "riki_backstab", // 18
-          "special_bonus_attributes", // 19
+          'riki_backstab', // 12
+          'riki_tricks_of_the_trade', // 13
+          'riki_tricks_of_the_trade', // 14
+          'special_bonus_unique_riki_3', // 15
+          'riki_tricks_of_the_trade', // 16
+          'special_bonus_attributes', // 17
+          'riki_backstab', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_riki_9`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_riki_6`, // 25
         ],
         items: {
@@ -14699,7 +14699,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `power_treads`,
             `wraith_band`,
             `magic_wand`,
-            "wind_lace",
+            'wind_lace',
           ],
           mid_game: [
             `diffusal_blade`,
@@ -14717,7 +14717,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `meteor_hammer`,
             `arcane_boots`,
             `tranquil_boots`,
-            "lotus_orb",
+            'lotus_orb',
             `boots_of_bearing`,
             `cyclone`,
             `pavise`,
@@ -14736,7 +14736,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `aghanims_shard`,
             `octarine_core`,
             `disperser`,
-            "nullifier",
+            'nullifier',
           ],
           neutral: [
             `lance_of_pursuit`,
@@ -14744,7 +14744,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `vambrace`,
             `orb_of_destruction`,
             `elven_tunic`,
-            "nemesis_curse",
+            'nemesis_curse',
             `ancient_guardian`,
             `mind_breaker`,
             `apex`,
@@ -14762,24 +14762,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
-        support: ["ward_sentry", "dust"],
+        all: ['wind_lace', 'boots', 'armor'],
+        support: ['ward_sentry', 'dust'],
         core: [],
       },
       mid_game: {
-        all: ["rod_of_atos"],
-        support: ["SentryDustGem", "force_staff", "ghost", "glimmer_cape"],
-        core: ["crimson_guard", "hurricane_pike", "silver_edge", "witch_blade"],
+        all: ['rod_of_atos'],
+        support: ['SentryDustGem', 'force_staff', 'ghost', 'glimmer_cape'],
+        core: ['crimson_guard', 'hurricane_pike', 'silver_edge', 'witch_blade'],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk"],
-        support: ["SentryDustGem"],
+        all: ['sheepstick', 'aeon_disk'],
+        support: ['SentryDustGem'],
         core: [
-          "abyssal_blade",
-          "assault",
-          "monkey_king_bar",
-          "bloodthorn",
-          "butterfly",
+          'abyssal_blade',
+          'assault',
+          'monkey_king_bar',
+          'bloodthorn',
+          'butterfly',
         ],
       },
     },
@@ -14798,36 +14798,36 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.8, 1.9, 2, 1.9],
         facet: [1, 2],
         abilities: [
-          "rubick_fade_bolt", // 1
-          "rubick_telekinesis", // 2
-          "rubick_fade_bolt", // 3
-          "rubick_arcane_supremacy", // 4
-          "rubick_fade_bolt", // 5
-          "rubick_spell_steal", // 6
-          "rubick_fade_bolt", // 7
+          'rubick_fade_bolt', // 1
+          'rubick_telekinesis', // 2
+          'rubick_fade_bolt', // 3
+          'rubick_arcane_supremacy', // 4
+          'rubick_fade_bolt', // 5
+          'rubick_spell_steal', // 6
+          'rubick_fade_bolt', // 7
           `rubick_arcane_supremacy`, // 8
           `rubick_arcane_supremacy`, // 9
           `rubick_arcane_supremacy`, // 10
           `rubick_telekinesis`, // 11
-          "rubick_spell_steal", // 12
+          'rubick_spell_steal', // 12
           `rubick_telekinesis`, // 13
           `rubick_telekinesis`, // 14
           `special_bonus_unique_rubick_8`, // 15
           `special_bonus_unique_rubick_6`, // 16
-          "special_bonus_attributes", // 17
-          "rubick_spell_steal", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'rubick_spell_steal', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_rubick_3`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_rubick_5`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "tango",
+            'tango',
+            'tango',
             `blood_grenade`,
             `faerie_fire`,
             `circlet`,
@@ -14860,17 +14860,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `spirit_vessel`,
             `veil_of_discord`,
             `phylactery`,
-            "lotus_orb",
+            'lotus_orb',
             `ghost`,
             `glimmer_cape`,
             `cyclone`,
             `pavise`,
-            "solar_crest",
-            "mekansm",
-            "guardian_greaves",
+            'solar_crest',
+            'mekansm',
+            'guardian_greaves',
             `aeon_disk`,
-            "boots_of_bearing",
-            "wind_waker",
+            'boots_of_bearing',
+            'wind_waker',
             `travel_boots`,
           ],
           core: [
@@ -14886,13 +14886,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `arcane_ring`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
             `ceremonial_robe`,
-            "psychic_headband",
-            "spy_gadget",
+            'psychic_headband',
+            'spy_gadget',
             `timeless_relic`,
-            "seer_stone",
+            'seer_stone',
             `force_boots`,
           ],
         },
@@ -14901,18 +14901,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "infused_raindrop"],
+        all: ['magic_stick', 'ring_of_regen', 'infused_raindrop'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape", "force_staff"],
-        core: ["black_king_bar"],
+        all: ['lotus_orb'],
+        support: ['glimmer_cape', 'force_staff'],
+        core: ['black_king_bar'],
       },
       late_game: {
-        all: ["sphere"],
-        support: ["black_king_bar"],
+        all: ['sphere'],
+        support: ['black_king_bar'],
         core: [],
       },
     },
@@ -14931,35 +14931,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 2.1, 2.4, 2.1],
         facet: 1,
         abilities: [
-          "sandking_burrowstrike", // 1
+          'sandking_burrowstrike', // 1
           `sandking_scorpion_strike`, // 2
           `sandking_scorpion_strike`, // 3
           `sandking_burrowstrike`, // 4
           `sandking_scorpion_strike`, // 5
-          "sandking_epicenter", // 6
+          'sandking_epicenter', // 6
           `sandking_scorpion_strike`, // 7
-          "sandking_burrowstrike", // 8
-          "sandking_burrowstrike", // 9
+          'sandking_burrowstrike', // 8
+          'sandking_burrowstrike', // 9
           `sandking_sand_storm`, // 10
           `sandking_sand_storm`, // 11
-          "sandking_epicenter", // 12
+          'sandking_epicenter', // 12
           `sandking_sand_storm`, // 13
           `sandking_sand_storm`, // 14
           `special_bonus_unique_sand_king_burrowstrike_stun`, // 15
           `special_bonus_unique_sand_king_scorpion_strike_damage`, // 16
-          "special_bonus_attributes", // 17
-          "sandking_epicenter", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_sand_king_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_sand_king_4", // 25
+          'special_bonus_attributes', // 17
+          'sandking_epicenter', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_sand_king_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_sand_king_4', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `quelling_blade`,
             `circlet`,
             `circlet`,
@@ -15013,7 +15013,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           core: [
             `bracer`,
             `phase_boots`,
-            "blink",
+            'blink',
             `ultimate_scepter`,
             `eternal_shroud`,
             `bloodstone`,
@@ -15022,14 +15022,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           neutral: [
             `unstable_wand`,
-            "arcane_ring",
+            'arcane_ring',
             `bullwhip`,
-            "vambrace",
+            'vambrace',
             `ceremonial_robe`,
             `cloak_of_flames`,
             `havoc_hammer`,
             `timeless_relic`,
-            "giants_ring",
+            'giants_ring',
             `force_boots`,
           ],
         },
@@ -15044,32 +15044,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "blight_stone",
-          "magic_stick",
-          "lifesteal",
-          "ring_of_health",
-          "infused_raindrop",
-          "cloak",
+          'blight_stone',
+          'magic_stick',
+          'lifesteal',
+          'ring_of_health',
+          'infused_raindrop',
+          'cloak',
         ],
-        support: ["ward_sentry", "dust"],
-        core: ["orb_of_corrosion"],
+        support: ['ward_sentry', 'dust'],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["SentryDust", "glimmer_cape", "force_staff"],
+        all: ['lotus_orb'],
+        support: ['SentryDust', 'glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["sheepstick", "sphere"],
-        support: ["SentryDustGem", "black_king_bar"],
-        core: ["abyssal_blade"],
+        all: ['sheepstick', 'sphere'],
+        support: ['SentryDustGem', 'black_king_bar'],
+        core: ['abyssal_blade'],
       },
     },
   },
@@ -15089,41 +15089,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `shadow_demon_disruption`, // 1
           `shadow_demon_shadow_poison`, // 2
-          "shadow_demon_shadow_poison", // 3
+          'shadow_demon_shadow_poison', // 3
           `shadow_demon_disseminate`, // 4
-          "shadow_demon_shadow_poison", // 5
-          "shadow_demon_demonic_purge", // 6
-          "shadow_demon_shadow_poison", // 7
-          "shadow_demon_disruption", // 8
-          "shadow_demon_disruption", // 9
+          'shadow_demon_shadow_poison', // 5
+          'shadow_demon_demonic_purge', // 6
+          'shadow_demon_shadow_poison', // 7
+          'shadow_demon_disruption', // 8
+          'shadow_demon_disruption', // 9
           `special_bonus_strength_10`, // 10
           `shadow_demon_disruption`, // 11
-          "shadow_demon_demonic_purge", // 12
+          'shadow_demon_demonic_purge', // 12
           `shadow_demon_disseminate`, // 13
           `shadow_demon_disseminate`, // 14
           `special_bonus_unique_shadow_demon_3`, // 15
           `shadow_demon_disseminate`, // 16
-          "special_bonus_attributes", // 17
-          "shadow_demon_demonic_purge", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'shadow_demon_demonic_purge', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_shadow_demon_1`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_shadow_demon_7`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
-            "enchanted_mango",
+            'enchanted_mango',
             `circlet`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
@@ -15152,7 +15152,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ancient_janggo`,
             `boots_of_bearing`,
             `guardian_greaves`,
-            "lotus_orb",
+            'lotus_orb',
             `ghost`,
             `cyclone`,
             `pavise`,
@@ -15163,8 +15163,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
-            "aether_lens",
+            'arcane_boots',
+            'aether_lens',
             `blink`,
             `force_staff`,
             `aghanims_shard`,
@@ -15174,14 +15174,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `trusty_shovel`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ogre_seal_totem`,
-            "spy_gadget",
+            'spy_gadget',
             `timeless_relic`,
-            "seer_stone",
-            "book_of_shadows",
+            'seer_stone',
+            'book_of_shadows',
           ],
         },
       },
@@ -15199,23 +15199,23 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_wand", "ring_of_regen", "cloak"],
-        support: ["tranquil_boots"],
+        all: ['magic_wand', 'ring_of_regen', 'cloak'],
+        support: ['tranquil_boots'],
         core: [],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape"],
+        all: ['lotus_orb'],
+        support: ['glimmer_cape'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["sphere"],
-        support: ["black_king_bar"],
+        all: ['sphere'],
+        support: ['black_king_bar'],
         core: [],
       },
     },
@@ -15234,92 +15234,92 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40606,
         power_level: [1.8, 2, 2.6, 2.6],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "nevermore_shadowraze1", // 1
-          "nevermore_necromastery", // 2
-          "nevermore_shadowraze1", // 3
-          "nevermore_necromastery", // 4
-          "nevermore_shadowraze1", // 5
-          "nevermore_necromastery", // 6
-          "nevermore_necromastery", // 7
-          "nevermore_dark_lord", // 8
-          "nevermore_requiem", // 9
-          "special_bonus_unique_nevermore_7", // 10
-          "nevermore_dark_lord", // 11
-          "nevermore_dark_lord", // 12
-          "nevermore_dark_lord", // 13
-          "nevermore_shadowraze1", // 14
-          "special_bonus_unique_nevermore_3", // 15
-          "nevermore_requiem", // 16
-          "special_bonus_attributes", // 17
-          "nevermore_requiem", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_nevermore_1", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_nevermore_raze_procsattacks", // 25
+          'nevermore_shadowraze1', // 1
+          'nevermore_necromastery', // 2
+          'nevermore_shadowraze1', // 3
+          'nevermore_necromastery', // 4
+          'nevermore_shadowraze1', // 5
+          'nevermore_necromastery', // 6
+          'nevermore_necromastery', // 7
+          'nevermore_dark_lord', // 8
+          'nevermore_requiem', // 9
+          'special_bonus_unique_nevermore_7', // 10
+          'nevermore_dark_lord', // 11
+          'nevermore_dark_lord', // 12
+          'nevermore_dark_lord', // 13
+          'nevermore_shadowraze1', // 14
+          'special_bonus_unique_nevermore_3', // 15
+          'nevermore_requiem', // 16
+          'special_bonus_attributes', // 17
+          'nevermore_requiem', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_nevermore_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_nevermore_raze_procsattacks', // 25
         ],
         items: {
           starting: [
-            "circlet",
-            "tango",
-            "slippers",
-            "enchanted_mango",
-            "enchanted_mango",
-            "branches",
+            'circlet',
+            'tango',
+            'slippers',
+            'enchanted_mango',
+            'enchanted_mango',
+            'branches',
           ],
           early_game: [
-            "wraith_band",
-            "power_treads",
-            "magic_wand",
-            "mask_of_madness",
-            "lesser_crit",
+            'wraith_band',
+            'power_treads',
+            'magic_wand',
+            'mask_of_madness',
+            'lesser_crit',
           ],
           mid_game: [
-            "dragon_lance",
-            "black_king_bar",
-            "aghanims_shard",
-            "manta",
+            'dragon_lance',
+            'black_king_bar',
+            'aghanims_shard',
+            'manta',
           ],
           late_game: [
-            "hurricane_pike",
-            "blink",
-            "greater_crit",
-            "satanic",
-            "swift_blink",
+            'hurricane_pike',
+            'blink',
+            'greater_crit',
+            'satanic',
+            'swift_blink',
           ],
           situational: [
-            "sphere",
-            "assault",
-            "silver_edge",
-            "skadi",
-            "butterfly",
+            'sphere',
+            'assault',
+            'silver_edge',
+            'skadi',
+            'butterfly',
           ],
           core: [
-            "power_treads",
-            "mask_of_madness",
-            "lesser_crit",
-            "dragon_lance",
-            "black_king_bar",
-            "aghanims_shard",
-            "manta",
-            "hurricane_pike",
+            'power_treads',
+            'mask_of_madness',
+            'lesser_crit',
+            'dragon_lance',
+            'black_king_bar',
+            'aghanims_shard',
+            'manta',
+            'hurricane_pike',
           ],
           neutral: [
             //"pogo_stick",
-            "occult_bracelet",
+            'occult_bracelet',
             //"ring_of_aquila",
-            "grove_bow",
-            "elven_tunic",
+            'grove_bow',
+            'elven_tunic',
             //"titan_sliver",
-            "mind_breaker",
-            "ninja_gear",
-            "desolator_2",
-            "mirror_shield",
-            "force_boots",
+            'mind_breaker',
+            'ninja_gear',
+            'desolator_2',
+            'mirror_shield',
+            'force_boots',
           ],
         },
       },
@@ -15330,92 +15330,92 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40605,
         power_level: [1.8, 2.1, 2.6, 2.6],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "nevermore_shadowraze1", // 1
-          "nevermore_necromastery", // 2
-          "nevermore_shadowraze1", // 3
-          "nevermore_necromastery", // 4
-          "nevermore_shadowraze1", // 5
-          "nevermore_necromastery", // 6
-          "nevermore_shadowraze1", // 7
-          "nevermore_necromastery", // 8
-          "nevermore_requiem", // 9
-          "special_bonus_unique_nevermore_7", // 10
-          "nevermore_dark_lord", // 11
-          "nevermore_requiem", // 12
-          "nevermore_dark_lord", // 13
-          "nevermore_dark_lord", // 14
-          "special_bonus_unique_nevermore_3", // 15
-          "nevermore_dark_lord", // 16
-          "special_bonus_attributes", // 17
-          "nevermore_requiem", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_nevermore_1", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_nevermore_raze_procsattacks", // 25
+          'nevermore_shadowraze1', // 1
+          'nevermore_necromastery', // 2
+          'nevermore_shadowraze1', // 3
+          'nevermore_necromastery', // 4
+          'nevermore_shadowraze1', // 5
+          'nevermore_necromastery', // 6
+          'nevermore_shadowraze1', // 7
+          'nevermore_necromastery', // 8
+          'nevermore_requiem', // 9
+          'special_bonus_unique_nevermore_7', // 10
+          'nevermore_dark_lord', // 11
+          'nevermore_requiem', // 12
+          'nevermore_dark_lord', // 13
+          'nevermore_dark_lord', // 14
+          'special_bonus_unique_nevermore_3', // 15
+          'nevermore_dark_lord', // 16
+          'special_bonus_attributes', // 17
+          'nevermore_requiem', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_nevermore_1', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_nevermore_raze_procsattacks', // 25
         ],
         items: {
           starting: [
-            "enchanted_mango",
-            "enchanted_mango",
-            "tango",
-            "branches",
-            "branches",
-            "branches",
+            'enchanted_mango',
+            'enchanted_mango',
+            'tango',
+            'branches',
+            'branches',
+            'branches',
           ],
           early_game: [
-            "bottle",
-            "boots",
-            "power_treads",
-            "magic_wand",
-            "wind_lace",
-            "falcon_blade",
-            "dragon_lance",
+            'bottle',
+            'boots',
+            'power_treads',
+            'magic_wand',
+            'wind_lace',
+            'falcon_blade',
+            'dragon_lance',
           ],
-          mid_game: ["black_king_bar", "manta", "aghanims_shard"],
+          mid_game: ['black_king_bar', 'manta', 'aghanims_shard'],
           late_game: [
-            "hurricane_pike",
-            "greater_crit",
-            "swift_blink",
-            "satanic",
-            "butterfly",
+            'hurricane_pike',
+            'greater_crit',
+            'swift_blink',
+            'satanic',
+            'butterfly',
           ],
           situational: [
-            "mask_of_madness",
-            "skadi",
-            "monkey_king_bar",
-            "sphere",
-            "silver_edge",
+            'mask_of_madness',
+            'skadi',
+            'monkey_king_bar',
+            'sphere',
+            'silver_edge',
           ],
           core: [
-            "falcon_blade",
-            "dragon_lance",
-            "black_king_bar",
-            "manta",
-            "aghanims_shard",
-            "hurricane_pike",
-            "greater_crit",
+            'falcon_blade',
+            'dragon_lance',
+            'black_king_bar',
+            'manta',
+            'aghanims_shard',
+            'hurricane_pike',
+            'greater_crit',
           ],
           neutral: [
             //"possessed_mask", Removed in 7.33
-            "arcane_ring",
-            "lance_of_pursuit",
-            "grove_bow",
-            "specialists_array",
+            'arcane_ring',
+            'lance_of_pursuit',
+            'grove_bow',
+            'specialists_array',
             //"dagger_of_ristul", Removed in 7.33
             //"ring_of_aquila",
             //"titan_sliver",
-            "elven_tunic",
-            "mind_breaker",
-            "ninja_gear",
-            "desolator_2",
-            "pirate_hat",
-            "mirror_shield",
-            "force_boots",
+            'elven_tunic',
+            'mind_breaker',
+            'ninja_gear',
+            'desolator_2',
+            'pirate_hat',
+            'mirror_shield',
+            'force_boots',
           ],
         },
       },
@@ -15423,23 +15423,23 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "wind_lace", "boots", "infused_raindrop"],
-        support: ["ward_sentry"],
-        core: ["DamageItems"],
+        all: ['magic_stick', 'wind_lace', 'boots', 'infused_raindrop'],
+        support: ['ward_sentry'],
+        core: ['DamageItems'],
       },
       mid_game: {
-        all: [/*"medallion_of_courage",*/ "solar_crest", "mekansm"],
-        support: ["glimmer_cape", "force_staff"],
+        all: [/*"medallion_of_courage",*/ 'solar_crest', 'mekansm'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           //"hood_of_defiance",
-          "black_king_bar",
-          "heavens_halberd",
+          'black_king_bar',
+          'heavens_halberd',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["butterfly", "satanic"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['butterfly', 'satanic'],
       },
     },
   },
@@ -15457,30 +15457,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 2, 2.1, 2.3],
         facet: 1,
         abilities: [
-          "shadow_shaman_ether_shock", // 1
-          "shadow_shaman_shackles", // 2
+          'shadow_shaman_ether_shock', // 1
+          'shadow_shaman_shackles', // 2
           `shadow_shaman_shackles`, // 3
           `shadow_shaman_voodoo`, // 4
           `shadow_shaman_voodoo`, // 5
-          "shadow_shaman_mass_serpent_ward", // 6
+          'shadow_shaman_mass_serpent_ward', // 6
           `shadow_shaman_voodoo`, // 7
           `shadow_shaman_voodoo`, // 8
           `shadow_shaman_shackles`, // 9
           `special_bonus_mp_regen_175`, // 10
           `shadow_shaman_shackles`, // 11
-          "shadow_shaman_mass_serpent_ward", // 12
+          'shadow_shaman_mass_serpent_ward', // 12
           `shadow_shaman_ether_shock`, // 13
           `shadow_shaman_ether_shock`, // 14
           `special_bonus_unique_shadow_shaman_2`, // 15
           `shadow_shaman_ether_shock`, // 16
-          "special_bonus_attributes", // 17
-          "shadow_shaman_mass_serpent_ward", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'shadow_shaman_mass_serpent_ward', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_shadow_shaman_1`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_shadow_shaman_4`, // 25
         ],
         items: {
@@ -15495,7 +15495,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: [
             `boots`,
-            "magic_wand",
+            'magic_wand',
             `ring_of_basilius`,
             `infused_raindrop`,
           ],
@@ -15517,13 +15517,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `black_king_bar`,
             `ghost`,
             `glimmer_cape`,
-            "lotus_orb",
+            'lotus_orb',
             `cyclone`,
             `wind_waker`,
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            'arcane_boots',
             `blink`,
             `aether_lens`,
             `aghanims_shard`,
@@ -15534,13 +15534,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `faded_broach`,
             `arcane_ring`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ogre_seal_totem`,
-            "spy_gadget",
+            'spy_gadget',
             `ninja_gear`,
-            "seer_stone",
+            'seer_stone',
             `force_boots`,
           ],
         },
@@ -15555,19 +15555,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "infused_raindrop", "armor"],
+        all: ['magic_stick', 'ring_of_regen', 'infused_raindrop', 'armor'],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["force_staff", "glimmer_cape"],
+        all: ['lotus_orb'],
+        support: ['force_staff', 'glimmer_cape'],
         core: [`orchid`, `black_king_bar`, `sange_and_yasha`],
       },
       late_game: {
-        all: ["sphere"],
-        support: ["black_king_bar"],
-        core: ["assault"],
+        all: ['sphere'],
+        support: ['black_king_bar'],
+        core: ['assault'],
       },
     },
   },
@@ -15586,35 +15586,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.5, 1.6, 1.9, 1.9],
         facet: 2,
         abilities: [
-          "silencer_glaives_of_wisdom", // 1
-          "silencer_curse_of_the_silent", // 2
-          "silencer_curse_of_the_silent", // 3
-          "silencer_last_word", // 4
-          "silencer_curse_of_the_silent", // 5
-          "silencer_global_silence", // 6
-          "silencer_curse_of_the_silent", // 7
-          "silencer_last_word", // 8
-          "silencer_last_word", // 9
+          'silencer_glaives_of_wisdom', // 1
+          'silencer_curse_of_the_silent', // 2
+          'silencer_curse_of_the_silent', // 3
+          'silencer_last_word', // 4
+          'silencer_curse_of_the_silent', // 5
+          'silencer_global_silence', // 6
+          'silencer_curse_of_the_silent', // 7
+          'silencer_last_word', // 8
+          'silencer_last_word', // 9
           `special_bonus_unique_silencer`, // 10
           `silencer_last_word`, // 11
-          "silencer_global_silence", // 12
-          "silencer_glaives_of_wisdom", // 13
-          "silencer_glaives_of_wisdom", // 14
+          'silencer_global_silence', // 12
+          'silencer_glaives_of_wisdom', // 13
+          'silencer_glaives_of_wisdom', // 14
           `special_bonus_unique_silencer_7`, // 15
-          "silencer_glaives_of_wisdom", // 16
-          "special_bonus_attributes", // 17
-          "silencer_global_silence", // 18
-          "special_bonus_attributes", // 19
+          'silencer_glaives_of_wisdom', // 16
+          'special_bonus_attributes', // 17
+          'silencer_global_silence', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_silencer_arcane_curse_undispellable`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_silencer_arcane_curse_charges`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
@@ -15672,9 +15672,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `mysterious_hat`,
-            "philosophers_stone",
-            "bullwhip",
-            "psychic_headband",
+            'philosophers_stone',
+            'bullwhip',
+            'psychic_headband',
             `ogre_seal_totem`,
             `timeless_relic`,
             `spy_gadget`,
@@ -15691,27 +15691,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen"],
+        all: ['magic_stick', 'ring_of_regen'],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["cyclone", "lotus_orb", `cloak`],
-        support: ["glimmer_cape", "ghost", "force_staff"],
+        all: ['cyclone', 'lotus_orb', `cloak`],
+        support: ['glimmer_cape', 'ghost', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "heavens_halberd",
-          "orchid",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'heavens_halberd',
+          'orchid',
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["butterfly"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['butterfly'],
       },
     },
   },
@@ -15730,15 +15730,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.9, 2.2, 2, 1.6],
         facet: 1,
         abilities: [
-          "skywrath_mage_concussive_shot", // 1
-          "skywrath_mage_arcane_bolt", // 2
+          'skywrath_mage_concussive_shot', // 1
+          'skywrath_mage_arcane_bolt', // 2
           `skywrath_mage_concussive_shot`, // 3
-          "skywrath_mage_ancient_seal", // 4
+          'skywrath_mage_ancient_seal', // 4
           `skywrath_mage_concussive_shot`, // 5
-          "skywrath_mage_mystic_flare", // 6
+          'skywrath_mage_mystic_flare', // 6
           `skywrath_mage_ancient_seal`, // 7
-          "skywrath_mage_ancient_seal", // 8
-          "skywrath_mage_ancient_seal", // 9
+          'skywrath_mage_ancient_seal', // 8
+          'skywrath_mage_ancient_seal', // 9
           `special_bonus_mp_regen_150`, // 10
           `skywrath_mage_arcane_bolt`, // 11
           `skywrath_mage_mystic_flare`, // 12
@@ -15746,19 +15746,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `skywrath_mage_arcane_bolt`, // 14
           `special_bonus_unique_skywrath`, // 15
           `skywrath_mage_concussive_shot`, // 16
-          "special_bonus_attributes", // 17
-          "skywrath_mage_mystic_flare", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'skywrath_mage_mystic_flare', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_skywrath_3`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_skywrath_5`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `enchanted_mango`,
@@ -15783,7 +15783,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `force_staff`,
           ],
           late_game: [
-            "ultimate_scepter",
+            'ultimate_scepter',
             `ethereal_blade`,
             `sheepstick`,
             `wind_waker`,
@@ -15839,31 +15839,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "headdress",
-          "infused_raindrop",
-          "cloak",
+          'magic_stick',
+          'ring_of_regen',
+          'headdress',
+          'infused_raindrop',
+          'cloak',
         ],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["cyclone", "lotus_orb"],
-        support: ["force_staff", "glimmer_cape"],
+        all: ['cyclone', 'lotus_orb'],
+        support: ['force_staff', 'glimmer_cape'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'black_king_bar',
+          'manta',
         ],
       },
       late_game: {
-        all: ["sphere", "sheepstick"],
-        support: ["black_king_bar"],
+        all: ['sphere', 'sheepstick'],
+        support: ['black_king_bar'],
         core: [],
       },
     },
@@ -15880,41 +15880,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40623,
         power_level: [1.8, 2.1, 2.5, 2.4],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "slardar_slithereen_crush", // 1
-          "slardar_bash", // 2
+          'slardar_slithereen_crush', // 1
+          'slardar_bash', // 2
           `slardar_bash`, // 3
           `slardar_sprint`, // 4
-          "slardar_bash", // 5
-          "slardar_amplify_damage", // 6
-          "slardar_bash", // 7
-          "slardar_sprint", // 8
-          "slardar_sprint", // 9
-          "slardar_sprint", // 10
-          "special_bonus_unique_slardar_7", // 11
-          "slardar_amplify_damage", // 12
-          "slardar_slithereen_crush", // 13
-          "slardar_slithereen_crush", // 14
-          "special_bonus_unique_slardar_2", // 15
-          "slardar_slithereen_crush", // 16
-          "special_bonus_attributes", // 17
-          "slardar_amplify_damage", // 18
-          "special_bonus_attributes", // 19
+          'slardar_bash', // 5
+          'slardar_amplify_damage', // 6
+          'slardar_bash', // 7
+          'slardar_sprint', // 8
+          'slardar_sprint', // 9
+          'slardar_sprint', // 10
+          'special_bonus_unique_slardar_7', // 11
+          'slardar_amplify_damage', // 12
+          'slardar_slithereen_crush', // 13
+          'slardar_slithereen_crush', // 14
+          'special_bonus_unique_slardar_2', // 15
+          'slardar_slithereen_crush', // 16
+          'special_bonus_attributes', // 17
+          'slardar_amplify_damage', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_slardar`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_slardar_3", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_slardar_3', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `quelling_blade`,
             `gauntlets`,
             `circlet`,
-            "branches",
+            'branches',
             `branches`,
             `ward_observer`,
           ],
@@ -15924,13 +15924,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           situational: [
             `mask_of_madness`,
             `hand_of_midas`,
-            "heavens_halberd",
+            'heavens_halberd',
             `octarine_core`,
             `monkey_king_bar`,
             `nullifier`,
-            "satanic",
-            "orchid",
-            "silver_edge",
+            'satanic',
+            'orchid',
+            'silver_edge',
           ],
           core: [
             `power_treads`,
@@ -15942,15 +15942,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `harpoon`,
           ],
           neutral: [
-            "broom_handle",
+            'broom_handle',
             `duelist_gloves`,
             `orb_of_destruction`,
             `vambrace`,
             `cloak_of_flames`,
             `elven_tunic`,
             `mind_breaker`,
-            "desolator_2",
-            "pirate_hat",
+            'desolator_2',
+            'pirate_hat',
           ],
         },
       },
@@ -15964,19 +15964,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
+        all: ['wind_lace', 'boots', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["lotus_orb", "solar_crest", "heavens_halberd"],
-        support: ["force_staff", "ghost"],
-        core: ["manta", "hurricane_pike"],
+        all: ['lotus_orb', 'solar_crest', 'heavens_halberd'],
+        support: ['force_staff', 'ghost'],
+        core: ['manta', 'hurricane_pike'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade"],
+        all: ['sheepstick', 'ethereal_blade'],
         support: [],
-        core: ["assault", "butterfly"],
+        core: ['assault', 'butterfly'],
       },
     },
   },
@@ -15995,43 +15995,43 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 2, 2.6, 2.6],
         facet: 1,
         abilities: [
-          "slark_essence_shift", // 1
-          "slark_pounce", // 2
-          "slark_dark_pact", // 3
-          "slark_dark_pact", // 4
-          "slark_dark_pact", // 5
-          "slark_shadow_dance", // 6
-          "slark_dark_pact", // 7
-          "slark_pounce", // 8
-          "slark_pounce", // 9
+          'slark_essence_shift', // 1
+          'slark_pounce', // 2
+          'slark_dark_pact', // 3
+          'slark_dark_pact', // 4
+          'slark_dark_pact', // 5
+          'slark_shadow_dance', // 6
+          'slark_dark_pact', // 7
+          'slark_pounce', // 8
+          'slark_pounce', // 9
           `slark_pounce`, // 10
           `special_bonus_unique_slark_6`, // 11
-          "slark_shadow_dance", // 12
-          "slark_essence_shift", // 13
-          "slark_essence_shift", // 14
-          "special_bonus_unique_slark_2", // 15
-          "slark_essence_shift", // 16
-          "special_bonus_attributes", // 17
-          "slark_shadow_dance", // 18
-          "special_bonus_attributes", // 19
+          'slark_shadow_dance', // 12
+          'slark_essence_shift', // 13
+          'slark_essence_shift', // 14
+          'special_bonus_unique_slark_2', // 15
+          'slark_essence_shift', // 16
+          'special_bonus_attributes', // 17
+          'slark_shadow_dance', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_slark_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_slark_4", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_slark_4', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `slippers`,
             `circlet`,
             `branches`,
             `branches`,
           ],
           early_game: [
-            "wraith_band",
+            'wraith_band',
             `power_treads`,
             `magic_wand`,
             `infused_raindrop`,
@@ -16039,48 +16039,48 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           mid_game: [
             `diffusal_blade`,
             `orchid`,
-            "ultimate_scepter",
-            "aghanims_shard",
-            "black_king_bar",
+            'ultimate_scepter',
+            'aghanims_shard',
+            'black_king_bar',
           ],
-          late_game: [`skadi`, `disperser`, "abyssal_blade", `bloodthorn`],
+          late_game: [`skadi`, `disperser`, 'abyssal_blade', `bloodthorn`],
           situational: [
-            "orb_of_venom",
-            "orb_of_corrosion",
+            'orb_of_venom',
+            'orb_of_corrosion',
             `hand_of_midas`,
             `echo_sabre`,
             `harpoon`,
             `basher`,
             `blink`,
-            "sange_and_yasha",
-            "sphere",
-            "monkey_king_bar",
-            "nullifier",
-            "mage_slayer",
-            "silver_edge",
+            'sange_and_yasha',
+            'sphere',
+            'monkey_king_bar',
+            'nullifier',
+            'mage_slayer',
+            'silver_edge',
             `butterfly`,
             `moon_shard`,
             `swift_blink`,
             `travel_boots`,
           ],
           core: [
-            "power_treads",
-            "diffusal_blade",
+            'power_treads',
+            'diffusal_blade',
             `orchid`,
-            "ultimate_scepter",
-            "aghanims_shard",
+            'ultimate_scepter',
+            'aghanims_shard',
             `black_king_bar`,
             `skadi`,
             `abyssal_blade`,
           ],
           neutral: [
-            "lance_of_pursuit",
-            "occult_bracelet",
+            'lance_of_pursuit',
+            'occult_bracelet',
             `vambrace`,
-            "orb_of_destruction",
-            "elven_tunic",
+            'orb_of_destruction',
+            'elven_tunic',
             `nemesis_curse`,
-            "mind_breaker",
+            'mind_breaker',
             `ancient_guardian`,
             `apex`,
             `pirate_hat`,
@@ -16091,19 +16091,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots"],
-        support: ["ward_sentry"],
+        all: ['wind_lace', 'boots'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
         all: [`wind_waker`],
-        support: ["force_staff", "glimmer_cape", "ghost", "ward_sentry"],
-        core: ["hurricane_pike", "heavens_halberd", "basher"],
+        support: ['force_staff', 'glimmer_cape', 'ghost', 'ward_sentry'],
+        core: ['hurricane_pike', 'heavens_halberd', 'basher'],
       },
       late_game: {
         all: [`sheepstick`, `ethereal_blade`, `wind_waker`],
-        support: ["SentryGem"],
-        core: ["abyssal_blade", "butterfly", "bloodthorn"],
+        support: ['SentryGem'],
+        core: ['abyssal_blade', 'butterfly', 'bloodthorn'],
       },
     },
   },
@@ -16121,50 +16121,50 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.1, 2.1, 2, 2.1],
         facet: 2,
         abilities: [
-          "snapfire_scatterblast", // 1
-          "snapfire_firesnap_cookie", // 2
-          "snapfire_scatterblast", // 3
-          "snapfire_firesnap_cookie", // 4
-          "snapfire_scatterblast", // 5
-          "snapfire_mortimer_kisses", // 6
-          "snapfire_scatterblast", // 7
-          "snapfire_firesnap_cookie", // 8
-          "snapfire_firesnap_cookie", // 9
-          "special_bonus_unique_snapfire_7", // 10
-          "snapfire_lil_shredder", // 11
-          "snapfire_mortimer_kisses", // 12
-          "snapfire_lil_shredder", // 13
-          "snapfire_lil_shredder", // 14
-          "special_bonus_unique_snapfire_3", // 15
-          "snapfire_lil_shredder", // 16
-          "special_bonus_attributes", // 17
-          "snapfire_mortimer_kisses", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_snapfire_mortimer_kisses_impact_damage", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_snapfire_1", // 25
+          'snapfire_scatterblast', // 1
+          'snapfire_firesnap_cookie', // 2
+          'snapfire_scatterblast', // 3
+          'snapfire_firesnap_cookie', // 4
+          'snapfire_scatterblast', // 5
+          'snapfire_mortimer_kisses', // 6
+          'snapfire_scatterblast', // 7
+          'snapfire_firesnap_cookie', // 8
+          'snapfire_firesnap_cookie', // 9
+          'special_bonus_unique_snapfire_7', // 10
+          'snapfire_lil_shredder', // 11
+          'snapfire_mortimer_kisses', // 12
+          'snapfire_lil_shredder', // 13
+          'snapfire_lil_shredder', // 14
+          'special_bonus_unique_snapfire_3', // 15
+          'snapfire_lil_shredder', // 16
+          'special_bonus_attributes', // 17
+          'snapfire_mortimer_kisses', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_snapfire_mortimer_kisses_impact_damage', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_snapfire_1', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "tango",
-            "blood_grenade",
+            'tango',
+            'tango',
+            'blood_grenade',
             `circlet`,
             `branches`,
-            "branches",
-            "branches",
-            "ward_observer",
-            "ward_sentry",
+            'branches',
+            'branches',
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
             `magic_wand`,
             `ring_of_basilius`,
-            "wind_lace",
-            "infused_raindrop",
+            'wind_lace',
+            'infused_raindrop',
           ],
           mid_game: [
             `arcane_boots`,
@@ -16188,7 +16188,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `rod_of_atos`,
             `ghost`,
             `boots_of_bearing`,
-            "lotus_orb",
+            'lotus_orb',
             `heavens_halberd`,
             `pipe`,
             `cyclone`,
@@ -16198,7 +16198,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            'arcane_boots',
             `mekansm`,
             `force_staff`,
             `aghanims_shard`,
@@ -16209,11 +16209,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `trusty_shovel`,
-            "philosophers_stone",
+            'philosophers_stone',
             `pupils_gift`,
             `ceremonial_robe`,
             `ogre_seal_totem`,
-            "timeless_relic",
+            'timeless_relic',
             `spy_gadget`,
             `apex`,
             `giants_ring`,
@@ -16230,31 +16230,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "headdress",
-          "infused_raindrop",
-          "cloak",
+          'magic_stick',
+          'ring_of_regen',
+          'headdress',
+          'infused_raindrop',
+          'cloak',
         ],
-        support: ["tranquil_boots"],
-        core: ["ring_of_health"],
+        support: ['tranquil_boots'],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["cyclone"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['cyclone'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade"],
-        support: ["black_king_bar"],
-        core: ["assault", "butterfly"],
+        all: ['sheepstick', 'ethereal_blade'],
+        support: ['black_king_bar'],
+        core: ['assault', 'butterfly'],
       },
     },
   },
@@ -16274,13 +16274,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.2, 2.2, 2.7, 3],
         facet: 1,
         abilities: [
-          "sniper_headshot", // 1
+          'sniper_headshot', // 1
           `sniper_take_aim`, // 2
           `sniper_headshot`, // 3
           `sniper_shrapnel`, // 4
           `sniper_shrapnel`, // 5
-          "sniper_assassinate", // 6
-          "sniper_shrapnel", // 7
+          'sniper_assassinate', // 6
+          'sniper_shrapnel', // 7
           `sniper_shrapnel`, // 8
           `sniper_headshot`, // 9
           `sniper_headshot`, // 10
@@ -16290,15 +16290,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `sniper_take_aim`, // 14
           `special_bonus_attack_speed_30`, // 15
           `sniper_take_aim`, // 16
-          "special_bonus_attributes", // 17
-          "sniper_assassinate", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_attack_range_100", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_sniper_3", // 25
+          'special_bonus_attributes', // 17
+          'sniper_assassinate', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_attack_range_100', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_sniper_3', // 25
         ],
         items: {
           starting: [
@@ -16311,8 +16311,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ward_observer`,
           ],
           early_game: [
-            "wraith_band",
-            "wraith_band",
+            'wraith_band',
+            'wraith_band',
             `power_treads`,
             `magic_wand`,
             `wind_lace`,
@@ -16354,8 +16354,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           core: [
             `wraith_band`,
             `power_treads`,
-            "dragon_lance",
-            "maelstrom",
+            'dragon_lance',
+            'maelstrom',
             `hurricane_pike`,
             `disperser`,
             `aghanims_shard`,
@@ -16367,10 +16367,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `grove_bow`,
             `specialists_array`,
             `enchanted_quiver`,
-            "elven_tunic",
+            'elven_tunic',
             `mind_breaker`,
             `ancient_guardian`,
-            "pirate_hat",
+            'pirate_hat',
             `desolator_2`,
           ],
         },
@@ -16387,27 +16387,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `sniper_headshot`, // 2
           `sniper_shrapnel`, // 3
           `sniper_take_aim`, // 4
-          "sniper_shrapnel", // 5
-          "sniper_assassinate", // 6
-          "sniper_shrapnel", // 7
+          'sniper_shrapnel', // 5
+          'sniper_assassinate', // 6
+          'sniper_shrapnel', // 7
           `sniper_headshot`, // 8
           `sniper_headshot`, // 9
           `special_bonus_unique_sniper_5`, // 10
           `sniper_headshot`, // 11
-          "sniper_assassinate", // 12
+          'sniper_assassinate', // 12
           `sniper_take_aim`, // 13
           `sniper_take_aim`, // 14
           `special_bonus_attack_speed_30`, // 15
           `sniper_take_aim`, // 16
-          "special_bonus_attributes", // 17
-          "sniper_assassinate", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_attack_range_100", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_sniper_2", // 25
+          'special_bonus_attributes', // 17
+          'sniper_assassinate', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_attack_range_100', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_sniper_2', // 25
         ],
         items: {
           starting: [
@@ -16422,7 +16422,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           early_game: [
             `tranquil_boots`,
-            "magic_wand",
+            'magic_wand',
             `wraith_band`,
             `wind_lace`,
             `infused_raindrop`,
@@ -16439,7 +16439,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `power_treads`,
             `spirit_vessel`,
             `ancient_janggo`,
-            "glimmer_cape",
+            'glimmer_cape',
             `veil_of_discord`,
             `pavise`,
             `aether_lens`,
@@ -16454,7 +16454,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "tranquil_boots",
+            'tranquil_boots',
             `phylactery`,
             `ultimate_scepter`,
             `angels_demise`,
@@ -16463,16 +16463,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `yasha_and_kaya`,
           ],
           neutral: [
-            "mysterious_hat",
+            'mysterious_hat',
             `faded_broach`,
-            "philosophers_stone",
-            "bullwhip",
+            'philosophers_stone',
+            'bullwhip',
             `ogre_seal_totem`,
             `psychic_headband`,
             `timeless_relic`,
             `spy_gadget`,
-            "seer_stone",
-            "book_of_shadows",
+            'seer_stone',
+            'book_of_shadows',
           ],
         },
         // item_tooltips:
@@ -16489,24 +16489,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
-          "armor",
-          "infused_raindrop",
+          'ring_of_regen',
+          'wind_lace',
+          'boots',
+          'armor',
+          'infused_raindrop',
         ],
-        support: ["ward_sentry", "smoke_of_deceit"],
-        core: ["ring_of_health"],
+        support: ['ward_sentry', 'smoke_of_deceit'],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["blink"],
-        support: ["force_staff", "smoke_of_deceit", "glimmer_cape", "ghost"],
-        core: ["heavens_halberd", "invis_sword", "blade_mail"],
+        all: ['blink'],
+        support: ['force_staff', 'smoke_of_deceit', 'glimmer_cape', 'ghost'],
+        core: ['heavens_halberd', 'invis_sword', 'blade_mail'],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["smoke_of_deceit"],
-        core: ["silver_edge", "assault", "butterfly"],
+        all: ['sheepstick'],
+        support: ['smoke_of_deceit'],
+        core: ['silver_edge', 'assault', 'butterfly'],
       },
     },
   },
@@ -16523,84 +16523,84 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40637,
         power_level: [0.8, 1.9, 2.7, 2.9],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "spectre_spectral_dagger", // 1
-          "spectre_dispersion", // 2
-          "spectre_dispersion", // 3
-          "spectre_spectral_dagger", // 4
-          "spectre_spectral_dagger", // 5
-          "spectre_haunt_single", // 6
-          "spectre_spectral_dagger", // 7
-          "spectre_dispersion", // 8
-          "spectre_dispersion", // 9
-          "special_bonus_unique_spectre", // 10
-          "spectre_desolate", // 11
-          "spectre_haunt_single", // 12
-          "spectre_desolate", // 13
-          "spectre_desolate", // 14
-          "special_bonus_unique_spectre_6", // 15
-          "spectre_desolate", // 16
-          "special_bonus_attributes", // 17
-          "spectre_haunt_single", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_hp_350", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_spectre_5", // 25
+          'spectre_spectral_dagger', // 1
+          'spectre_dispersion', // 2
+          'spectre_dispersion', // 3
+          'spectre_spectral_dagger', // 4
+          'spectre_spectral_dagger', // 5
+          'spectre_haunt_single', // 6
+          'spectre_spectral_dagger', // 7
+          'spectre_dispersion', // 8
+          'spectre_dispersion', // 9
+          'special_bonus_unique_spectre', // 10
+          'spectre_desolate', // 11
+          'spectre_haunt_single', // 12
+          'spectre_desolate', // 13
+          'spectre_desolate', // 14
+          'special_bonus_unique_spectre_6', // 15
+          'spectre_desolate', // 16
+          'special_bonus_attributes', // 17
+          'spectre_haunt_single', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_hp_350', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_spectre_5', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "circlet",
-            "ring_of_regen",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'circlet',
+            'ring_of_regen',
           ],
           early_game: [
-            "urn_of_shadows",
-            "magic_wand",
-            "power_treads",
-            "blade_mail",
+            'urn_of_shadows',
+            'magic_wand',
+            'power_treads',
+            'blade_mail',
           ],
-          mid_game: ["radiance", "spirit_vessel"],
-          late_game: ["manta", "heart", "skadi", "abyssal_blade"],
+          mid_game: ['radiance', 'spirit_vessel'],
+          late_game: ['manta', 'heart', 'skadi', 'abyssal_blade'],
           situational: [
-            "orchid",
-            "diffusal_blade",
-            "hand_of_midas",
-            "black_king_bar",
-            "nullifier",
-            "refresher",
-            "ultimate_scepter",
-            "aghanims_shard",
-            "bloodthorn",
+            'orchid',
+            'diffusal_blade',
+            'hand_of_midas',
+            'black_king_bar',
+            'nullifier',
+            'refresher',
+            'ultimate_scepter',
+            'aghanims_shard',
+            'bloodthorn',
           ],
           core: [
-            "power_treads",
-            "blade_mail",
-            "radiance",
-            "spirit_vessel",
-            "manta",
-            "heart",
-            "skadi",
+            'power_treads',
+            'blade_mail',
+            'radiance',
+            'spirit_vessel',
+            'manta',
+            'heart',
+            'skadi',
           ],
           neutral: [
             //"possessed_mask", Removed in 7.33
-            "lance_of_pursuit",
-            "broom_handle",
-            "vambrace",
+            'lance_of_pursuit',
+            'broom_handle',
+            'vambrace',
             //"dagger_of_ristul", Removed in 7.33
             //"ring_of_aquila",
-            "pupils_gift",
+            'pupils_gift',
             //"titan_sliver",
-            "elven_tunic",
-            "mind_breaker",
-            "ninja_gear",
-            "pirate_hat",
-            "apex",
+            'elven_tunic',
+            'mind_breaker',
+            'ninja_gear',
+            'pirate_hat',
+            'apex',
           ],
         },
       },
@@ -16608,22 +16608,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [
       `spectre_haunt`,
       `spectre_reality`,
-      "spirit_vessel",
-      "spectre_spectral_dagger",
+      'spirit_vessel',
+      'spectre_spectral_dagger',
       `manta`,
-      "attack",
+      'attack',
     ],
     counter_items: {
       laning_phase: { all: [], support: [], core: [] },
       mid_game: {
-        all: ["mekansm"],
-        support: ["glimmer_cape", "ghost"],
-        core: ["hurricane_pike", "silver_edge"],
+        all: ['mekansm'],
+        support: ['glimmer_cape', 'ghost'],
+        core: ['hurricane_pike', 'silver_edge'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk"],
+        all: ['sheepstick', 'ethereal_blade', 'aeon_disk'],
         support: [],
-        core: ["butterfly", "bloodthorn"],
+        core: ['butterfly', 'bloodthorn'],
       },
     },
   },
@@ -16639,32 +16639,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40666,
         power_level: [1.4, 2.2, 2.3, 2.1],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "spirit_breaker_greater_bash", // 1
-          "spirit_breaker_charge_of_darkness", // 2
-          "spirit_breaker_greater_bash", // 3
-          "spirit_breaker_bulldoze", // 4
-          "spirit_breaker_greater_bash", // 5
-          "spirit_breaker_nether_strike", // 6
-          "spirit_breaker_greater_bash", // 7
-          "spirit_breaker_charge_of_darkness", // 8
-          "spirit_breaker_charge_of_darkness", // 9
-          "spirit_breaker_charge_of_darkness", // 10
-          "spirit_breaker_bulldoze", // 11
-          "spirit_breaker_nether_strike", // 12
-          "spirit_breaker_bulldoze", // 13
-          "spirit_breaker_bulldoze", // 14
-          "special_bonus_night_vision_500", // 15
-          "special_bonus_unique_spirit_breaker_2", // 16
-          "special_bonus_attributes", // 17
-          "spirit_breaker_nether_strike", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_spirit_breaker_shield", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'spirit_breaker_greater_bash', // 1
+          'spirit_breaker_charge_of_darkness', // 2
+          'spirit_breaker_greater_bash', // 3
+          'spirit_breaker_bulldoze', // 4
+          'spirit_breaker_greater_bash', // 5
+          'spirit_breaker_nether_strike', // 6
+          'spirit_breaker_greater_bash', // 7
+          'spirit_breaker_charge_of_darkness', // 8
+          'spirit_breaker_charge_of_darkness', // 9
+          'spirit_breaker_charge_of_darkness', // 10
+          'spirit_breaker_bulldoze', // 11
+          'spirit_breaker_nether_strike', // 12
+          'spirit_breaker_bulldoze', // 13
+          'spirit_breaker_bulldoze', // 14
+          'special_bonus_night_vision_500', // 15
+          'special_bonus_unique_spirit_breaker_2', // 16
+          'special_bonus_attributes', // 17
+          'spirit_breaker_nether_strike', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_spirit_breaker_shield', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_spirit_breaker_4`, // 25
         ],
         items: {
@@ -16681,16 +16681,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: [`phase_boots`, `magic_wand`],
           mid_game: [`invis_sword`, `ancient_janggo`, `aghanims_shard`],
           late_game: [
-            "black_king_bar",
+            'black_king_bar',
             `ultimate_scepter`,
             `octarine_core`,
             `yasha_and_kaya`,
             `wind_waker`,
-            "silver_edge",
+            'silver_edge',
           ],
           situational: [
             `infused_raindrop`,
-            "orb_of_venom",
+            'orb_of_venom',
             `hand_of_midas`,
             `urn_of_shadows`,
             `spirit_vessel`,
@@ -16703,16 +16703,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           core: [`phase_boots`, `wind_lace`, `invis_sword`, `black_king_bar`],
           neutral: [
-            "broom_handle",
+            'broom_handle',
             `faded_broach`,
             `gossamer_cape`,
             `vambrace`,
             `ceremonial_robe`,
             `dandelion_amulet`,
             `timeless_relic`,
-            "ninja_gear",
-            "force_boots",
-            "giants_ring",
+            'ninja_gear',
+            'force_boots',
+            'giants_ring',
           ],
         },
         // item_tooltips: {
@@ -16727,38 +16727,38 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40736,
         power_level: [1.4, 2.3, 2.4, 2.2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "spirit_breaker_greater_bash", // 1
-          "spirit_breaker_charge_of_darkness", // 2
-          "spirit_breaker_greater_bash", // 3
+          'spirit_breaker_greater_bash', // 1
+          'spirit_breaker_charge_of_darkness', // 2
+          'spirit_breaker_greater_bash', // 3
           `spirit_breaker_charge_of_darkness`, // 4
-          "spirit_breaker_greater_bash", // 5
-          "spirit_breaker_nether_strike", // 6
-          "spirit_breaker_greater_bash", // 7
+          'spirit_breaker_greater_bash', // 5
+          'spirit_breaker_nether_strike', // 6
+          'spirit_breaker_greater_bash', // 7
           `spirit_breaker_bulldoze`, // 8
-          "spirit_breaker_charge_of_darkness", // 9
-          "spirit_breaker_charge_of_darkness", // 10
+          'spirit_breaker_charge_of_darkness', // 9
+          'spirit_breaker_charge_of_darkness', // 10
           `spirit_breaker_bulldoze`, // 11
-          "spirit_breaker_nether_strike", // 12
-          "spirit_breaker_bulldoze", // 13
-          "spirit_breaker_bulldoze", // 14
+          'spirit_breaker_nether_strike', // 12
+          'spirit_breaker_bulldoze', // 13
+          'spirit_breaker_bulldoze', // 14
           `special_bonus_armor_4`, // 15
-          "special_bonus_unique_spirit_breaker_2", // 16
-          "special_bonus_attributes", // 17
-          "spirit_breaker_nether_strike", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_spirit_breaker_shield", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_unique_spirit_breaker_2', // 16
+          'special_bonus_attributes', // 17
+          'spirit_breaker_nether_strike', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_spirit_breaker_shield', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_spirit_breaker_4`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `gauntlets`,
             `circlet`,
             `branches`,
@@ -16768,11 +16768,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: [
             `bracer`,
             `phase_boots`,
-            "hand_of_midas",
-            "magic_wand",
+            'hand_of_midas',
+            'magic_wand',
             `wind_lace`,
           ],
-          mid_game: ["octarine_core", "invis_sword"],
+          mid_game: ['octarine_core', 'invis_sword'],
           late_game: [
             `yasha_and_kaya`,
             `black_king_bar`,
@@ -16780,8 +16780,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `silver_edge`,
           ],
           situational: [
-            "ultimate_scepter",
-            "aghanims_shard",
+            'ultimate_scepter',
+            'aghanims_shard',
             `pipe`,
             `cyclone`,
             `heavens_halberd`,
@@ -16795,8 +16795,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           core: [
             `phase_boots`,
-            "hand_of_midas",
-            "invis_sword",
+            'hand_of_midas',
+            'invis_sword',
             `octarine_core`,
             `black_king_bar`,
           ],
@@ -16824,19 +16824,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots"],
-        support: ["ward_observer"],
+        all: ['wind_lace', 'boots'],
+        support: ['ward_observer'],
         core: [],
       },
       mid_game: {
-        all: ["cyclone"],
-        support: ["glimmer_cape", "force_staff", "ghost"],
-        core: ["hurricane_pike"],
+        all: ['cyclone'],
+        support: ['glimmer_cape', 'force_staff', 'ghost'],
+        core: ['hurricane_pike'],
       },
       late_game: {
-        all: ["sphere"],
+        all: ['sphere'],
         support: [],
-        core: ["abyssal_blade", "butterfly"],
+        core: ['abyssal_blade', 'butterfly'],
       },
     },
   },
@@ -16854,31 +16854,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 1.9, 2.6, 2.8],
         facet: 2,
         abilities: [
-          "storm_spirit_static_remnant", // 1
-          "storm_spirit_overload", // 2
-          "storm_spirit_electric_vortex", // 3
-          "storm_spirit_static_remnant", // 4
-          "storm_spirit_overload", // 5
-          "storm_spirit_ball_lightning", // 6
-          "storm_spirit_static_remnant", // 7
-          "storm_spirit_static_remnant", // 8
-          "storm_spirit_overload", // 9
+          'storm_spirit_static_remnant', // 1
+          'storm_spirit_overload', // 2
+          'storm_spirit_electric_vortex', // 3
+          'storm_spirit_static_remnant', // 4
+          'storm_spirit_overload', // 5
+          'storm_spirit_ball_lightning', // 6
+          'storm_spirit_static_remnant', // 7
+          'storm_spirit_static_remnant', // 8
+          'storm_spirit_overload', // 9
           `storm_spirit_overload`, // 10
           `special_bonus_mp_regen_150`, // 11
-          "storm_spirit_ball_lightning", // 12
-          "storm_spirit_electric_vortex", // 13
-          "storm_spirit_electric_vortex", // 14
-          "special_bonus_hp_250", // 15
-          "storm_spirit_electric_vortex", // 16
-          "special_bonus_attributes", // 17
-          "storm_spirit_ball_lightning", // 18
-          "special_bonus_attributes", // 19
+          'storm_spirit_ball_lightning', // 12
+          'storm_spirit_electric_vortex', // 13
+          'storm_spirit_electric_vortex', // 14
+          'special_bonus_hp_250', // 15
+          'storm_spirit_electric_vortex', // 16
+          'special_bonus_attributes', // 17
+          'storm_spirit_ball_lightning', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_storm_spirit`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_storm_spirit_7", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_storm_spirit_7', // 25
         ],
         items: {
           starting: [
@@ -16889,46 +16889,46 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `branches`,
             `ward_observer`,
           ],
-          early_game: ["bottle", "null_talisman", `boots`, `magic_wand`],
+          early_game: ['bottle', 'null_talisman', `boots`, `magic_wand`],
           mid_game: [
             `power_treads`,
             `witch_blade`,
-            "kaya",
-            "eternal_shroud",
-            "meteor_hammer",
+            'kaya',
+            'eternal_shroud',
+            'meteor_hammer',
           ],
           late_game: [
             `black_king_bar`,
-            "devastator",
-            "aghanims_shard",
-            "ultimate_scepter",
-            "shivas_guard",
-            "sheepstick",
+            'devastator',
+            'aghanims_shard',
+            'ultimate_scepter',
+            'shivas_guard',
+            'sheepstick',
           ],
           situational: [
             `sphere`,
             `cyclone`,
             `orchid`,
             `refresher`,
-            "kaya_and_sange",
-            "bloodthorn",
+            'kaya_and_sange',
+            'bloodthorn',
           ],
           core: [
             `power_treads`,
             `witch_blade`,
-            "kaya",
-            "eternal_shroud",
-            "meteor_hammer",
-            "black_king_bar",
+            'kaya',
+            'eternal_shroud',
+            'meteor_hammer',
+            'black_king_bar',
           ],
           neutral: [
-            "mysterious_hat",
-            "arcane_ring",
-            "vambrace",
-            "grove_bow",
-            "ceremonial_robe",
-            "psychic_headband",
-            "timeless_relic",
+            'mysterious_hat',
+            'arcane_ring',
+            'vambrace',
+            'grove_bow',
+            'ceremonial_robe',
+            'psychic_headband',
+            'timeless_relic',
             `apex`,
           ],
         },
@@ -16944,26 +16944,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "infused_raindrop"],
-        support: ["ward_sentry"],
+        all: ['magic_stick', 'infused_raindrop'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
-        all: ["rod_of_atos"],
-        support: ["glimmer_cape", "ghost"],
+        all: ['rod_of_atos'],
+        support: ['glimmer_cape', 'ghost'],
         core: [
-          "mage_slayer",
-          "pipe",
-          "eternal_shroud",
-          "orchid",
-          "black_king_bar",
-          "manta",
+          'mage_slayer',
+          'pipe',
+          'eternal_shroud',
+          'orchid',
+          'black_king_bar',
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk"],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade"],
+        all: ['sheepstick', 'aeon_disk'],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade'],
       },
     },
   },
@@ -16982,98 +16982,98 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [0.9, 1.7, 2.7, 2.6],
         facet: 2,
         abilities: [
-          "sven_storm_bolt", // 1
-          "sven_warcry", // 2
-          "sven_great_cleave", // 3
-          "sven_great_cleave", // 4
-          "sven_great_cleave", // 5
-          "sven_gods_strength", // 6
-          "sven_great_cleave", // 7
-          "sven_warcry", // 8
-          "sven_warcry", // 9
-          "special_bonus_attack_speed_20", // 10
-          "sven_warcry", // 11
-          "sven_gods_strength", // 12
-          "sven_storm_bolt", // 13
-          "sven_storm_bolt", // 14
-          "special_bonus_unique_sven_3", // 15
-          "sven_storm_bolt", // 16
-          "special_bonus_attributes", // 17
-          "sven_gods_strength", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_sven_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_sven_2", // 25
+          'sven_storm_bolt', // 1
+          'sven_warcry', // 2
+          'sven_great_cleave', // 3
+          'sven_great_cleave', // 4
+          'sven_great_cleave', // 5
+          'sven_gods_strength', // 6
+          'sven_great_cleave', // 7
+          'sven_warcry', // 8
+          'sven_warcry', // 9
+          'special_bonus_attack_speed_20', // 10
+          'sven_warcry', // 11
+          'sven_gods_strength', // 12
+          'sven_storm_bolt', // 13
+          'sven_storm_bolt', // 14
+          'special_bonus_unique_sven_3', // 15
+          'sven_storm_bolt', // 16
+          'special_bonus_attributes', // 17
+          'sven_gods_strength', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_sven_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_sven_2', // 25
         ],
         items: {
           starting: [
-            "quelling_blade",
-            "tango",
-            "branches",
-            "branches",
-            "circlet",
-            "gauntlets",
+            'quelling_blade',
+            'tango',
+            'branches',
+            'branches',
+            'circlet',
+            'gauntlets',
           ],
           early_game: [
-            "tango",
-            "bracer",
-            "boots",
-            "magic_wand",
-            "power_treads",
-            "mask_of_madness",
-            "echo_sabre",
+            'tango',
+            'bracer',
+            'boots',
+            'magic_wand',
+            'power_treads',
+            'mask_of_madness',
+            'echo_sabre',
           ],
-          mid_game: ["black_king_bar", "harpoon", "lesser_crit", "blink"],
+          mid_game: ['black_king_bar', 'harpoon', 'lesser_crit', 'blink'],
           late_game: [
-            "greater_crit",
-            "assault",
-            "satanic",
-            "swift_blink",
-            "moon_shard",
+            'greater_crit',
+            'assault',
+            'satanic',
+            'swift_blink',
+            'moon_shard',
           ],
           situational: [
-            "aghanims_shard",
-            "silver_edge",
-            "sphere",
-            "monkey_king_bar",
-            "ultimate_scepter",
+            'aghanims_shard',
+            'silver_edge',
+            'sphere',
+            'monkey_king_bar',
+            'ultimate_scepter',
           ],
           core: [
-            "power_treads",
-            "mask_of_madness",
-            "harpoon",
-            "blink",
-            "black_king_bar",
-            "greater_crit",
+            'power_treads',
+            'mask_of_madness',
+            'harpoon',
+            'blink',
+            'black_king_bar',
+            'greater_crit',
           ],
           neutral: [
             //tier 1
-            "unstable_wand",
-            "broom_handle",
-            "occult_bracelet",
+            'unstable_wand',
+            'broom_handle',
+            'occult_bracelet',
 
             //tier 2
-            "vambrace",
-            "orb_of_destruction",
-            "dragon_scale",
+            'vambrace',
+            'orb_of_destruction',
+            'dragon_scale',
 
             //tier 3
-            "paladin_sword",
-            "elven_tunic",
-            "vindicators_axe",
+            'paladin_sword',
+            'elven_tunic',
+            'vindicators_axe',
 
             //tier 4
-            "mind_breaker",
-            "havoc_hammer",
-            "ninja_gear",
+            'mind_breaker',
+            'havoc_hammer',
+            'ninja_gear',
 
             //tier 5
-            "pirate_hat",
-            "mirror_shield",
-            "giants_ring",
+            'pirate_hat',
+            'mirror_shield',
+            'giants_ring',
           ],
         },
       },
@@ -17089,24 +17089,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["armor"],
-        support: ["ward_sentry"],
+        all: ['armor'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
-        all: ["lotus_orb", "blade_mail"],
-        support: ["glimmer_cape", "ghost", "force_staff", "cyclone"],
-        core: ["hurricane_pike", "heavens_halberd", "invis_sword"],
+        all: ['lotus_orb', 'blade_mail'],
+        support: ['glimmer_cape', 'ghost', 'force_staff', 'cyclone'],
+        core: ['hurricane_pike', 'heavens_halberd', 'invis_sword'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk"],
+        all: ['sheepstick', 'ethereal_blade', 'aeon_disk'],
         support: [],
         core: [
-          "abyssal_blade",
-          "assault",
-          "shivas_guard",
-          "butterfly",
-          "skadi",
+          'abyssal_blade',
+          'assault',
+          'shivas_guard',
+          'butterfly',
+          'skadi',
         ],
       },
     },
@@ -17123,37 +17123,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40625,
         power_level: [2, 2.1, 2.1, 2.2],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "techies_sticky_bomb", // 1
-          "techies_suicide", // 2
-          "techies_sticky_bomb", // 3
-          "techies_suicide", // 4
-          "techies_sticky_bomb", // 5
-          "techies_land_mines", // 6
-          "techies_sticky_bomb", // 7
+          'techies_sticky_bomb', // 1
+          'techies_suicide', // 2
+          'techies_sticky_bomb', // 3
+          'techies_suicide', // 4
+          'techies_sticky_bomb', // 5
+          'techies_land_mines', // 6
+          'techies_sticky_bomb', // 7
           `techies_reactive_tazer`, // 8
-          "techies_suicide", // 9
+          'techies_suicide', // 9
           `techies_suicide`, // 10
           `special_bonus_magic_resistance_20`, // 11
-          "techies_land_mines", // 12
-          "techies_reactive_tazer", // 13
-          "techies_reactive_tazer", // 14
-          "special_bonus_unique_techies", // 15
-          "techies_reactive_tazer", // 16
-          "special_bonus_attributes", // 17
-          "techies_land_mines", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_techies_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_techies_4", // 25
+          'techies_land_mines', // 12
+          'techies_reactive_tazer', // 13
+          'techies_reactive_tazer', // 14
+          'special_bonus_unique_techies', // 15
+          'techies_reactive_tazer', // 16
+          'special_bonus_attributes', // 17
+          'techies_land_mines', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_techies_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_techies_4', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
@@ -17192,7 +17192,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `force_staff`,
             `cyclone`,
             `ghost`,
-            "blink",
+            'blink',
             `aeon_disk`,
             `sheepstick`,
             `shivas_guard`,
@@ -17209,14 +17209,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ethereal_blade`,
           ],
           neutral: [
-            "arcane_ring",
+            'arcane_ring',
             `mysterious_hat`,
-            "philosophers_stone",
+            'philosophers_stone',
             `bullwhip`,
-            "psychic_headband",
-            "ceremonial_robe",
+            'psychic_headband',
+            'ceremonial_robe',
             `spy_gadget`,
-            "timeless_relic",
+            'timeless_relic',
             `force_boots`,
             `seer_stone`,
           ],
@@ -17228,41 +17228,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40624,
         power_level: [1.8, 2.1, 2.1, 2.3],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "techies_sticky_bomb", // 1
-          "techies_suicide", // 2
-          "techies_sticky_bomb", // 3
-          "techies_suicide", // 4
-          "techies_sticky_bomb", // 5
-          "techies_land_mines", // 6
-          "techies_sticky_bomb", // 7
-          "techies_suicide", // 8
-          "techies_suicide", // 9
+          'techies_sticky_bomb', // 1
+          'techies_suicide', // 2
+          'techies_sticky_bomb', // 3
+          'techies_suicide', // 4
+          'techies_sticky_bomb', // 5
+          'techies_land_mines', // 6
+          'techies_sticky_bomb', // 7
+          'techies_suicide', // 8
+          'techies_suicide', // 9
           `special_bonus_magic_resistance_20`, // 10
           `techies_reactive_tazer`, // 11
-          "techies_land_mines", // 12
-          "techies_reactive_tazer", // 13
-          "techies_reactive_tazer", // 14
-          "special_bonus_unique_techies", // 15
-          "techies_reactive_tazer", // 16
-          "special_bonus_attributes", // 17
-          "techies_land_mines", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_techies_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_techies_4", // 25
+          'techies_land_mines', // 12
+          'techies_reactive_tazer', // 13
+          'techies_reactive_tazer', // 14
+          'special_bonus_unique_techies', // 15
+          'techies_reactive_tazer', // 16
+          'special_bonus_attributes', // 17
+          'techies_land_mines', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_techies_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_techies_4', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `faerie_fire`,
             `circlet`,
             `branches`,
-            "branches",
+            'branches',
             `branches`,
             `ward_observer`,
           ],
@@ -17285,15 +17285,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
             `ultimate_scepter`,
             `sheepstick`,
-            "overwhelming_blink",
+            'overwhelming_blink',
           ],
           situational: [
             `wraith_band`,
             `soul_ring`,
             `glimmer_cape`,
             `guardian_greaves`,
-            "black_king_bar",
-            "aeon_disk",
+            'black_king_bar',
+            'aeon_disk',
             `sphere`,
             `pipe`,
             `cyclone`,
@@ -17342,31 +17342,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["quelling_blade", "headdress", "infused_raindrop", "cloak"],
+        all: ['quelling_blade', 'headdress', 'infused_raindrop', 'cloak'],
         support: [
           /* "ward_sentry", */
-          "tranquil_boots",
+          'tranquil_boots',
         ],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
         all: [],
-        support: [/* "SentryGem" , */ "glimmer_cape", "force_staff"],
+        support: [/* "SentryGem" , */ 'glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "blade_mail",
-          "eternal_shroud",
-          "orchid",
-          "black_king_bar",
-          "manta",
+          'pipe',
+          'blade_mail',
+          'eternal_shroud',
+          'orchid',
+          'black_king_bar',
+          'manta',
         ],
       },
       late_game: {
-        all: ["aeon_disk"],
-        support: [/* "SentryGem", */ "black_king_bar"],
-        core: ["heart", "satanic"],
+        all: ['aeon_disk'],
+        support: [/* "SentryGem", */ 'black_king_bar'],
+        core: ['heart', 'satanic'],
       },
     },
   },
@@ -17383,92 +17383,92 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40602,
         power_level: [1.8, 2.2, 2.7, 2.6],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "templar_assassin_psi_blades", // 1
-          "templar_assassin_refraction", // 2
-          "templar_assassin_refraction", // 3
-          "templar_assassin_psi_blades", // 4
-          "templar_assassin_refraction", // 5
-          "templar_assassin_psionic_trap", // 6
-          "templar_assassin_refraction", // 7
-          "templar_assassin_meld", // 8
-          "templar_assassin_meld", // 9
-          "templar_assassin_meld", // 10
-          "templar_assassin_meld", // 11
-          "templar_assassin_psionic_trap", // 12
-          "templar_assassin_psi_blades", // 13
-          "special_bonus_unique_templar_assassin_refraction_damage", // 14
-          "special_bonus_unique_templar_assassin_8", // 15
-          "templar_assassin_psi_blades", // 16
-          "special_bonus_attributes", // 17
-          "templar_assassin_psionic_trap", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_templar_assassin_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_templar_assassin", // 25
+          'templar_assassin_psi_blades', // 1
+          'templar_assassin_refraction', // 2
+          'templar_assassin_refraction', // 3
+          'templar_assassin_psi_blades', // 4
+          'templar_assassin_refraction', // 5
+          'templar_assassin_psionic_trap', // 6
+          'templar_assassin_refraction', // 7
+          'templar_assassin_meld', // 8
+          'templar_assassin_meld', // 9
+          'templar_assassin_meld', // 10
+          'templar_assassin_meld', // 11
+          'templar_assassin_psionic_trap', // 12
+          'templar_assassin_psi_blades', // 13
+          'special_bonus_unique_templar_assassin_refraction_damage', // 14
+          'special_bonus_unique_templar_assassin_8', // 15
+          'templar_assassin_psi_blades', // 16
+          'special_bonus_attributes', // 17
+          'templar_assassin_psionic_trap', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_templar_assassin_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_templar_assassin', // 25
         ],
         items: {
           starting: [
-            "quelling_blade",
-            "slippers",
-            "circlet",
-            "branches",
-            "tango",
+            'quelling_blade',
+            'slippers',
+            'circlet',
+            'branches',
+            'tango',
           ],
-          early_game: ["wraith_band", "blight_stone", "power_treads"],
-          mid_game: ["desolator", "black_king_bar", "blink", "dragon_lance"],
+          early_game: ['wraith_band', 'blight_stone', 'power_treads'],
+          mid_game: ['desolator', 'black_king_bar', 'blink', 'dragon_lance'],
           late_game: [
-            "ultimate_scepter",
-            "aghanims_shard",
-            "hurricane_pike",
-            "greater_crit",
-            "swift_blink",
-            "satanic",
+            'ultimate_scepter',
+            'aghanims_shard',
+            'hurricane_pike',
+            'greater_crit',
+            'swift_blink',
+            'satanic',
           ],
           situational: [
-            "sheepstick",
-            "sphere",
-            "nullifier",
-            "monkey_king_bar",
-            "silver_edge",
+            'sheepstick',
+            'sphere',
+            'nullifier',
+            'monkey_king_bar',
+            'silver_edge',
           ],
           core: [
-            "power_treads",
-            "desolator",
-            "black_king_bar",
-            "blink",
-            "dragon_lance",
-            "ultimate_scepter",
+            'power_treads',
+            'desolator',
+            'black_king_bar',
+            'blink',
+            'dragon_lance',
+            'ultimate_scepter',
           ],
           neutral: [
             // tier 1
-            "unstable_wand",
-            "occult_bracelet",
-            "lance_of_pursuit",
+            'unstable_wand',
+            'occult_bracelet',
+            'lance_of_pursuit',
 
             // tier 2
-            "grove_bow",
-            "specialists_array",
-            "orb_of_destruction",
+            'grove_bow',
+            'specialists_array',
+            'orb_of_destruction',
 
             // tier 3
-            "elven_tunic",
-            "enchanted_quiver",
-            "paladin_sword",
+            'elven_tunic',
+            'enchanted_quiver',
+            'paladin_sword',
 
             // tier 4
-            "ninja_gear",
-            "mind_breaker",
-            "avianas_feather",
+            'ninja_gear',
+            'mind_breaker',
+            'avianas_feather',
 
             // tier 5
-            "pirate_hat",
-            "desolator_2",
-            "apex",
+            'pirate_hat',
+            'desolator_2',
+            'apex',
           ],
         },
       },
@@ -17478,118 +17478,118 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40613,
         power_level: [1.9, 2.2, 2.7, 2.6],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "templar_assassin_psi_blades", // 1
-          "templar_assassin_refraction", // 2
-          "templar_assassin_refraction", // 3
-          "templar_assassin_psi_blades", // 4
-          "templar_assassin_refraction", // 5
-          "templar_assassin_psionic_trap", // 6
-          "templar_assassin_refraction", // 7
-          "templar_assassin_meld", // 8
-          "templar_assassin_meld", // 9
-          "templar_assassin_meld", // 10
-          "templar_assassin_meld", // 11
-          "templar_assassin_psionic_trap", // 12
-          "templar_assassin_psi_blades", // 13
-          "special_bonus_unique_templar_assassin_refraction_damage", // 14
-          "special_bonus_unique_templar_assassin_8", // 15
-          "templar_assassin_psi_blades", // 16
-          "special_bonus_attributes", // 17
-          "templar_assassin_psionic_trap", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_templar_assassin_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_templar_assassin", // 25
+          'templar_assassin_psi_blades', // 1
+          'templar_assassin_refraction', // 2
+          'templar_assassin_refraction', // 3
+          'templar_assassin_psi_blades', // 4
+          'templar_assassin_refraction', // 5
+          'templar_assassin_psionic_trap', // 6
+          'templar_assassin_refraction', // 7
+          'templar_assassin_meld', // 8
+          'templar_assassin_meld', // 9
+          'templar_assassin_meld', // 10
+          'templar_assassin_meld', // 11
+          'templar_assassin_psionic_trap', // 12
+          'templar_assassin_psi_blades', // 13
+          'special_bonus_unique_templar_assassin_refraction_damage', // 14
+          'special_bonus_unique_templar_assassin_8', // 15
+          'templar_assassin_psi_blades', // 16
+          'special_bonus_attributes', // 17
+          'templar_assassin_psionic_trap', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_templar_assassin_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_templar_assassin', // 25
         ],
         items: {
           starting: [
-            "branches",
-            "branches",
-            "tango",
-            "faerie_fire",
-            "ward_observer",
+            'branches',
+            'branches',
+            'tango',
+            'faerie_fire',
+            'ward_observer',
           ],
-          early_game: ["bottle", "magic_wand", "blight_stone", "power_treads"],
-          mid_game: ["desolator", "black_king_bar", "blink", "dragon_lance"],
+          early_game: ['bottle', 'magic_wand', 'blight_stone', 'power_treads'],
+          mid_game: ['desolator', 'black_king_bar', 'blink', 'dragon_lance'],
           late_game: [
-            "ultimate_scepter",
-            "hurricane_pike",
-            "aghanims_shard",
-            "greater_crit",
-            "swift_blink",
-            "satanic",
+            'ultimate_scepter',
+            'hurricane_pike',
+            'aghanims_shard',
+            'greater_crit',
+            'swift_blink',
+            'satanic',
           ],
           situational: [
-            "sheepstick",
-            "sphere",
-            "nullifier",
-            "monkey_king_bar",
-            "silver_edge",
+            'sheepstick',
+            'sphere',
+            'nullifier',
+            'monkey_king_bar',
+            'silver_edge',
           ],
           core: [
-            "power_treads",
-            "desolator",
-            "black_king_bar",
-            "blink",
-            "dragon_lance",
-            "ultimate_scepter",
+            'power_treads',
+            'desolator',
+            'black_king_bar',
+            'blink',
+            'dragon_lance',
+            'ultimate_scepter',
           ],
           neutral: [
             // tier 1
-            "unstable_wand",
-            "occult_bracelet",
-            "lance_of_pursuit",
+            'unstable_wand',
+            'occult_bracelet',
+            'lance_of_pursuit',
 
             // tier 2
-            "grove_bow",
-            "specialists_array",
-            "orb_of_destruction",
+            'grove_bow',
+            'specialists_array',
+            'orb_of_destruction',
 
             // tier 3
-            "elven_tunic",
-            "enchanted_quiver",
-            "paladin_sword",
+            'elven_tunic',
+            'enchanted_quiver',
+            'paladin_sword',
 
             // tier 4
-            "ninja_gear",
-            "mind_breaker",
-            "avianas_feather",
+            'ninja_gear',
+            'mind_breaker',
+            'avianas_feather',
 
             // tier 5
-            "pirate_hat",
-            "desolator_2",
-            "apex",
+            'pirate_hat',
+            'desolator_2',
+            'apex',
           ],
         },
       },
     ],
     combo: [
-      "templar_assassin_refraction",
-      "black_king_bar",
-      "blink",
-      "templar_assassin_meld",
-      "attack",
+      'templar_assassin_refraction',
+      'black_king_bar',
+      'blink',
+      'templar_assassin_meld',
+      'attack',
     ],
     counter_items: {
       laning_phase: {
-        all: ["ward_sentry", "wind_lace", "boots", "urn_of_shadows", "armor"],
+        all: ['ward_sentry', 'wind_lace', 'boots', 'urn_of_shadows', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel", "ward_sentry", "dust"],
-        support: ["ghost", "glimmer_cape"],
-        core: ["hurricane_pike", "witch_blade", "heavens_halberd", "javelin"],
+        all: ['spirit_vessel', 'ward_sentry', 'dust'],
+        support: ['ghost', 'glimmer_cape'],
+        core: ['hurricane_pike', 'witch_blade', 'heavens_halberd', 'javelin'],
       },
       late_game: {
-        all: ["gem", "sheepstick", "ethereal_blade", "aeon_disk"],
+        all: ['gem', 'sheepstick', 'ethereal_blade', 'aeon_disk'],
         support: [],
-        core: ["abyssal_blade", "assault", "butterfly", "radiance"],
+        core: ['abyssal_blade', 'assault', 'butterfly', 'radiance'],
       },
     },
   },
@@ -17606,70 +17606,70 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40645,
         power_level: [1.6, 2, 2.7, 2.8],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "terrorblade_reflection", // 1
-          "terrorblade_metamorphosis", // 2
-          "terrorblade_metamorphosis", // 3
-          "terrorblade_conjure_image", // 4
-          "terrorblade_conjure_image", // 5
-          "terrorblade_conjure_image", // 6
-          "terrorblade_conjure_image", // 7
-          "terrorblade_sunder", // 8
-          "terrorblade_metamorphosis", // 9
-          "special_bonus_unique_terrorblade_4", // 10
-          "terrorblade_metamorphosis", // 11
-          "terrorblade_sunder", // 12
-          "terrorblade_reflection", // 13
-          "terrorblade_reflection", // 14
-          "special_bonus_unique_terrorblade_metamorphosis_cooldown", // 15
-          "terrorblade_reflection", // 16
-          "special_bonus_attributes", // 17
-          "terrorblade_sunder", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_terrorblade_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_terrorblade_3", // 25
+          'terrorblade_reflection', // 1
+          'terrorblade_metamorphosis', // 2
+          'terrorblade_metamorphosis', // 3
+          'terrorblade_conjure_image', // 4
+          'terrorblade_conjure_image', // 5
+          'terrorblade_conjure_image', // 6
+          'terrorblade_conjure_image', // 7
+          'terrorblade_sunder', // 8
+          'terrorblade_metamorphosis', // 9
+          'special_bonus_unique_terrorblade_4', // 10
+          'terrorblade_metamorphosis', // 11
+          'terrorblade_sunder', // 12
+          'terrorblade_reflection', // 13
+          'terrorblade_reflection', // 14
+          'special_bonus_unique_terrorblade_metamorphosis_cooldown', // 15
+          'terrorblade_reflection', // 16
+          'special_bonus_attributes', // 17
+          'terrorblade_sunder', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_terrorblade_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_terrorblade_3', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "magic_stick",
-            "branches",
-            "circlet",
+            'tango',
+            'quelling_blade',
+            'magic_stick',
+            'branches',
+            'circlet',
           ],
-          early_game: ["wraith_band", "power_treads", "magic_wand", "yasha"],
-          mid_game: ["manta", "skadi", "black_king_bar"],
-          late_game: ["butterfly", "greater_crit", "disperser", "satanic"],
+          early_game: ['wraith_band', 'power_treads', 'magic_wand', 'yasha'],
+          mid_game: ['manta', 'skadi', 'black_king_bar'],
+          late_game: ['butterfly', 'greater_crit', 'disperser', 'satanic'],
           situational: [
-            "hand_of_midas",
-            "aghanims_shard",
-            "infused_raindrop",
-            "monkey_king_bar",
-            "sange_and_yasha",
-            "sphere",
-            "diffusal_blade",
-            "swift_blink",
-            "hurricane_pike",
-            "dragon_lance",
-            "refresher",
+            'hand_of_midas',
+            'aghanims_shard',
+            'infused_raindrop',
+            'monkey_king_bar',
+            'sange_and_yasha',
+            'sphere',
+            'diffusal_blade',
+            'swift_blink',
+            'hurricane_pike',
+            'dragon_lance',
+            'refresher',
           ],
-          core: ["manta", "skadi", "black_king_bar", "butterfly"],
+          core: ['manta', 'skadi', 'black_king_bar', 'butterfly'],
           neutral: [
-            "unstable_wand",
-            "broom_handle",
-            "grove_bow",
-            "vambrace",
-            "elven_tunic",
-            "vindicators_axe",
-            "mind_breaker",
-            "ninja_gear",
-            "pirate_hat",
-            "mirror_shield",
+            'unstable_wand',
+            'broom_handle',
+            'grove_bow',
+            'vambrace',
+            'elven_tunic',
+            'vindicators_axe',
+            'mind_breaker',
+            'ninja_gear',
+            'pirate_hat',
+            'mirror_shield',
           ],
         },
       },
@@ -17677,41 +17677,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["armor"],
-        support: ["ward_sentry"],
+        all: ['armor'],
+        support: ['ward_sentry'],
         core: [],
       },
       mid_game: {
         all: [
           //"medallion_of_courage",
-          "solar_crest",
-          "lotus_orb",
-          "sphere",
-          "dagon",
+          'solar_crest',
+          'lotus_orb',
+          'sphere',
+          'dagon',
         ],
-        support: ["ward_dispenser", "glimmer_cape", "ghost"],
+        support: ['ward_dispenser', 'glimmer_cape', 'ghost'],
         core: [
-          "maelstrom",
-          "crimson_guard",
-          "heavens_halberd",
-          "orchid",
-          "black_king_bar",
-          "travel_boots",
-          "manta",
+          'maelstrom',
+          'crimson_guard',
+          'heavens_halberd',
+          'orchid',
+          'black_king_bar',
+          'travel_boots',
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade"],
-        support: ["travel_boots"],
+        all: ['sheepstick', 'ethereal_blade'],
+        support: ['travel_boots'],
         core: [
-          "mjollnir",
-          "monkey_king_bar",
-          "abyssal_blade",
-          "assault",
-          "bloodthorn",
-          "butterfly",
-          "overwhelming_blink",
-          "satanic",
+          'mjollnir',
+          'monkey_king_bar',
+          'abyssal_blade',
+          'assault',
+          'bloodthorn',
+          'butterfly',
+          'overwhelming_blink',
+          'satanic',
         ],
       },
     },
@@ -17728,38 +17728,38 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40621,
         power_level: [1.7, 2, 2.5, 2.6],
-        facet: undefined,
+        facet: null,
         abilities: [
           `tidehunter_gush`, // 1
           `tidehunter_anchor_smash`, // 2
-          "tidehunter_anchor_smash", // 3
+          'tidehunter_anchor_smash', // 3
           `tidehunter_kraken_shell`, // 4
-          "tidehunter_anchor_smash", // 5
-          "tidehunter_ravage", // 6
-          "tidehunter_anchor_smash", // 7
-          "tidehunter_kraken_shell", // 8
-          "tidehunter_kraken_shell", // 9
+          'tidehunter_anchor_smash', // 5
+          'tidehunter_ravage', // 6
+          'tidehunter_anchor_smash', // 7
+          'tidehunter_kraken_shell', // 8
+          'tidehunter_kraken_shell', // 9
           `special_bonus_unique_tidehunter_9`, // 10
           `tidehunter_kraken_shell`, // 11
-          "tidehunter_ravage", // 12
-          "tidehunter_gush", // 13
-          "tidehunter_gush", // 14
+          'tidehunter_ravage', // 12
+          'tidehunter_gush', // 13
+          'tidehunter_gush', // 14
           `special_bonus_unique_tidehunter_2`, // 15
           `tidehunter_gush`, // 16
-          "special_bonus_attributes", // 17
-          "tidehunter_ravage", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'tidehunter_ravage', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_tidehunter_10`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_tidehunter_7", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tidehunter_7', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
+            'tango',
+            'quelling_blade',
             `gauntlets`,
             `gauntlets`,
             `branches`,
@@ -17793,7 +17793,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `meteor_hammer`,
             `guardian_greaves`,
             `force_staff`,
-            "heavens_halberd",
+            'heavens_halberd',
             `lotus_orb`,
             `pipe`,
             `eternal_shroud`,
@@ -17813,7 +17813,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `blink`,
             `shivas_guard`,
             `aghanims_shard`,
-            "ultimate_scepter",
+            'ultimate_scepter',
             `refresher`,
           ],
           neutral: [
@@ -17821,7 +17821,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_ring`,
             `bullwhip`,
             `dragon_scale`,
-            "cloak_of_flames",
+            'cloak_of_flames',
             `ceremonial_robe`,
             `timeless_relic`,
             `ninja_gear`,
@@ -17849,19 +17849,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "blight_stone", "lifesteal", "armor"],
+        all: ['magic_stick', 'blight_stone', 'lifesteal', 'armor'],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["mekansm"],
-        support: ["glimmer_cape", "force_staff"],
-        core: ["black_king_bar", "silver_edge", `sange_and_yasha`],
+        all: ['mekansm'],
+        support: ['glimmer_cape', 'force_staff'],
+        core: ['black_king_bar', 'silver_edge', `sange_and_yasha`],
       },
       late_game: {
-        all: ["wind_waker"],
-        support: ["black_king_bar", "aeon_disk"],
-        core: ["assault"],
+        all: ['wind_waker'],
+        support: ['black_king_bar', 'aeon_disk'],
+        core: ['assault'],
       },
     },
   },
@@ -17880,39 +17880,39 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.4, 2.6, 2.4, 2.3],
         facet: 2,
         abilities: [
-          "shredder_whirling_death", // 1
-          "shredder_reactive_armor", // 2
+          'shredder_whirling_death', // 1
+          'shredder_reactive_armor', // 2
           `shredder_timber_chain`, // 3
           `shredder_whirling_death`, // 4
           `shredder_timber_chain`, // 5
-          "shredder_chakram", // 6
-          "shredder_timber_chain", // 7
-          "shredder_timber_chain", // 8
+          'shredder_chakram', // 6
+          'shredder_timber_chain', // 7
+          'shredder_timber_chain', // 8
           `shredder_whirling_death`, // 9
           `special_bonus_mp_regen_150`, // 10
           `shredder_whirling_death`, // 11
-          "shredder_chakram", // 12
+          'shredder_chakram', // 12
           `shredder_reactive_armor`, // 13
           `shredder_reactive_armor`, // 14
           `special_bonus_unique_timbersaw_5`, // 15
           `shredder_reactive_armor`, // 16
-          "special_bonus_attributes", // 17
-          "shredder_chakram", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_magic_resistance_20", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'shredder_chakram', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_magic_resistance_20', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_timbersaw_3`, // 25
         ],
         items: {
           starting: [
             `tango`,
             `quelling_blade`,
-            "gauntlets",
-            "gauntlets",
-            "branches",
+            'gauntlets',
+            'gauntlets',
+            'branches',
             `branches`,
             `ward_observer`,
           ],
@@ -17920,7 +17920,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `bracer`,
             `arcane_boots`,
             `soul_ring`,
-            "magic_wand",
+            'magic_wand',
             `wind_lace`,
           ],
           mid_game: [
@@ -17932,7 +17932,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           late_game: [`blink`, `aghanims_shard`, `wind_waker`, `sheepstick`],
           situational: [
-            "orb_of_corrosion",
+            'orb_of_corrosion',
             `veil_of_discord`,
             `vanguard`,
             `meteor_hammer`,
@@ -17962,12 +17962,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `wind_waker`,
           ],
           neutral: [
-            "arcane_ring",
+            'arcane_ring',
             `occult_bracelet`,
             `vambrace`,
             `bullwhip`,
             `craggy_coat`,
-            "cloak_of_flames",
+            'cloak_of_flames',
             `rattlecage`,
             `havoc_hammer`,
             `giants_ring`,
@@ -17987,25 +17987,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_health",
-          "wind_lace",
-          "boots",
-          "urn_of_shadows",
-          "quelling_blade",
+          'magic_stick',
+          'ring_of_health',
+          'wind_lace',
+          'boots',
+          'urn_of_shadows',
+          'quelling_blade',
         ],
-        support: ["tranquil_boots"],
+        support: ['tranquil_boots'],
         core: [],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["glimmer_cape", "force_staff"],
-        core: ["mage_slayer", "black_king_bar", "silver_edge"],
+        all: ['spirit_vessel'],
+        support: ['glimmer_cape', 'force_staff'],
+        core: ['mage_slayer', 'black_king_bar', 'silver_edge'],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["skadi", "abyssal_blade", "bloodthorn"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['skadi', 'abyssal_blade', 'bloodthorn'],
       },
     },
   },
@@ -18023,31 +18023,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2, 2.2, 2.7, 2.8],
         facet: 2,
         abilities: [
-          "tinker_laser", // 1
-          "tinker_march_of_the_machines", // 2
+          'tinker_laser', // 1
+          'tinker_march_of_the_machines', // 2
           `tinker_march_of_the_machines`, // 3
           `tinker_laser`, // 4
           `tinker_march_of_the_machines`, // 5
-          "tinker_rearm", // 6   Note Michel: Use 'tinker_keen_teleport' instead of 'tinker_rearm'
+          'tinker_rearm', // 6   Note Michel: Use 'tinker_keen_teleport' instead of 'tinker_rearm'
           `tinker_march_of_the_machines`, // 7
           `tinker_laser`, // 8
           `tinker_laser`, // 9
           `special_bonus_unique_tinker_march_duration`, // 10
           `tinker_defense_matrix`, // 11
-          "tinker_rearm", // 12
-          "tinker_defense_matrix", // 13
-          "tinker_defense_matrix", // 14
+          'tinker_rearm', // 12
+          'tinker_defense_matrix', // 13
+          'tinker_defense_matrix', // 14
           `special_bonus_unique_tinker`, // 15
           `tinker_defense_matrix`, // 16
-          "special_bonus_attributes", // 17
-          "tinker_rearm", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'tinker_rearm', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_tinker_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_tinker_4", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tinker_4', // 25
         ],
         items: {
           starting: [
@@ -18089,7 +18089,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `overwhelming_blink`,
           ],
           core: [
-            "bottle",
+            'bottle',
             `null_talisman`,
             `blink`,
             `ultimate_scepter`,
@@ -18099,15 +18099,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_blink`,
           ],
           neutral: [
-            "mysterious_hat",
+            'mysterious_hat',
             `safety_bubble`,
-            "philosophers_stone",
+            'philosophers_stone',
             `vambrace`,
-            "psychic_headband",
-            "ceremonial_robe",
-            "timeless_relic",
+            'psychic_headband',
+            'ceremonial_robe',
+            'timeless_relic',
             `spy_gadget`,
-            "seer_stone",
+            'seer_stone',
             `force_boots`,
           ],
         },
@@ -18135,27 +18135,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       laning_phase: {
         all: [`ring_of_regen`, `headdress`, `cloak`],
         support: [`tranquil_boots`],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb", "blink"],
+        all: ['lotus_orb', 'blink'],
         support: [`glimmer_cape`, `ward_observer`],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "blade_mail",
-          "black_king_bar",
-          "invis_sword",
-          "travel_boots",
-          "witch_blade",
+          'pipe',
+          'eternal_shroud',
+          'blade_mail',
+          'black_king_bar',
+          'invis_sword',
+          'travel_boots',
+          'witch_blade',
         ],
       },
       late_game: {
-        all: ["sheepstick", "sphere", "aeon_disk"],
-        support: ["ward_observer", "black_king_bar", "travel_boots"],
-        core: ["monkey_king_bar", "abyssal_blade", "satanic", "heart"],
+        all: ['sheepstick', 'sphere', 'aeon_disk'],
+        support: ['ward_observer', 'black_king_bar', 'travel_boots'],
+        core: ['monkey_king_bar', 'abyssal_blade', 'satanic', 'heart'],
       },
     },
   },
@@ -18174,30 +18174,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         facet: 1,
         abilities: [
           `tiny_tree_grab`, // 1
-          "tiny_avalanche", // 2
-          "tiny_toss", // 3
-          "tiny_avalanche", // 4
-          "tiny_avalanche", // 5
+          'tiny_avalanche', // 2
+          'tiny_toss', // 3
+          'tiny_avalanche', // 4
+          'tiny_avalanche', // 5
           `tiny_grow`, // 6
-          "tiny_avalanche", // 7
-          "tiny_toss", // 8
+          'tiny_avalanche', // 7
+          'tiny_toss', // 8
           `tiny_toss`, // 9
           `tiny_toss`, // 10
           `special_bonus_unique_tiny_4`, // 11
-          "tiny_grow", // 12
-          "tiny_tree_grab", // 13
-          "tiny_tree_grab", // 14
+          'tiny_grow', // 12
+          'tiny_tree_grab', // 13
+          'tiny_tree_grab', // 14
           `special_bonus_unique_tiny`, // 15
-          "tiny_tree_grab", // 16
-          "special_bonus_attributes", // 17
-          "tiny_grow", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_tiny_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_tiny_2", // 25
+          'tiny_tree_grab', // 16
+          'special_bonus_attributes', // 17
+          'tiny_grow', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_tiny_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tiny_2', // 25
         ],
         items: {
           starting: [
@@ -18245,8 +18245,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           ],
           core: [
             `arcane_boots`,
-            "blink",
-            "force_staff",
+            'blink',
+            'force_staff',
             `wind_waker`,
             `octarine_core`,
             `assault`,
@@ -18254,10 +18254,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `faded_broach`,
-            "philosophers_stone",
+            'philosophers_stone',
             `bullwhip`,
             `ceremonial_robe`,
-            "ogre_seal_totem",
+            'ogre_seal_totem',
             `timeless_relic`,
             `ninja_gear`,
             `giants_ring`,
@@ -18273,31 +18273,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 2.2, 2.6, 2.5],
         facet: 2,
         abilities: [
-          "tiny_tree_grab", // 1
-          "tiny_avalanche", // 2
-          "tiny_avalanche", // 3
-          "tiny_toss", // 4
-          "tiny_avalanche", // 5
-          "tiny_grow", // 6
-          "tiny_avalanche", // 7
-          "tiny_toss", // 8
-          "tiny_toss", // 9
-          "tiny_toss", // 10
+          'tiny_tree_grab', // 1
+          'tiny_avalanche', // 2
+          'tiny_avalanche', // 3
+          'tiny_toss', // 4
+          'tiny_avalanche', // 5
+          'tiny_grow', // 6
+          'tiny_avalanche', // 7
+          'tiny_toss', // 8
+          'tiny_toss', // 9
+          'tiny_toss', // 10
           `special_bonus_strength_8`, // 11
-          "tiny_grow", // 12
-          "tiny_tree_grab", // 13
-          "tiny_tree_grab", // 14
-          "special_bonus_unique_tiny", // 15
-          "tiny_tree_grab", // 16
-          "special_bonus_attributes", // 17
-          "tiny_grow", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_tiny_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_tiny_2", // 25
+          'tiny_grow', // 12
+          'tiny_tree_grab', // 13
+          'tiny_tree_grab', // 14
+          'special_bonus_unique_tiny', // 15
+          'tiny_tree_grab', // 16
+          'special_bonus_attributes', // 17
+          'tiny_grow', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_tiny_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tiny_2', // 25
         ],
         items: {
           starting: [
@@ -18305,9 +18305,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `quelling_blade`,
             `faerie_fire`,
             `branches`,
-            "branches",
-            "branches",
-            "ward_observer",
+            'branches',
+            'branches',
+            'ward_observer',
           ],
           early_game: [
             `bottle`,
@@ -18382,31 +18382,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.7, 1.9, 2.7, 2.6],
         facet: 2,
         abilities: [
-          "tiny_tree_grab", // 1
-          "tiny_avalanche", // 2
-          "tiny_tree_grab", // 3
-          "tiny_toss", // 4
-          "tiny_tree_grab", // 5
-          "tiny_grow", // 6
-          "tiny_tree_grab", // 7
-          "tiny_avalanche", // 8
-          "tiny_avalanche", // 9
+          'tiny_tree_grab', // 1
+          'tiny_avalanche', // 2
+          'tiny_tree_grab', // 3
+          'tiny_toss', // 4
+          'tiny_tree_grab', // 5
+          'tiny_grow', // 6
+          'tiny_tree_grab', // 7
+          'tiny_avalanche', // 8
+          'tiny_avalanche', // 9
           `special_bonus_strength_8`, // 10
-          "tiny_avalanche", // 11
-          "tiny_grow", // 12
-          "tiny_toss", // 13
-          "tiny_toss", // 14
-          "special_bonus_unique_tiny_6", // 15
-          "tiny_toss", // 16
-          "special_bonus_attributes", // 17
-          "tiny_grow", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_tiny_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_tiny_2", // 25
+          'tiny_avalanche', // 11
+          'tiny_grow', // 12
+          'tiny_toss', // 13
+          'tiny_toss', // 14
+          'special_bonus_unique_tiny_6', // 15
+          'tiny_toss', // 16
+          'special_bonus_attributes', // 17
+          'tiny_grow', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_tiny_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tiny_2', // 25
         ],
         items: {
           starting: [
@@ -18475,26 +18475,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [`blink`, `tiny_avalanche`, `tiny_toss`, `attack`],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "infused_raindrop", "armor", "cloak"],
-        support: ["ward_sentry"],
-        core: ["orb_of_corrosion"],
+        all: ['blight_stone', 'infused_raindrop', 'armor', 'cloak'],
+        support: ['ward_sentry'],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: [/*"medallion_of_courage",*/ "solar_crest"],
-        support: ["glimmer_cape"],
+        all: [/*"medallion_of_courage",*/ 'solar_crest'],
+        support: ['glimmer_cape'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "hurricane_pike",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'hurricane_pike',
+          'black_king_bar',
         ],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk"],
-        support: ["black_king_bar"],
-        core: ["assault", "shivas_guard", "butterfly", "bloodthorn"],
+        all: ['sheepstick', 'ethereal_blade', 'aeon_disk'],
+        support: ['black_king_bar'],
+        core: ['assault', 'shivas_guard', 'butterfly', 'bloodthorn'],
       },
     },
   },
@@ -18519,36 +18519,36 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `treant_leech_seed`, // 3
           `treant_living_armor`, // 4
           `treant_leech_seed`, // 5
-          "treant_overgrowth", // 6
+          'treant_overgrowth', // 6
           `treant_natures_grasp`, // 7
           `treant_natures_grasp`, // 8
           `treant_natures_grasp`, // 9
           `treant_living_armor`, // 10
           `treant_living_armor`, // 11
-          "treant_overgrowth", // 12
+          'treant_overgrowth', // 12
           `treant_living_armor`, // 13
           `special_bonus_unique_treant_12`, // 14
           `special_bonus_unique_treant_9`, // 15
           `treant_leech_seed`, // 16
-          "special_bonus_attributes", // 17
-          "treant_overgrowth", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_treant_13", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'treant_overgrowth', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_treant_13', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_treant_14`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `blood_grenade`,
             `enchanted_mango`,
             `wind_lace`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
@@ -18598,10 +18598,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `arcane_ring`,
-            "philosophers_stone",
-            "bullwhip",
+            'philosophers_stone',
+            'bullwhip',
             `ogre_seal_totem`,
-            "ceremonial_robe",
+            'ceremonial_robe',
             `timeless_relic`,
             `ascetic_cap`,
             `book_of_shadows`,
@@ -18622,30 +18622,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "quelling_blade",
-          "blight_stone",
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
+          'quelling_blade',
+          'blight_stone',
+          'ring_of_regen',
+          'wind_lace',
+          'boots',
         ],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb", "cyclone"],
-        support: ["SentryDustGem", "glimmer_cape", "force_staff"],
+        all: ['lotus_orb', 'cyclone'],
+        support: ['SentryDustGem', 'glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'manta',
         ],
       },
       late_game: {
         all: [],
-        support: ["SentryDustGem", "black_king_bar"],
-        core: ["satanic"],
+        support: ['SentryDustGem', 'black_king_bar'],
+        core: ['satanic'],
       },
     },
   },
@@ -18662,50 +18662,50 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40634,
         power_level: [1.6, 1.7, 2.7, 2.6],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "troll_warlord_whirling_axes_ranged", // 1
-          "troll_warlord_berserkers_rage", // 2
-          "troll_warlord_fervor", // 3
-          "troll_warlord_whirling_axes_ranged", // 4
-          "troll_warlord_whirling_axes_ranged", // 5
-          "troll_warlord_battle_trance", // 6
-          "troll_warlord_whirling_axes_ranged", // 7
-          "troll_warlord_fervor", // 8
+          'troll_warlord_whirling_axes_ranged', // 1
+          'troll_warlord_berserkers_rage', // 2
+          'troll_warlord_fervor', // 3
+          'troll_warlord_whirling_axes_ranged', // 4
+          'troll_warlord_whirling_axes_ranged', // 5
+          'troll_warlord_battle_trance', // 6
+          'troll_warlord_whirling_axes_ranged', // 7
+          'troll_warlord_fervor', // 8
           `troll_warlord_berserkers_rage`, // 9
-          "troll_warlord_fervor", // 10
-          "special_bonus_unique_troll_warlord_2", // 11
-          "troll_warlord_battle_trance", // 12
-          "troll_warlord_berserkers_rage", // 13
-          "troll_warlord_berserkers_rage", // 14
-          "special_bonus_unique_troll_warlord_5", // 15 Note Michel: Can't skill level 15 before level 10 in Dota 2 guides
+          'troll_warlord_fervor', // 10
+          'special_bonus_unique_troll_warlord_2', // 11
+          'troll_warlord_battle_trance', // 12
+          'troll_warlord_berserkers_rage', // 13
+          'troll_warlord_berserkers_rage', // 14
+          'special_bonus_unique_troll_warlord_5', // 15 Note Michel: Can't skill level 15 before level 10 in Dota 2 guides
           `troll_warlord_fervor`, // 16
-          "special_bonus_attributes", // 17
-          "troll_warlord_battle_trance", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_troll_warlord", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_troll_warlord_4", // 25
+          'special_bonus_attributes', // 17
+          'troll_warlord_battle_trance', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_troll_warlord', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_troll_warlord_4', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "slippers",
-            "circlet",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'slippers',
+            'circlet',
           ],
-          early_game: ["wraith_band", "phase_boots", "magic_wand", "bfury"],
-          mid_game: ["yasha", "black_king_bar", "sange_and_yasha", "blink"],
+          early_game: ['wraith_band', 'phase_boots', 'magic_wand', 'bfury'],
+          mid_game: ['yasha', 'black_king_bar', 'sange_and_yasha', 'blink'],
           late_game: [
-            "abyssal_blade",
-            "ultimate_scepter",
-            "satanic",
-            "butterfly",
-            "swift_blink",
+            'abyssal_blade',
+            'ultimate_scepter',
+            'satanic',
+            'butterfly',
+            'swift_blink',
           ],
           situational: [
             `power_treads`,
@@ -18714,62 +18714,62 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `monkey_king_bar`,
             `mjollnir`,
             `disperser`,
-            "sphere",
-            "silver_edge",
-            "greater_crit",
-            "aghanims_shard",
-            "manta",
-            "skadi",
-            "refresher",
+            'sphere',
+            'silver_edge',
+            'greater_crit',
+            'aghanims_shard',
+            'manta',
+            'skadi',
+            'refresher',
           ],
           core: [
-            "phase_boots",
-            "bfury",
-            "sange_and_yasha",
-            "black_king_bar",
-            "blink",
-            "abyssal_blade",
-            "ultimate_scepter",
+            'phase_boots',
+            'bfury',
+            'sange_and_yasha',
+            'black_king_bar',
+            'blink',
+            'abyssal_blade',
+            'ultimate_scepter',
           ],
           neutral: [
-            "broom_handle",
-            "occult_bracelet",
+            'broom_handle',
+            'occult_bracelet',
             //"ring_of_aquila",
-            "orb_of_destruction",
-            "elven_tunic",
+            'orb_of_destruction',
+            'elven_tunic',
             //"titan_sliver",
-            "paladin_sword",
-            "ninja_gear",
+            'paladin_sword',
+            'ninja_gear',
             //"penta_edged_sword",
-            "apex",
-            "mirror_shield",
-            "pirate_hat",
+            'apex',
+            'mirror_shield',
+            'pirate_hat',
           ],
         },
       },
     ],
     combo: [
-      "troll_warlord_berserkers_rage",
-      "black_king_bar",
-      "blink",
-      "troll_warlord_battle_trance",
-      "troll_warlord_whirling_axes_ranged",
+      'troll_warlord_berserkers_rage',
+      'black_king_bar',
+      'blink',
+      'troll_warlord_battle_trance',
+      'troll_warlord_whirling_axes_ranged',
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "wind_lace", "boots", "armor"],
+        all: ['magic_stick', 'wind_lace', 'boots', 'armor'],
         support: [],
-        core: ["vanguard"],
+        core: ['vanguard'],
       },
       mid_game: {
-        all: ["cyclone", /*"medallion_of_courage",*/ "solar_crest"],
-        support: ["force_staff", "ghost"],
-        core: ["heavens_halberd", "hurricane_pike", "witch_blade"],
+        all: ['cyclone', /*"medallion_of_courage",*/ 'solar_crest'],
+        support: ['force_staff', 'ghost'],
+        core: ['heavens_halberd', 'hurricane_pike', 'witch_blade'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "wind_waker"],
+        all: ['sheepstick', 'ethereal_blade', 'wind_waker'],
         support: [],
-        core: ["assault", "abyssal_blade", "butterfly", "monkey_king_bar"],
+        core: ['assault', 'abyssal_blade', 'butterfly', 'monkey_king_bar'],
       },
     },
   },
@@ -18789,37 +18789,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `tusk_bitter_chill`, // 1
           `tusk_ice_shards`, // 2
-          "tusk_snowball", // 3
-          "tusk_bitter_chill", // 4
-          "tusk_bitter_chill", // 5
-          "tusk_walrus_punch", // 6
-          "tusk_bitter_chill", // 7
-          "tusk_snowball", // 8
-          "tusk_snowball", // 9
+          'tusk_snowball', // 3
+          'tusk_bitter_chill', // 4
+          'tusk_bitter_chill', // 5
+          'tusk_walrus_punch', // 6
+          'tusk_bitter_chill', // 7
+          'tusk_snowball', // 8
+          'tusk_snowball', // 9
           `tusk_snowball`, // 10
           `tusk_ice_shards`, // 11
-          "tusk_walrus_punch", // 12
-          "tusk_ice_shards", // 13
-          "tusk_ice_shards", // 14
+          'tusk_walrus_punch', // 12
+          'tusk_ice_shards', // 13
+          'tusk_ice_shards', // 14
           `special_bonus_unique_tusk_7`, // 15
-          "special_bonus_unique_tusk_2", // 16
-          "special_bonus_attributes", // 17
-          "tusk_walrus_punch", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_tusk_5", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_tusk_6", // 25
+          'special_bonus_unique_tusk_2', // 16
+          'special_bonus_attributes', // 17
+          'tusk_walrus_punch', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_tusk_5', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tusk_6', // 25
         ],
         items: {
           starting: [
             `tango`,
             `blood_grenade`,
             `enchanted_mango`,
-            "faerie_fire",
-            "wind_lace",
+            'faerie_fire',
+            'wind_lace',
             `ward_observer`,
             `ward_sentry`,
           ],
@@ -18829,12 +18829,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `wind_lace`,
             `infused_raindrop`,
           ],
-          mid_game: [`blink`, "aghanims_shard", `cyclone`, `force_staff`],
+          mid_game: [`blink`, 'aghanims_shard', `cyclone`, `force_staff`],
           late_game: [
             `ultimate_scepter`,
             `boots_of_bearing`,
             `octarine_core`,
-            "wind_waker",
+            'wind_waker',
           ],
           situational: [
             `orb_of_venom`,
@@ -18845,20 +18845,20 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `solar_crest`,
             `aether_lens`,
             `glimmer_cape`,
-            "ghost",
-            "vladmir",
+            'ghost',
+            'vladmir',
             `lotus_orb`,
             `black_king_bar`,
             `heavens_halberd`,
             `aeon_disk`,
-            "assault",
+            'assault',
             `overwhelming_blink`,
             `travel_boots`,
           ],
           core: [
             `tranquil_boots`,
             `blink`,
-            "aghanims_shard",
+            'aghanims_shard',
             `cyclone`,
             `force_staff`,
             `ultimate_scepter`,
@@ -18867,12 +18867,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `arcane_ring`,
-            "bullwhip",
+            'bullwhip',
             `philosophers_stone`,
             `ceremonial_robe`,
             `ogre_seal_totem`,
             `ascetic_cap`,
-            "trickster_cloak",
+            'trickster_cloak',
             `giants_ring`,
             `force_boots`,
           ],
@@ -18891,43 +18891,43 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `tusk_bitter_chill`, // 3
           `tusk_snowball`, // 4
           `tusk_bitter_chill`, // 5
-          "tusk_walrus_punch", // 6
+          'tusk_walrus_punch', // 6
           `tusk_bitter_chill`, // 7
-          "tusk_snowball", // 8
-          "tusk_snowball", // 9
+          'tusk_snowball', // 8
+          'tusk_snowball', // 9
           `tusk_snowball`, // 10
           `tusk_ice_shards`, // 11
-          "tusk_walrus_punch", // 12
+          'tusk_walrus_punch', // 12
           `tusk_ice_shards`, // 13
           `tusk_ice_shards`, // 14
           `special_bonus_unique_tusk_7`, // 15
           `special_bonus_unique_tusk_2`, // 16
-          "special_bonus_attributes", // 17
-          "tusk_walrus_punch", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_tusk", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_tusk_4", // 25
+          'special_bonus_attributes', // 17
+          'tusk_walrus_punch', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_tusk', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_tusk_4', // 25
         ],
         items: {
           starting: [
             `tango`,
             `quelling_blade`,
-            "gauntlets",
-            "gauntlets",
-            "branches",
+            'gauntlets',
+            'gauntlets',
+            'branches',
             `branches`,
             `ward_observer`,
           ],
           early_game: [
-            "bracer",
-            "bracer",
-            "phase_boots",
+            'bracer',
+            'bracer',
+            'phase_boots',
             `magic_wand`,
-            "soul_ring",
+            'soul_ring',
           ],
           mid_game: [
             `blink`,
@@ -18935,36 +18935,36 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ultimate_scepter`,
             `aghanims_shard`,
           ],
-          late_game: ["black_king_bar", `harpoon`, `assault`, `octarine_core`],
+          late_game: ['black_king_bar', `harpoon`, `assault`, `octarine_core`],
           situational: [
-            "blight_stone",
-            "orb_of_corrosion",
+            'blight_stone',
+            'orb_of_corrosion',
             `veil_of_discord`,
-            "falcon_blade",
-            "echo_sabre",
+            'falcon_blade',
+            'echo_sabre',
             `vanguard`,
             `hand_of_midas`,
             `crimson_guard`,
             `pipe`,
             `blade_mail`,
-            "force_staff",
-            "cyclone",
-            "aether_lens",
-            "vladmir",
+            'force_staff',
+            'cyclone',
+            'aether_lens',
+            'vladmir',
             `silver_edge`,
             `heavens_halberd`,
             `lotus_orb`,
             `shivas_guard`,
             `sphere`,
             `aeon_disk`,
-            "wind_waker",
-            "moon_shard",
+            'wind_waker',
+            'moon_shard',
             `overwhelming_blink`,
             `travel_boots`,
           ],
           core: [
-            "phase_boots",
-            "soul_ring",
+            'phase_boots',
+            'soul_ring',
             `blink`,
             `desolator`,
             `ultimate_scepter`,
@@ -18975,7 +18975,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `broom_handle`,
             `arcane_ring`,
-            "vambrace",
+            'vambrace',
             `dragon_scale`,
             `cloak_of_flames`,
             `enchanted_quiver`,
@@ -18988,24 +18988,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       },
     ],
     combo: [
-      "tusk_bitter_chill",
-      "blink",
-      "tusk_walrus_punch",
-      "tusk_ice_shards",
-      "tusk_snowball",
+      'tusk_bitter_chill',
+      'blink',
+      'tusk_walrus_punch',
+      'tusk_ice_shards',
+      'tusk_snowball',
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
-        support: ["ward_observer"],
+        all: ['wind_lace', 'boots', 'armor'],
+        support: ['ward_observer'],
         core: [],
       },
       mid_game: {
-        all: [/*"medallion_of_courage",*/ "solar_crest"],
-        support: ["force_staff", "glimmer_cape", "ghost"],
-        core: ["blink", "hurricane_pike"],
+        all: [/*"medallion_of_courage",*/ 'solar_crest'],
+        support: ['force_staff', 'glimmer_cape', 'ghost'],
+        core: ['blink', 'hurricane_pike'],
       },
-      late_game: { all: [], support: [], core: ["assault"] },
+      late_game: { all: [], support: [], core: ['assault'] },
     },
   },
 
@@ -19097,13 +19097,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `arcane_ring`,
             `vambrace`,
             `dragon_scale`,
-            "cloak_of_flames",
-            "ogre_seal_totem",
-            "craggy_coat",
+            'cloak_of_flames',
+            'ogre_seal_totem',
+            'craggy_coat',
             `havoc_hammer`,
             `trickster_cloak`,
             `giants_ring`,
-            "force_boots",
+            'force_boots',
           ],
         },
       },
@@ -19123,34 +19123,34 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "headdress",
-          "wind_lace",
-          "boots",
-          "urn_of_shadows",
+          'magic_stick',
+          'headdress',
+          'wind_lace',
+          'boots',
+          'urn_of_shadows',
         ],
         support: [],
-        core: ["orb_of_corrosion"],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
         all: [
           /*"medallion_of_courage",*/
-          "spirit_vessel",
-          "solar_crest",
+          'spirit_vessel',
+          'solar_crest',
         ],
-        support: ["glimmer_cape", "force_staff"],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["skadi", "bloodthorn"],
+        support: ['black_king_bar'],
+        core: ['skadi', 'bloodthorn'],
       },
     },
   },
@@ -19169,35 +19169,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.4, 2.1, 1.6, 1.5],
         facet: 1,
         abilities: [
-          "undying_decay", // 1
+          'undying_decay', // 1
           `undying_tombstone`, // 2
           `undying_decay`, // 3
           `undying_tombstone`, // 4
           `undying_decay`, // 5
-          "undying_flesh_golem", // 6
+          'undying_flesh_golem', // 6
           `undying_decay`, // 7
           `undying_tombstone`, // 8
           `undying_tombstone`, // 9
           `special_bonus_unique_undying_8`, // 10
           `undying_soul_rip`, // 11
-          "undying_flesh_golem", // 12
+          'undying_flesh_golem', // 12
           `undying_soul_rip`, // 13
           `undying_soul_rip`, // 14
           `undying_soul_rip`, // 15
           `special_bonus_unique_undying_6`, // 16
-          "special_bonus_attributes", // 17
-          "undying_flesh_golem", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_undying_3", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 17
+          'undying_flesh_golem', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_undying_3', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_undying_5`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `clarity`,
@@ -19205,8 +19205,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `enchanted_mango`,
             `branches`,
             `branches`,
-            "ward_observer",
-            "ward_sentry",
+            'ward_observer',
+            'ward_sentry',
           ],
           early_game: [
             `boots`,
@@ -19216,57 +19216,57 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `infused_raindrop`,
           ],
           mid_game: [
-            "arcane_boots",
-            "mekansm",
+            'arcane_boots',
+            'mekansm',
             `pavise`,
             `solar_crest`,
             `guardian_greaves`,
-            "aghanims_shard",
+            'aghanims_shard',
           ],
           late_game: [
             `force_staff`,
-            "ultimate_scepter",
-            "shivas_guard",
-            "octarine_core",
+            'ultimate_scepter',
+            'shivas_guard',
+            'octarine_core',
           ],
           situational: [
             `veil_of_discord`,
             `spirit_vessel`,
-            "pipe",
-            "vladmir",
-            "lotus_orb",
-            "blink",
-            "glimmer_cape",
+            'pipe',
+            'vladmir',
+            'lotus_orb',
+            'blink',
+            'glimmer_cape',
             `ghost`,
             `cyclone`,
             `holy_locket`,
-            "blade_mail",
-            "ancient_janggo",
-            "crimson_guard",
-            "boots_of_bearing",
-            "aeon_disk",
-            "refresher",
+            'blade_mail',
+            'ancient_janggo',
+            'crimson_guard',
+            'boots_of_bearing',
+            'aeon_disk',
+            'refresher',
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            'arcane_boots',
             `solar_crest`,
             `guardian_greaves`,
-            "aghanims_shard",
+            'aghanims_shard',
             `force_staff`,
-            "ultimate_scepter",
-            "shivas_guard",
+            'ultimate_scepter',
+            'shivas_guard',
           ],
           neutral: [
-            "trusty_shovel",
+            'trusty_shovel',
             `arcane_ring`,
             `philosophers_stone`,
-            "bullwhip",
+            'bullwhip',
             `ogre_seal_totem`,
             `craggy_coat`,
             `trickster_cloak`,
             `ascetic_cap`,
-            "force_field",
+            'force_field',
             `giants_ring`,
           ],
         },
@@ -19279,44 +19279,44 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.4, 2.4, 1.9, 1.7],
         facet: 1,
         abilities: [
-          "undying_decay", // 1
+          'undying_decay', // 1
           `undying_tombstone`, // 2
           `undying_decay`, // 3
           `undying_tombstone`, // 4
           `undying_decay`, // 5
-          "undying_flesh_golem", // 6
+          'undying_flesh_golem', // 6
           `undying_decay`, // 7
           `undying_tombstone`, // 8
           `undying_tombstone`, // 9
           `special_bonus_unique_undying_8`, // 10
           `undying_soul_rip`, // 11
-          "undying_flesh_golem", // 12
+          'undying_flesh_golem', // 12
           `undying_soul_rip`, // 13
           `undying_soul_rip`, // 14
           `special_bonus_unique_undying`, // 15
           `undying_soul_rip`, // 16
-          "special_bonus_attributes", // 17
-          "undying_flesh_golem", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'undying_flesh_golem', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_undying_2`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_undying_4`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `quelling_blade`,
             `gauntlets`,
-            "circlet",
+            'circlet',
             `branches`,
             `branches`,
             `ward_observer`,
           ],
           early_game: [
-            "bracer",
+            'bracer',
             `boots`,
             `soul_ring`,
             `magic_wand`,
@@ -19324,47 +19324,47 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `wind_lace`,
           ],
           mid_game: [
-            "arcane_boots",
-            "blade_mail",
-            "eternal_shroud",
+            'arcane_boots',
+            'blade_mail',
+            'eternal_shroud',
             `ultimate_scepter`,
           ],
           late_game: [
-            "black_king_bar",
-            "octarine_core",
-            "shivas_guard",
+            'black_king_bar',
+            'octarine_core',
+            'shivas_guard',
             `overwhelming_blink`,
           ],
           situational: [
-            "veil_of_discord",
+            'veil_of_discord',
             `phase_boots`,
             `vanguard`,
-            "hand_of_midas",
+            'hand_of_midas',
             `pipe`,
-            "mekansm",
-            "ancient_janggo",
+            'mekansm',
+            'ancient_janggo',
             `vladmir`,
             `aghanims_shard`,
             `heavens_halberd`,
             `force_staff`,
             `lotus_orb`,
-            "guardian_greaves",
-            "boots_of_bearing",
+            'guardian_greaves',
+            'boots_of_bearing',
             `echo_sabre`,
             `harpoon`,
             `aeon_disk`,
-            "heart",
-            "assault",
+            'heart',
+            'assault',
             `travel_boots`,
           ],
           core: [
             `soul_ring`,
             `arcane_boots`,
-            "blade_mail",
-            "eternal_shroud",
-            "ultimate_scepter",
-            "black_king_bar",
-            "shivas_guard",
+            'blade_mail',
+            'eternal_shroud',
+            'ultimate_scepter',
+            'black_king_bar',
+            'shivas_guard',
           ],
           neutral: [
             `occult_bracelet`,
@@ -19394,24 +19394,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
-          "urn_of_shadows",
+          'magic_stick',
+          'ring_of_regen',
+          'wind_lace',
+          'boots',
+          'urn_of_shadows',
         ],
         support: [],
         core: [],
       },
       mid_game: {
         all: [],
-        support: ["glimmer_cape", "force_staff"],
-        core: ["AttackSpeed"],
+        support: ['glimmer_cape', 'force_staff'],
+        core: ['AttackSpeed'],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["AttackSpeed"],
+        core: ['AttackSpeed'],
       },
     },
   },
@@ -19428,90 +19428,90 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40635,
         power_level: [1.9, 2.3, 2.6, 2.3],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "ursa_earthshock", // 1
-          "ursa_fury_swipes", // 2
-          "ursa_fury_swipes", // 3
-          "ursa_overpower", // 4
-          "ursa_fury_swipes", // 5
-          "ursa_enrage", // 6
-          "ursa_fury_swipes", // 7
-          "ursa_overpower", // 8
-          "ursa_overpower", // 9
-          "ursa_overpower", // 10
-          "special_bonus_unique_ursa_4", // 11
-          "ursa_enrage", // 12
-          "ursa_earthshock", // 13
-          "ursa_earthshock", // 14
-          "special_bonus_unique_ursa_earthshock_furyswipes", // 15
-          "ursa_earthshock", // 16
-          "special_bonus_attributes", // 17
-          "ursa_enrage", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_ursa", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_ursa_3", // 25
+          'ursa_earthshock', // 1
+          'ursa_fury_swipes', // 2
+          'ursa_fury_swipes', // 3
+          'ursa_overpower', // 4
+          'ursa_fury_swipes', // 5
+          'ursa_enrage', // 6
+          'ursa_fury_swipes', // 7
+          'ursa_overpower', // 8
+          'ursa_overpower', // 9
+          'ursa_overpower', // 10
+          'special_bonus_unique_ursa_4', // 11
+          'ursa_enrage', // 12
+          'ursa_earthshock', // 13
+          'ursa_earthshock', // 14
+          'special_bonus_unique_ursa_earthshock_furyswipes', // 15
+          'ursa_earthshock', // 16
+          'special_bonus_attributes', // 17
+          'ursa_enrage', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_ursa', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_ursa_3', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "circlet",
-            "slippers",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'circlet',
+            'slippers',
           ],
-          early_game: ["wraith_band", "magic_wand", "boots", "bfury"],
+          early_game: ['wraith_band', 'magic_wand', 'boots', 'bfury'],
           mid_game: [
-            "phase_boots",
-            "lifesteal",
-            "smoke_of_deceit",
-            "black_king_bar",
-            "blink",
-            "aghanims_shard",
-            "basher",
+            'phase_boots',
+            'lifesteal',
+            'smoke_of_deceit',
+            'black_king_bar',
+            'blink',
+            'aghanims_shard',
+            'basher',
           ],
           late_game: [
-            "abyssal_blade",
-            "ultimate_scepter",
-            "satanic",
-            "swift_blink",
+            'abyssal_blade',
+            'ultimate_scepter',
+            'satanic',
+            'swift_blink',
           ],
           situational: [
-            "orb_of_venom",
-            "orb_of_corrosion",
-            "diffusal_blade",
-            "monkey_king_bar",
-            "nullifier",
-            "sange_and_yasha",
-            "sphere",
+            'orb_of_venom',
+            'orb_of_corrosion',
+            'diffusal_blade',
+            'monkey_king_bar',
+            'nullifier',
+            'sange_and_yasha',
+            'sphere',
           ],
           core: [
-            "phase_boots",
-            "bfury",
-            "lifesteal",
-            "black_king_bar",
-            "blink",
-            "aghanims_shard",
-            "basher",
-            "abyssal_blade",
-            "ultimate_scepter",
+            'phase_boots',
+            'bfury',
+            'lifesteal',
+            'black_king_bar',
+            'blink',
+            'aghanims_shard',
+            'basher',
+            'abyssal_blade',
+            'ultimate_scepter',
           ],
           neutral: [
-            "broom_handle",
-            "lance_of_pursuit",
+            'broom_handle',
+            'lance_of_pursuit',
             //"ring_of_aquila",
-            "vambrace",
-            "elven_tunic",
+            'vambrace',
+            'elven_tunic',
             //"titan_sliver",
             //"penta_edged_sword",
-            "mind_breaker",
-            "desolator_2",
-            "force_boots",
-            "mirror_shield",
+            'mind_breaker',
+            'desolator_2',
+            'force_boots',
+            'mirror_shield',
           ],
         },
       },
@@ -19526,19 +19526,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots"],
+        all: ['wind_lace', 'boots'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["cyclone"],
-        support: ["force_staff", "glimmer_cape", "ghost"],
-        core: ["hurricane_pike", "heavens_halberd"],
+        all: ['cyclone'],
+        support: ['force_staff', 'glimmer_cape', 'ghost'],
+        core: ['hurricane_pike', 'heavens_halberd'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk", "wind_waker"],
+        all: ['sheepstick', 'ethereal_blade', 'aeon_disk', 'wind_waker'],
         support: [],
-        core: ["abyssal_blade", "assault", "butterfly"],
+        core: ['abyssal_blade', 'assault', 'butterfly'],
       },
     },
   },
@@ -19558,33 +19558,33 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `vengefulspirit_wave_of_terror`, // 1
           `vengefulspirit_magic_missile`, // 2
-          "vengefulspirit_magic_missile", // 3
-          "vengefulspirit_wave_of_terror", // 4
-          "vengefulspirit_magic_missile", // 5
-          "vengefulspirit_nether_swap", // 6
-          "vengefulspirit_magic_missile", // 7
+          'vengefulspirit_magic_missile', // 3
+          'vengefulspirit_wave_of_terror', // 4
+          'vengefulspirit_magic_missile', // 5
+          'vengefulspirit_nether_swap', // 6
+          'vengefulspirit_magic_missile', // 7
           `vengefulspirit_wave_of_terror`, // 8
-          "vengefulspirit_wave_of_terror", // 9
+          'vengefulspirit_wave_of_terror', // 9
           `special_bonus_unique_vengeful_spirit_missile_castrange`, // 10
           `vengefulspirit_command_aura`, // 11
-          "vengefulspirit_nether_swap", // 12
-          "vengefulspirit_command_aura", // 13
-          "vengefulspirit_command_aura", // 14
+          'vengefulspirit_nether_swap', // 12
+          'vengefulspirit_command_aura', // 13
+          'vengefulspirit_command_aura', // 14
           `special_bonus_unique_vengeful_spirit_4`, // 15
           `vengefulspirit_command_aura`, // 16
-          "special_bonus_attributes", // 17
-          "vengefulspirit_nether_swap", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'vengefulspirit_nether_swap', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_vengeful_spirit_5`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_vengeful_spirit_9`, // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `circlet`,
@@ -19642,7 +19642,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `trusty_shovel`,
             `unstable_wand`,
-            "philosophers_stone",
+            'philosophers_stone',
             `pupils_gift`,
             `psychic_headband`,
             `ceremonial_robe`,
@@ -19661,19 +19661,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "armor"],
+        all: ['magic_stick', 'ring_of_regen', 'armor'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: [/*"medallion_of_courage",*/ "solar_crest"],
-        support: ["glimmer_cape", "force_staff", "ghost"],
-        core: ["heavens_halberd"],
+        all: [/*"medallion_of_courage",*/ 'solar_crest'],
+        support: ['glimmer_cape', 'force_staff', 'ghost'],
+        core: ['heavens_halberd'],
       },
       late_game: {
         all: [],
         support: [],
-        core: ["assault", "butterfly"],
+        core: ['assault', 'butterfly'],
       },
     },
   },
@@ -19694,37 +19694,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         abilities: [
           `venomancer_venomous_gale`, // 1
           `venomancer_poison_sting`, // 2
-          "venomancer_poison_sting", // 3
+          'venomancer_poison_sting', // 3
           `venomancer_plague_ward`, // 4
-          "venomancer_plague_ward", // 5
+          'venomancer_plague_ward', // 5
           `venomancer_noxious_plague`, // 6
-          "venomancer_plague_ward", // 7
+          'venomancer_plague_ward', // 7
           `venomancer_plague_ward`, // 8
           `venomancer_poison_sting`, // 9
           `venomancer_poison_sting`, // 10
           `special_bonus_unique_venomancer_poisonsting_regen_reduction`, // 11
           `venomancer_noxious_plague`, // 12
           `venomancer_venomous_gale`, // 13
-          "venomancer_venomous_gale", // 14
-          "special_bonus_unique_venomancer_2", // 15
-          "venomancer_venomous_gale", // 16
-          "special_bonus_attributes", // 17
+          'venomancer_venomous_gale', // 14
+          'special_bonus_unique_venomancer_2', // 15
+          'venomancer_venomous_gale', // 16
+          'special_bonus_attributes', // 17
           `venomancer_noxious_plague`, // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_venomancer_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_venomancer", // 25
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_venomancer_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_venomancer', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `faerie_fire`,
-            "circlet",
+            'circlet',
             `circlet`,
-            "branches",
+            'branches',
             `branches`,
             `ward_observer`,
           ],
@@ -19790,11 +19790,11 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `unstable_wand`,
-            "grove_bow",
+            'grove_bow',
             `pupils_gift`,
-            "ceremonial_robe",
+            'ceremonial_robe',
             `defiant_shell`,
-            "timeless_relic",
+            'timeless_relic',
             `ninja_gear`,
             `force_boots`,
             `apex`,
@@ -19825,22 +19825,22 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `special_bonus_unique_venomancer_poisonsting_regen_reduction`, // 11
           `venomancer_noxious_plague`, // 12
           `venomancer_venomous_gale`, // 13
-          "venomancer_venomous_gale", // 14
-          "special_bonus_unique_venomancer_2", // 15
-          "venomancer_venomous_gale", // 16
-          "special_bonus_attributes", // 17
+          'venomancer_venomous_gale', // 14
+          'special_bonus_unique_venomancer_2', // 15
+          'venomancer_venomous_gale', // 16
+          'special_bonus_attributes', // 17
           `venomancer_noxious_plague`, // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_venomancer_4", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_venomancer", // 25
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_venomancer_4', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_venomancer', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
@@ -19906,7 +19906,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `timeless_relic`,
             `spy_gadget`,
             `force_boots`,
-            "seer_stone",
+            'seer_stone',
           ],
         },
         // ability_tooltips:
@@ -19924,32 +19924,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "headdress",
-          "wind_lace",
-          "boots",
-          "cloak",
+          'magic_stick',
+          'ring_of_regen',
+          'headdress',
+          'wind_lace',
+          'boots',
+          'cloak',
         ],
-        support: ["tranquil_boots"],
-        core: ["ring_of_health"],
+        support: ['tranquil_boots'],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb", "cyclone"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['lotus_orb', 'cyclone'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'manta',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["satanic"],
+        support: ['black_king_bar'],
+        core: ['satanic'],
       },
     },
   },
@@ -19967,30 +19967,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.1, 2.5, 2.3, 2.3],
         facet: 1,
         abilities: [
-          "viper_poison_attack", // 1
-          "viper_corrosive_skin", // 2
-          "viper_poison_attack", // 3
+          'viper_poison_attack', // 1
+          'viper_corrosive_skin', // 2
+          'viper_poison_attack', // 3
           `viper_nethertoxin`, // 4
-          "viper_poison_attack", // 5
-          "viper_viper_strike", // 6
+          'viper_poison_attack', // 5
+          'viper_viper_strike', // 6
           `viper_poison_attack`, // 7
           `viper_corrosive_skin`, // 8
-          "viper_corrosive_skin", // 9
+          'viper_corrosive_skin', // 9
           `viper_corrosive_skin`, // 10
           `special_bonus_unique_viper_4`, // 11
-          "viper_viper_strike", // 12
+          'viper_viper_strike', // 12
           `viper_nethertoxin`, // 13
-          "viper_nethertoxin", // 14
+          'viper_nethertoxin', // 14
           `special_bonus_unique_viper_6`, // 15
-          "viper_nethertoxin", // 16
-          "special_bonus_attributes", // 17
-          "viper_viper_strike", // 18
-          "special_bonus_attributes", // 19
+          'viper_nethertoxin', // 16
+          'special_bonus_attributes', // 17
+          'viper_viper_strike', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_viper_7`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_viper_5`, // 25
         ],
         items: {
@@ -20022,7 +20022,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           situational: [
             `ring_of_basilius`,
             `veil_of_discord`,
-            "spirit_vessel",
+            'spirit_vessel',
             `eternal_shroud`,
             `pipe`,
             `crimson_guard`,
@@ -20054,9 +20054,9 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `mysterious_hat`,
             `arcane_ring`,
-            "grove_bow",
+            'grove_bow',
             `vambrace`,
-            "enchanted_quiver",
+            'enchanted_quiver',
             `vindicators_axe`,
             `trickster_cloak`,
             `mind_breaker`,
@@ -20076,36 +20076,36 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2.3, 2.5, 2.3, 2.3],
         facet: 1,
         abilities: [
-          "viper_poison_attack", // 1
-          "viper_corrosive_skin", // 2
-          "viper_poison_attack", // 3
+          'viper_poison_attack', // 1
+          'viper_corrosive_skin', // 2
+          'viper_poison_attack', // 3
           `viper_corrosive_skin`, // 4
-          "viper_poison_attack", // 5
-          "viper_viper_strike", // 6
+          'viper_poison_attack', // 5
+          'viper_viper_strike', // 6
           `viper_poison_attack`, // 7
           `viper_nethertoxin`, // 8
-          "viper_corrosive_skin", // 9
+          'viper_corrosive_skin', // 9
           `special_bonus_unique_viper_4`, // 10
           `viper_corrosive_skin`, // 11
-          "viper_viper_strike", // 12
+          'viper_viper_strike', // 12
           `viper_nethertoxin`, // 13
-          "viper_nethertoxin", // 14
+          'viper_nethertoxin', // 14
           `special_bonus_unique_viper_6`, // 15
-          "viper_nethertoxin", // 16
-          "special_bonus_attributes", // 17
-          "viper_viper_strike", // 18
-          "special_bonus_attributes", // 19
+          'viper_nethertoxin', // 16
+          'special_bonus_attributes', // 17
+          'viper_viper_strike', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_viper_7`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_viper_5`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
+            'tango',
+            'faerie_fire',
             `circlet`,
             `branches`,
             `branches`,
@@ -20188,26 +20188,26 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["ring_of_regen", "wind_lace", "boots", "cloak"],
+        all: ['ring_of_regen', 'wind_lace', 'boots', 'cloak'],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["force_staff", "glimmer_cape"],
+        all: ['lotus_orb'],
+        support: ['force_staff', 'glimmer_cape'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "heavens_halberd",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'heavens_halberd',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["abyssal_blade", "butterfly"],
+        support: ['black_king_bar'],
+        core: ['abyssal_blade', 'butterfly'],
       },
     },
   },
@@ -20225,38 +20225,38 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.6, 2.4, 2.3, 2.1],
         facet: 1,
         abilities: [
-          "visage_soul_assumption", // 1
-          "visage_grave_chill", // 2
+          'visage_soul_assumption', // 1
+          'visage_grave_chill', // 2
           `visage_grave_chill`, // 3
           `visage_gravekeepers_cloak`, // 4
-          "visage_grave_chill", // 5
-          "visage_summon_familiars", // 6
-          "visage_grave_chill", // 7
+          'visage_grave_chill', // 5
+          'visage_summon_familiars', // 6
+          'visage_grave_chill', // 7
           `visage_gravekeepers_cloak`, // 8
           `visage_gravekeepers_cloak`, // 9
           `special_bonus_unique_visage_8`, // 10
           `visage_gravekeepers_cloak`, // 11
-          "visage_summon_familiars", // 12
+          'visage_summon_familiars', // 12
           `visage_soul_assumption`, // 13
           `visage_soul_assumption`, // 14
           `special_bonus_unique_visage_grave_chill_duration`, // 15
           `visage_soul_assumption`, // 16
-          "special_bonus_attributes", // 17
-          "visage_summon_familiars", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'visage_summon_familiars', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_visage_1`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_visage_6", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_visage_6', // 25
         ],
         items: {
           starting: [
             `tango`,
             `branches`,
-            "branches",
-            "circlet",
+            'branches',
+            'circlet',
             `circlet`,
             `enchanted_mango`,
             `ward_observer`,
@@ -20317,7 +20317,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `unstable_wand`,
             `spark_of_courage`,
-            "grove_bow",
+            'grove_bow',
             `specialists_array`,
             `enchanted_quiver`,
             `nemesis_curse`,
@@ -20336,31 +20336,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.4, 2.4, 2.4, 2.1],
         facet: 1,
         abilities: [
-          "visage_grave_chill", // 1
-          "visage_gravekeepers_cloak", // 2
-          "visage_grave_chill", // 3
+          'visage_grave_chill', // 1
+          'visage_gravekeepers_cloak', // 2
+          'visage_grave_chill', // 3
           `visage_gravekeepers_cloak`, // 4
-          "visage_grave_chill", // 5
-          "visage_summon_familiars", // 6
-          "visage_grave_chill", // 7
+          'visage_grave_chill', // 5
+          'visage_summon_familiars', // 6
+          'visage_grave_chill', // 7
           `visage_soul_assumption`, // 8
           `visage_gravekeepers_cloak`, // 9
           `special_bonus_unique_visage_8`, // 10
           `visage_gravekeepers_cloak`, // 11
-          "visage_summon_familiars", // 12
+          'visage_summon_familiars', // 12
           `visage_soul_assumption`, // 13
           `visage_soul_assumption`, // 14
           `special_bonus_unique_visage_grave_chill_duration`, // 15
           `visage_soul_assumption`, // 16
-          "special_bonus_attributes", // 17
-          "visage_summon_familiars", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'visage_summon_familiars', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_visage_1`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_visage_6", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_visage_6', // 25
         ],
         items: {
           starting: [
@@ -20454,33 +20454,33 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["blight_stone", "armor", "urn_of_shadows"],
+        all: ['blight_stone', 'armor', 'urn_of_shadows'],
         support: [],
-        core: ["vanguard"],
+        core: ['vanguard'],
       },
       mid_game: {
         all: [
-          "spirit_vessel",
-          "lotus_orb",
+          'spirit_vessel',
+          'lotus_orb',
           /*"medallion_of_courage",*/
-          "solar_crest",
+          'solar_crest',
           `cloak`,
         ],
-        support: ["glimmer_cape", "force_staff"],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "crimson_guard",
-          "black_king_bar",
-          "javelin",
+          'pipe',
+          'eternal_shroud',
+          'crimson_guard',
+          'black_king_bar',
+          'javelin',
         ],
       },
       late_game: {
-        all: ["sheepstick"],
-        support: ["black_king_bar"],
-        core: ["assault", "bloodthorn", "satanic"],
+        all: ['sheepstick'],
+        support: ['black_king_bar'],
+        core: ['assault', 'bloodthorn', 'satanic'],
       },
     },
   },
@@ -20496,52 +20496,52 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40619,
         power_level: [1.7, 2.1, 2.6, 2.6],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "void_spirit_resonant_pulse", // 1
-          "void_spirit_aether_remnant", // 2
-          "void_spirit_resonant_pulse", // 3
+          'void_spirit_resonant_pulse', // 1
+          'void_spirit_aether_remnant', // 2
+          'void_spirit_resonant_pulse', // 3
           `void_spirit_aether_remnant`, // 4
           `void_spirit_resonant_pulse`, // 5
-          "void_spirit_astral_step", // 6
+          'void_spirit_astral_step', // 6
           `void_spirit_resonant_pulse`, // 7
-          "void_spirit_aether_remnant", // 8
+          'void_spirit_aether_remnant', // 8
           `void_spirit_aether_remnant`, // 9
           `special_bonus_unique_void_spirit_2`, // 10
           `void_spirit_dissimilate`, // 11
-          "void_spirit_astral_step", // 12
+          'void_spirit_astral_step', // 12
           `void_spirit_dissimilate`, // 13
           `void_spirit_dissimilate`, // 14
           `special_bonus_unique_void_spirit_4`, // 15 Comment Michel: Talent level 1 has to come before talent level 2
           `void_spirit_dissimilate`, // 16
-          "special_bonus_attributes", // 17
-          "void_spirit_astral_step", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'void_spirit_astral_step', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_void_spirit_1`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_void_spirit_8`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "circlet",
+            'tango',
+            'circlet',
             `branches`,
             `branches`,
-            "branches",
-            "ward_observer",
+            'branches',
+            'ward_observer',
           ],
           early_game: [
             `bottle`,
             `magic_wand`,
             `bracer`,
             `power_treads`,
-            "mage_slayer",
+            'mage_slayer',
           ],
-          mid_game: ["manta", `ultimate_scepter`],
-          late_game: ["skadi", "greater_crit", "satanic"],
+          mid_game: ['manta', `ultimate_scepter`],
+          late_game: ['skadi', 'greater_crit', 'satanic'],
           situational: [
             `aghanims_shard`,
             `sphere`,
@@ -20549,16 +20549,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
             `sheepstick`,
             `silver_edge`,
-            "cyclone",
+            'cyclone',
           ],
           core: [
             `power_treads`,
-            "mage_slayer",
+            'mage_slayer',
             `manta`,
             `ultimate_scepter`,
             `skadi`,
             `greater_crit`,
-            "satanic",
+            'satanic',
           ],
           neutral: [
             `arcane_ring`,
@@ -20580,42 +20580,42 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40641,
         power_level: [1.4, 2, 2.5, 2.5],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "void_spirit_resonant_pulse", // 1
-          "void_spirit_aether_remnant", // 2
-          "void_spirit_resonant_pulse", // 3
+          'void_spirit_resonant_pulse', // 1
+          'void_spirit_aether_remnant', // 2
+          'void_spirit_resonant_pulse', // 3
           `void_spirit_dissimilate`, // 4
           `void_spirit_resonant_pulse`, // 5
-          "void_spirit_astral_step", // 6
+          'void_spirit_astral_step', // 6
           `void_spirit_resonant_pulse`, // 7
-          "void_spirit_aether_remnant", // 8
+          'void_spirit_aether_remnant', // 8
           `void_spirit_aether_remnant`, // 9
           `special_bonus_unique_void_spirit_2`, // 10
           `void_spirit_aether_remnant`, // 11
-          "void_spirit_astral_step", // 12
+          'void_spirit_astral_step', // 12
           `void_spirit_dissimilate`, // 13
           `void_spirit_dissimilate`, // 14
           `special_bonus_unique_void_spirit_4`, // 15 Comment Michel: Talent level 1 has to come before talent level 2
           `void_spirit_dissimilate`, // 16
-          "special_bonus_attributes", // 17
-          "void_spirit_astral_step", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'void_spirit_astral_step', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_void_spirit_1`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_void_spirit_8`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "circlet",
-            "circlet",
-            "gauntlets",
-            "branches",
-            "ward_observer",
+            'tango',
+            'circlet',
+            'circlet',
+            'gauntlets',
+            'branches',
+            'ward_observer',
           ],
           early_game: [
             `bracer`,
@@ -20625,7 +20625,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `urn_of_shadows`,
           ],
           mid_game: [`spirit_vessel`, `manta`, `ultimate_scepter`],
-          late_game: ["skadi", "greater_crit", "satanic"],
+          late_game: ['skadi', 'greater_crit', 'satanic'],
           situational: [
             `aghanims_shard`,
             `sphere`,
@@ -20633,18 +20633,18 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
             `sheepstick`,
             `silver_edge`,
-            "cyclone",
+            'cyclone',
           ],
           core: [
             `bracer`,
             `wraith_band`,
-            "power_treads",
+            'power_treads',
             `spirit_vessel`,
             `manta`,
             `ultimate_scepter`,
-            "skadi",
+            'skadi',
             `greater_crit`,
-            "satanic",
+            'satanic',
           ],
           neutral: [
             `arcane_ring`,
@@ -20667,37 +20667,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [
       `void_spirit_astral_step`,
       `void_spirit_resonant_pulse`,
-      "attack",
+      'attack',
       `void_spirit_aether_remnant`,
-      "attack",
+      'attack',
       `void_spirit_astral_step`,
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "wind_lace", "boots", "infused_raindrop"],
+        all: ['magic_stick', 'wind_lace', 'boots', 'infused_raindrop'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["rod_of_atos"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['rod_of_atos'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "orchid",
-          "hurricane_pike",
-          "black_king_bar",
-          "manta",
+          'orchid',
+          'hurricane_pike',
+          'black_king_bar',
+          'manta',
         ],
       },
       late_game: {
-        all: ["sheepstick", "aeon_disk"],
-        support: ["black_king_bar"],
+        all: ['sheepstick', 'aeon_disk'],
+        support: ['black_king_bar'],
         core: [
-          "abyssal_blade",
-          "assault",
-          "invis_sword",
-          "nullifier",
-          "satanic",
+          'abyssal_blade',
+          'assault',
+          'invis_sword',
+          'nullifier',
+          'satanic',
         ],
       },
     },
@@ -20721,30 +20721,30 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `warlock_fatal_bonds`, // 3
           `warlock_upheaval`, // 4
           `warlock_upheaval`, // 5
-          "warlock_rain_of_chaos", // 6
+          'warlock_rain_of_chaos', // 6
           `warlock_upheaval`, // 7
           `warlock_fatal_bonds`, // 8
           `warlock_fatal_bonds`, // 9
           `special_bonus_unique_warlock_upheaval_aoe`, // 10
           `warlock_shadow_word`, // 11
-          "warlock_rain_of_chaos", // 12
+          'warlock_rain_of_chaos', // 12
           `warlock_shadow_word`, // 13
           `warlock_shadow_word`, // 14
           `special_bonus_unique_warlock_10`, // 15
           `warlock_shadow_word`, // 16
-          "special_bonus_attributes", // 17
-          "warlock_rain_of_chaos", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'warlock_rain_of_chaos', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_warlock_4`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_warlock_2", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_warlock_2', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `sobi_mask`,
@@ -20756,7 +20756,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: [
             `ring_of_basilius`,
             `boots`,
-            "magic_wand",
+            'magic_wand',
             `wind_lace`,
             `infused_raindrop`,
           ],
@@ -20799,16 +20799,16 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
           ],
           neutral: [
-            "arcane_ring",
+            'arcane_ring',
             `trusty_shovel`,
-            "philosophers_stone",
-            "bullwhip",
+            'philosophers_stone',
+            'bullwhip',
             `ogre_seal_totem`,
             `psychic_headband`,
-            "spy_gadget",
+            'spy_gadget',
             `timeless_relic`,
             `book_of_shadows`,
-            "seer_stone",
+            'seer_stone',
           ],
         },
       },
@@ -20821,25 +20821,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "ring_of_regen", "headdress"],
+        all: ['magic_stick', 'ring_of_regen', 'headdress'],
         support: [],
         core: [],
       },
       mid_game: {
-        all: ["lotus_orb", "cyclone"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['lotus_orb', 'cyclone'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
-          "manta",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
+          'manta',
         ],
       },
       late_game: {
         all: [],
-        support: ["black_king_bar"],
-        core: ["satanic"],
+        support: ['black_king_bar'],
+        core: ['satanic'],
       },
     },
   },
@@ -20856,71 +20856,71 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40669,
         power_level: [1.8, 1.9, 2.1, 2.1],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "weaver_shukuchi", // 1
-          "weaver_geminate_attack", // 2
+          'weaver_shukuchi', // 1
+          'weaver_geminate_attack', // 2
           `weaver_the_swarm`, // 3
           `weaver_shukuchi`, // 4
-          "weaver_shukuchi", // 5
-          "weaver_time_lapse", // 6
-          "weaver_shukuchi", // 7
-          "weaver_geminate_attack", // 8
-          "weaver_geminate_attack", // 9
+          'weaver_shukuchi', // 5
+          'weaver_time_lapse', // 6
+          'weaver_shukuchi', // 7
+          'weaver_geminate_attack', // 8
+          'weaver_geminate_attack', // 9
           `weaver_geminate_attack`, // 10
           `special_bonus_strength_7`, // 11
-          "weaver_time_lapse", // 12
-          "weaver_the_swarm", // 13
-          "weaver_the_swarm", // 14
-          "special_bonus_unique_weaver_4", // 15
-          "weaver_the_swarm", // 16
-          "special_bonus_attributes", // 17
-          "weaver_time_lapse", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_weaver_2", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_weaver_5", // 25
+          'weaver_time_lapse', // 12
+          'weaver_the_swarm', // 13
+          'weaver_the_swarm', // 14
+          'special_bonus_unique_weaver_4', // 15
+          'weaver_the_swarm', // 16
+          'special_bonus_attributes', // 17
+          'weaver_time_lapse', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_weaver_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_weaver_5', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "magic_stick",
-            "blood_grenade",
-            "branches",
-            "faerie_fire",
+            'tango',
+            'magic_stick',
+            'blood_grenade',
+            'branches',
+            'faerie_fire',
             `ward_sentry`,
-            "ward_sentry",
-            "ward_observer",
+            'ward_sentry',
+            'ward_observer',
           ],
-          early_game: ["urn_of_shadows", "magic_wand"],
+          early_game: ['urn_of_shadows', 'magic_wand'],
           mid_game: [
-            "spirit_vessel",
+            'spirit_vessel',
             `rod_of_atos`,
-            "aghanims_shard",
-            "maelstrom",
+            'aghanims_shard',
+            'maelstrom',
           ],
-          late_game: ["gungir", `black_king_bar`, `bloodthorn`, "sheepstick"],
+          late_game: ['gungir', `black_king_bar`, `bloodthorn`, 'sheepstick'],
           situational: [
             `orchid`,
             `heavens_halberd`,
-            "lotus_orb",
+            'lotus_orb',
             `travel_boots`,
-            "sphere",
+            'sphere',
           ],
-          core: ["spirit_vessel", `rod_of_atos`, "aghanims_shard", "maelstrom"],
+          core: ['spirit_vessel', `rod_of_atos`, 'aghanims_shard', 'maelstrom'],
           neutral: [
-            "lance_of_pursuit",
-            "trusty_shovel",
+            'lance_of_pursuit',
+            'trusty_shovel',
             `grove_bow`,
-            "specialists_array",
-            "enchanted_quiver",
-            "ogre_seal_totem",
-            "ascetic_cap",
+            'specialists_array',
+            'enchanted_quiver',
+            'ogre_seal_totem',
+            'ascetic_cap',
             `stormcrafter`,
-            "desolator_2",
+            'desolator_2',
             `mirror_shield`,
           ],
         },
@@ -20931,90 +20931,90 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40670,
         power_level: [2, 2.4, 2.6, 2.4],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "weaver_shukuchi", // 1
-          "weaver_geminate_attack", // 2
-          "weaver_the_swarm", // 3
-          "weaver_shukuchi", // 4
-          "weaver_shukuchi", // 5
-          "weaver_time_lapse", // 6
-          "weaver_shukuchi", // 7
-          "weaver_geminate_attack", // 8
-          "weaver_geminate_attack", // 9
-          "weaver_geminate_attack", // 10
+          'weaver_shukuchi', // 1
+          'weaver_geminate_attack', // 2
+          'weaver_the_swarm', // 3
+          'weaver_shukuchi', // 4
+          'weaver_shukuchi', // 5
+          'weaver_time_lapse', // 6
+          'weaver_shukuchi', // 7
+          'weaver_geminate_attack', // 8
+          'weaver_geminate_attack', // 9
+          'weaver_geminate_attack', // 10
           `special_bonus_strength_7`, // 11
-          "weaver_time_lapse", // 12
-          "weaver_the_swarm", // 13
-          "weaver_the_swarm", // 14
-          "special_bonus_mana_break_20", // 15
-          "weaver_the_swarm", // 16
-          "special_bonus_attributes", // 17
-          "weaver_time_lapse", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_weaver_2", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_weaver_5", // 25
+          'weaver_time_lapse', // 12
+          'weaver_the_swarm', // 13
+          'weaver_the_swarm', // 14
+          'special_bonus_mana_break_20', // 15
+          'weaver_the_swarm', // 16
+          'special_bonus_attributes', // 17
+          'weaver_time_lapse', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_weaver_2', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_weaver_5', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "branches",
+            'tango',
+            'branches',
             `branches`,
-            "branches",
-            "magic_stick",
+            'branches',
+            'magic_stick',
             `circlet`,
           ],
           early_game: [
             `power_treads`,
             `magic_wand`,
             `wraith_band`,
-            "falcon_blade",
+            'falcon_blade',
           ],
           mid_game: [
-            "dragon_lance",
+            'dragon_lance',
             `desolator`,
-            "aghanims_shard",
+            'aghanims_shard',
             `diffusal_blade`,
           ],
           late_game: [
-            "disperser",
-            "black_king_bar",
-            "greater_crit",
-            "hurricane_pike",
-            "satanic",
-            "butterfly",
-            "travel_boots",
+            'disperser',
+            'black_king_bar',
+            'greater_crit',
+            'hurricane_pike',
+            'satanic',
+            'butterfly',
+            'travel_boots',
           ],
           situational: [
             `monkey_king_bar`,
             `gungir`,
-            "sphere",
+            'sphere',
             `manta`,
-            "nullifier",
+            'nullifier',
             `skadi`,
           ],
           core: [
             `dragon_lance`,
-            "desolator",
-            "black_king_bar",
+            'desolator',
+            'black_king_bar',
             `aghanims_shard`,
           ],
           neutral: [
             `lance_of_pursuit`,
-            "occult_bracelet",
-            "specialists_array",
-            "grove_bow",
-            "elven_tunic",
-            "vindicators_axe",
-            "mind_breaker",
-            "ancient_guardian",
-            "mirror_shield",
-            "desolator_2",
-            "pirate_hat",
+            'occult_bracelet',
+            'specialists_array',
+            'grove_bow',
+            'elven_tunic',
+            'vindicators_axe',
+            'mind_breaker',
+            'ancient_guardian',
+            'mirror_shield',
+            'desolator_2',
+            'pirate_hat',
           ],
         },
       },
@@ -21029,19 +21029,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     ],
     counter_items: {
       laning_phase: {
-        all: ["magic_stick", "blight_stone", "ring_of_regen", "armor"],
-        support: ["ward_sentry", "dust"],
-        core: ["ring_of_health"],
+        all: ['magic_stick', 'blight_stone', 'ring_of_regen', 'armor'],
+        support: ['ward_sentry', 'dust'],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: [/*"medallion_of_courage",*/ "solar_crest"],
-        support: ["SentryDustGem", "glimmer_cape", "ghost"],
-        core: ["orchid", "heavens_halberd"],
+        all: [/*"medallion_of_courage",*/ 'solar_crest'],
+        support: ['SentryDustGem', 'glimmer_cape', 'ghost'],
+        core: ['orchid', 'heavens_halberd'],
       },
       late_game: {
-        all: ["sheepstick", "ethereal_blade", "aeon_disk"],
-        support: ["SentryDustGem"],
-        core: ["abyssal_blade", "assault", "butterfly", "silver_edge"],
+        all: ['sheepstick', 'ethereal_blade', 'aeon_disk'],
+        support: ['SentryDustGem'],
+        core: ['abyssal_blade', 'assault', 'butterfly', 'silver_edge'],
       },
     },
   },
@@ -21058,42 +21058,42 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.SUPPORT,
         dota_fire_id: 40677,
         power_level: [1.7, 1.7, 1.9, 2],
-        facet: undefined,
+        facet: null,
         abilities: [
           `windrunner_powershot`, // 1
           `windrunner_windrun`, // 2
-          "windrunner_powershot", // 3
+          'windrunner_powershot', // 3
           `windrunner_shackleshot`, // 4
-          "windrunner_powershot", // 5
+          'windrunner_powershot', // 5
           `windrunner_focusfire`, // 6
-          "windrunner_powershot", // 7
+          'windrunner_powershot', // 7
           `windrunner_shackleshot`, // 8
           `windrunner_shackleshot`, // 9
           `windrunner_shackleshot`, // 10
-          "special_bonus_unique_windranger_9", // 11
+          'special_bonus_unique_windranger_9', // 11
           `windrunner_focusfire`, // 12
           `windrunner_windrun`, // 13
           `windrunner_windrun`, // 14
           `special_bonus_unique_windranger_4`, // 15
           `windrunner_windrun`, // 16
-          "special_bonus_attributes", // 17
-          "windrunner_focusfire", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'windrunner_focusfire', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_windranger_8`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_windranger_2`, // 25
         ],
         items: {
           starting: [
             `tango`,
-            "blood_grenade",
+            'blood_grenade',
             `circlet`,
             `circlet`,
-            "branches",
-            "branches",
+            'branches',
+            'branches',
             `ward_observer`,
             `ward_sentry`,
           ],
@@ -21123,7 +21123,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `power_treads`,
             `spirit_vessel`,
             `aether_lens`,
-            "lotus_orb",
+            'lotus_orb',
             `pavise`,
             `solar_crest`,
             `glimmer_cape`,
@@ -21149,14 +21149,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `ultimate_scepter`,
           ],
           neutral: [
-            "arcane_ring",
+            'arcane_ring',
             `unstable_wand`,
             `pupils_gift`,
-            "grove_bow",
+            'grove_bow',
             `ceremonial_robe`,
             `enchanted_quiver`,
             `spy_gadget`,
-            "spy_gadget",
+            'spy_gadget',
             `desolator_2`,
             `apex`,
           ],
@@ -21168,50 +21168,50 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40678,
         power_level: [2, 2.1, 2.5, 2.4],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "windrunner_powershot", // 1
-          "windrunner_windrun", // 2
-          "windrunner_powershot", // 3
+          'windrunner_powershot', // 1
+          'windrunner_windrun', // 2
+          'windrunner_powershot', // 3
           `windrunner_windrun`, // 4
-          "windrunner_powershot", // 5
-          "windrunner_focusfire", // 6
+          'windrunner_powershot', // 5
+          'windrunner_focusfire', // 6
           `windrunner_windrun`, // 7
-          "windrunner_windrun", // 8
+          'windrunner_windrun', // 8
           `windrunner_shackleshot`, // 9
           `windrunner_powershot`, // 10
-          "windrunner_shackleshot", // 11
-          "windrunner_focusfire", // 12
+          'windrunner_shackleshot', // 11
+          'windrunner_focusfire', // 12
           `windrunner_shackleshot`, // 13
           `windrunner_shackleshot`, // 14
           `special_bonus_unique_windranger_9`, // 15
           `special_bonus_unique_windranger_4`, // 16
-          "special_bonus_attributes", // 17
-          "windrunner_focusfire", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_windranger_8", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_windranger_2", // 25
+          'special_bonus_attributes', // 17
+          'windrunner_focusfire', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_windranger_8', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_windranger_2', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "faerie_fire",
+            'tango',
+            'faerie_fire',
             `circlet`,
-            "branches",
-            "branches",
+            'branches',
+            'branches',
             `branches`,
             `ward_observer`,
           ],
           early_game: [
-            "bottle",
-            "power_treads",
-            "bracer",
-            "magic_wand",
-            "maelstrom",
+            'bottle',
+            'power_treads',
+            'bracer',
+            'magic_wand',
+            'maelstrom',
           ],
           mid_game: [
             `manta`,
@@ -21240,19 +21240,19 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `maelstrom`,
             `manta`,
             `blink`,
-            "black_king_bar",
+            'black_king_bar',
             `ultimate_scepter`,
             `greater_crit`,
             `gungir`,
           ],
           neutral: [
-            "lance_of_pursuit",
-            "unstable_wand",
-            "grove_bow",
+            'lance_of_pursuit',
+            'unstable_wand',
+            'grove_bow',
             `pupils_gift`,
-            "enchanted_quiver",
+            'enchanted_quiver',
             `paladin_sword`,
-            "mind_breaker",
+            'mind_breaker',
             `ninja_gear`,
             `desolator_2`,
             `apex`,
@@ -21265,41 +21265,41 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40679,
         power_level: [1.8, 1.9, 2.3, 2.3],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "windrunner_powershot", // 1
-          "windrunner_windrun", // 2
-          "windrunner_powershot", // 3
-          "windrunner_shackleshot", // 4
-          "windrunner_powershot", // 5
-          "windrunner_focusfire", // 6
-          "windrunner_powershot", // 7
-          "windrunner_windrun", // 8
-          "windrunner_windrun", // 9
-          "windrunner_windrun", // 10
-          "windrunner_shackleshot", // 11
-          "windrunner_focusfire", // 12
-          "windrunner_shackleshot", // 13
-          "windrunner_shackleshot", // 14
-          "special_bonus_unique_windranger_9", // 15
-          "special_bonus_unique_windranger_4", // 16
-          "special_bonus_attributes", // 17
-          "windrunner_focusfire", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_windranger_8", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
+          'windrunner_powershot', // 1
+          'windrunner_windrun', // 2
+          'windrunner_powershot', // 3
+          'windrunner_shackleshot', // 4
+          'windrunner_powershot', // 5
+          'windrunner_focusfire', // 6
+          'windrunner_powershot', // 7
+          'windrunner_windrun', // 8
+          'windrunner_windrun', // 9
+          'windrunner_windrun', // 10
+          'windrunner_shackleshot', // 11
+          'windrunner_focusfire', // 12
+          'windrunner_shackleshot', // 13
+          'windrunner_shackleshot', // 14
+          'special_bonus_unique_windranger_9', // 15
+          'special_bonus_unique_windranger_4', // 16
+          'special_bonus_attributes', // 17
+          'windrunner_focusfire', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_windranger_8', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
           `special_bonus_unique_windranger_2`, // 25
         ],
         items: {
           starting: [
-            "tango",
-            "branches",
-            "branches",
-            "branches",
-            "circlet",
+            'tango',
+            'branches',
+            'branches',
+            'branches',
+            'circlet',
             `circlet`,
             `ward_observer`,
           ],
@@ -21367,39 +21367,39 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_stick",
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
-          "armor",
-          "infused_raindrop",
+          'magic_stick',
+          'ring_of_regen',
+          'wind_lace',
+          'boots',
+          'armor',
+          'infused_raindrop',
         ],
         support: [],
-        core: ["ring_of_health", "vanguard"],
+        core: ['ring_of_health', 'vanguard'],
       },
       mid_game: {
         all: [`cyclone`, `ghost`],
         support: [`glimmer_cape`],
         core: [
-          "blade_mail",
-          "orchid",
-          "heavens_halberd",
+          'blade_mail',
+          'orchid',
+          'heavens_halberd',
           `hurricane_pike`,
-          "black_king_bar",
-          "monkey_king_bar",
-          "witch_blade",
+          'black_king_bar',
+          'monkey_king_bar',
+          'witch_blade',
         ],
       },
       late_game: {
-        all: ["sphere", "sheepstick", "ethereal_blade", "aeon_disk"],
-        support: ["SentryDustGem", "black_king_bar"],
+        all: ['sphere', 'sheepstick', 'ethereal_blade', 'aeon_disk'],
+        support: ['SentryDustGem', 'black_king_bar'],
         core: [
-          "monkey_king_bar",
-          "abyssal_blade",
-          "bloodthorn",
-          "assault",
-          "butterfly",
-          "nullifier",
+          'monkey_king_bar',
+          'abyssal_blade',
+          'bloodthorn',
+          'assault',
+          'butterfly',
+          'nullifier',
         ],
       },
     },
@@ -21419,35 +21419,35 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [1.6, 1.9, 1.9, 2],
         facet: 2,
         abilities: [
-          "winter_wyvern_arctic_burn", // 1
-          "winter_wyvern_splinter_blast", // 2
-          "winter_wyvern_splinter_blast", // 3
+          'winter_wyvern_arctic_burn', // 1
+          'winter_wyvern_splinter_blast', // 2
+          'winter_wyvern_splinter_blast', // 3
           `winter_wyvern_cold_embrace`, // 4
-          "winter_wyvern_splinter_blast", // 5
-          "winter_wyvern_winters_curse", // 6
-          "winter_wyvern_splinter_blast", // 7
+          'winter_wyvern_splinter_blast', // 5
+          'winter_wyvern_winters_curse', // 6
+          'winter_wyvern_splinter_blast', // 7
           `winter_wyvern_arctic_burn`, // 8
           `winter_wyvern_cold_embrace`, // 9
-          "winter_wyvern_cold_embrace", // 10
+          'winter_wyvern_cold_embrace', // 10
           `winter_wyvern_cold_embrace`, // 11
-          "winter_wyvern_winters_curse", // 12
+          'winter_wyvern_winters_curse', // 12
           `winter_wyvern_arctic_burn`, // 13
-          "winter_wyvern_arctic_burn", // 14
+          'winter_wyvern_arctic_burn', // 14
           `special_bonus_unique_winter_wyvern_5`, // 15
           `special_bonus_unique_winter_wyvern_2`, // 16
-          "special_bonus_attributes", // 17
-          "winter_wyvern_winters_curse", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_unique_winter_wyvern_7", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_winter_wyvern_4", // 25
+          'special_bonus_attributes', // 17
+          'winter_wyvern_winters_curse', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_unique_winter_wyvern_7', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_winter_wyvern_4', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
             `faerie_fire`,
@@ -21491,7 +21491,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            'arcane_boots',
             `blink`,
             `aether_lens`,
             `aghanims_shard`,
@@ -21502,14 +21502,14 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `trusty_shovel`,
-            "philosophers_stone",
+            'philosophers_stone',
             `eye_of_the_vizier`,
-            "psychic_headband",
+            'psychic_headband',
             `ceremonial_robe`,
-            "spy_gadget",
+            'spy_gadget',
             `ninja_gear`,
-            "seer_stone",
-            "book_of_shadows",
+            'seer_stone',
+            'book_of_shadows',
           ],
         },
       },
@@ -21522,37 +21522,37 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "blight_stone",
-          "magic_stick",
-          "ring_of_regen",
-          "headdress",
-          "infused_raindrop",
-          "cloak",
+          'blight_stone',
+          'magic_stick',
+          'ring_of_regen',
+          'headdress',
+          'infused_raindrop',
+          'cloak',
         ],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['lotus_orb'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
           `sange_and_yasha`,
         ],
       },
       late_game: {
         all: [
-          "sphere",
-          "sheepstick",
-          "ethereal_blade",
-          "aeon_disk",
-          "wind_waker",
+          'sphere',
+          'sheepstick',
+          'ethereal_blade',
+          'aeon_disk',
+          'wind_waker',
         ],
-        support: ["black_king_bar"],
-        core: ["invis_sword"],
+        support: ['black_king_bar'],
+        core: ['invis_sword'],
       },
     },
   },
@@ -21575,33 +21575,33 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           `witch_doctor_voodoo_restoration`, // 3
           `witch_doctor_paralyzing_cask`, // 4
           `witch_doctor_voodoo_restoration`, // 5
-          "witch_doctor_death_ward", // 6
+          'witch_doctor_death_ward', // 6
           `witch_doctor_voodoo_restoration`, // 7
           `witch_doctor_maledict`, // 8
           `witch_doctor_maledict`, // 9
           `special_bonus_unique_witch_doctor_4`, // 10
           `witch_doctor_maledict`, // 11
-          "witch_doctor_death_ward", // 12
+          'witch_doctor_death_ward', // 12
           `witch_doctor_paralyzing_cask`, // 13
           `witch_doctor_paralyzing_cask`, // 14
           `witch_doctor_paralyzing_cask`, // 15
           `special_bonus_unique_witch_doctor_3`, // 16
-          "special_bonus_attributes", // 17
-          "witch_doctor_death_ward", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'witch_doctor_death_ward', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_witch_doctor_1`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_witch_doctor_5", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_witch_doctor_5', // 25
         ],
         items: {
           starting: [
-            "tango",
+            'tango',
             `tango`,
             `blood_grenade`,
-            "enchanted_mango",
+            'enchanted_mango',
             `circlet`,
             `branches`,
             `branches`,
@@ -21646,7 +21646,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "arcane_boots",
+            'arcane_boots',
             `guardian_greaves`,
             `aghanims_shard`,
             `glimmer_cape`,
@@ -21657,13 +21657,13 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             `arcane_ring`,
             `trusty_shovel`,
-            "philosophers_stone",
+            'philosophers_stone',
             `pupils_gift`,
             `psychic_headband`,
             `ogre_seal_totem`,
             `timeless_relic`,
             `spy_gadget`,
-            "seer_stone",
+            'seer_stone',
             `force_boots`,
           ],
         },
@@ -21679,27 +21679,27 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "ring_of_regen",
-          "wind_lace",
-          "boots",
+          'ring_of_regen',
+          'wind_lace',
+          'boots',
           /* "armor", */
-          "infused_raindrop",
+          'infused_raindrop',
           `cloak`,
         ],
         support: [],
-        core: ["ring_of_health"],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb" /*"medallion_of_courage", "solar_crest" */],
-        support: ["glimmer_cape", "force_staff", "ghost"],
+        all: ['lotus_orb' /*"medallion_of_courage", "solar_crest" */],
+        support: ['glimmer_cape', 'force_staff', 'ghost'],
         core: [
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
         ],
       },
-      late_game: { all: [], support: ["black_king_bar"], core: [] },
+      late_game: { all: [], support: ['black_king_bar'], core: [] },
     },
   },
 
@@ -21716,82 +21716,82 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40640,
         power_level: [2, 2.1, 2.6, 2.5],
-        facet: undefined,
+        facet: null,
         abilities: [
-          "skeleton_king_hellfire_blast", // 1
-          "skeleton_king_vampiric_spirit", // 2
-          "skeleton_king_vampiric_spirit", // 3
-          "skeleton_king_mortal_strike", // 4
-          "skeleton_king_vampiric_spirit", // 5
-          "skeleton_king_reincarnation", // 6
-          "skeleton_king_vampiric_spirit", // 7
-          "skeleton_king_mortal_strike", // 8
-          "skeleton_king_mortal_strike", // 9
-          "special_bonus_unique_wraith_king_2", // 10
-          "skeleton_king_mortal_strike", // 11
-          "skeleton_king_reincarnation", // 12
-          "skeleton_king_hellfire_blast", // 13
-          "skeleton_king_hellfire_blast", // 14
-          "special_bonus_hp_400", // 15
-          "skeleton_king_hellfire_blast", // 16
-          "special_bonus_attributes", // 17
-          "skeleton_king_reincarnation", // 18
-          "special_bonus_attributes", // 19
-          "special_bonus_attack_speed_70", // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_wraith_king_10", // 25
+          'skeleton_king_hellfire_blast', // 1
+          'skeleton_king_vampiric_spirit', // 2
+          'skeleton_king_vampiric_spirit', // 3
+          'skeleton_king_mortal_strike', // 4
+          'skeleton_king_vampiric_spirit', // 5
+          'skeleton_king_reincarnation', // 6
+          'skeleton_king_vampiric_spirit', // 7
+          'skeleton_king_mortal_strike', // 8
+          'skeleton_king_mortal_strike', // 9
+          'special_bonus_unique_wraith_king_2', // 10
+          'skeleton_king_mortal_strike', // 11
+          'skeleton_king_reincarnation', // 12
+          'skeleton_king_hellfire_blast', // 13
+          'skeleton_king_hellfire_blast', // 14
+          'special_bonus_hp_400', // 15
+          'skeleton_king_hellfire_blast', // 16
+          'special_bonus_attributes', // 17
+          'skeleton_king_reincarnation', // 18
+          'special_bonus_attributes', // 19
+          'special_bonus_attack_speed_70', // 20
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_wraith_king_10', // 25
         ],
         items: {
           starting: [
-            "tango",
-            "quelling_blade",
-            "branches",
-            "slippers",
-            "circlet",
+            'tango',
+            'quelling_blade',
+            'branches',
+            'slippers',
+            'circlet',
           ],
           early_game: [
-            "wraith_band",
-            "phase_boots",
-            "magic_wand",
-            "hand_of_midas",
+            'wraith_band',
+            'phase_boots',
+            'magic_wand',
+            'hand_of_midas',
           ],
-          mid_game: ["radiance", "aghanims_shard", "blink", "black_king_bar"],
-          late_game: ["assault", "abyssal_blade", "swift_blink"],
+          mid_game: ['radiance', 'aghanims_shard', 'blink', 'black_king_bar'],
+          late_game: ['assault', 'abyssal_blade', 'swift_blink'],
           situational: [
-            "armlet",
-            "desolator",
-            "silver_edge",
-            "skadi",
-            "monkey_king_bar",
-            "nullifier",
-            "bloodthorn",
-            "ultimate_scepter",
+            'armlet',
+            'desolator',
+            'silver_edge',
+            'skadi',
+            'monkey_king_bar',
+            'nullifier',
+            'bloodthorn',
+            'ultimate_scepter',
           ],
           core: [
-            "phase_boots",
-            "hand_of_midas",
-            "radiance",
-            "aghanims_shard",
-            "blink",
-            "black_king_bar",
-            "assault",
+            'phase_boots',
+            'hand_of_midas',
+            'radiance',
+            'aghanims_shard',
+            'blink',
+            'black_king_bar',
+            'assault',
           ],
           neutral: [
-            "broom_handle",
-            "lance_of_pursuit",
-            "vambrace",
-            "orb_of_destruction",
-            "elven_tunic",
+            'broom_handle',
+            'lance_of_pursuit',
+            'vambrace',
+            'orb_of_destruction',
+            'elven_tunic',
             //"titan_sliver",
-            "paladin_sword",
-            "mind_breaker",
+            'paladin_sword',
+            'mind_breaker',
             //"penta_edged_sword",
-            "desolator_2",
-            "pirate_hat",
-            "mirror_shield",
+            'desolator_2',
+            'pirate_hat',
+            'mirror_shield',
           ],
         },
       },
@@ -21799,25 +21799,25 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     combo: [],
     counter_items: {
       laning_phase: {
-        all: ["wind_lace", "boots", "armor"],
-        support: ["ward_sentry"],
-        core: ["orb_of_corrosion"],
+        all: ['wind_lace', 'boots', 'armor'],
+        support: ['ward_sentry'],
+        core: ['orb_of_corrosion'],
       },
       mid_game: {
-        all: ["spirit_vessel"],
-        support: ["ward_dispenser", "glimmer_cape", "ghost", "force_staff"],
-        core: ["hurricane_pike", "diffusal_blade"],
+        all: ['spirit_vessel'],
+        support: ['ward_dispenser', 'glimmer_cape', 'ghost', 'force_staff'],
+        core: ['hurricane_pike', 'diffusal_blade'],
       },
       late_game: {
-        all: ["ethereal_blade", "aeon_disk"],
+        all: ['ethereal_blade', 'aeon_disk'],
         support: [],
         core: [
-          "assault",
-          "skadi",
-          "shivas_guard",
-          "silver_edge",
-          "butterfly",
-          "bloodthorn",
+          'assault',
+          'skadi',
+          'shivas_guard',
+          'silver_edge',
+          'butterfly',
+          'bloodthorn',
         ],
       },
     },
@@ -21836,31 +21836,31 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         power_level: [2, 2.1, 2.6, 2.7],
         facet: 1,
         abilities: [
-          "zuus_arc_lightning", // 1
-          "zuus_heavenly_jump", // 2
-          "zuus_arc_lightning", // 3
+          'zuus_arc_lightning', // 1
+          'zuus_heavenly_jump', // 2
+          'zuus_arc_lightning', // 3
           `zuus_lightning_bolt`, // 4
-          "zuus_arc_lightning", // 5
-          "zuus_thundergods_wrath", // 6
-          "zuus_arc_lightning", // 7
+          'zuus_arc_lightning', // 5
+          'zuus_thundergods_wrath', // 6
+          'zuus_arc_lightning', // 7
           `zuus_lightning_bolt`, // 8
           `zuus_lightning_bolt`, // 9
           `zuus_lightning_bolt`, // 10
           `zuus_heavenly_jump`, // 11
-          "zuus_thundergods_wrath", // 12
+          'zuus_thundergods_wrath', // 12
           `zuus_heavenly_jump`, // 13
           `zuus_heavenly_jump`, // 14
           `special_bonus_unique_zeus_jump_cooldown`, // 15
           `special_bonus_unique_zeus_jump_postjump_movespeed`, // 16
-          "special_bonus_attributes", // 17
-          "zuus_thundergods_wrath", // 18
-          "special_bonus_attributes", // 19
+          'special_bonus_attributes', // 17
+          'zuus_thundergods_wrath', // 18
+          'special_bonus_attributes', // 19
           `special_bonus_unique_zeus_2`, // 20
-          "special_bonus_attributes", // 21
-          "special_bonus_attributes", // 22
-          "special_bonus_attributes", // 23
-          "special_bonus_attributes", // 24
-          "special_bonus_unique_zeus_5", // 25
+          'special_bonus_attributes', // 21
+          'special_bonus_attributes', // 22
+          'special_bonus_attributes', // 23
+          'special_bonus_attributes', // 24
+          'special_bonus_unique_zeus_5', // 25
         ],
         items: {
           starting: [
@@ -21916,8 +21916,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `travel_boots`,
           ],
           core: [
-            "bottle",
-            "arcane_boots",
+            'bottle',
+            'arcane_boots',
             `phylactery`,
             `yasha_and_kaya`,
             `aether_lens`,
@@ -21926,15 +21926,15 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `refresher`,
           ],
           neutral: [
-            "mysterious_hat",
-            "arcane_ring",
+            'mysterious_hat',
+            'arcane_ring',
             `vambrace`,
             `bullwhip`,
             `ceremonial_robe`,
-            "psychic_headband",
-            "timeless_relic",
+            'psychic_headband',
+            'timeless_relic',
             `stormcrafter`,
-            "seer_stone",
+            'seer_stone',
             `force_boots`,
           ],
         },
@@ -21949,32 +21949,32 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     counter_items: {
       laning_phase: {
         all: [
-          "magic_wand",
-          "blight_stone",
-          "ring_of_regen",
-          "headdress",
-          "infused_raindrop",
-          "cloak",
+          'magic_wand',
+          'blight_stone',
+          'ring_of_regen',
+          'headdress',
+          'infused_raindrop',
+          'cloak',
         ],
-        support: ["tranquil_boots", "smoke_of_deceit"],
-        core: ["ring_of_health"],
+        support: ['tranquil_boots', 'smoke_of_deceit'],
+        core: ['ring_of_health'],
       },
       mid_game: {
-        all: ["lotus_orb", "blink"],
-        support: ["glimmer_cape", "force_staff"],
+        all: ['lotus_orb', 'blink'],
+        support: ['glimmer_cape', 'force_staff'],
         core: [
-          "mage_slayer",
+          'mage_slayer',
           /* "hood_of_defiance", */
-          "pipe",
-          "eternal_shroud",
-          "black_king_bar",
+          'pipe',
+          'eternal_shroud',
+          'black_king_bar',
           `orchid`,
         ],
       },
       late_game: {
-        all: ["sheepstick", "sphere"],
-        support: ["black_king_bar"],
-        core: ["silver_edge"],
+        all: ['sheepstick', 'sphere'],
+        support: ['black_king_bar'],
+        core: ['silver_edge'],
       },
     },
   },
