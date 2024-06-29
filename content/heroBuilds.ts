@@ -17371,7 +17371,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
   templar_assassin: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -17383,7 +17382,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40602,
         power_level: [1.8, 2.2, 2.7, 2.6],
-        facet: null,
+        facet: 2,
         abilities: [
           'templar_assassin_psi_blades', // 1
           'templar_assassin_refraction', // 2
@@ -17417,9 +17416,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'slippers',
             'circlet',
             'branches',
+	    'branches',		
             'tango',
           ],
-          early_game: ['wraith_band', 'blight_stone', 'power_treads'],
+          early_game: ['wraith_band', 'blight_stone', 'power_treads', 'null_talisman'],
           mid_game: ['desolator', 'black_king_bar', 'blink', 'dragon_lance'],
           late_game: [
             'ultimate_scepter',
@@ -17478,7 +17478,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40613,
         power_level: [1.9, 2.2, 2.7, 2.6],
-        facet: null,
+        facet: 2,
         abilities: [
           'templar_assassin_psi_blades', // 1
           'templar_assassin_refraction', // 2
@@ -17510,6 +17510,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           starting: [
             'branches',
             'branches',
+	    'branches',
             'tango',
             'faerie_fire',
             'ward_observer',
