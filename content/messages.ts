@@ -15455,7 +15455,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/TemplarAssassin_2_PsiBlade",
     messageTime: -50,
     textMessage:
-      "To dodge Templar's Psi Blade, play on your hero's max range and on the same side of the lane as Templar.",
+      "To dodge Templar's Psi Blade, play on your hero's max range and avoid being in line with Templar's attack direction.",
     audience: [Audience.IN_LANE],
   },
   {
