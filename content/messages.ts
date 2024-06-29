@@ -1128,7 +1128,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/ArcWarden_1_LastHit",
     messageTime: -30,
     textMessage:
-      "Make use of Spark Wraiths to secure creep last hits, especially ranged creep.",
+      'Make use of Spark Wraiths to secure creep last hits, especially the ranged creeps.',
     audience: [Audience.IN_LANE, Audience.ROLE_CORE],
     image: { type: "ability", name: "arc_warden_spark_wraith" },
   },
@@ -1208,7 +1208,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/ArcWarden_2_SparkWraith",
     messageTime: 7 * 60,
     textMessage:
-      "Arc Wardens Tempest Spark Wraith takes two seconds to charge which gives you time to dodge it.",
+      'Arc Wardens Spark Wraith takes time to charge which gives you an opportunity to run away and dodge it.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "arc_warden_spark_wraith" },
   },
@@ -2429,7 +2429,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "broodmother",
     audioFile: "enemyHero/Broodmother_6_AntievasionItems",
     messageTime: 12 * 60 + 20,
-    textMessage: "Evasion piercing items are good against Brood's Silken Bola.",
+    textMessage: 'Evasion piercing items are good against Broodmothers Incapacitating Bite.',
     audience: [Audience.ALL],
     image: { type: "item", name: "monkey_king_bar" },
   },
@@ -2669,7 +2669,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "chen",
     audioFile: "ownHero/Chen_1_UnblockCamps",
-    messageTime: -90,
+    messageTime: -80,
     textMessage:
       "Bring a sentry or two to the lane to unblock the camps. Chen's laning impact is directly related to summon usage.",
     audience: [Audience.ALL],
@@ -2730,6 +2730,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Chen_7_Farming",
     messageTime: 7 * 60,
     textMessage: `Look to farm and play greedy once you have level 3 Holy Persuasion. An early timing on Vladmirs Offering into Solar Crest lets you snowball the game.`,
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'OwnHero',
+    npcHeroName: 'chen',
+    audioFile: 'ownHero/Chen_8_FacetSelection',
+    messageTime: -90,
+    textMessage: 'You can choose a Convert facet to cover the weakness or enforce the strength of your team, such as stun lock, damage, or laning.',
     audience: [Audience.ALL],
   },
 
@@ -3423,12 +3431,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     category: "OwnHero",
     npcHeroName: "dark_willow",
     audioFile: "ownHero/DarkWillow_6_Carry",
-    messageTime: [20 * 60 + 15, 24 * 60 + 15],
+    messageTime: 35 * 60 + 15,
     textMessage:
-      "If the game opens up for you, you can transition into right-clicker with Aghanim's Scepter and attack speed talent.",
+      'If the game opens up for you, you can transition into right clicker with Aghanims Scepter and attack speed items in the late game.',
     audience: [Audience.ROLE_SUPPORT],
   },
-  {
+  /* {
     category: `OwnHero`,
     npcHeroName: `dark_willow`,
     audioFile: `ownHero/DarkWillow_7_BedlamAlly`,
@@ -3436,7 +3444,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     textMessage: `You can use your Bedlam on initiators on your team and do all your damage while staying back in fights.`,
     audience: [Audience.ROLE_SUPPORT],
     image: { type: `ability`, name: `dark_willow_bedlam` },
-  },
+  }, */
 
   {
     category: "EnemyHero",
@@ -7938,7 +7946,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "lone_druid",
     audioFile: "ownHero/LoneDruid_4_InTrouble",
     messageTime: [5 * 60 + 15, 15 * 60 + 15],
-    textMessage: `When in trouble, consider using Savage Roar and True Form. Lifesteal or body blocks from the Spirit Bear can help.`,
+    textMessage: 'When in trouble, consider using Savage Roar and True Form if you have the Bear with Me facet. Lifesteal or body blocks from the Spirit Bear can help.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "lone_druid_savage_roar" },
   },
@@ -7957,7 +7965,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "lone_druid",
     audioFile: "ownHero/LoneDruid_6_Roshan",
     messageTime: 16 * 60 + 15,
-    textMessage: `You can take Roshan fairly early by yourself or with minimal help. Tank with hero as the Spirit Bear will heal you.`,
+    textMessage: 'You can take Roshan fairly early by yourself or with minimal help. The Bear with Me facet will help heal both the hero and Spirit Bear with right clicks.',
     audience: [Audience.ROLE_CORE],
     image: { type: "item", name: "aegis" },
   },
@@ -8181,7 +8189,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_1_HelmOfIronWill",
     messageTime: -90,
     textMessage: "Rush Helm of Iron Will to solve your health sustain issues.",
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
     image: { type: "item", name: "helm_of_iron_will" },
   },
   {
@@ -8219,7 +8227,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 4 * 60 + 45,
     textMessage:
       "Lycan's laning power spike is Helm of Dominator and level 6. Try to get a kill or force the enemy out of the lane and you can take the tower fast.",
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
   {
@@ -8229,7 +8237,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 5 * 60,
     textMessage:
       "Delay death of the 5 minute catapult wave to meet Helm of the Dominator and level 6 power spike.",
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
   },
   {
     category: "OwnHero",
@@ -8237,7 +8245,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Lycan_7_ControlledCreep",
     messageTime: 5 * 60,
     textMessage: `Take control of a neutral creep with a stun or root with the Helm of the Dominator so the opponents cant teleport out.`,
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
   {
@@ -8247,7 +8255,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: [7 * 60 + 15, 14 * 60 + 15],
     textMessage:
       "When dominated creep is about to die, you can overtake another one and deny gold and experience to opponents.",
-    audience: [Audience.ROLE_OFFLANE],
+    audience: [Audience.ALL],
     image: { type: "item", name: "helm_of_the_dominator" },
   },
   {
@@ -8301,7 +8309,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "aghanims_shard" },
   },
-  {
+  /* {
     category: "OwnHero",
     npcHeroName: "lycan",
     audioFile: "ownHero/Lycan_14_Boots",
@@ -8310,7 +8318,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
       "With Power Treads, you are less reliant on your Shapeshift when trying to stay on top of enemy heroes and right click them.",
     audience: [Audience.ROLE_MID],
     image: { type: "item", name: "power_treads" },
-  },
+  }, */
   {
     category: "OwnHero",
     npcHeroName: "lycan",
@@ -8318,8 +8326,8 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 9 * 60,
     textMessage:
       "Use your burst damage to make maximum use of item spikes by looking for kills and objectives on the map.",
-    audience: [Audience.ROLE_MID],
-    image: { type: "item", name: "echo_sabre" },
+    audience: [Audience.ALL],
+    image: { type: 'item', name: 'helm_of_the_overlord' },
   },
   {
     category: "OwnHero",
@@ -10070,7 +10078,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Furion_1_TreantsJob",
     messageTime: 18 * 60 + 45,
     textMessage:
-      "Treants are not only good for lasthitting or harassing but also to scout, block off camps and deny runes.",
+      'Treants are not only good for last hitting or harassing but also to scout, block off camps and deny runes.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_force_of_nature" },
   },
@@ -10100,7 +10108,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Furion_12_TPWisdomRune",
     messageTime: 6 * 60 + 45,
     textMessage:
-      "Wisdom runes spawn at minute 7, look to steal enemy runes with teleport as it gives you alot and denies alot from the enemy.",
+      'Wisdom runes spawn at minute 7, look to steal enemy runes with teleport as it gives you a lot and denies a lot from the enemy.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_teleportation" },
   },
@@ -10169,7 +10177,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Furion_10_PushSidelanes",
     messageTime: [10 * 60 + 15, 18 * 60 + 15, 26 * 60 + 15],
     textMessage:
-      "When not much is happening, push out the sidelines with your sprout and summons.",
+      'When not much is happening, push out the side lanes with your Sprout and summons.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "furion_sprout" },
   },
@@ -10456,7 +10464,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/NightStalker_3_SurviveDay",
     messageTime: 10,
     textMessage:
-      "Look to survive through the first 5 minutes of the game and ideally have phase boots as the night hits.",
+      'If you took the Blinding Void facet, look to survive through the first 5 minutes of the game and ideally have phase boots as the night hits.',
     audience: [Audience.ALL],
   },
   {
@@ -10464,7 +10472,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: "night_stalker",
     audioFile: "ownHero/NightStalker_4_VoidCreeps",
     messageTime: 20,
-    textMessage: "Use Void to secure ranged creep lasthits.",
+    textMessage: 'Use Void to secure ranged creep last hits.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "night_stalker_void" },
   },
@@ -10484,7 +10492,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/NightStalker_5_CripplingFear",
     messageTime: 4 * 60,
     textMessage:
-      "Keep a skill point or opt to skill Crippling Fear as the first night approaches if it is necessary to score a kill.",
+      'If you took the Blinding Void facet, keep a skill point or opt to skill Crippling Fear as the first night approaches if it is necessary to score a kill.',
     audience: [Audience.ALL],
     image: { type: "ability", name: "night_stalker_crippling_fear" },
   },
@@ -10527,6 +10535,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audience: [Audience.ALL],
     image: { type: "item", name: "blink" },
   },
+  {
+    category: 'OwnHero',
+    npcHeroName: 'night_stalker',
+    audioFile: 'ownHero/NightStalker_10_NightTimeLaning',
+    messageTime: -10,
+    textMessage:
+      'With the Night Reign facet, Look to apply pressure in the first 5 mins of the game and get ahead during this time to eventually make use of your ultimate.',
+    audience: [Audience.ALL],
+  },
 
   {
     category: "EnemyHero",
@@ -10534,7 +10551,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/NightStalker_1_PressureEarly",
     messageTime: 10,
     textMessage:
-      "Night Stalker is weak in the first 5 minutes of the game. Pressure him early.",
+      'If Night Stalker took the Blinding Void facet, he is weak in the first 5 minutes of the game. Pressure him early.',
     audience: [Audience.IN_LANE],
   },
   {
@@ -10543,7 +10560,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/NightStalker_2_5Minutes",
     messageTime: 4 * 60 + 30,
     textMessage:
-      "Night Stalker will fight you at the 5 minute mark, as night time will hit.",
+      'If Night Stalker took the Blinding Void facet, he will fight you at the 5 minute mark, as night time will hit.',
     audience: [Audience.IN_LANE],
   },
   {
@@ -10580,6 +10597,15 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     messageTime: 12 * 60 + 10,
     textMessage:
       "Break effects remove Hunter in the Night and Nightstalker becomes significantly weaker.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'EnemyHero',
+    npcHeroName: 'night_stalker',
+    audioFile: 'enemyHero/NightStalker_7_DayTimeAggression',
+    messageTime: 5 * 60 + 10,
+    textMessage:
+      'If Night Stalker took the Night Reign facet, look to apply pressure before he reaches his level 6 during day time.',
     audience: [Audience.ALL],
   },
 
@@ -11105,6 +11131,14 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Oracle_5_GapClosingItems",
     messageTime: 12 * 60 + 10,
     textMessage: "Gap closing items allow you to get on top of Oracle.",
+    audience: [Audience.ALL],
+  },
+  {
+    category: 'EnemyHero',
+    npcHeroName: 'oracle',
+    audioFile: 'enemyHero/Oracle_6_RunePrediction',
+    messageTime: [5 * 60 + 45, 7 * 60 + 45, 9 * 60 + 45],
+    textMessage: 'The enemy mid laner will know where the power rune will spawn because of Oracle. You can follow him to contest the rune.',
     audience: [Audience.ALL],
   },
 
@@ -16202,7 +16236,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     npcHeroName: `tinker`,
     audioFile: `enemyHero/Tinker_12_DisableAfterShield`,
     messageTime: [21 * 60 + 10, 31 * 60 + 10, 41 * 60 + 10, 51 * 60 + 10],
-    textMessage: `Against the Translocator facet, try to disable Tinker only after you break through his Defense Matrix as he gets a strong dispel when the shield expires.`,
+    textMessage: 'Against the Translocator facet, try to root or silence Tinker only after you break through his Defense Matrix as he gets a basic dispel when the shield expires.',
     audience: [Audience.ALL],
   },
 
@@ -16720,9 +16754,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_4_MaxPunch",
     messageTime: [4 * 60, 14 * 60],
     textMessage:
-      "Pop Tag Team before using Walrus Punch to maximize on damage.",
+      'If you have the Tag Team facet, pop Tag Team before using Walrus Punch to maximize on damage.',
     audience: [Audience.ALL],
-    image: { type: "ability", name: "tusk_tag_team" },
+    image: { type: 'ability', name: 'tusk_bitter_chill' },
   },
   {
     category: "OwnHero",
@@ -16739,9 +16773,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_6_BlinkSnowball2",
     messageTime: [14 * 60 + 30, 19 * 60 + 30],
     textMessage:
-      "Tuskar enables the team to take an early Roshan due to the Tag Team.",
+      'If you have the Tag Team facet, Tusk enables the team to take an early Roshan due to the Tag Team.',
     audience: [Audience.ALL],
-    image: { type: "ability", name: "tusk_tag_team" },
+    image: { type: 'ability', name: 'tusk_bitter_chill' },
   },
   {
     category: "OwnHero",
@@ -16749,7 +16783,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_7_AghanimsScepter",
     messageTime: [24 * 60 + 30, 29 * 60 + 30],
     textMessage:
-      "Pick up Aghanims Scepter as it is an amazing repositioning and kiting tool.",
+      'Pick up Aghanims Scepter as it is an amazing repositioning, kiting, and waveclear tool.',
     audience: [Audience.ALL],
     image: { type: "item", name: "ultimate_scepter" },
   },
@@ -16759,7 +16793,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Tusk_8_SpellsDuringSnowball",
     messageTime: [6 * 60 + 30, 11 * 60 + 30, 21 * 60 + 30, 31 * 60 + 30],
     textMessage:
-      "You can use both Tag Team and Ice Shard while Snowballed. Particularly helps in stopping enemy heroes fleeing from Snowball.",
+      'If you have the Tag Team facet, you can use both Tag Team and Ice Shard while Snowballed. Particularly helps in stopping enemy heroes fleeing from Snowball.',
     audience: [Audience.ALL],
   },
 
