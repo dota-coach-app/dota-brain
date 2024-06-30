@@ -7631,7 +7631,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "enemyHero/Lifestealer_6_Evasion",
     messageTime: [26 * 60 + 30, 36 * 60 + 30],
     textMessage:
-      "Lifestealer tends to have lots of evasion due to his level 20 talent and a Halberd purchase. Look to counter it by getting true strike items",
+      "Lifestealer tends to have evasion due to his Radiance and possibly a Halberd purchase. Look to counter it by getting true strike items",
     chatMessage:
       "Lifestealer tends to have evasion due to his level 20 talent and Halberd. Counter it with true strike items",
     audience: [Audience.ALL],
