@@ -7811,7 +7811,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
   life_stealer: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -7823,24 +7822,24 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40608,
         power_level: [2.2, 2.3, 2.5, 2.3],
-        facet: null,
+        facet: 1,
         abilities: [
-          'life_stealer_feast', // 1
-          'life_stealer_ghoul_frenzy', // 2
-          'life_stealer_feast', // 3
-          'life_stealer_rage', // 4
-          'life_stealer_ghoul_frenzy', // 5
+	  'life_stealer_ghoul_frenzy', // 1
+	  'life_stealer_open_wounds', // 2
+	  'life_stealer_ghoul_frenzy', // 3
+	  'life_stealer_rage', // 4
+	  'life_stealer_ghoul_frenzy', // 5
           'life_stealer_infest', // 6
           'life_stealer_ghoul_frenzy', // 7
-          'life_stealer_ghoul_frenzy', // 8
-          'life_stealer_feast', // 9
-          'life_stealer_feast', // 10
-          'life_stealer_rage', // 11
-          'life_stealer_infest', // 12
-          'life_stealer_rage', // 13
-          'life_stealer_rage', // 14
-          'special_bonus_unique_lifestealer_2', // 15
-          'special_bonus_unique_lifestealer_5', // 16
+	  'life_stealer_rage', // 8
+	  'life_stealer_rage', // 9
+	  'special_bonus_unique_lifestealer_2', // 10
+	  'life_stealer_rage', // 11
+	  'life_stealer_infest', // 12
+	  'life_stealer_open_wounds', // 13
+	  'life_stealer_open_wounds', // 14
+	  'special_bonus_unique_lifestealer_5', // 15
+	  'life_stealer_open_wounds', // 16
           'special_bonus_attributes', // 17
           'life_stealer_infest', // 18
           'special_bonus_attributes', // 19
@@ -7857,49 +7856,45 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'quelling_blade',
             'gauntlets',
             'circlet',
+	    'branches',
             'branches',
           ],
           early_game: [
             'bracer',
             'phase_boots',
             'magic_wand',
-            'orb_of_corrosion',
             'armlet',
           ],
-          mid_game: ['desolator', 'blink', 'basher'],
-          late_game: ['skadi', 'assault', 'aghanims_shard', 'abyssal_blade'],
+          mid_game: ['radiance', 'sange_and_yasha', 'blink'],
+          late_game: ['abyssal_blade', 'ultimate_scepter', 'greater_crit', 'assault],
           situational: [
-            'radiance',
+	    'desolator',
+	    'orb_of_corrosion',
             'heavens_halberd',
-            'sange_and_yasha',
             'monkey_king_bar',
             'nullifier',
             'black_king_bar',
             'mjollnir',
-            'greater_crit',
-            'hand_of_midas',
+	    'skadi',
           ],
           core: [
             'phase_boots',
             'armlet',
-            'desolator',
+            'radiance',
+	    'sange_and_yasha',
             'blink',
-            'basher',
+            'abyssal_blade',
+            'ultimate_scepter',
+            'greater_crit',
             'assault',
-            'aghanims_shard',
-            'skadi',
           ],
           neutral: [
             'lance_of_pursuit',
             'broom_handle',
-            //"dagger_of_ristul", Removed in 7.33
-            //"misericorde",
             'orb_of_destruction',
             'vambrace',
             'paladin_sword',
-            //"titan_sliver",
             'mind_breaker',
-            //"penta_edged_sword",
             'havoc_hammer',
             'desolator_2',
             'pirate_hat',
@@ -17720,7 +17715,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
 
   tidehunter: {
     under_review: true,
-    creator: ContentCreator.YoonA,
+    creator: ContentCreator.yongy146,
     damage_type: DamageType.neutral,
     builds: [
       {
@@ -17729,12 +17724,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.OFFLANE,
         dota_fire_id: 40621,
         power_level: [1.7, 2, 2.5, 2.6],
-        facet: null,
+        facet: 1,
         abilities: [
-          `tidehunter_gush`, // 1
-          `tidehunter_anchor_smash`, // 2
-          'tidehunter_anchor_smash', // 3
-          `tidehunter_kraken_shell`, // 4
+	  `tidehunter_anchor_smash`, // 1
+	  `tidehunter_kraken_shell`, // 2
+	  `tidehunter_anchor_smash`, // 3
+	  `tidehunter_gush`, // 4
           'tidehunter_anchor_smash', // 5
           'tidehunter_ravage', // 6
           'tidehunter_anchor_smash', // 7
@@ -17745,12 +17740,12 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           'tidehunter_ravage', // 12
           'tidehunter_gush', // 13
           'tidehunter_gush', // 14
-          `special_bonus_unique_tidehunter_2`, // 15
+          `special_bonus_unique_tidehunter_3`, // 15
           `tidehunter_gush`, // 16
           'special_bonus_attributes', // 17
           'tidehunter_ravage', // 18
           'special_bonus_attributes', // 19
-          `special_bonus_unique_tidehunter_10`, // 20
+          `special_bonus_unique_tidehunter`, // 20
           'special_bonus_attributes', // 21
           'special_bonus_attributes', // 22
           'special_bonus_attributes', // 23
@@ -17762,17 +17757,17 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'tango',
             'quelling_blade',
             `gauntlets`,
-            `gauntlets`,
+            'circlet',
             `branches`,
             `branches`,
             `ward_observer`,
           ],
           early_game: [
+            'bracer',
+	    'boots',
+	    `magic_wand`,
+	    'soul_ring',
             `phase_boots`,
-            `soul_ring`,
-            `magic_wand`,
-            `wind_lace`,
-            `infused_raindrop`,
           ],
           mid_game: [
             `vladmir`,
@@ -17788,9 +17783,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             `octarine_core`,
           ],
           situational: [
-            `bracer`,
-            `arcane_boots`,
-            `hand_of_midas`,
             `meteor_hammer`,
             `guardian_greaves`,
             `force_staff`,
@@ -18651,7 +18643,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
   troll_warlord: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -18663,28 +18654,28 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40634,
         power_level: [1.6, 1.7, 2.7, 2.6],
-        facet: null,
+        facet: 1,
         abilities: [
           'troll_warlord_whirling_axes_ranged', // 1
-          'troll_warlord_berserkers_rage', // 2
-          'troll_warlord_fervor', // 3
-          'troll_warlord_whirling_axes_ranged', // 4
+	  'troll_warlord_fervor', // 2
+	  'troll_warlord_whirling_axes_ranged', // 3
+	  'troll_warlord_berserkers_rage', // 4
           'troll_warlord_whirling_axes_ranged', // 5
           'troll_warlord_battle_trance', // 6
           'troll_warlord_whirling_axes_ranged', // 7
-          'troll_warlord_fervor', // 8
-          `troll_warlord_berserkers_rage`, // 9
-          'troll_warlord_fervor', // 10
+	  `troll_warlord_berserkers_rage`, // 8
+	  `troll_warlord_berserkers_rage`, // 9
+	  `troll_warlord_berserkers_rage`, // 10
           'special_bonus_unique_troll_warlord_2', // 11
           'troll_warlord_battle_trance', // 12
-          'troll_warlord_berserkers_rage', // 13
-          'troll_warlord_berserkers_rage', // 14
-          'special_bonus_unique_troll_warlord_5', // 15 Note Michel: Can't skill level 15 before level 10 in Dota 2 guides
+          `troll_warlord_fervor`, // 13
+          `troll_warlord_fervor`, // 14
+          'special_bonus_unique_troll_warlord_5', // 15 
           `troll_warlord_fervor`, // 16
           'special_bonus_attributes', // 17
           'troll_warlord_battle_trance', // 18
           'special_bonus_attributes', // 19
-          'special_bonus_unique_troll_warlord', // 20
+          'special_bonus_unique_troll_warlord_battle_trance_movespeed', // 20
           'special_bonus_attributes', // 21
           'special_bonus_attributes', // 22
           'special_bonus_attributes', // 23
@@ -18695,6 +18686,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           starting: [
             'tango',
             'quelling_blade',
+	    'branches',
             'branches',
             'slippers',
             'circlet',
@@ -18702,6 +18694,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           early_game: ['wraith_band', 'phase_boots', 'magic_wand', 'bfury'],
           mid_game: ['yasha', 'black_king_bar', 'sange_and_yasha', 'blink'],
           late_game: [
+	    'aghanims_shard',
             'abyssal_blade',
             'ultimate_scepter',
             'satanic',
@@ -18718,7 +18711,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'sphere',
             'silver_edge',
             'greater_crit',
-            'aghanims_shard',
             'manta',
             'skadi',
             'refresher',
@@ -18735,13 +18727,10 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             'broom_handle',
             'occult_bracelet',
-            //"ring_of_aquila",
             'orb_of_destruction',
             'elven_tunic',
-            //"titan_sliver",
             'paladin_sword',
             'ninja_gear',
-            //"penta_edged_sword",
             'apex',
             'mirror_shield',
             'pirate_hat',
@@ -18763,7 +18752,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         core: ['vanguard'],
       },
       mid_game: {
-        all: ['cyclone', /*"medallion_of_courage",*/ 'solar_crest'],
+        all: ['cyclone', 'solar_crest'],
         support: ['force_staff', 'ghost'],
         core: ['heavens_halberd', 'hurricane_pike', 'witch_blade'],
       },
@@ -19417,7 +19406,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
   ursa: {
     under_review: true,
     creator: ContentCreator.yongy146,
@@ -19429,7 +19417,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
         steam_guide_role: STEAM_GUIDE_ROLE.CORE,
         dota_fire_id: 40635,
         power_level: [1.9, 2.3, 2.6, 2.3],
-        facet: null,
+        facet: 1,
         abilities: [
           'ursa_earthshock', // 1
           'ursa_fury_swipes', // 2
@@ -19462,6 +19450,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
             'tango',
             'quelling_blade',
             'branches',
+	    'branches',
             'circlet',
             'slippers',
           ],
@@ -19504,11 +19493,8 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
           neutral: [
             'broom_handle',
             'lance_of_pursuit',
-            //"ring_of_aquila",
             'vambrace',
             'elven_tunic',
-            //"titan_sliver",
-            //"penta_edged_sword",
             'mind_breaker',
             'desolator_2',
             'force_boots',
@@ -19522,6 +19508,7 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
       `blink`,
       `ursa_earthshock`,
       `attack`,
+      'ursa_enrage',
       `ursa_overpower`,
       `attack`,
     ],
@@ -21704,7 +21691,6 @@ export const heroBuilds: { [key: string]: IHeroContent } = {
     },
   },
 
-  // eidendota plays hero
   // Wraith King
   skeleton_king: {
     under_review: true,
