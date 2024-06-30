@@ -9628,12 +9628,12 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "morphling",
-    audioFile: "ownHero/Morphling_9_EyeOfSkadi",
+    audioFile: "ownHero/Morphling_9_AngelsDemise",
     messageTime: 9 * 60 + 30,
     textMessage:
-      "Your main powerspike is eye of skadi, in cases where manta isn't required you can go skadi after yasha.",
-    audience: [Audience.ROLE_CORE],
-    image: { type: "item", name: "skadi" },
+      "Khanda gives you a big power spike because it synergizes well with your adaptive strike. Look to play closer to team once you get the item.",
+    audience: [Audience.ROLE_CORE], 
+    image: { type: "item", name: "angels_demise" },
   },
   {
     category: "OwnHero",
@@ -9648,11 +9648,11 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
   {
     category: "OwnHero",
     npcHeroName: "morphling",
-    audioFile: "ownHero/Morphling_10_Aghanims",
+    audioFile: "ownHero/Morphling_10_BlackKingBar",
     messageTime: 18 * 60 + 30,
-    textMessage: "Aghanim's Scepter is good vs strong illusion heroes.",
+    textMessage: "Black King Bar is necessary to prevent getting interrupted when waveforming in to fight enemy heroes.",
     audience: [Audience.ALL],
-    image: { type: "item", name: "ultimate_scepter" },
+    image: { type: "item", name: "black_king_bar" },
   },
 
   {
@@ -15555,7 +15555,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Terrorblade_2_MetamorphosisFarming",
     messageTime: 20,
     textMessage:
-      "Feel free to pop Metamorphosis to give yourself an easier time lasthitting for two waves, Try to harras your opponent and deny they're creeps.",
+      "Feel free to pop Metamorphosis to give yourself an easier time lasthitting for two waves. Try to harras your opponents and deny their creeps.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "terrorblade_metamorphosis" },
   },
@@ -15565,7 +15565,7 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/Terrorblade_0_Metamorphosis",
     messageTime: 1 * 60,
     textMessage:
-      "Make sure you have 2 levels in metamorphosis before your second use of it in lane.",
+      "Make sure you have 2 levels in Metamorphosis before your second use of it in lane.",
     audience: [Audience.ROLE_CORE],
     image: { type: "ability", name: "terrorblade_metamorphosis" },
   },
@@ -17893,9 +17893,9 @@ export const dotaCoachMessages: DotaCoachMessage[] = [
     audioFile: "ownHero/VoidSpirit_7_AggressionWithItems",
     messageTime: 18 * 60 + 45,
     textMessage:
-      "Once you have both Echo Sabre and Spirit Vessel, look to play aggressively as you can solo kill pretty much any hero on the map.",
+      "Once you have both Manta and Aghanim's Scepter, look to play aggressively as you can solo kill pretty much any hero on the map.",
     audience: [Audience.ALL],
-    image: { type: "item", name: "echo_sabre" },
+    image: { type: "item", name: "ultimate_scepter" },
   },
 
   {
